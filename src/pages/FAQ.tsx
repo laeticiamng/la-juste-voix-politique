@@ -1,18 +1,19 @@
-
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
+import { ChevronDown, ChevronUp, HelpCircle, Search, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Badge } from '@/components/ui/badge';
 
-type FAQCategory = 'general' | 'revalorisations' | 'fiscalite' | 'programme';
+type FAQCategory = 'general' | 'revalorisations' | 'fiscalite' | 'programme' | 'initiatives';
 type FAQItem = {
   question: string;
   answer: string;
   category: FAQCategory;
+  badge?: string;
 };
 
 const faqItems: FAQItem[] = [
@@ -103,6 +104,68 @@ const faqItems: FAQItem[] = [
     answer: "Nous défendons une éducation émancipatrice qui réduit les inégalités sociales. Notre plan prévoit : classes à effectifs réduits, revalorisation du métier d'enseignant, renforcement de l'éducation artistique et civique, lutte contre le décrochage scolaire, et gratuité effective de l'école. L'éducation est pour nous le premier investissement d'avenir.",
     category: 'programme',
   },
+  
+  // Initiatives phares
+  {
+    question: "Qu'est-ce que la CNJP (Contribution Nationale de Justice Patrimoniale) ?",
+    answer: "La CNJP est un impôt progressif sur les patrimoines financiers nets supérieurs à 100 millions d'euros, appliqué aux personnes physiques, même si leur fortune est logée dans une société. Elle vise les ultra-riches réels et non les entrepreneurs, passe à travers les écrans juridiques (holdings, SCI…), et peut générer entre 70 et 100 milliards d'euros par an. Cette mesure est inédite en France et dans le monde par sa clarté et son barème détaillé.",
+    category: 'initiatives',
+    badge: 'Phare',
+  },
+  {
+    question: "Comment fonctionnent les revalorisations des travailleurs essentiels ?",
+    answer: "Notre plan prévoit la revalorisation immédiate de plus de 4 millions de travailleurs essentiels. Par exemple : +1 000 €/mois pour les médecins internes, +600 € pour les infirmiers, SMIC horaire obligatoire pour tous les étudiants hospitaliers et stagiaires, et +500-600 € pour les enseignants, assistants sociaux, éducateurs et ATSEM. Ce qui rend cette mesure inédite est qu'elle lie un financement clair (CNJP) à une revalorisation immédiate, avec des montants précis et des bénéficiaires clairement identifiés.",
+    category: 'initiatives',
+    badge: 'Phare',
+  },
+  {
+    question: "Comment comptez-vous assurer la présence des députés à l'Assemblée ?",
+    answer: "Nous proposons un système de remplacement automatique des députés absents, suivant le principe 'Tout travail mérite salaire. Mais tout salaire mérite travail aussi'. La mesure prévoit que 25% d'absences non justifiées entraînent une suspension des indemnités, 10 absences mènent au remplacement par le suppléant, et une inéligibilité pendant 5 ans. Cette mesure inédite et radicale est fortement soutenue par l'opinion publique.",
+    category: 'initiatives',
+    badge: 'Phare',
+  },
+  {
+    question: "Qu'est-ce que le FSCRD (Fonds Souverain Citoyen de Réduction de la Dette) ?",
+    answer: "Le FSCRD est un fonds souverain dont l'objectif est de rembourser la dette publique sans austérité, en la finançant par la CNJP et la CER. Ce qui rend ce fonds particulièrement innovant est qu'il sera géré par des citoyens tirés au sort assistés d'experts, avec jusqu'à 40 milliards d'euros par an dédiés à la réduction de la dette. Cette mesure supprime l'excuse du 'y a pas d'argent' souvent utilisée pour justifier l'inaction.",
+    category: 'initiatives',
+    badge: 'Phare',
+  },
+  {
+    question: "Comment allez-vous réformer les consultations médicales ?",
+    answer: "Nous proposons une uniformisation de la consultation médicale à 50 euros, tant pour les généralistes que pour les spécialistes, remboursée à 100% par la Sécurité sociale. Cette mesure met fin aux consultations à 25-30 euros, qui sont source de déséquilibre et de désertification médicale. Elle vise à revaloriser la profession médicale tout en garantissant un accès équitable aux soins pour tous les citoyens.",
+    category: 'initiatives',
+    badge: 'Phare',
+  },
+  {
+    question: "Qu'est-ce que le référent 'Projet & Ambition' dans les établissements scolaires ?",
+    answer: "Notre programme prévoit la mise en place d'un référent 'Projet & Ambition' dans chaque établissement scolaire. Il s'agit d'un adulte formé pour accompagner chaque jeune, détecter, encourager et structurer son projet de vie. L'objectif est de faire passer l'orientation scolaire d'une logique 'par défaut' à une logique 'par ambition', permettant ainsi à chaque élève de développer pleinement son potentiel en fonction de ses aspirations.",
+    category: 'initiatives',
+    badge: 'Phare',
+  },
+  {
+    question: "En quoi consiste le programme 'Logement contre contribution locale' ?",
+    answer: "Le programme 'Logement contre contribution locale' offre un logement subventionné en échange de 5 à 15 heures par semaine de mission utile pour la commune. Il est ciblé principalement sur les jeunes, les parents isolés et les personnes en insertion. Ce dispositif s'inscrit dans une logique de dignité et de renforcement du lien social, permettant aux personnes concernées de bénéficier d'un logement abordable tout en contribuant positivement à leur communauté.",
+    category: 'initiatives',
+    badge: 'Phare',
+  },
+  {
+    question: "Que propose le nouveau statut 'Créateur de transmission' dans le domaine culturel ?",
+    answer: "Le statut 'Créateur de transmission' est une nouvelle approche du soutien à la culture qui associe le soutien aux artistes et auteurs à une obligation de mission publique dans les écoles, les prisons ou les hôpitaux. Notre programme prévoit la création de 10 000 résidences d'artistes-médiateurs. Cette initiative vise à transformer la culture en un véritable outil de lien social et d'émancipation, s'éloignant d'une vision élitiste 'sous cloche'.",
+    category: 'initiatives',
+    badge: 'Phare',
+  },
+  {
+    question: "Comment fonctionnera le budget citoyen ?",
+    answer: "Notre programme inclut un budget citoyen de 2 milliards d'euros par an, dédié à des projets locaux votés par les citoyens dès l'âge de 16 ans. Ces projets pourront être portés par des associations, des communes ou des collectifs citoyens. Ce dispositif 100% démocratique, visible et traçable représente une véritable démocratie participative avec un pouvoir budgétaire concret, permettant aux citoyens de s'impliquer directement dans les décisions qui affectent leur quotidien.",
+    category: 'initiatives',
+    badge: 'Phare',
+  },
+  {
+    question: "Qu'implique la création d'un Statut de Parent Unique ?",
+    answer: "La création d'un Statut de Parent Unique comprend une révision du quotient familial, une priorité en crèche, et des aides renforcées à la reconversion professionnelle. Cette mesure vise à faire du parent solo un acteur reconnu de la République, plutôt qu'une simple 'case invisible' dans les formulaires administratifs. Elle répond aux défis spécifiques auxquels sont confrontés les parents qui élèvent seuls leurs enfants, en leur offrant un soutien adapté à leur situation particulière.",
+    category: 'initiatives',
+    badge: 'Phare',
+  },
 ];
 
 const FAQ = () => {
@@ -131,6 +194,7 @@ const FAQ = () => {
 
   const categories: { id: FAQCategory; label: string }[] = [
     { id: 'general', label: 'Questions générales' },
+    { id: 'initiatives', label: '10 Mesures Phares' },
     { id: 'revalorisations', label: 'Revalorisations' },
     { id: 'fiscalite', label: 'Fiscalité' },
     { id: 'programme', label: 'Programme' },
@@ -160,7 +224,7 @@ const FAQ = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg pl-10 focus:outline-none focus:ring-2 focus:ring-ljv-gold"
               />
-              <HelpCircle className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
             </div>
           </div>
 
@@ -208,7 +272,14 @@ const FAQ = () => {
                     onClick={() => toggleItem(index)}
                     className="w-full p-5 flex items-center justify-between text-left bg-white hover:bg-gray-50 transition-colors"
                   >
-                    <h3 className="text-xl font-medium">{item.question}</h3>
+                    <div className="flex items-center gap-3">
+                      <h3 className="text-xl font-medium">{item.question}</h3>
+                      {item.badge && (
+                        <Badge variant="outline" className="bg-ljv-gold/10 text-ljv-gold border-ljv-gold/30">
+                          {item.badge}
+                        </Badge>
+                      )}
+                    </div>
                     {openItems.includes(index) ? (
                       <ChevronUp className="flex-shrink-0 text-ljv-gold" />
                     ) : (
@@ -219,6 +290,13 @@ const FAQ = () => {
                   {openItems.includes(index) && (
                     <div className="p-5 bg-gray-50">
                       <p className="text-gray-700">{item.answer}</p>
+                      {activeCategory === 'initiatives' && (
+                        <div className="mt-4">
+                          <Link to="/manifeste" className="text-ljv-navy hover:text-ljv-gold flex items-center gap-2">
+                            En savoir plus sur notre manifeste <ExternalLink size={16} />
+                          </Link>
+                        </div>
+                      )}
                     </div>
                   )}
                 </motion.div>
