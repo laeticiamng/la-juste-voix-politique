@@ -11,10 +11,10 @@ const Hero: React.FC = () => {
             <span className="title-gradient">La Juste Voix</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
-            Un programme politique qui vise à restaurer la justice, la dignité et l'égalité au cœur de notre République.
+            Un programme politique qui remet la justice, la dignité et la contribution au centre de la République.
           </p>
           <blockquote className="italic text-xl md:text-2xl text-gray-600 mb-10 px-6 border-l-4 border-ljv-gold">
-            "L'économie doit servir l'Homme, et non l'inverse."
+            "Parce qu'un pays ne tient pas sur des privilèges, mais sur celles et ceux qui agissent."
           </blockquote>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link to="/manifeste" className="btn-primary">
