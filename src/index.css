@@ -1,6 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,33 +7,46 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
-
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 221.2 83.2% 53.3%;
     --primary-foreground: 210 40% 98%;
-
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
-
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
+    --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
   }
 }
 
@@ -43,42 +54,111 @@
   * {
     @apply border-border;
   }
-  
   body {
     @apply bg-background text-foreground;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
-@layer components {
-  .container {
-    @apply px-4 md:px-6 lg:px-8;
-  }
+/* Custom styles for La Juste Voix */
+:root {
+  --ljv-navy: #1A1F2C;
+  --ljv-gold: #D4AF37;
+  --ljv-red: #ea384c;
+}
 
-  .btn-primary {
-    @apply bg-ljv-navy text-white hover:bg-ljv-navy/90 px-6 py-3 rounded-md font-medium transition-colors;
-  }
+.text-ljv-navy {
+  color: var(--ljv-navy);
+}
 
-  .btn-secondary {
-    @apply bg-transparent border border-ljv-navy text-ljv-navy hover:bg-ljv-navy/5 px-6 py-3 rounded-md font-medium transition-colors;
-  }
+.text-ljv-gold {
+  color: var(--ljv-gold);
+}
 
-  .title-gradient {
-    @apply bg-gradient-to-r from-ljv-navy to-ljv-gold bg-clip-text text-transparent;
-  }
+.text-ljv-red {
+  color: var(--ljv-red);
+}
 
-  .block-number {
-    @apply text-4xl md:text-6xl font-bold text-ljv-gold opacity-80;
-  }
+.bg-ljv-navy {
+  background-color: var(--ljv-navy);
+}
 
-  .section {
-    @apply py-12 md:py-24;
-  }
+.bg-ljv-gold {
+  background-color: var(--ljv-gold);
+}
 
-  .fade-in {
-    @apply animate-fade-in;
+.bg-ljv-red {
+  background-color: var(--ljv-red);
+}
+
+.border-ljv-navy {
+  border-color: var(--ljv-navy);
+}
+
+.border-ljv-gold {
+  border-color: var(--ljv-gold);
+}
+
+.hover\:bg-ljv-gold:hover {
+  background-color: var(--ljv-gold);
+}
+
+.hover\:text-ljv-gold:hover {
+  color: var(--ljv-gold);
+}
+
+/* Button styles */
+.btn-primary {
+  @apply inline-flex items-center px-6 py-3 bg-ljv-navy text-white font-medium rounded-md shadow-sm hover:bg-ljv-gold transition-colors duration-300;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center px-6 py-3 bg-white text-ljv-navy font-medium rounded-md shadow-sm border border-gray-300 hover:bg-gray-50 hover:border-ljv-gold transition-colors duration-300;
+}
+
+/* Title gradient */
+.title-gradient {
+  @apply bg-gradient-to-r from-ljv-navy to-ljv-gold bg-clip-text text-transparent;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Block number styling */
+.block-number {
+  @apply text-4xl font-bold text-ljv-gold;
+}
+
+/* Section styling */
+.section {
+  @apply py-16;
+}
+
+/* Prose customization */
+.prose h2 {
+  @apply text-ljv-navy;
+}
+
+.prose a {
+  @apply text-ljv-gold hover:text-ljv-navy;
+}
+
+/* Add responsive tailwind classes */
+@responsive {
+  .grid-cols-auto-fill {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
 }
