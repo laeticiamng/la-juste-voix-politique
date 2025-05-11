@@ -11,6 +11,7 @@ import Bloc from "./pages/Bloc";
 import NotFound from "./pages/NotFound";
 import Revalorisations from "./pages/Revalorisations";
 import TaxBrackets from "./pages/TaxBrackets";
+import FAQ from "./pages/FAQ";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ function App() {
               <Route path="/manifeste" element={<Manifeste />} />
               <Route path="/revalorisations" element={<Revalorisations />} />
               <Route path="/fiscalite" element={<TaxBrackets />} />
+              <Route path="/faq" element={<FAQ />} />
               <Route path="/bloc/:id" element={<Bloc />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

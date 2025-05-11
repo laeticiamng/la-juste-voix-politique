@@ -50,6 +50,9 @@ const Header: React.FC = () => {
           <Link to="/revalorisations" className="text-gray-700 hover:text-ljv-navy transition-colors">
             Revalorisations
           </Link>
+          <Link to="/faq" className="text-gray-700 hover:text-ljv-navy transition-colors">
+            FAQ
+          </Link>
           <Link to="#" className="bg-ljv-navy text-white px-5 py-2 rounded-md hover:bg-ljv-navy/90 transition-colors">
             Soutenir
           </Link>
@@ -95,6 +98,13 @@ const Header: React.FC = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Revalorisations
+            </Link>
+            <Link 
+              to="/faq" 
+              className="block text-gray-700 hover:text-ljv-navy transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              FAQ
             </Link>
             <Link 
               to="#" 
