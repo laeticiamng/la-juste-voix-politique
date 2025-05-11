@@ -1,4 +1,3 @@
-
 export type RevalorisationCategory = {
   title: string;
   icon: string;
@@ -18,7 +17,7 @@ export const revalorisationsData: RevalorisationCategory[] = [
     color: "bg-red-100 text-red-800",
     items: [
       {
-        title: "Médecins internes",
+        title: "Médecins et internes en médecine",
         revalorisation: "+1 000 €"
       },
       {
