@@ -12,6 +12,7 @@ import NotFound from "./pages/NotFound";
 import Revalorisations from "./pages/Revalorisations";
 import TaxBrackets from "./pages/TaxBrackets";
 import FAQ from "./pages/FAQ";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ function App() {
               <Route path="/revalorisations" element={<Revalorisations />} />
               <Route path="/fiscalite" element={<TaxBrackets />} />
               <Route path="/faq" element={<FAQ />} />
+              <Route path="/contact" element={<Contact />} />
               <Route path="/bloc/:id" element={<Bloc />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

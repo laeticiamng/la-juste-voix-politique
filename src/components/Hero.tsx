@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, Calculator } from 'lucide-react';
+import { ArrowRight, BookOpen, Calculator, ChevronDown } from 'lucide-react';
 import { Button } from './ui/button';
 
 const Hero: React.FC = () => {
@@ -38,6 +38,12 @@ const Hero: React.FC = () => {
                 Barème fiscal
               </Link>
             </Button>
+          </div>
+          <div className="mt-12 flex justify-center">
+            <a href="#blocks" className="text-ljv-navy hover:text-ljv-gold transition-colors flex flex-col items-center">
+              <span className="text-sm mb-2">Découvrir les blocs</span>
+              <ChevronDown className="h-6 w-6 animate-bounce" />
+            </a>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Facebook, Twitter, Instagram, Youtube, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -14,6 +15,24 @@ const Footer: React.FC = () => {
             <p className="text-gray-300 text-sm">
               Un programme politique pour restaurer la justice, la dignité et l'égalité au cœur de notre République.
             </p>
+            <div className="flex space-x-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+                <Facebook size={20} />
+                <span className="sr-only">Facebook</span>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+                <Twitter size={20} />
+                <span className="sr-only">Twitter</span>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+                <Instagram size={20} />
+                <span className="sr-only">Instagram</span>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+                <Youtube size={20} />
+                <span className="sr-only">Youtube</span>
+              </a>
+            </div>
           </div>
           
           <div>
@@ -24,6 +43,7 @@ const Footer: React.FC = () => {
               <li><Link to="/revalorisations" className="text-gray-300 hover:text-white transition-colors">Revalorisations</Link></li>
               <li><Link to="/fiscalite" className="text-gray-300 hover:text-white transition-colors">Fiscalité</Link></li>
               <li><Link to="/faq" className="text-gray-300 hover:text-white transition-colors">FAQ</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
           
@@ -51,7 +71,8 @@ const Footer: React.FC = () => {
                   placeholder="Votre email" 
                   className="px-3 py-2 bg-white bg-opacity-10 rounded-md focus:outline-none focus:ring-2 focus:ring-ljv-gold text-white placeholder-gray-300"
                 />
-                <button className="bg-ljv-gold text-ljv-navy px-3 py-2 rounded-md hover:bg-opacity-90 transition-colors">
+                <button className="bg-ljv-gold text-ljv-navy px-3 py-2 rounded-md hover:bg-opacity-90 transition-colors flex items-center justify-center">
+                  <Mail className="mr-2 h-4 w-4" />
                   S'inscrire
                 </button>
               </div>
@@ -64,7 +85,7 @@ const Footer: React.FC = () => {
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Link to="#" className="text-gray-300 hover:text-white transition-colors">Mentions légales</Link>
             <Link to="#" className="text-gray-300 hover:text-white transition-colors">Politique de confidentialité</Link>
-            <Link to="#" className="text-gray-300 hover:text-white transition-colors">Contact</Link>
+            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link>
           </div>
         </div>
       </div>
