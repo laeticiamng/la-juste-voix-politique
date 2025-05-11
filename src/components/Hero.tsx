@@ -1,6 +1,8 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight, BookOpen, Calculator } from 'lucide-react';
+import { Button } from './ui/button';
 
 const Hero: React.FC = () => {
   return (
@@ -17,15 +19,25 @@ const Hero: React.FC = () => {
             "Parce qu'un pays ne tient pas sur des privilèges, mais sur celles et ceux qui agissent."
           </blockquote>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link to="/manifeste" className="btn-primary">
-              Lire le manifeste
-            </Link>
-            <Link to="/revalorisations" className="btn-secondary">
-              Qui va être revalorisé ?
-            </Link>
-            <Link to="/fiscalite" className="btn-secondary">
-              Barème fiscal
-            </Link>
+            <Button asChild className="bg-ljv-navy hover:bg-ljv-gold text-white transition-colors duration-300 text-base px-6 py-5 h-auto">
+              <Link to="/manifeste" className="flex items-center gap-2">
+                <BookOpen className="h-5 w-5" />
+                Lire le manifeste
+                <ArrowRight className="h-4 w-4 ml-1" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" className="border-gray-300 hover:border-ljv-gold text-ljv-navy hover:bg-white text-base px-6 py-5 h-auto">
+              <Link to="/revalorisations" className="flex items-center gap-2">
+                <ArrowRight className="h-4 w-4" />
+                Qui va être revalorisé ?
+              </Link>
+            </Button>
+            <Button asChild variant="outline" className="border-gray-300 hover:border-ljv-gold text-ljv-navy hover:bg-white text-base px-6 py-5 h-auto">
+              <Link to="/fiscalite" className="flex items-center gap-2">
+                <Calculator className="h-5 w-5" />
+                Barème fiscal
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
