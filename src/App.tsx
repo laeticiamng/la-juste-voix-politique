@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Manifeste from "./pages/Manifeste";
 import Bloc from "./pages/Bloc";
 import NotFound from "./pages/NotFound";
+import Revalorisations from "./pages/Revalorisations";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/manifeste" element={<Manifeste />} />
           <Route path="/bloc/:id" element={<Bloc />} />
+          <Route path="/revalorisations" element={<Revalorisations />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

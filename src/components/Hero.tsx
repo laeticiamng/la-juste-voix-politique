@@ -20,8 +20,8 @@ const Hero: React.FC = () => {
             <Link to="/manifeste" className="btn-primary">
               Lire le manifeste
             </Link>
-            <Link to="#blocks" className="btn-secondary">
-              Découvrir les blocs
+            <Link to="/revalorisations" className="btn-secondary">
+              Qui va être revalorisé ?
             </Link>
           </div>
         </div>
