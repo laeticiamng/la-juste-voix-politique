@@ -1,3 +1,4 @@
+
 export type RevalorisationCategory = {
   title: string;
   icon: string;
@@ -37,7 +38,7 @@ export const revalorisationsData: RevalorisationCategory[] = [
         revalorisation: "SMIC horaire (5h/½ journée – 10h/jour)"
       },
       {
-        title: "Médecins généralistes (libéraux)",
+        title: "Médecins libéraux (généralistes et spécialistes)",
         revalorisation: "Consultation revalorisée à 50 €, 100 % Sécu"
       }
     ]
