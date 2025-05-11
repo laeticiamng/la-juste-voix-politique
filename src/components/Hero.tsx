@@ -23,6 +23,9 @@ const Hero: React.FC = () => {
             <Link to="/revalorisations" className="btn-secondary">
               Qui va être revalorisé ?
             </Link>
+            <Link to="/fiscalite" className="btn-secondary">
+              Barème fiscal
+            </Link>
           </div>
         </div>
       </div>
