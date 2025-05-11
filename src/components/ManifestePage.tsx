@@ -38,8 +38,25 @@ const ManifestePage: React.FC = () => {
         </div>
         
         <div className="space-y-6 text-gray-700">
-          {manifesteContent.content.split('\n\n').map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
+          {manifesteContent.content.split('⸻').map((section, index) => (
+            <div key={index} className="mb-8">
+              {index > 0 && <hr className="my-6 border-t-2 border-gray-200" />}
+              {section.split('\n\n').map((paragraph, pIndex) => (
+                <div key={pIndex} className="mb-6">
+                  {paragraph.includes('	•') ? (
+                    <ul className="list-disc pl-6 space-y-2">
+                      {paragraph.split('\n').map((line, lIndex) => (
+                        <li key={lIndex} className="text-gray-700">
+                          {line.replace(/^\s*•\s*/, '')}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-gray-700">{paragraph}</p>
+                  )}
+                </div>
+              ))}
+            </div>
           ))}
         </div>
       </div>
