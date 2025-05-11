@@ -1,10 +1,9 @@
-
 import React from 'react';
 import Hero from '../components/Hero';
 import BlockCard from '../components/BlockCard';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { blocksData } from '../lib/data';
+import { blocksData } from '../lib';
 
 const Index = () => {
   return (

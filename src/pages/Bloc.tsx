@@ -1,10 +1,9 @@
-
 import React, { useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import BlockContent from '../components/BlockContent';
-import { blocksData } from '../lib/data';
+import { blocksData } from '../lib';
 
 const Bloc = () => {
   const { id } = useParams<{ id: string }>();

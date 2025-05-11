@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BlockData } from '../lib/data';
+import { BlockData } from '../lib';
 
 interface BlockCardProps {
   block: BlockData;

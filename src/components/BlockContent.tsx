@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { BlockData } from '../lib/data';
+import { BlockData } from '../lib';
 
 interface BlockContentProps {
   block: BlockData;

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { manifesteContent, blocksData } from '../lib/data';
+import { manifesteContent, blocksData } from '../lib';
 import { Gavel, Heart, GraduationCap, Coins, Home, Earth, Users, Shield } from 'lucide-react';
 
 const getBlockIcon = (id: number) => {
