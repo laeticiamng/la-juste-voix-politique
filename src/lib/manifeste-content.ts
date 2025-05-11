@@ -90,8 +90,6 @@ Notre programme s'articule autour de 14 grands blocs thématiques qui couvrent l
   conclusion: `Ce programme n'est pas un rêve.
 C'est un plan. Structuré, financé, applicable.
 
-⸻
-
 Il repose sur une idée simple mais fondamentale :
 
 👉 Ceux qui ont le plus de moyens doivent contribuer le plus.
@@ -108,8 +106,6 @@ J'écoute.
 Je comprends.
 Et j'agis.
 
-⸻
-
 Je ne veux pas punir une minorité.
 Je veux responsabiliser ceux qui ont tout reçu
 pour qu'ils aident à reconstruire ce qui, aujourd'hui, se fissure.
@@ -120,11 +116,10 @@ Je veux une France :
 	• Humaine dans ses priorités
 	• Souveraine dans ses décisions
 
-⸻
-
 Ce programme, c'est La Juste Voix.
 Ce n'est pas la voix la plus forte.
 C'est la voix la plus claire.
 Celle qui dit enfin ce que beaucoup pensent tout bas :
 👉 "Le temps de la justice contributive est venu."`
 };
+
