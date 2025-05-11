@@ -77,7 +77,8 @@ export default {
 			},
 			fontFamily: {
 				sans: ['SF Pro Display', 'system-ui', 'sans-serif'],
-				serif: ['Playfair Display', 'Georgia', 'serif']
+				serif: ['Playfair Display', 'Georgia', 'serif'],
+				playfair: ['Playfair Display', 'serif']
 			},
 			keyframes: {
 				'accordion-down': {
