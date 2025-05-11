@@ -87,5 +87,44 @@ Mais on a demandé plus à ceux qui pouvaient."
 Nous croyons en une société où chaque citoyen peut vivre dignement de son travail, où les services publics sont accessibles à tous, et où la transition écologique est une opportunité plutôt qu'une contrainte.
   
 Notre programme s'articule autour de 14 grands blocs thématiques qui couvrent l'ensemble des défis auxquels notre pays fait face.`,
-  conclusion: `// ... keep existing code (conclusion text)`
+  conclusion: `Ce programme n'est pas un rêve.
+C'est un plan. Structuré, financé, applicable.
+
+⸻
+
+Il repose sur une idée simple mais fondamentale :
+
+👉 Ceux qui ont le plus de moyens doivent contribuer le plus.
+👉 Et ceux qui tiennent ce pays à bout de bras doivent vivre dignement.
+
+Je ne propose pas une société égalitariste.
+Je propose une société équitable :
+	• Où l'on valorise l'effort sans mépriser la fragilité
+	• Où l'on protège sans infantiliser
+	• Où l'on redistribue sans culpabiliser
+
+Je ne fais pas semblant d'écouter.
+J'écoute.
+Je comprends.
+Et j'agis.
+
+⸻
+
+Je ne veux pas punir une minorité.
+Je veux responsabiliser ceux qui ont tout reçu
+pour qu'ils aident à reconstruire ce qui, aujourd'hui, se fissure.
+
+Je veux une France :
+	• Juste dans ses valeurs
+	• Saine dans ses finances
+	• Humaine dans ses priorités
+	• Souveraine dans ses décisions
+
+⸻
+
+Ce programme, c'est La Juste Voix.
+Ce n'est pas la voix la plus forte.
+C'est la voix la plus claire.
+Celle qui dit enfin ce que beaucoup pensent tout bas :
+👉 "Le temps de la justice contributive est venu."`
 };
