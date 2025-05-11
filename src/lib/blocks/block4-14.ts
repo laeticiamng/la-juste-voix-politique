@@ -1,20 +1,4 @@
-
 import { BlockData } from '../types';
-
-export const block4: BlockData = {
-  id: 4,
-  title: "Éducation & Formation de vie",
-  subtitle: "Investir dans notre jeunesse",
-  description: "L'éducation est la clé de l'émancipation individuelle et collective.",
-  measures: [
-    "Réduction des effectifs en classe à 20 élèves maximum",
-    "Revalorisation du métier d'enseignant",
-    "Gratuité réelle de l'école publique"
-  ],
-  quotes: [
-    "Chaque élève a droit à l'ambition. Chaque parcours mérite le respect."
-  ]
-};
 
 export const block5: BlockData = {
   id: 5,
