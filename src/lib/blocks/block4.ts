@@ -1,11 +1,10 @@
-
-import { BlockData } from '../types';
+import { BlockData, DetailedMeasure } from '../types';
 
 export const block4: BlockData = {
   id: 4,
   title: "Éducation & Formation de vie",
   subtitle: "Investir dans notre jeunesse",
-  description: "L'éducation est la clé de l'émancipation individuelle et collective. Notre système éducatif doit permettre à chaque enfant de développer son potentiel, quelle que soit son origine sociale. Nous refusons une école qui trie trop tôt, qui enferme dans des cases, qui décourage les parcours atypiques. Nous proposons une école qui comprend, valorise, oriente avec bienveillance mais aussi exigence. Une école qui ne forme pas seulement des salariés, mais des citoyens confiants, capables d'agir dans le monde.",
+  description: "Refuser une école qui trie trop tôt, qui enferme dans des cases, qui décourage les parcours atypiques. Proposer une école qui comprend, valorise, oriente avec bienveillance mais aussi exigence. Créer une école qui ne forme pas seulement des salariés, mais des citoyens confiants, capables d'agir dans le monde.",
   measures: [
     "Référents \"Projet & Ambition\" dans chaque établissement",
     "Orientation multiple & double cursus dans les filières professionnelles",
@@ -107,5 +106,5 @@ export const block4: BlockData = {
       financing: "Budget de l'État et plan d'investissement dans l'éducation"
     }
   ],
-  conclusion: "Nous proposons une école qui sème l'ambition dès le collège, qui valorise les chemins non linéaires, qui offre des secondes chances sans stigmatiser, et qui prépare au réel, pas seulement aux diplômes. Nous transformons l'école en espace de liberté intérieure, en tremplin de projet, et en communauté qui accompagne. Nous ne changeons pas l'école pour qu'elle fasse rêver, mais pour qu'elle ne brise plus l'élan."
+  conclusion: "Proposer une école qui sème l'ambition dès le collège, qui valorise les chemins non linéaires, qui offre des secondes chances sans stigmatiser, et qui prépare au réel, pas seulement aux diplômes. Transformer l'école en espace de liberté intérieure, en tremplin de projet, et en communauté qui accompagne. Ne pas changer l'école pour qu'elle fasse rêver, mais pour qu'elle ne brise plus l'élan."
 };

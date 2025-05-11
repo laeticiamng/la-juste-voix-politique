@@ -1,17 +1,16 @@
-
 import { BlockData } from '../types';
 
 export const block1: BlockData = {
   id: 1,
   title: "Travail & Valeur",
   subtitle: "Reconnaître toutes les formes de contribution",
-  description: "Nous refusons l'idée que seule l'activité salariale mérite reconnaissance. Notre modèle valorise tout engagement productif, éducatif, social ou créatif. Nous valorisons l'effort, l'intention de progression et l'utilité réelle, même sans contrat de travail formel.",
+  description: "Refuser l'idée que seule l'activité salariale mérite reconnaissance. Valoriser tout engagement productif, éducatif, social ou créatif. Reconnaître l'effort, l'intention de progression et l'utilité réelle, même sans contrat de travail formel.",
   measures: [
-    "Prime de Progression Individuelle (PPI) - Soutien financier pour les personnes en transition (formation, reconversion, création de projet utile)",
-    "Statut de Contributeur Actif (SCA) - Reconnaissance officielle des engagements non rémunérés mais essentiels",
+    "Prime de Progression Individuelle (PPI) - Soutenir financièrement les personnes en transition (formation, reconversion, création de projet utile)",
+    "Statut de Contributeur Actif (SCA) - Reconnaître officiellement les engagements non rémunérés mais essentiels",
     "Droit au cumul d'activités et de projets - Permettre le développement d'activités secondaires légales",
-    "Compte de Valeur Créée (CVC) - Attribution de points sociaux pour les actions utiles non salariées",
-    "Réseau des Référents Ambition - Accompagnement humain et bienveillant pour chaque citoyen engagé"
+    "Compte de Valeur Créée (CVC) - Attribuer des points sociaux pour les actions utiles non salariées",
+    "Réseau des Référents Ambition - Accompagner humainement et avec bienveillance chaque citoyen engagé"
   ],
   quotes: [
     "La dignité commence quand on reconnaît ce que chacun peut apporter."
@@ -74,5 +73,5 @@ export const block1: BlockData = {
       financing: "Redéploiement partiel de Pôle Emploi + FSE+"
     }
   ],
-  conclusion: "Nous proposons une nouvelle vision du travail : moins statique et plus évolutive, moins stigmatisante et plus humaine, moins centrée sur le contrat et plus ouverte à la contribution. Nous transformons l'idée même d'utilité sociale et proposons un État qui reconnaît, soutient et encourage, plutôt qu'un État qui juge, classe et abandonne."
+  conclusion: "Proposer une nouvelle vision du travail : moins statique et plus évolutive, moins stigmatisante et plus humaine, moins centrée sur le contrat et plus ouverte à la contribution. Transformer l'idée même d'utilité sociale et proposer un État qui reconnaît, soutient et encourage, plutôt qu'un État qui juge, classe et abandonne."
 };

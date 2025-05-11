@@ -1,11 +1,10 @@
-
 import { BlockData } from '../types';
 
 export const block2: BlockData = {
   id: 2,
   title: "Justice pénale & sociale",
   subtitle: "Équité et réinsertion au cœur du système",
-  description: "Nous refusons l'illusion d'égalité qui traite de manière identique des personnes inégalement armées dans la vie. Nous proposons une justice proportionnée, réparatrice, humanisée, qui ne cède ni au laxisme, ni à la brutalité, qui répare plutôt que de casser, qui prépare l'avenir au lieu de figer le passé.",
+  description: "Refuser l'illusion d'égalité qui traite de manière identique des personnes inégalement armées dans la vie. Proposer une justice proportionnée, réparatrice, humanisée, qui ne cède ni au laxisme, ni à la brutalité, qui répare plutôt que de casser, qui prépare l'avenir au lieu de figer le passé.",
   measures: [
     "La Peine à Impact Équivalent (PIE) - Adapter la peine à la réalité de vie de la personne condamnée, pour qu'elle soit juste dans ses effets",
     "Observatoire Citoyen de la Justice Sociale - Évaluer la justice non seulement dans les textes, mais dans ses effets concrets sur les citoyens",
@@ -89,5 +88,5 @@ export const block2: BlockData = {
       ]
     }
   ],
-  conclusion: "Nous proposons une justice qui punit sans briser, qui responsabilise sans humilier, qui protège sans oppresser, qui éduque sans infantiliser. Nous ne parlons pas de justice abstraite. Nous proposons une justice à hauteur de terrain, à hauteur d'humain, à hauteur de République."
+  conclusion: "Proposer une justice qui punit sans briser, qui responsabilise sans humilier, qui protège sans oppresser, qui éduque sans infantiliser. Ne pas parler de justice abstraite. Proposer une justice à hauteur de terrain, à hauteur d'humain, à hauteur de République."
 };

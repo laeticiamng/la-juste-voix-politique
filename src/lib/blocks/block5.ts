@@ -1,11 +1,10 @@
-
 import { BlockData, DetailedMeasure } from '../types';
 
 export const block5: BlockData = {
   id: 5,
   title: "Économie & Fiscalité juste",
   subtitle: "Un système économique au service de tous",
-  description: "Tu refuses une fiscalité qui punit le travail mais épargne la rente. Tu proposes une fiscalité du mérite, de la création utile, de la contribution réelle. Tu ne veux pas \"faire payer les riches\", tu veux responsabiliser ceux qui accumulent sans agir, et soulager ceux qui construisent sans relâche.",
+  description: "Refuser une fiscalité qui punit le travail mais épargne la rente. Proposer une fiscalité du mérite, de la création utile, de la contribution réelle. Ne pas vouloir \"faire payer les riches\", mais responsabiliser ceux qui accumulent sans agir, et soulager ceux qui construisent sans relâche.",
   measures: [
     "Nouvelle grille d'impôt sur le revenu : fiscalité du mérite",
     "CNJP : Contribution Nationale de Justice Patrimoniale",
@@ -106,5 +105,5 @@ export const block5: BlockData = {
       ]
     }
   ],
-  conclusion: "Une économie qui protège les créateurs de valeur, qui ne punit pas l'innovation, qui responsabilise la rente silencieuse, et qui libère des ressources massives, sans austérité. Tu ne parles pas d'économie punitive. Tu parles d'économie équitable, ambitieuse et reconstruite."
+  conclusion: "Proposer une économie qui protège les créateurs de valeur, qui ne punit pas l'innovation, qui responsabilise la rente silencieuse, et qui libère des ressources massives, sans austérité. Ne pas parler d'économie punitive. Parler d'économie équitable, ambitieuse et reconstruite."
 };

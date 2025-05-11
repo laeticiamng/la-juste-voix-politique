@@ -1,11 +1,10 @@
-
 import { BlockData } from '../types';
 
 export const block3: BlockData = {
   id: 3,
   title: "Santé & Épanouissement personnel",
   subtitle: "Un système de santé accessible et préventif",
-  description: "Tu refuses une vision de la santé centrée uniquement sur le corps ou l'hôpital. Tu proposes une santé globale, humaine, accessible, préventive, qui prend en compte la souffrance mentale, la solitude, la précarité, l'usure. Tu assumes que la santé publique ne peut pas fonctionner sans lien social, ni sans souffle collectif.",
+  description: "Refuser une vision de la santé centrée uniquement sur le corps ou l'hôpital. Proposer une santé globale, humaine, accessible, préventive, qui prend en compte la souffrance mentale, la solitude, la précarité, l'usure. Assumer que la santé publique ne peut pas fonctionner sans lien social, ni sans souffle collectif.",
   measures: [
     "Crédit Santé Mentale Universel - Offrir à tous les Français un accès réel à un soutien psychologique",
     "Prévention Active & Populaire - Faire de la prévention une présence joyeuse, visible, accessible partout",
@@ -77,5 +76,5 @@ export const block3: BlockData = {
       impact: "Travailler pour soi, c'est déjà travailler pour la France."
     }
   ],
-  conclusion: "Tu proposes une santé qui ne s'arrête pas à l'hôpital, qui commence dans le souffle, le lien, la reconnaissance, qui soigne le corps, mais aussi l'élan intérieur. Tu proposes une vision du travail comme un moteur d'estime de soi, comme un outil de reconstruction, comme un socle de réintégration. Tu ne soignes pas les symptômes. Tu soignes la société."
+  conclusion: "Proposer une santé qui ne s'arrête pas à l'hôpital, qui commence dans le souffle, le lien, la reconnaissance, qui soigne le corps, mais aussi l'élan intérieur. Proposer une vision du travail comme un moteur d'estime de soi, comme un outil de reconstruction, comme un socle de réintégration. Ne pas soigner les symptômes. Soigner la société."
 };
