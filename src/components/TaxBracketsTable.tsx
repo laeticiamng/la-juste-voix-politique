@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { taxBrackets, taxBracketsContent } from '@/lib/tax-brackets';
+import { Euro, TrendingUp, Shield } from 'lucide-react';
 
 const formatAmount = (amount: number | null): string => {
   if (amount === null) return '∞';
@@ -58,6 +58,92 @@ const TaxBracketsTable: React.FC = () => {
           sans pour autant décourager l'initiative ou la création de richesse.
           Il concentre l'effort sur ceux qui peuvent contribuer sans impact sur leur niveau de vie.
         </p>
+      </div>
+      
+      {/* Nouveau barème d'impôt sur le revenu */}
+      <div className="mt-12 border-t pt-8">
+        <h2 className="text-3xl font-serif font-bold mb-4 text-center">
+          Nouvelle Fiscalité du Mérite
+        </h2>
+        
+        <div className="prose prose-lg mx-auto mb-8 text-gray-700">
+          <p>
+            Notre proposition fiscale repose sur un principe simple : <strong>valoriser le mérite et l'effort</strong>, 
+            et non pas pénaliser le travail. Nous proposons un système qui récompense ceux qui créent de la valeur 
+            tout en maintenant une contribution juste de ceux qui détiennent des patrimoines importants.
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
+            <h3 className="text-xl font-serif font-bold mb-3 flex items-center gap-2">
+              <Euro className="text-ljv-gold" size={24} />
+              Fiscalité du travail
+            </h3>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>Diminution des taux marginaux sur les revenus du travail</li>
+              <li>Abattements spécifiques pour les créateurs d'entreprise</li>
+              <li>Valorisation des revenus issus de l'innovation</li>
+              <li>Protection des PME et entreprises familiales</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
+            <h3 className="text-xl font-serif font-bold mb-3 flex items-center gap-2">
+              <TrendingUp className="text-ljv-gold" size={24} />
+              Fiscalité du patrimoine
+            </h3>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>Contribution progressive sur les grands patrimoines</li>
+              <li>Distinction entre capital productif et non-productif</li>
+              <li>Taxation des revenus financiers passifs</li>
+              <li>Imposition des très grandes fortunes dormantes</li>
+            </ul>
+          </div>
+        </div>
+        
+        {/* Protection contre l'exil fiscal */}
+        <div className="bg-white rounded-lg shadow-sm border-ljv-gold border p-6 mb-8">
+          <h3 className="text-xl font-serif font-bold mb-4 flex items-center gap-2">
+            <Shield className="text-ljv-navy" size={24} />
+            Protection contre l'évasion fiscale
+          </h3>
+          
+          <div className="prose prose-lg text-gray-700">
+            <p className="mb-4">
+              Notre système intègre des mécanismes robustes pour éviter l'exil fiscal des grandes fortunes :
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-4">
+              <ul className="list-disc pl-5 space-y-2">
+                <li>Imposition différée lors d'un départ à l'étranger pour motifs fiscaux</li>
+                <li>Suivi des patrimoines pendant 10 ans après le départ fiscal</li>
+                <li>Traçabilité des structures de détention (holdings, trusts, etc.)</li>
+              </ul>
+              
+              <ul className="list-disc pl-5 space-y-2">
+                <li>Coopération internationale renforcée pour le partage d'informations</li>
+                <li>Dispositifs spécifiques pour les entreprises familiales</li>
+                <li>Protection des fondateurs d'entreprises pour éviter la fuite des talents</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div className="bg-ljv-navy text-white p-6 rounded-lg">
+          <h3 className="text-xl font-serif font-bold mb-3">Notre vision</h3>
+          <p className="mb-4">
+            Une fiscalité équilibrée qui génère les ressources nécessaires à notre modèle social sans décourager 
+            l'entrepreneuriat et l'innovation. Nous voulons une France qui :
+          </p>
+          
+          <ul className="grid md:grid-cols-2 gap-3">
+            <li className="border border-ljv-gold/30 rounded p-3">Récompense le mérite plutôt que la rente</li>
+            <li className="border border-ljv-gold/30 rounded p-3">Valorise l'effort plutôt que la spéculation</li>
+            <li className="border border-ljv-gold/30 rounded p-3">Protège ses talents entrepreneuriaux</li>
+            <li className="border border-ljv-gold/30 rounded p-3">Maintient sa souveraineté fiscale</li>
+          </ul>
+        </div>
       </div>
       
       {/* CNJP Section */}
