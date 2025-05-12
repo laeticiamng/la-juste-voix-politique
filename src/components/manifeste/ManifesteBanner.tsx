@@ -12,7 +12,7 @@ const ManifesteBanner: React.FC = () => {
         Une fiscalité du mérite, pas de la rente
       </p>
       <p className="text-md font-serif text-gray-500">
-        Récompenser le travail et l'innovation, éviter la fuite des talents
+        Récompenser le travail et l'innovation, protéger les talents productifs
       </p>
     </div>
   );

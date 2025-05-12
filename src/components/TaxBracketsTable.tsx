@@ -84,7 +84,7 @@ const TaxBracketsTable: React.FC = () => {
           
           <p className="text-center mb-6 text-gray-700">
             Cette grille vise à soulager les classes moyennes et les talents intermédiaires, 
-            maintenir une contribution forte des ultra-riches et introduire davantage de progressivité.
+            maintenir une contribution forte des ultra-riches et introduire davantage de progressivité pour plus de justice.
           </p>
           
           <div className="overflow-x-auto">
@@ -92,7 +92,7 @@ const TaxBracketsTable: React.FC = () => {
               <TableHeader>
                 <TableRow>
                   <TableHead className="w-1/2">Revenu imposable annuel</TableHead>
-                  <TableHead className="w-1/2 text-center">Taux marginal appliqué</TableHead>
+                  <TableHead className="w-1/2 text-center">Taux marginal optimisé</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -105,20 +105,28 @@ const TaxBracketsTable: React.FC = () => {
                   <TableCell className="font-bold text-center text-ljv-navy">10 %</TableCell>
                 </TableRow>
                 <TableRow className="bg-gray-50">
-                  <TableCell>30 001 € – 50 000 €</TableCell>
-                  <TableCell className="font-bold text-center text-ljv-navy">20 %</TableCell>
+                  <TableCell>30 001 € – 40 000 €</TableCell>
+                  <TableCell className="font-bold text-center text-ljv-navy">17 %</TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>40 001 € – 50 000 €</TableCell>
+                  <TableCell className="font-bold text-center text-ljv-navy">22 %</TableCell>
+                </TableRow>
+                <TableRow className="bg-gray-50">
                   <TableCell>50 001 € – 85 000 €</TableCell>
                   <TableCell className="font-bold text-center text-ljv-navy">30 %</TableCell>
                 </TableRow>
-                <TableRow className="bg-gray-50">
+                <TableRow>
                   <TableCell>85 001 € – 150 000 €</TableCell>
-                  <TableCell className="font-bold text-center text-ljv-navy">35 %</TableCell>
+                  <TableCell className="font-bold text-center text-ljv-navy">34 %</TableCell>
+                </TableRow>
+                <TableRow className="bg-gray-50">
+                  <TableCell>150 001 € – 200 000 €</TableCell>
+                  <TableCell className="font-bold text-center text-ljv-navy">38 %</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>150 001 € – 250 000 €</TableCell>
-                  <TableCell className="font-bold text-center text-ljv-navy">40 %</TableCell>
+                  <TableCell>200 001 € – 250 000 €</TableCell>
+                  <TableCell className="font-bold text-center text-ljv-navy">41 %</TableCell>
                 </TableRow>
                 <TableRow className="bg-gray-50">
                   <TableCell>250 001 € – 500 000 €</TableCell>

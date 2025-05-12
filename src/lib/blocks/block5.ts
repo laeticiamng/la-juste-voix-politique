@@ -28,10 +28,12 @@ export const block5: BlockData = {
       details: [
         "Tranche jusqu'à 15 000 € : 0%",
         "Tranche 15 001 - 30 000 € : 10%",
-        "Tranche 30 001 - 50 000 € : 20%",
+        "Tranche 30 001 - 40 000 € : 17%",
+        "Tranche 40 001 - 50 000 € : 22%",
         "Tranche 50 001 - 85 000 € : 30%",
-        "Tranche 85 001 - 150 000 € : 35%",
-        "Tranche 150 001 - 250 000 € : 40%",
+        "Tranche 85 001 - 150 000 € : 34%",
+        "Tranche 150 001 - 200 000 € : 38%",
+        "Tranche 200 001 - 250 000 € : 41%",
         "Tranche 250 001 - 500 000 € : 45%",
         "Tranche 500 001 - 1 000 000 € : 50%",
         "Tranche > 1 000 000 € : 55%"
