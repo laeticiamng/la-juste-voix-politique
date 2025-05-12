@@ -9,6 +9,8 @@ import TaxFeaturesGrid from './tax/TaxFeaturesGrid';
 import TaxEvasionProtection from './tax/TaxEvasionProtection';
 import TaxVision from './tax/TaxVision';
 import CNJPSection from './tax/CNJPSection';
+import CNJPUsageSection from './tax/CNJPUsageSection';
+import RetirementReformSection from './tax/RetirementReformSection';
 
 const TaxBracketsTable: React.FC = () => {
   return (
@@ -26,6 +28,10 @@ const TaxBracketsTable: React.FC = () => {
       
       {/* CNJP Section */}
       <CNJPSection />
+      
+      {/* Nouvelles sections */}
+      <CNJPUsageSection />
+      <RetirementReformSection />
     </div>
   );
 };
