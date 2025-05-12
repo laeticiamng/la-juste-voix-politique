@@ -8,8 +8,11 @@ const ManifesteBanner: React.FC = () => {
       <p className="text-2xl font-serif italic text-gray-700 mb-2">
         "Pour une République juste et digne"
       </p>
-      <p className="text-lg font-serif text-gray-600">
+      <p className="text-lg font-serif text-gray-600 mb-2">
         Une fiscalité du mérite, pas de la rente
+      </p>
+      <p className="text-md font-serif text-gray-500">
+        Récompenser le travail et l'innovation, éviter la fuite des talents
       </p>
     </div>
   );

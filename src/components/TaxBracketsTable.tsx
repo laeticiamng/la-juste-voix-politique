@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { taxBrackets, taxBracketsContent } from '@/lib/tax-brackets';
-import { Euro, TrendingUp, Shield } from 'lucide-react';
+import { Euro, Percent, ArrowDown, ArrowUp } from 'lucide-react';
 
 const formatAmount = (amount: number | null): string => {
   if (amount === null) return '∞';
@@ -74,6 +75,76 @@ const TaxBracketsTable: React.FC = () => {
           </p>
         </div>
         
+        {/* Grille fiscale du revenu */}
+        <div className="bg-white rounded-xl shadow-sm border border-ljv-gold p-6 mb-8">
+          <h3 className="text-2xl font-serif font-bold mb-4 text-center flex items-center justify-center gap-2">
+            <Euro className="text-ljv-navy" size={28} />
+            Grille Fiscale du Revenu
+          </h3>
+          
+          <p className="text-center mb-6 text-gray-700">
+            Cette grille vise à soulager les classes moyennes et les talents intermédiaires, 
+            maintenir une contribution forte des ultra-riches et introduire davantage de progressivité.
+          </p>
+          
+          <div className="overflow-x-auto">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="w-1/2">Revenu imposable annuel</TableHead>
+                  <TableHead className="w-1/2 text-center">Taux marginal appliqué</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                <TableRow className="bg-gray-50">
+                  <TableCell>Jusqu'à 15 000 €</TableCell>
+                  <TableCell className="font-bold text-center text-ljv-navy">0 %</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>15 001 € – 30 000 €</TableCell>
+                  <TableCell className="font-bold text-center text-ljv-navy">10 %</TableCell>
+                </TableRow>
+                <TableRow className="bg-gray-50">
+                  <TableCell>30 001 € – 50 000 €</TableCell>
+                  <TableCell className="font-bold text-center text-ljv-navy">20 %</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>50 001 € – 85 000 €</TableCell>
+                  <TableCell className="font-bold text-center text-ljv-navy">30 %</TableCell>
+                </TableRow>
+                <TableRow className="bg-gray-50">
+                  <TableCell>85 001 € – 150 000 €</TableCell>
+                  <TableCell className="font-bold text-center text-ljv-navy">35 %</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>150 001 € – 250 000 €</TableCell>
+                  <TableCell className="font-bold text-center text-ljv-navy">40 %</TableCell>
+                </TableRow>
+                <TableRow className="bg-gray-50">
+                  <TableCell>250 001 € – 500 000 €</TableCell>
+                  <TableCell className="font-bold text-center text-ljv-navy">45 %</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>500 001 € – 1 000 000 €</TableCell>
+                  <TableCell className="font-bold text-center text-ljv-navy">50 %</TableCell>
+                </TableRow>
+                <TableRow className="bg-gray-50">
+                  <TableCell>Plus de 1 000 000 €</TableCell>
+                  <TableCell className="font-bold text-center text-ljv-navy">55 %</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </div>
+          
+          <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
+            <blockquote className="italic text-gray-700 text-lg">
+              "Quand tu gagnes 45 000 € par an, tu ne devrais pas être taxé comme si tu étais riche. 
+              Mais quand tu gagnes 1 million d'euros par an, contribuer à 55 %, ce n'est pas du vol.
+              C'est du respect pour ceux qui font vivre la République au quotidien."
+            </blockquote>
+          </div>
+        </div>
+        
         <div className="grid md:grid-cols-2 gap-6 mb-8">
           <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
             <h3 className="text-xl font-serif font-bold mb-3 flex items-center gap-2">
@@ -90,7 +161,7 @@ const TaxBracketsTable: React.FC = () => {
           
           <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
             <h3 className="text-xl font-serif font-bold mb-3 flex items-center gap-2">
-              <TrendingUp className="text-ljv-gold" size={24} />
+              <ArrowUp className="text-ljv-gold" size={24} />
               Fiscalité du patrimoine
             </h3>
             <ul className="list-disc pl-5 space-y-2">
@@ -105,7 +176,7 @@ const TaxBracketsTable: React.FC = () => {
         {/* Protection contre l'exil fiscal */}
         <div className="bg-white rounded-lg shadow-sm border-ljv-gold border p-6 mb-8">
           <h3 className="text-xl font-serif font-bold mb-4 flex items-center gap-2">
-            <Shield className="text-ljv-navy" size={24} />
+            <ArrowDown className="text-ljv-navy" size={24} />
             Protection contre l'évasion fiscale
           </h3>
           

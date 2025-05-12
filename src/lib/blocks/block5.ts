@@ -1,3 +1,4 @@
+
 import { BlockData, DetailedMeasure } from '../types';
 
 export const block5: BlockData = {
@@ -29,9 +30,11 @@ export const block5: BlockData = {
         "Tranche 15 001 - 30 000 € : 10%",
         "Tranche 30 001 - 50 000 € : 20%",
         "Tranche 50 001 - 85 000 € : 30%",
-        "Tranche 85 001 - 150 000 € : 33%",
-        "Tranche 150 001 - 250 000 € : 41%",
-        "Tranche > 250 000 € : 45% à 50%"
+        "Tranche 85 001 - 150 000 € : 35%",
+        "Tranche 150 001 - 250 000 € : 40%",
+        "Tranche 250 001 - 500 000 € : 45%",
+        "Tranche 500 001 - 1 000 000 € : 50%",
+        "Tranche > 1 000 000 € : 55%"
       ],
       impact: "Protection des talents productifs, éviter la fuite des cerveaux, renforcement de la progressivité sans effet de seuil absurde"
     },
