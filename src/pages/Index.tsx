@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import BlockCard from "../components/BlockCard";
 import Footer from "../components/Footer";
-import { blocks } from "../lib";
+import { blocksData } from "../lib/blocks";
 import CNJPSummary from "../components/home/CNJPSummary";
 
 const Index = () => {
@@ -24,7 +24,7 @@ const Index = () => {
             Les 14 blocs de la Juste Voix
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blocks.map((block) => (
+            {blocksData.map((block) => (
               <BlockCard key={block.id} block={block} />
             ))}
           </div>
