@@ -574,6 +574,162 @@ export type Database = {
         }
         Relationships: []
       }
+      notification_preferences: {
+        Row: {
+          category: string
+          created_at: string | null
+          delivery_methods: string[] | null
+          enabled: boolean | null
+          frequency: string | null
+          id: string
+          quiet_hours_end: string | null
+          quiet_hours_start: string | null
+          timezone: string | null
+          updated_at: string | null
+          user_id: string
+        }
+        Insert: {
+          category: string
+          created_at?: string | null
+          delivery_methods?: string[] | null
+          enabled?: boolean | null
+          frequency?: string | null
+          id?: string
+          quiet_hours_end?: string | null
+          quiet_hours_start?: string | null
+          timezone?: string | null
+          updated_at?: string | null
+          user_id: string
+        }
+        Update: {
+          category?: string
+          created_at?: string | null
+          delivery_methods?: string[] | null
+          enabled?: boolean | null
+          frequency?: string | null
+          id?: string
+          quiet_hours_end?: string | null
+          quiet_hours_start?: string | null
+          timezone?: string | null
+          updated_at?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      notification_templates: {
+        Row: {
+          category: string
+          created_at: string | null
+          default_delivery_methods: string[] | null
+          default_priority: string | null
+          id: string
+          message_template: string
+          name: string
+          title_template: string
+          updated_at: string | null
+        }
+        Insert: {
+          category: string
+          created_at?: string | null
+          default_delivery_methods?: string[] | null
+          default_priority?: string | null
+          id?: string
+          message_template: string
+          name: string
+          title_template: string
+          updated_at?: string | null
+        }
+        Update: {
+          category?: string
+          created_at?: string | null
+          default_delivery_methods?: string[] | null
+          default_priority?: string | null
+          id?: string
+          message_template?: string
+          name?: string
+          title_template?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      notifications: {
+        Row: {
+          action_link: string | null
+          action_text: string | null
+          category: string | null
+          channel: string | null
+          clicked_at: string | null
+          created_at: string | null
+          deeplink: string | null
+          delivered_at: string | null
+          delivery_method: string[] | null
+          expires_at: string | null
+          icon: string | null
+          id: string
+          image: string | null
+          message: string
+          metadata: Json | null
+          priority: string | null
+          read: boolean | null
+          scheduled_at: string | null
+          source_url: string | null
+          target_audience: string | null
+          title: string
+          type: string
+          user_id: string
+        }
+        Insert: {
+          action_link?: string | null
+          action_text?: string | null
+          category?: string | null
+          channel?: string | null
+          clicked_at?: string | null
+          created_at?: string | null
+          deeplink?: string | null
+          delivered_at?: string | null
+          delivery_method?: string[] | null
+          expires_at?: string | null
+          icon?: string | null
+          id?: string
+          image?: string | null
+          message: string
+          metadata?: Json | null
+          priority?: string | null
+          read?: boolean | null
+          scheduled_at?: string | null
+          source_url?: string | null
+          target_audience?: string | null
+          title: string
+          type: string
+          user_id: string
+        }
+        Update: {
+          action_link?: string | null
+          action_text?: string | null
+          category?: string | null
+          channel?: string | null
+          clicked_at?: string | null
+          created_at?: string | null
+          deeplink?: string | null
+          delivered_at?: string | null
+          delivery_method?: string[] | null
+          expires_at?: string | null
+          icon?: string | null
+          id?: string
+          image?: string | null
+          message?: string
+          metadata?: Json | null
+          priority?: string | null
+          read?: boolean | null
+          scheduled_at?: string | null
+          source_url?: string | null
+          target_audience?: string | null
+          title?: string
+          type?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       official_content_cache: {
         Row: {
           content: string
@@ -649,6 +805,60 @@ export type Database = {
           image_url?: string | null
           reactions?: number | null
           user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          bio: string | null
+          created_at: string | null
+          department: string | null
+          email: string | null
+          emotional_score: number | null
+          id: string
+          job_title: string | null
+          location: string | null
+          name: string | null
+          phone: string | null
+          preferences: Json | null
+          role: string | null
+          updated_at: string | null
+          website: string | null
+        }
+        Insert: {
+          avatar_url?: string | null
+          bio?: string | null
+          created_at?: string | null
+          department?: string | null
+          email?: string | null
+          emotional_score?: number | null
+          id: string
+          job_title?: string | null
+          location?: string | null
+          name?: string | null
+          phone?: string | null
+          preferences?: Json | null
+          role?: string | null
+          updated_at?: string | null
+          website?: string | null
+        }
+        Update: {
+          avatar_url?: string | null
+          bio?: string | null
+          created_at?: string | null
+          department?: string | null
+          email?: string | null
+          emotional_score?: number | null
+          id?: string
+          job_title?: string | null
+          location?: string | null
+          name?: string | null
+          phone?: string | null
+          preferences?: Json | null
+          role?: string | null
+          updated_at?: string | null
+          website?: string | null
         }
         Relationships: []
       }
@@ -855,6 +1065,14 @@ export type Database = {
         Args: Record<PropertyKey, never>
         Returns: undefined
       }
+      create_notification_from_template: {
+        Args: {
+          template_name: string
+          target_user_id: string
+          template_variables?: Json
+        }
+        Returns: string
+      }
       get_activity_stats: {
         Args: { p_start_date?: string; p_end_date?: string }
         Returns: {
@@ -879,6 +1097,10 @@ export type Database = {
           count: number
           timestamp_day: string
         }[]
+      }
+      mark_notifications_as_read: {
+        Args: { user_id_param: string; notification_ids?: string[] }
+        Returns: number
       }
       verify_invitation_token: {
         Args: { token_param: string }

@@ -6,6 +6,7 @@ import BlockCard from "../components/BlockCard";
 import Footer from "../components/Footer";
 import { blocksData } from "../lib/blocks";
 import CNJPSummary from "../components/home/CNJPSummary";
+import TestimonialsSection from "../components/home/TestimonialsSection";
 
 const Index = () => {
   return (
@@ -18,6 +19,9 @@ const Index = () => {
         <div className="container mx-auto px-4 my-16">
           <CNJPSummary />
         </div>
+
+        {/* Testimonials Section */}
+        <TestimonialsSection />
         
         <div id="blocks" className="container mx-auto px-4 py-16">
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-12 text-center">

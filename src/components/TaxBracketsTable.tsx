@@ -11,11 +11,16 @@ import TaxVision from './tax/TaxVision';
 import CNJPSection from './tax/CNJPSection';
 import CNJPUsageSection from './tax/CNJPUsageSection';
 import RetirementReformSection from './tax/RetirementReformSection';
+import TaxSimulator from './TaxSimulator';
 
 const TaxBracketsTable: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto py-8">
       <TaxBracketsHeader />
+      
+      {/* Simulateur interactif */}
+      <TaxSimulator />
+      
       <ContributionTable />
       <BaremeBenefit />
       
