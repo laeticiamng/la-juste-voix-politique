@@ -14,12 +14,14 @@ import {
 const CNJPSummary: React.FC = () => {
   // Affectations RÉELLES de la CNJP selon le programme
   const keyUsages = [
-    { description: "Revalorisation métiers publics (enseignants, soignants, policiers, etc.)", amount: "21-30 Md€/an", percentage: "30%" },
-    { description: "Retraites - Retour à 60 ans (système mixte, pension 60%)", amount: "17,5-25 Md€/an", percentage: "25%" },
-    { description: "FSCRD - Remboursement de la dette", amount: "14-20 Md€/an", percentage: "20%" },
-    { description: "Logement social + Plan zéro SDF", amount: "9,8-14 Md€/an", percentage: "14%" },
-    { description: "Transition écologique (rénovation, mobilité, emplois verts)", amount: "5,6-8 Md€/an", percentage: "8%" },
-    { description: "Santé mentale et prévention", amount: "2,1-3 Md€/an", percentage: "3%" },
+    { description: "Revalorisation métiers publics (enseignants, soignants, policiers, etc.)", amount: "22,5-32,5 Md€/an", percentage: "25%" },
+    { description: "Retraites - Retour à 60 ans (système mixte, pension 60%)", amount: "18-26 Md€/an", percentage: "20%" },
+    { description: "FSCRD - Remboursement de la dette publique", amount: "13,5-19,5 Md€/an", percentage: "15%" },
+    { description: "Logement social + Plan zéro SDF (500k logements)", amount: "9,9-14,3 Md€/an", percentage: "11%" },
+    { description: "Transition écologique (rénovation, mobilité, emplois verts)", amount: "7,2-10,4 Md€/an", percentage: "8%" },
+    { description: "Éducation hors salaires (formation, orientation, classes)", amount: "4,5-6,5 Md€/an", percentage: "5%" },
+    { description: "Santé mentale + santé mobile", amount: "3,6-5,2 Md€/an", percentage: "4%" },
+    { description: "Démocratie participative (budget citoyen, service civique)", amount: "3,6-5,2 Md€/an", percentage: "4%" },
   ];
 
   return (
@@ -58,7 +60,7 @@ const CNJPSummary: React.FC = () => {
                 ))}
                 <TableRow className="bg-ljv-gold/10 font-bold">
                   <TableCell colSpan={3} className="text-center py-3">
-                    Total CNJP : 70-100 milliards € / an (100% affecté)
+                    Total CNJP : 90-130 milliards € / an (100% affecté — taux max 60%)
                   </TableCell>
                 </TableRow>
               </TableBody>

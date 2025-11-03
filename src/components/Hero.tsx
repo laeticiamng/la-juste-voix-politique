@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
           {/* Statistiques clés */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border border-ljv-gold/20 shadow-md">
-              <div className="text-2xl font-bold text-ljv-navy mb-2">70-100 Md€/an</div>
+              <div className="text-2xl font-bold text-ljv-navy mb-2">90-130 Md€/an</div>
               <div className="text-sm text-gray-600">CNJP pour financer les réformes</div>
             </div>
             <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border border-ljv-gold/20 shadow-md">
