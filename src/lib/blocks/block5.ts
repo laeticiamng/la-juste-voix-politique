@@ -63,13 +63,13 @@ export const block5: BlockData = {
         "  → dont Forces de l'ordre +10% : 1,5 Md€/an (inclus)",
         "  → dont Autres métiers publics essentiels : 9-18,5 Md€/an (pompiers, juges, agents territoriaux, travailleurs sociaux, etc.)",
         "  → Détail complet des revalorisations par métier disponible sur la page Revalorisations",
-        "• 25% → FSCRD - Remboursement de la dette (12,5-20 Md€/an) + CER (5-6 Md€/an) = 17,5-26 Md€/an",
-        "• 16% → Logement social et lutte contre le mal-logement (8-12,8 Md€/an)",
+        "• 24% → FSCRD - Remboursement de la dette (12-19,2 Md€/an) + CER (5-6 Md€/an) = 17-25,2 Md€/an",
+        "• 18% → Logement social et lutte contre le mal-logement (9-14,4 Md€/an)",
         "  → Inclut : 500 000 logements à loyers maîtrisés + Plan Habiter & Travailler (zéro SDF)",
-        "• 12% → Fonds de garantie des retraites (6-9,6 Md€/an)",
+        "• 9% → Fonds de garantie des retraites (4,5-7,2 Md€/an)",
         "• 3% → Santé mentale et prévention (1,5-2,4 Md€/an)",
-        "• 9% → Transition écologique (4,5-7,2 Md€/an)",
-        "  → Détail : Rénovation 2Md€ + Mobilité 1Md€ + Transports publics 0,8Md€ + Emplois verts 1,5Md€ + Divers 0,4Md€"
+        "• 11% → Transition écologique (5,5-8,8 Md€/an)",
+        "  → Détail : Rénovation 2Md€ + Mobilité 1Md€ + Transports publics 0,8Md€ + Emplois verts 1,5Md€ + Divers 0,2Md€"
       ],
       impact: "Environ 1 500 foyers fiscaux concernés, 50 à 80 milliards €/an mobilisables selon le patrimoine net total",
       financing: "Financement intégral via cette contribution des très grandes fortunes"
@@ -98,12 +98,12 @@ export const block5: BlockData = {
       title: "FSCRD : Fonds Souverain Citoyen de Réduction de la Dette",
       objective: "Utiliser les recettes exceptionnelles pour rembourser durablement la dette publique",
       details: [
-        "Financement : 25% CNJP (12,5-20 Md€/an) + 100% CER (5-6 Md€/an)",
-        "Total : 17,5 à 26 Md€/an affectés au remboursement de la dette",
+        "Financement : 24% CNJP (12-19,2 Md€/an) + 100% CER (5-6 Md€/an)",
+        "Total : 17 à 25,2 Md€/an affectés au remboursement de la dette",
         "Gouvernance : citoyens tirés au sort + experts + Cour des comptes",
         "Transparence : plateforme publique, rapport annuel"
       ],
-      impact: "Rembourser 17,5 à 26 milliards €/an pour ramener la dette publique de ~110% à < 80% du PIB d'ici 15-20 ans"
+      impact: "Rembourser 17 à 25,2 milliards €/an pour ramener la dette publique de ~110% à < 80% du PIB d'ici 15-20 ans"
     },
     {
       id: 5,
@@ -137,7 +137,7 @@ export const block5: BlockData = {
         "Cumul emploi/retraite encouragé pour ceux qui le souhaitent",
         "Intégration des indépendants précaires dans le système",
         "Cotisation des personnes régularisées ou en contrat de contribution",
-        "Fonds de garantie financé à 12% par la CNJP (6-9,6 Md€/an)"
+        "Fonds de garantie financé à 9% par la CNJP (4,5-7,2 Md€/an)"
       ],
       impact: "Système des retraites sécurisé sans nouvel allongement de l'âge légal"
     }

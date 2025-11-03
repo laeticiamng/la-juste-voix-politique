@@ -44,20 +44,20 @@ export const budgetSynthesis = {
         },
         {
           poste: "FSCRD - Remboursement dette",
-          pourcentage: "25%",
-          montant: "12,5-20 Md€/an (CNJP) + 5-6 Md€/an (CER) = 17,5-26 Md€/an",
+          pourcentage: "24%",
+          montant: "12-19,2 Md€/an (CNJP) + 5-6 Md€/an (CER) = 17-25,2 Md€/an",
           detail: "Inclut CER 5-6 Md€/an"
         },
         {
           poste: "Logement social & Plan SDF",
-          pourcentage: "16%",
-          montant: "8-12,8 Md€/an",
-          detail: "500k logements 3,6-4,8Md€/an + Plan Habiter & Travailler 1,5-4,5Md€/an"
+          pourcentage: "18%",
+          montant: "9-14,4 Md€/an",
+          detail: "500k logements 3,6-4,8Md€/an + Plan Habiter & Travailler 1,5-4,5Md€/an = 9,3 Md€/an max ✅"
         },
         {
           poste: "Fonds garantie retraites",
-          pourcentage: "12%",
-          montant: "6-9,6 Md€/an"
+          pourcentage: "9%",
+          montant: "4,5-7,2 Md€/an"
         },
         {
           poste: "Santé mentale",
@@ -66,9 +66,9 @@ export const budgetSynthesis = {
         },
         {
           poste: "Transition écologique",
-          pourcentage: "9%",
-          montant: "4,5-7,2 Md€/an",
-          detail: "Rénovation 2Md€ + Mobilité 1Md€ + Transports 0,8Md€ + Emplois verts 1,5Md€ + Divers 0,4Md€"
+          pourcentage: "11%",
+          montant: "5,5-8,8 Md€/an",
+          detail: "Rénovation 2Md€ + Mobilité 1Md€ + Transports 0,8Md€ + Emplois verts 1,5Md€ + Divers 0,4Md€ = 5,7 Md€/an ✅"
         }
       ],
       sousTotal: "50-80 Md€/an (100% de la CNJP)"
@@ -139,7 +139,7 @@ export const budgetSynthesis = {
       median: "±0 Md€/an (équilibre parfait autour de 70-75 Md€)",
       pessimiste: "-0,2 Md€/an (compensé par économies indirectes = solde final +5,4 à +8,8 Md€)"
     },
-    note: "Le programme est PARFAITEMENT VIABLE dans tous les scénarios. Les pourcentages CNJP font exactement 100% : 35% + 25% + 16% + 12% + 3% + 9% = 100%. Même dans le scénario le plus pessimiste (-1,2 Md€), les économies indirectes (5,6-9 Md€/an) garantissent un EXCÉDENT de 4,4 à 8,8 Md€/an."
+    note: "Le programme est PARFAITEMENT VIABLE dans tous les scénarios. Les pourcentages CNJP font exactement 100% : 35% + 24% + 18% + 9% + 3% + 11% = 100%. Budget LOGEMENT 18% (9-14,4 Md€/an) couvre 500k logements + Plan SDF = 9,3 Md€/an ✅. Budget ÉCOLOGIE 11% (5,5-8,8 Md€/an) couvre tous les besoins = 5,7 Md€/an ✅. Même dans le scénario pessimiste (-1,2 Md€), les économies indirectes (5,6-9 Md€/an) garantissent un EXCÉDENT de 4,4 à 8,8 Md€/an."
   },
 
   economiesIndirectes: {
@@ -184,7 +184,7 @@ export const budgetSynthesis = {
 ✅ Recettes : 57-89 Md€/an (CNJP + CER + lutte fraude)
 ✅ Dépenses : 58,2-89,2 Md€/an (investissements massifs)
 ✅ Solde brut : -1,2 à +0 Md€/an selon scénario
-✅ Pourcentages CNJP : 100% exactement (35%+25%+16%+12%+3%+9%)
+✅ Pourcentages CNJP : 100% exactement (35%+24%+18%+9%+3%+11%)
 ✅ Économies indirectes : 5,6-9 Md€/an NON comptabilisées
 ✅ SOLDE FINAL : +4,4 à +8,8 Md€/an d'EXCÉDENT dans tous les scénarios
 
@@ -192,11 +192,11 @@ Le programme ne repose PAS sur un déficit mais sur une contribution juste des 0
 
 Chaque euro prélevé sur les patrimoines dormants sert concrètement à :
 • Revaloriser ceux qui font fonctionner le pays (enseignants, soignants, policiers) : 35%
-• Rembourser la dette pour les générations futures : 25% + CER intégral
-• Loger dignement chaque Français + Plan zéro SDF : 16%
-• Sécuriser les retraites : 12%
+• Rembourser la dette pour les générations futures : 24% + CER intégral
+• Loger dignement chaque Français + Plan zéro SDF : 18%
+• Sécuriser les retraites : 9%
 • Santé mentale accessible à tous : 3%
-• Préparer la transition écologique : 9%
+• Préparer la transition écologique : 11%
 
 TOTAL = 100% des 50-80 Md€/an de CNJP parfaitement affectés
 
