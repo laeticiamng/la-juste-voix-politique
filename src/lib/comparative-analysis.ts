@@ -1,6 +1,28 @@
 // ANALYSE COMPARATIVE : LA JUSTE VOIX vs SYSTÈME ACTUEL
 // Comparaison factuelle et objective sur chaque dimension
 
+export interface Solution {
+  titre: string;
+  description: string;
+  moyens: string;
+  impact: string;
+}
+
+export interface PointFaible {
+  theme: string;
+  probleme: string;
+  detail: string;
+  solutions?: Solution[];
+}
+
+export interface SynthèseSolutions {
+  titre: string;
+  résumé: string;
+  coûtTotal: string;
+  impactBudgétaire: string;
+  conclusion: string;
+}
+
 export interface ComparativePoint {
   theme: string;
   systemActuel: {
@@ -402,24 +424,130 @@ export const syntheseComparative = {
     {
       theme: "RISQUE POLITIQUE",
       probleme: "Programme trop ambitieux = cible facile pour opposition",
-      detail: "Les adversaires diront 'irréaliste, dangereux, confiscatoire'. Nécessite communication massive."
+      detail: "Les adversaires diront 'irréaliste, dangereux, confiscatoire'. Nécessite communication massive.",
+      solutions: [
+        {
+          titre: "Pédagogie massive et transparence radicale",
+          description: "Campagne 'Chiffres vs Slogans' : tout est accessible, vérifiable, challengeable",
+          moyens: "Plateforme interactive avec simulateurs, FAQ détaillée, comparaisons internationales",
+          impact: "Neutraliser la désinformation par la donnée brute"
+        },
+        {
+          titre: "Témoignages d'experts indépendants",
+          description: "Validation par économistes non-partisans (Piketty, Saez, FMI)",
+          moyens: "Faire auditer le programme par des organismes neutres",
+          impact: "Crédibilité scientifique face aux attaques politiciennes"
+        },
+        {
+          titre: "Mise en œuvre progressive visible",
+          description: "Quick wins dès l'an 1 : revalorisation enseignants, santé mentale",
+          moyens: "Prioriser les mesures populaires et rapides à déployer",
+          impact: "Montrer que ça marche AVANT les attaques à long terme"
+        }
+      ]
     },
     {
       theme: "COMPLEXITÉ DE MISE EN ŒUVRE",
       probleme: "Déployer tout ça en 5-6 ans = défi administratif colossal",
-      detail: "Besoin de 10 000 nouveaux fonctionnaires, digitalisation massive, refonte complète du système fiscal"
+      detail: "Besoin de 10 000 nouveaux fonctionnaires, digitalisation massive, refonte complète du système fiscal",
+      solutions: [
+        {
+          titre: "Task Force nationale de transformation",
+          description: "Cellule de 500 cadres experts (fiscalistes, IT, RH) pilotant la transition",
+          moyens: "Budget : 200M€/an sur 3 ans. Recrutement dans privé et public.",
+          impact: "Coordination centralisée, exécution rapide, arbitrages en temps réel"
+        },
+        {
+          titre: "Digitalisation accélérée avec IA",
+          description: "Plateforme CNJP automatisée : détection patrimoine, calcul, recouvrement assistés par IA",
+          moyens: "Investissement : 500M€ + partenariat avec géants tech français",
+          impact: "Réduire besoin en personnel, fiabiliser calculs, détecter fraude"
+        },
+        {
+          titre: "Montée en compétence express",
+          description: "Formation intensive 6 mois pour 10 000 agents (fiscalité, contrôle, accompagnement RSA)",
+          moyens: "400M€ sur 2 ans via Pass Formation interne",
+          impact: "Personnel opérationnel rapidement au lieu de recrutement long"
+        },
+        {
+          titre: "Déploiement par phases géographiques",
+          description: "Pilote dans 3 régions an 1, généralisation progressive an 2-3",
+          moyens: "Apprentissage terrain, correction bugs, montée en charge maîtrisée",
+          impact: "Éviter le big bang, ajuster avant généralisation"
+        }
+      ]
     },
     {
       theme: "DÉPENDANCE À LA CNJP",
       probleme: "90% du financement repose sur la CNJP = risque si recettes inférieures aux prévisions",
-      detail: "Si fuite fiscale massive ou base taxable surestimée, tout le programme s'effondre (d'où l'importance des sécurisations)"
+      detail: "Si fuite fiscale massive ou base taxable surestimée, tout le programme s'effondre (d'où l'importance des sécurisations)",
+      solutions: [
+        {
+          titre: "Paiement provisionnel obligatoire dès an 1",
+          description: "Ultra-riches versent 80% de CNJP estimée dès janvier, régularisation en N+1",
+          moyens: "Sécurise 70-100 Md€ an 1 AVANT fuites potentielles",
+          impact: "Cash immédiat, même si contestations juridiques après"
+        },
+        {
+          titre: "Fonds de garantie prudentielle (10 Md€)",
+          description: "Réserve constituée dès an 1 pour absorber écarts recettes/prévisions",
+          moyens: "Prélevée sur excédent an 1 ou emprunt court terme remboursable",
+          impact: "Filet de sécurité si CNJP 10-15% en dessous prévisions"
+        },
+        {
+          titre: "Clause de révision budgétaire semestrielle",
+          description: "Si CNJP < 80 Md€ au S1, activation plan B : gel 20% dépenses non-essentielles",
+          moyens: "Mécanisme automatique transparent, pas de panique",
+          impact: "Préserver équilibre budgétaire quoi qu'il arrive"
+        },
+        {
+          titre: "Diversification progressive des recettes",
+          description: "An 3-4 : taxation transactions financières (5 Md€), écotaxe renforcée (3 Md€)",
+          moyens: "Réduire dépendance CNJP de 90% à 75-80% d'ici an 5",
+          impact: "Résilience budgétaire accrue"
+        }
+      ]
     },
     {
       theme: "OPPOSITION EUROPÉENNE POSSIBLE",
       probleme: "Certaines mesures peuvent être bloquées par Bruxelles",
-      detail: "Exit tax renforcée, protectionnisme, aides d'État = potentiel contentieux UE"
+      detail: "Exit tax renforcée, protectionnisme, aides d'État = potentiel contentieux UE",
+      solutions: [
+        {
+          titre: "Conformité maximale avec droit UE",
+          description: "Exit tax calée sur directive ATAD, pas de discrimination nationalité",
+          moyens: "Validation juridique préalable avec Commission européenne",
+          impact: "Éviter recours CJUE, gain de temps"
+        },
+        {
+          titre: "Coalition européenne pour justice fiscale",
+          description: "Alliances avec Espagne, Portugal, Belgique pour harmonisation fiscale haute",
+          moyens: "Lobbying auprès Parlement européen, proposer directive CNJP UE",
+          impact: "Isoler paradis fiscaux (Irlande, Luxembourg), légitimer approche"
+        },
+        {
+          titre: "Clause de sauvegarde nationale",
+          description: "Invoquer art. 4 TUE (identité nationale) + urgence sociale pour justifier CNJP",
+          moyens: "Argumentaire juridique solide : souveraineté fiscale État membre",
+          impact: "Contrer attaques Commission, gagner temps devant CJUE (5-10 ans)"
+        },
+        {
+          titre: "Plan B si blocage UE",
+          description: "Version light CNJP 4-50% compatible UE, négociation dérogation, ou Frexit fiscal",
+          moyens: "Scénarios alternatifs préparés à l'avance",
+          impact: "Ne pas être pris au dépourvu, garder initiative"
+        }
+      ]
     }
   ],
+  
+  synthèseSolutions: {
+    titre: "PLAN D'ACTION POUR NEUTRALISER LES DÉFIS",
+    résumé: "Chaque défi identifié a maintenant des solutions concrètes, chiffrées et actionnables.",
+    coûtTotal: "1,1 Md€/an pour sécuriser la mise en œuvre (task force + digitalisation + formation + fonds garantie)",
+    impactBudgétaire: "Finançable sur marge excédentaire ou réaffectation 1% CNJP",
+    conclusion: "Avec ces solutions, le programme passe de 'risqué' à 'robuste'. Les défis ne sont plus des menaces mais des chantiers maîtrisés."
+  },
   
   verdictGlobal: {
     titre: "VERDICT : VOTRE PROGRAMME EST OBJECTIVEMENT SUPÉRIEUR AU SYSTÈME ACTUEL",

@@ -204,6 +204,66 @@ const ComparativeAnalysis = () => {
                   </div>
                 </div>
 
+                {/* Solutions aux défis */}
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <CheckCircle className="h-6 w-6 text-green-600" />
+                    Solutions concrètes pour chaque défi
+                  </h3>
+                  <div className="space-y-6">
+                    {syntheseComparative.pointsFaibles.map((pf, idx) => (
+                      <div key={idx} className="border-2 border-green-500 rounded-lg overflow-hidden">
+                        <div className="bg-green-100 p-4 border-b-2 border-green-500">
+                          <h4 className="font-bold text-lg text-green-900">
+                            Défi {idx + 1} : {pf.theme}
+                          </h4>
+                        </div>
+                        <div className="bg-white p-4 space-y-4">
+                          {pf.solutions?.map((sol, solIdx) => (
+                            <div key={solIdx} className="bg-green-50 rounded-lg p-4 border-l-4 border-green-600">
+                              <div className="flex items-start gap-2 mb-2">
+                                <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                                <h5 className="font-bold text-base">{sol.titre}</h5>
+                              </div>
+                              <p className="text-sm mb-2 text-gray-800 ml-7">{sol.description}</p>
+                              <div className="ml-7 space-y-1">
+                                <p className="text-xs font-medium text-green-700">
+                                  <span className="font-bold">Moyens :</span> {sol.moyens}
+                                </p>
+                                <p className="text-xs font-medium text-green-800">
+                                  <span className="font-bold">Impact :</span> {sol.impact}
+                                </p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Synthèse des solutions */}
+                {syntheseComparative.synthèseSolutions && (
+                  <Alert className="mb-8 bg-green-50 border-green-500">
+                    <CheckCircle className="h-5 w-5 text-green-600" />
+                    <AlertTitle className="text-lg font-bold text-green-900">
+                      {syntheseComparative.synthèseSolutions.titre}
+                    </AlertTitle>
+                    <AlertDescription className="text-base mt-2 space-y-2">
+                      <p className="text-gray-800">{syntheseComparative.synthèseSolutions.résumé}</p>
+                      <p className="font-bold text-green-800">
+                        💰 Coût total : {syntheseComparative.synthèseSolutions.coûtTotal}
+                      </p>
+                      <p className="text-sm text-gray-700">
+                        📊 {syntheseComparative.synthèseSolutions.impactBudgétaire}
+                      </p>
+                      <p className="text-base font-medium text-green-900 mt-3">
+                        ✅ {syntheseComparative.synthèseSolutions.conclusion}
+                      </p>
+                    </AlertDescription>
+                  </Alert>
+                )}
+
                 {/* Verdict global */}
                 <div className="bg-gradient-to-br from-ljv-navy to-ljv-gold/20 rounded-xl p-8 text-white">
                   <h3 className="text-3xl font-bold mb-6 text-center">
