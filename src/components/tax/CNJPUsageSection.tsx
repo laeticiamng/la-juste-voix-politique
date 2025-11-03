@@ -8,19 +8,19 @@ interface UsageItem {
 }
 
 const cnjpUsageData: UsageItem[] = [
-  { description: "Revalorisation métiers publics (enseignants, soignants, policiers, pompiers, magistrats, agents territoriaux, etc.)", amount: "17,5-28 Md€/an", percentage: "35%" },
-  { description: "FSCRD - Remboursement de la dette publique", amount: "12-19,2 Md€/an", percentage: "24%" },
-  { description: "Logement social et lutte contre le mal-logement (500 000 logements + Plan zéro SDF)", amount: "9-14,4 Md€/an", percentage: "18%" },
-  { description: "Transition écologique (rénovation énergétique, mobilité propre, transports publics, 100 000 emplois verts)", amount: "5,5-8,8 Md€/an", percentage: "11%" },
-  { description: "Fonds de garantie des retraites (maintien à 64 ans avec élargissement base contributive)", amount: "4,5-7,2 Md€/an", percentage: "9%" },
-  { description: "Santé mentale et prévention (crédit santé mentale universel, prévention active)", amount: "1,5-2,4 Md€/an", percentage: "3%" },
+  { description: "Revalorisation métiers publics (enseignants, soignants, policiers, pompiers, magistrats, agents territoriaux, etc.)", amount: "21-30 Md€/an", percentage: "30%" },
+  { description: "Retraites - Retour à 60 ans avec système mixte (50% répartition + 50% capitalisation sociale)", amount: "17,5-25 Md€/an", percentage: "25%" },
+  { description: "FSCRD - Remboursement de la dette publique", amount: "14-20 Md€/an", percentage: "20%" },
+  { description: "Logement social et lutte contre le mal-logement (500 000 logements + Plan zéro SDF)", amount: "9,8-14 Md€/an", percentage: "14%" },
+  { description: "Transition écologique (rénovation énergétique, mobilité propre, transports publics, 100 000 emplois verts)", amount: "5,6-8 Md€/an", percentage: "8%" },
+  { description: "Santé mentale et prévention (crédit santé mentale universel, prévention active)", amount: "2,1-3 Md€/an", percentage: "3%" },
 ];
 
 const CNJPUsageSection: React.FC = () => {
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-8">
       <h2 className="text-3xl font-serif font-bold mb-6 text-center">
-        AFFECTATION COMPLÈTE DE LA CNJP (50-80 MILLIARDS €/AN)
+        AFFECTATION COMPLÈTE DE LA CNJP (70-100 MILLIARDS €/AN)
       </h2>
       
       <div className="overflow-x-auto">
@@ -44,7 +44,7 @@ const CNJPUsageSection: React.FC = () => {
           <tfoot>
             <tr className="bg-ljv-gold/10 font-bold">
               <td className="border p-3">TOTAL CNJP</td>
-              <td className="border p-3 text-center">50-80 Md€/an</td>
+              <td className="border p-3 text-center">70-100 Md€/an</td>
               <td className="border p-3 text-center">100%</td>
             </tr>
           </tfoot>

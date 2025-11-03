@@ -64,20 +64,21 @@ export const taxBrackets: TaxBracket[] = [
   {
     min: 50000,
     max: null,
-    rate: 42,
-    description: "Fortune extrême"
+    rate: 50,
+    description: "Fortune extrême (seuil renforcé pour financer le retour à 60 ans)"
   }
 ];
 
 export const taxBracketsContent = {
   title: "Barème Progressif de la Contribution Nationale pour la Justice et le Progrès (CNJP)",
-  description: "La Contribution Nationale pour la Justice et le Progrès (CNJP) repose sur un principe simple : plus votre patrimoine est élevé, plus votre taux de contribution augmente. Ce barème équilibré commence à 3% et n'atteint son maximum que pour les patrimoines vraiment exceptionnels.",
+  description: "La Contribution Nationale pour la Justice et le Progrès (CNJP) repose sur un principe simple : plus votre patrimoine est élevé, plus votre taux de contribution augmente. Ce barème équilibré commence à 3% et atteint 50% pour les patrimoines extrêmes (> 50 Md€), permettant de financer le retour à la retraite à 60 ans.",
   supplementaryInfo: `La CNJP ne concerne que les 0,1% des Français les plus fortunés - ceux dont le patrimoine net dépasse 100 millions d'euros.
 
 Ce barème est conçu pour être:
 - Juste : en demandant plus à ceux qui ont plus
-- Efficace : en générant des ressources significatives pour les services publics
+- Efficace : en générant 70-100 Md€/an pour financer les réformes structurelles
 - Équilibré : en préservant l'initiative et la création de richesse
+- Ambitieux : le taux de 50% permet de financer le retour à la retraite à 60 ans
 
 Les montants sont exprimés en millions d'euros (M€) et milliards d'euros (Md€).`,
   notes: "Le taux s'applique uniquement sur la fraction du patrimoine comprise dans chaque tranche."

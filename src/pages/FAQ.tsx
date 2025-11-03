@@ -127,7 +127,7 @@ const faqItems: FAQItem[] = [
   },
   {
     question: "Qu'est-ce que le FSCRD (Fonds Souverain Citoyen de Réduction de la Dette) ?",
-    answer: "Le FSCRD est un fonds souverain dont l'objectif est de rembourser la dette publique sans austérité, en la finançant par la CNJP et la CER. Ce qui rend ce fonds particulièrement innovant est qu'il sera géré par des citoyens tirés au sort assistés d'experts, avec jusqu'à 40 milliards d'euros par an dédiés à la réduction de la dette. Cette mesure supprime l'excuse du 'y a pas d'argent' souvent utilisée pour justifier l'inaction.",
+    answer: "Le FSCRD est un fonds souverain dont l'objectif est de rembourser la dette publique sans austérité, en la finançant par la CNJP et la CER. Ce qui rend ce fonds particulièrement innovant est qu'il sera géré par des citoyens tirés au sort assistés d'experts, avec 19 à 26 milliards d'euros par an dédiés à la réduction de la dette (20% de la CNJP + 100% de la CER). Cette mesure supprime l'excuse du 'y a pas d'argent' souvent utilisée pour justifier l'inaction.",
     category: 'initiatives',
     badge: 'Phare',
   },

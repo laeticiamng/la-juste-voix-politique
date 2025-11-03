@@ -14,12 +14,12 @@ import {
 const CNJPSummary: React.FC = () => {
   // Affectations RÉELLES de la CNJP selon le programme
   const keyUsages = [
-    { description: "Revalorisation métiers publics (enseignants, soignants, policiers, etc.)", amount: "17,5-28 Md€/an", percentage: "35%" },
-    { description: "FSCRD - Remboursement de la dette", amount: "12-19,2 Md€/an", percentage: "24%" },
-    { description: "Logement social + Plan zéro SDF", amount: "9-14,4 Md€/an", percentage: "18%" },
-    { description: "Transition écologique (rénovation, mobilité, emplois verts)", amount: "5,5-8,8 Md€/an", percentage: "11%" },
-    { description: "Fonds de garantie des retraites", amount: "4,5-7,2 Md€/an", percentage: "9%" },
-    { description: "Santé mentale et prévention", amount: "1,5-2,4 Md€/an", percentage: "3%" },
+    { description: "Revalorisation métiers publics (enseignants, soignants, policiers, etc.)", amount: "21-30 Md€/an", percentage: "30%" },
+    { description: "Retraites - Retour à 60 ans (système mixte, pension 60%)", amount: "17,5-25 Md€/an", percentage: "25%" },
+    { description: "FSCRD - Remboursement de la dette", amount: "14-20 Md€/an", percentage: "20%" },
+    { description: "Logement social + Plan zéro SDF", amount: "9,8-14 Md€/an", percentage: "14%" },
+    { description: "Transition écologique (rénovation, mobilité, emplois verts)", amount: "5,6-8 Md€/an", percentage: "8%" },
+    { description: "Santé mentale et prévention", amount: "2,1-3 Md€/an", percentage: "3%" },
   ];
 
   return (
@@ -58,7 +58,7 @@ const CNJPSummary: React.FC = () => {
                 ))}
                 <TableRow className="bg-ljv-gold/10 font-bold">
                   <TableCell colSpan={3} className="text-center py-3">
-                    Total CNJP : 50-80 milliards € / an (100% affecté)
+                    Total CNJP : 70-100 milliards € / an (100% affecté)
                   </TableCell>
                 </TableRow>
               </TableBody>
@@ -72,12 +72,12 @@ const CNJPSummary: React.FC = () => {
             
             <div className="flex flex-col md:flex-row gap-6 justify-between mb-4">
               <div className="flex-1 bg-ljv-navy/5 rounded-lg p-4">
-                <h4 className="font-bold mb-2">Maintien à 64 ans</h4>
-                <p>Statu quo actuel sans nouvel allongement, avec élargissement de la base contributive et fonds de garantie (9% CNJP = 4,5-7,2 Md€/an).</p>
+                <h4 className="font-bold mb-2">Âge légal rétabli à 60 ans</h4>
+                <p>Pour respecter l'espérance de vie en bonne santé et garantir une retraite digne à tous.</p>
               </div>
               <div className="flex-1 bg-ljv-navy/5 rounded-lg p-4">
-                <h4 className="font-bold mb-2">Système sécurisé</h4>
-                <p>Cumul emploi/retraite encouragé, intégration des indépendants précaires, cotisation des personnes régularisées.</p>
+                <h4 className="font-bold mb-2">Pension garantie à 60%</h4>
+                <p>Du salaire net de référence à vie, avec système mixte 50% répartition + 50% capitalisation sociale.</p>
               </div>
             </div>
           </div>

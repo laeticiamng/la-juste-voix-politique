@@ -47,7 +47,7 @@ const keyMeasures: KeyMeasure[] = [
     description: "Objectif : Rembourser la dette publique sans austérité, en la finançant par la CNJP et la CER.",
     strengths: [
       "Géré par citoyens tirés au sort + experts",
-      "Jusqu'à 40 Mds €/an dédiés à la réduction de dette",
+      "19 à 26 Md€/an dédiés à la réduction de dette (20% CNJP + CER)",
       "Supprime l'excuse du \"y a pas d'argent\""
     ]
   },

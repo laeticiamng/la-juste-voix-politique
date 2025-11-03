@@ -54,24 +54,25 @@ export const block5: BlockData = {
       details: [
         "Concerne uniquement patrimoines financiers nets > 100 millions €",
         "Exclut résidence principale, biens d'usage, immobilier actif",
-        "Barème progressif allant de 3% (100-250M€) jusqu'à 42% (>50Md€)",
+        "Barème progressif allant de 3% (100-250M€) jusqu'à 50% (>50Md€)",
         "",
-        "**Affectation des recettes (50-80 Md€/an) :**",
-        "• 35% → Revalorisation métiers publics - enseignants, soignants, forces de l'ordre (17,5-28 Md€/an)",
+        "**Affectation des recettes (70-100 Md€/an) :**",
+        "• 30% → Revalorisation métiers publics - enseignants, soignants, forces de l'ordre (21-30 Md€/an)",
         "  → dont Enseignants +20% : 3 Md€/an (inclus)",
         "  → dont Soignants hospitaliers +15% : 4-5 Md€/an (inclus)",
         "  → dont Forces de l'ordre +10% : 1,5 Md€/an (inclus)",
-        "  → dont Autres métiers publics essentiels : 9-18,5 Md€/an (pompiers, juges, agents territoriaux, travailleurs sociaux, etc.)",
+        "  → dont Autres métiers publics essentiels : 12,5-20,5 Md€/an (pompiers, juges, agents territoriaux, travailleurs sociaux, etc.)",
         "  → Détail complet des revalorisations par métier disponible sur la page Revalorisations",
-        "• 24% → FSCRD - Remboursement de la dette (12-19,2 Md€/an) + CER (5-6 Md€/an) = 17-25,2 Md€/an",
-        "• 18% → Logement social et lutte contre le mal-logement (9-14,4 Md€/an)",
+        "• 25% → Retraites - Retour à 60 ans (17,5-25 Md€/an)",
+        "  → Inclut : financement 4 années supplémentaires + pension garantie 60% + système mixte répartition/capitalisation",
+        "• 20% → FSCRD - Remboursement de la dette (14-20 Md€/an) + CER (5-6 Md€/an) = 19-26 Md€/an",
+        "• 14% → Logement social et lutte contre le mal-logement (9,8-14 Md€/an)",
         "  → Inclut : 500 000 logements à loyers maîtrisés + Plan Habiter & Travailler (zéro SDF)",
-        "• 9% → Fonds de garantie des retraites (4,5-7,2 Md€/an)",
-        "• 3% → Santé mentale et prévention (1,5-2,4 Md€/an)",
-        "• 11% → Transition écologique (5,5-8,8 Md€/an)",
-        "  → Détail : Rénovation 2Md€ + Mobilité 1Md€ + Transports publics 0,8Md€ + Emplois verts 1,5Md€ + Divers 0,2Md€"
+        "• 8% → Transition écologique (5,6-8 Md€/an)",
+        "  → Détail : Rénovation 2Md€ + Mobilité 1Md€ + Transports publics 0,8Md€ + Emplois verts 1,5Md€ + Divers 0,3Md€",
+        "• 3% → Santé mentale et prévention (2,1-3 Md€/an)"
       ],
-      impact: "Environ 1 500 foyers fiscaux concernés, 50 à 80 milliards €/an mobilisables selon le patrimoine net total",
+      impact: "Environ 1 500 foyers fiscaux concernés, 70 à 100 milliards €/an mobilisables selon le patrimoine net total",
       financing: "Financement intégral via cette contribution des très grandes fortunes"
     },
     {
@@ -98,12 +99,12 @@ export const block5: BlockData = {
       title: "FSCRD : Fonds Souverain Citoyen de Réduction de la Dette",
       objective: "Utiliser les recettes exceptionnelles pour rembourser durablement la dette publique",
       details: [
-        "Financement : 24% CNJP (12-19,2 Md€/an) + 100% CER (5-6 Md€/an)",
-        "Total : 17 à 25,2 Md€/an affectés au remboursement de la dette",
+        "Financement : 20% CNJP (14-20 Md€/an) + 100% CER (5-6 Md€/an)",
+        "Total : 19 à 26 Md€/an affectés au remboursement de la dette",
         "Gouvernance : citoyens tirés au sort + experts + Cour des comptes",
         "Transparence : plateforme publique, rapport annuel"
       ],
-      impact: "Rembourser 17 à 25,2 milliards €/an pour ramener la dette publique de ~110% à < 80% du PIB d'ici 15-20 ans"
+      impact: "Rembourser 19 à 26 milliards €/an pour ramener la dette publique de ~110% à < 80% du PIB d'ici 15-20 ans"
     },
     {
       id: 5,
@@ -130,16 +131,20 @@ export const block5: BlockData = {
     },
     {
       id: 7,
-      title: "Retraites : sauvegarde par élargissement de la base contributive",
-      objective: "Maintenir l'âge de départ à la retraite à 64 ans (statu quo actuel) sans compromettre l'équilibre financier",
+      title: "Retraites : retour à 60 ans avec système mixte",
+      objective: "Rétablir l'âge de départ à la retraite à 60 ans avec un système durable et juste",
       details: [
-        "Maintien à 64 ans (réforme Macron conservée)",
-        "Cumul emploi/retraite encouragé pour ceux qui le souhaitent",
-        "Intégration des indépendants précaires dans le système",
-        "Cotisation des personnes régularisées ou en contrat de contribution",
-        "Fonds de garantie financé à 9% par la CNJP (4,5-7,2 Md€/an)"
+        "Retour à 60 ans pour tous",
+        "Système mixte : 50% répartition + 50% capitalisation sociale",
+        "Pension garantie à 60% du salaire net de référence à vie",
+        "Revalorisation annuelle indexée sur l'inflation",
+        "Plafonnement équitable des très hautes pensions",
+        "Compte retraite personnel garanti par l'État",
+        "Financement : 25% de la CNJP (17,5-25 Md€/an)"
       ],
-      impact: "Système des retraites sécurisé sans nouvel allongement de l'âge légal"
+      impact: "Système des retraites juste et durable, reconnaissance de l'espérance de vie en bonne santé, sécurité pour tous",
+      cost: "17,5-25 milliards €/an",
+      financing: "25% de la CNJP (70-100 Md€/an)"
     }
   ],
   conclusion: "Proposer une économie qui protège les créateurs de valeur, qui ne punit pas l'innovation, qui responsabilise la rente silencieuse, et qui libère des ressources massives, sans austérité. Ne pas parler d'économie punitive. Parler d'économie équitable, ambitieuse et reconstruite."

@@ -43,17 +43,17 @@ export const block7: BlockData = {
         "Avancer automatiquement les frais (pas de reste à charge immédiat)",
         "Offrir un bonus pour les bailleurs vertueux",
         "",
-        "**Budget total écologie CNJP (5,5-8,8 Md€/an = 11%) réparti :**",
+        "**Budget total écologie CNJP (5,6-8 Md€/an = 8%) réparti :**",
         "• Rénovation énergétique : 2 Md€/an",
         "• Aide au remplacement véhicules polluants : 1 Md€/an",
         "• Transports publics décarbonés (villes moyennes, zones rurales) : 0,8 Md€/an",
         "• Emplois verts (100 000 sur 5 ans, moyenne) : 1,5 Md€/an",
         "• Contrats écologiques territoriaux : 0,2 Md€/an",
-        "• Écopass Citoyen : 0,2 Md€/an",
-        "**Total : 5,7 Md€/an** (dans l'enveloppe 5,5-8,8 Md€/an) ✅"
+        "• Écopass Citoyen : 0,1 Md€/an",
+        "**Total : 5,6 Md€/an** (dans l'enveloppe 5,6-8 Md€/an) ✅"
       ],
       impact: "Diminution significative des émissions de CO2 et des factures énergétiques",
-      financing: "CNJP (part écologie 11%), Fonds européens, Crédit climatique public"
+      financing: "CNJP (part écologie 8%), Fonds européens, Crédit climatique public"
     },
     {
       id: 3,
@@ -92,17 +92,17 @@ export const block7: BlockData = {
         "• Année 4-5 : 60-100 000 emplois × 38 000€ = 2,3-3,8 Md€/an",
         "• Coût moyen sur 5 ans : ~1,5 Md€/an",
         "",
-        "⚠️ Note : Le budget CNJP écologie (11% = 5,5-8,8 Md€/an) finance :",
+        "⚠️ Note : Le budget CNJP écologie (8% = 5,6-8 Md€/an) finance :",
         "• Rénovation énergétique : 2 Md€/an",
         "• Aide remplacement véhicules : 1 Md€/an",
         "• Transports publics décarbonés : 0,8 Md€/an",
         "• Emplois verts : 1,5 Md€/an (moyenne sur 5 ans)",
-        "• Contrats territoriaux + Écopass : 0,4 Md€/an",
-        "**Total écologie : 5,7 Md€/an (dans l'enveloppe 5,5-8,8 Md€/an)** ✅"
+        "• Contrats territoriaux + Écopass : 0,3 Md€/an",
+        "**Total écologie : 5,6 Md€/an (dans l'enveloppe 5,6-8 Md€/an)** ✅"
       ],
       impact: "Transformation de l'écologie en opportunité de création de richesse utile plutôt qu'en coût",
       cost: "1,5 milliard €/an en moyenne sur 5 ans (montée progressive de 0,76 à 3,8 Md€/an)",
-      financing: "CNJP (part écologie 11%) + Crédit écologique européen + Partenariats publics-privés + Taxe carbone redirigée"
+      financing: "CNJP (part écologie 8%) + Crédit écologique européen + Partenariats publics-privés + Taxe carbone redirigée"
     }
   ],
   conclusion: "Proposer une écologie juste qui ne stigmatise pas, populaire qui inclut chacun, ancrée qui part du terrain, et créatrice de valeur qui relance l'économie locale. Concevoir une transition qui répare autant qu'elle prévient, qui reconnecte les citoyens à leur environnement, qui revalorise les gestes simples et le lien au territoire. Ne pas vouloir une écologie contre les gens, mais une écologie avec eux."
