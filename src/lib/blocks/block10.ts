@@ -41,7 +41,7 @@ export const block10: BlockData = {
       ],
       impact: "Participation directe des citoyens aux décisions budgétaires et développement de projets répondant aux besoins réels",
       cost: "2 milliards €/an",
-      financing: "1% du budget de l'État (redéploiement de subventions existantes fragmentées)"
+      financing: "Inclus dans les 4% CNJP Démocratie participative (3,6-5,2 Md€/an)"
     },
     {
       id: 2,
@@ -64,7 +64,7 @@ export const block10: BlockData = {
       ],
       impact: "Formation de citoyens actifs et engagés par l'expérience directe du service public",
       cost: "1,42 milliard €/an en régime de croisière (montée progressive sur 3 ans)",
-      financing: "Budget de l'État (Éducation + Jeunesse) + FSE+ + Participation des collectivités"
+      financing: "Inclus dans les 4% CNJP Démocratie participative (3,6-5,2 Md€/an)"
     },
     {
       id: 3,
@@ -101,5 +101,5 @@ export const block10: BlockData = {
       impact: "Renforcement de la confiance envers les institutions par la transparence et la responsabilité"
     },
   ],
-  conclusion: "Proposer une démocratie lisible dans son budget, présente dans la vie quotidienne, ouverte à la participation réelle, et exigeante avec ses représentants. Créer une République qui ne regarde pas les citoyens de haut, qui ne laisse personne derrière une boîte mail ou un délai, qui forme à la décision collective, au lieu de s'en méfier. Ne pas vouloir une démocratie tous les 5 ans, mais une démocratie tous les jours."
+  conclusion: "Proposer une démocratie lisible dans son budget, présente dans la vie quotidienne, ouverte à la participation réelle, et exigeante avec ses représentants. Créer une République qui ne regarde pas les citoyens de haut, qui ne laisse personne derrière une boîte mail ou un délai, qui forme à la décision collective, au lieu de s'en méfier. Ne pas vouloir une démocratie tous les 5 ans, mais une démocratie tous les jours.\n\n**💰 Financement - Démocratie participative (4% CNJP = 3,6-5,2 Md€/an) :**\n• Budget citoyen national : 2 Md€/an\n• Service civique universel valorisé : 1,4 Md€/an\n• Référendum citoyen renforcé : 0,2 Md€/an\n**Total : 3,6 Md€/an (extensible à 5,2 Md€/an selon montée en charge)**"
 };

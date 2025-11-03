@@ -11,7 +11,7 @@ const keyMeasures: KeyMeasure[] = [
     strengths: [
       "Vise les ultra-riches réels, pas les entrepreneurs",
       "Passe à travers les écrans juridiques (holdings, SCI…)",
-      "Peut générer 70 à 100 Mds €/an",
+      "Peut générer 90 à 130 Mds €/an grâce au taux max 60%",
       "Inédit en France et dans le monde par sa clarté et son barème détaillé"
     ]
   },
@@ -47,7 +47,7 @@ const keyMeasures: KeyMeasure[] = [
     description: "Objectif : Rembourser la dette publique sans austérité, en la finançant par la CNJP et la CER.",
     strengths: [
       "Géré par citoyens tirés au sort + experts",
-      "19 à 26 Md€/an dédiés à la réduction de dette (20% CNJP + CER)",
+      "18,5 à 25,5 Md€/an dédiés à la réduction de dette (15% CNJP + 100% CER)",
       "Supprime l'excuse du \"y a pas d'argent\""
     ]
   },

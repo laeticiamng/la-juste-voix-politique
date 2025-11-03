@@ -117,7 +117,7 @@ const RetirementReformSection: React.FC = () => {
             </li>
             <li className="flex items-start gap-2 mb-2">
               <span className="text-green-600 font-bold flex-shrink-0">✅</span> 
-              <span>Il est financé durablement par la CNJP et les cotisations sociales équilibrées.</span>
+              <span>Il est financé durablement par <strong>20% de la CNJP (18-26 Md€/an)</strong> et les cotisations sociales équilibrées.</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-green-600 font-bold flex-shrink-0">✅</span> 

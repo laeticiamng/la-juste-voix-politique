@@ -110,8 +110,8 @@ export const block1: BlockData = {
         "➡️ La solidarité n'est pas un droit sans devoir"
       ],
       impact: "Pour la personne : Un travail, une formation, de vraies compétences, un avenir autonome. Pour les enfants : Meilleure santé, réussite scolaire, avenir sécurisé. Pour la société : Moins de pauvreté durable, plus de contribution, investissement qui rapporte.",
-      cost: "Réallocation des aides existantes avec meilleur ciblage",
-      financing: "Optimisation du RSA actuel, économies sur les aides détournées, augmentation de la base contributive",
+      cost: "2,7-3,9 milliards €/an",
+      financing: "3% de la CNJP (90-130 Md€/an) + optimisation du RSA actuel + économies sur les aides détournées",
       aidesTransformation: [
         {
           id: "1️⃣",
@@ -183,8 +183,8 @@ export const block1: BlockData = {
         "⚠️ À distinguer des Référents Projet & Ambition dans les établissements scolaires (voir Bloc 4)"
       ],
       cost: "400 millions €/an",
-      financing: "Redéploiement partiel de Pôle Emploi + FSE+"
+      financing: "Inclus dans les 3% CNJP dédiés au RSA réformé (2,7-3,9 Md€/an)"
     }
   ],
-  conclusion: "Proposer une nouvelle vision du travail : moins statique et plus évolutive, moins stigmatisante et plus humaine, moins centrée sur le contrat et plus ouverte à la contribution. Transformer l'idée même d'utilité sociale et proposer un État qui reconnaît, soutient et encourage, plutôt qu'un État qui juge, classe et abandonne.\n\n**💰 Note budgétaire - Cap Contribution :**\nLa plateforme nationale Cap Contribution (guichet unique pour SCA, PPI, CVC, cumul d'activités) nécessite un investissement initial de 80 millions € et un budget de maintenance de 30 millions €/an, financé par le budget de l'État (transformation numérique).\n\n**Synthèse budgétaire Bloc 1 :**\n• PPI : 1,35 Md€/an\n• SCA : 2-3 Md€/an\n• Référents Ambition : 0,4 Md€/an\n• Cap Contribution : 0,08 Md€ (initial) + 0,03 Md€/an\n**Total : 3,78-4,78 Md€/an** (hors CNJP, financé par réaffectation Pôle Emploi, FSE+, fusion aides passives)"
+  conclusion: "Proposer une nouvelle vision du travail : moins statique et plus évolutive, moins stigmatisante et plus humaine, moins centrée sur le contrat et plus ouverte à la contribution. Transformer l'idée même d'utilité sociale et proposer un État qui reconnaît, soutient et encourage, plutôt qu'un État qui juge, classe et abandonne.\n\n**💰 Note budgétaire - Cap Contribution :**\nLa plateforme nationale Cap Contribution (guichet unique pour SCA, PPI, CVC, cumul d'activités) nécessite un investissement initial de 80 millions € et un budget de maintenance de 30 millions €/an, financé par le budget de l'État (transformation numérique).\n\n**Synthèse budgétaire Bloc 1 :**\n• RSA réformé (accompagnement emploi, Pass mobilité, crèche, Référents Ambition) : 2,7-3,9 Md€/an → **Financé par 3% CNJP**\n• PPI : 1,35 Md€/an → Réaffectation allocations chômage + FSE+\n• SCA : 2-3 Md€/an → Fusion aides passives + rationalisation + fonds européens\n• Cap Contribution : 0,08 Md€ (initial) + 0,03 Md€/an → Budget État (transformation numérique)\n**Total général : 6,13-8,26 Md€/an** dont **2,7-3,9 Md€/an financés par CNJP**"
 };

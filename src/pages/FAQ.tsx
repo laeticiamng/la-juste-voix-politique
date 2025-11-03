@@ -48,7 +48,7 @@ const faqItems: FAQItem[] = [
   },
   {
     question: "Comment seront financées ces revalorisations ?",
-    answer: "Ces revalorisations seront financées par plusieurs leviers : la Contribution Nationale de Justice Patrimoniale (CNJP) qui touche les très grandes fortunes, une réforme fiscale plus progressive, la lutte contre l'évasion fiscale, et une réallocation des ressources publiques vers les services essentiels. Nous estimons que ces mesures permettront de dégager 45 milliards d'euros annuels.",
+    answer: "Ces revalorisations seront financées principalement par la Contribution Nationale de Justice Patrimoniale (CNJP) qui génère 90 à 130 milliards €/an en ciblant les patrimoines financiers nets supérieurs à 100 millions €. Les revalorisations des métiers publics représentent 25% de la CNJP, soit 22,5 à 32,5 milliards €/an, complétées par la lutte contre l'évasion fiscale et une réforme fiscale plus progressive.",
     category: 'revalorisations',
   },
   {
@@ -109,7 +109,7 @@ const faqItems: FAQItem[] = [
   // Initiatives phares
   {
     question: "Qu'est-ce que la CNJP (Contribution Nationale de Justice Patrimoniale) ?",
-    answer: "La CNJP est un impôt progressif sur les patrimoines financiers nets supérieurs à 100 millions d'euros, appliqué aux personnes physiques, même si leur fortune est logée dans une société. Elle vise les ultra-riches réels et non les entrepreneurs, passe à travers les écrans juridiques (holdings, SCI…), et peut générer entre 70 et 100 milliards d'euros par an. Cette mesure est inédite en France et dans le monde par sa clarté et son barème détaillé.",
+    answer: "La CNJP est un impôt progressif sur les patrimoines financiers nets supérieurs à 100 millions d'euros, appliqué aux personnes physiques, même si leur fortune est logée dans une société. Elle vise les ultra-riches réels et non les entrepreneurs, passe à travers les écrans juridiques (holdings, SCI…), et peut générer entre 90 et 130 milliards d'euros par an grâce à un taux maximal de 60% sur les patrimoines > 50 Md€. Cette mesure est inédite en France et dans le monde par sa clarté et son barème détaillé.",
     category: 'initiatives',
     badge: 'Phare',
   },
@@ -127,7 +127,7 @@ const faqItems: FAQItem[] = [
   },
   {
     question: "Qu'est-ce que le FSCRD (Fonds Souverain Citoyen de Réduction de la Dette) ?",
-    answer: "Le FSCRD est un fonds souverain dont l'objectif est de rembourser la dette publique sans austérité, en la finançant par la CNJP et la CER. Ce qui rend ce fonds particulièrement innovant est qu'il sera géré par des citoyens tirés au sort assistés d'experts, avec 19 à 26 milliards d'euros par an dédiés à la réduction de la dette (20% de la CNJP + 100% de la CER). Cette mesure supprime l'excuse du 'y a pas d'argent' souvent utilisée pour justifier l'inaction.",
+    answer: "Le FSCRD est un fonds souverain dont l'objectif est de rembourser la dette publique sans austérité, en la finançant par la CNJP et la CER. Ce qui rend ce fonds particulièrement innovant est qu'il sera géré par des citoyens tirés au sort assistés d'experts, avec 18,5 à 25,5 milliards d'euros par an dédiés à la réduction de la dette (15% de la CNJP de 90-130 Md€ + 100% de la CER de 5-6 Md€/an). Cette mesure supprime l'excuse du 'y a pas d'argent' souvent utilisée pour justifier l'inaction.",
     category: 'initiatives',
     badge: 'Phare',
   },

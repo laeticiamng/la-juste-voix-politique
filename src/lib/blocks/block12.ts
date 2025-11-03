@@ -81,5 +81,5 @@ export const block12: BlockData = {
       impact: "Établissement d'une culture de l'exemplarité dans l'exercice du pouvoir public"
     }
   ],
-  conclusion: "Proposer une République qui rend des comptes, qui rappelle que l'argent public est un outil de service, et qui fait du pouvoir un devoir. Vouloir que le peuple contrôle et pas seulement élise, que le représentant représente sans s'installer, et que la fonction publique inspire à nouveau confiance. Ne pas punir les élus, mais les aligner sur les principes qu'ils sont censés défendre."
+  conclusion: "Proposer une République qui rend des comptes, qui rappelle que l'argent public est un outil de service, et qui fait du pouvoir un devoir. Vouloir que le peuple contrôle et pas seulement élise, que le représentant représente sans s'installer, et que la fonction publique inspire à nouveau confiance. Ne pas punir les élus, mais les aligner sur les principes qu'ils sont censés défendre.\n\n**💰 Financement - Justice sociale & Contrôle citoyen (1% CNJP = 0,9-1,3 Md€/an) :**\n• Observatoire Justice Sociale : 0,02 Md€/an\n• Plateforme 'Mon élu, mon mandat' (Ma Justice) : 0,3 Md€/an\n• Audits d'équité et transparence : 0,58-0,98 Md€/an\n**Total : 0,9-1,3 Md€/an financés par CNJP**"
 };

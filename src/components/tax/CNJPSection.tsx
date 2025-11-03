@@ -24,6 +24,10 @@ const CNJPSection: React.FC = () => {
           Elle concerne les personnes physiques dont la fortune est largement héritée, dormante, 
           spéculative ou optimisée, souvent logée dans des sociétés qu'elles détiennent ou contrôlent.
         </p>
+
+        <p className="mb-6 font-bold text-lg">
+          💰 Recette totale estimée : <span className="text-ljv-navy">90 à 130 milliards €/an</span> selon le patrimoine net total des très grandes fortunes françaises.
+        </p>
         
         <div className="bg-gray-50 p-6 rounded-lg mb-8">
           <div className="flex items-start gap-4 mb-4">
