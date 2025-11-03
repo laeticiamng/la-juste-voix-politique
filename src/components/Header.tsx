@@ -26,6 +26,7 @@ const Header: React.FC = () => {
   const navLinks = [
     { path: "/", label: "Accueil" },
     { path: "/manifeste", label: "Manifeste" },
+    { path: "/comparaison-systeme", label: "vs Système actuel" },
     { path: "/revalorisations", label: "Revalorisations" },
     { path: "/fiscalite", label: "Fiscalité" },
     { path: "/risques-securisations", label: "Risques" },
