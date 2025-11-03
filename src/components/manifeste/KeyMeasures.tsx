@@ -26,8 +26,8 @@ const keyMeasures: KeyMeasure[] = [
       "+500–600 € pour enseignants, assistants sociaux, éducateurs, ATSEM"
     ],
     strengths: [
-      "Tu lies financement clair (CNJP) à revalorisation immédiate.",
-      "Tu ne promets pas \"on verra\" : tu dis \"voilà comment, quand, pour qui.\""
+      "Financement clair (CNJP) lié à revalorisation immédiate",
+      "Engagement concret avec montants, échéances et bénéficiaires précis"
     ]
   },
   {
@@ -106,7 +106,7 @@ const keyMeasures: KeyMeasure[] = [
       "Priorité en crèche",
       "Aides renforcées à la reconversion"
     ],
-    note: "✔️ Tu fais du parent solo un acteur reconnu de la République, pas une case invisible"
+    note: "✔️ Reconnaissance du parent solo comme acteur à part entière de la République, plus une case invisible"
   }
 ];
 
