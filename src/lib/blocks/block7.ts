@@ -38,13 +38,22 @@ export const block7: BlockData = {
       title: "Rénovation énergétique massive et équitable",
       objective: "Éradiquer les passoires thermiques sans ruiner les propriétaires modestes",
       details: [
-        "Créer le fonds 'Éco-Réno' : 20 milliards € sur 10 ans",
+        "Créer le fonds 'Éco-Réno' : 20 milliards € sur 10 ans (2 Md€/an)",
         "Prendre en charge jusqu'à 90% des travaux pour les foyers modestes",
         "Avancer automatiquement les frais (pas de reste à charge immédiat)",
-        "Offrir un bonus pour les bailleurs vertueux"
+        "Offrir un bonus pour les bailleurs vertueux",
+        "",
+        "**Budget total écologie CNJP (6-10,4 Md€/an) réparti :**",
+        "• Rénovation énergétique : 2 Md€/an",
+        "• Aide au remplacement véhicules polluants : 0,8-1 Md€/an",
+        "• Transports publics décarbonés : 1-1,5 Md€/an",
+        "• Emplois verts (100 000) : 3,8 Md€/an (montée progressive)",
+        "• Contrats écologiques territoriaux : 0,4-0,6 Md€/an",
+        "• Écopass Citoyen : 0,2 Md€/an",
+        "• Total : 8,2-9,9 Md€/an en régime de croisière"
       ],
       impact: "Diminution significative des émissions de CO2 et des factures énergétiques",
-      financing: "CNJP, Fonds européens, Crédit climatique public"
+      financing: "CNJP (part écologie 12-13%), Fonds européens, Crédit climatique public"
     },
     {
       id: 3,
@@ -73,11 +82,20 @@ export const block7: BlockData = {
       title: "Économie circulaire locale et emplois verts",
       objective: "Faire de la transition un levier d'emploi, de formation et de fierté locale",
       details: [
-        "Créer 100 000 emplois verts locaux",
-        "Investir dans la rénovation, le recyclage, l'agriculture, l'écotourisme, les ressourceries",
-        "Financer par le crédit écologique européen, les partenariats publics-privés, la CNJP et la redistribution des dépenses carbone"
+        "Créer 100 000 emplois verts locaux sur 5 ans",
+        "Secteurs ciblés : rénovation énergétique, recyclage, agriculture durable, écotourisme, ressourceries, mobilité douce",
+        "Contrats de 3 à 5 ans avec formation certifiante incluse",
+        "",
+        "**Chiffrage :**",
+        "• Salaire moyen brut : 28 000€/an par emploi",
+        "• Charges + formation : 10 000€/an par emploi",
+        "• Coût total par emploi : 38 000€/an",
+        "• 100 000 emplois × 38 000€ = 3,8 Md€/an en régime de croisière",
+        "• Montée en charge progressive : 20k emplois/an pendant 5 ans"
       ],
-      impact: "Transformation de l'écologie en opportunité de création de richesse utile plutôt qu'en coût"
+      impact: "Transformation de l'écologie en opportunité de création de richesse utile plutôt qu'en coût",
+      cost: "3,8 milliards €/an en régime de croisière (montée progressive sur 5 ans)",
+      financing: "CNJP (part écologie 12-13%) + Crédit écologique européen + Partenariats publics-privés + Taxe carbone redirigée"
     }
   ],
   conclusion: "Proposer une écologie juste qui ne stigmatise pas, populaire qui inclut chacun, ancrée qui part du terrain, et créatrice de valeur qui relance l'économie locale. Concevoir une transition qui répare autant qu'elle prévient, qui reconnecte les citoyens à leur environnement, qui revalorise les gestes simples et le lien au territoire. Ne pas vouloir une écologie contre les gens, mais une écologie avec eux."

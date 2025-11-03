@@ -36,9 +36,16 @@ export const block5: BlockData = {
         "Tranche 200 001 - 250 000 € : 41%",
         "Tranche 250 001 - 500 000 € : 45%",
         "Tranche 500 001 - 1 000 000 € : 50%",
-        "Tranche > 1 000 000 € : 55%"
+        "Tranche > 1 000 000 € : 55%",
+        "",
+        "**Impact budgétaire :**",
+        "Baisse d'impôt pour classes moyennes/moyennes-sup : -3 à -5 Md€/an",
+        "Hausse sur hauts revenus (>200k€) : +2 à +3 Md€/an",
+        "Manque à gagner net : -1 à -2 Md€/an (compensé par CNJP et lutte contre fraude fiscale)"
       ],
-      impact: "Protection des talents productifs, éviter la fuite des cerveaux, renforcement de la progressivité sans effet de seuil absurde"
+      impact: "Protection des talents productifs, éviter la fuite des cerveaux, renforcement de la progressivité sans effet de seuil absurde",
+      cost: "Manque à gagner net : 1-2 Md€/an",
+      financing: "Compensé par la CNJP et le renforcement de la lutte contre la fraude fiscale (+3-5 Md€/an)"
     },
     {
       id: 2,
@@ -50,11 +57,16 @@ export const block5: BlockData = {
         "Barème progressif allant de 3% (100-250M€) jusqu'à 42% (>50Md€)",
         "",
         "**Affectation des recettes (50-80 Md€/an) :**",
-        "• 15% → Fonds de garantie des retraites (7,5-12 Md€/an)",
+        "• 30% → Revalorisation métiers publics - enseignants, soignants, forces de l'ordre (15-24 Md€/an)",
+        "  → dont Enseignants +20% : 3 Md€/an (inclus)",
+        "  → dont Soignants hospitaliers +15% : 4-5 Md€/an (inclus)",
+        "  → dont Forces de l'ordre +10% : 1,5 Md€/an (inclus)",
+        "  → dont Autres métiers publics (juges, magistrats, agents territoriaux) : 6,5-14,5 Md€/an",
         "• 25-30% → FSCRD - Remboursement de la dette (12,5-24 Md€/an)",
-        "• 25% → Revalorisation métiers publics (enseignants, soignants, forces de l'ordre) (12,5-20 Md€/an)",
-        "• 15% → Santé mentale, logement social, prévention (7,5-12 Md€/an)",
-        "• 15% → Transition écologique (rénovation énergétique, mobilité propre) (7,5-12 Md€/an)"
+        "• 15% → Fonds de garantie des retraites (7,5-12 Md€/an)",
+        "• 12-15% → Logement social et lutte contre le mal-logement (6-12 Md€/an)",
+        "• 3% → Santé mentale et prévention (1,5-2,4 Md€/an)",
+        "• 12-13% → Transition écologique (rénovation, mobilité, emplois verts) (6-10,4 Md€/an)"
       ],
       impact: "Environ 1 500 foyers fiscaux concernés, 50 à 80 milliards €/an mobilisables selon le patrimoine net total",
       financing: "Financement intégral via cette contribution des très grandes fortunes"

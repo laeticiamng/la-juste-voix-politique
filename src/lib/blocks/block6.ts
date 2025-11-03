@@ -31,11 +31,17 @@ export const block6: BlockData = {
         "Partenariats publics/privés/associatifs",
         "Logements en location-pont (2 à 5 ans)",
         "Loyer plafonné à 25% du revenu médian local",
-        "Zones prioritaires: grandes métropoles, villes moyennes et zones rurales sous-dotées"
+        "Zones prioritaires: grandes métropoles, villes moyennes et zones rurales sous-dotées",
+        "",
+        "**Financement détaillé (30 Md€ sur 5 ans) :**",
+        "• CNJP (part logement 12-15%) : 18-24 Md€ sur 5 ans",
+        "• Collectivités territoriales : 5 Md€ sur 5 ans",
+        "• Fonds européens FEDER : 5-7 Md€ sur 5 ans",
+        "• Secteur privé (défiscalisation) : 2-3 Md€ sur 5 ans"
       ],
       impact: "Diminution significative de la crise du logement dans les zones tendues et revitalisation des territoires délaissés",
-      cost: "6 milliards €/an pendant 5 ans",
-      financing: "État: 3 Mds €/an, Collectivités: 1 Md €/an, Fonds européens: 2 Mds €/an"
+      cost: "30 milliards € sur 5 ans (6 Md€/an)",
+      financing: "CNJP 60-80% + Collectivités 17% + UE 17-23% + Privé défiscalisé 7-10%"
     },
     {
       id: 2,

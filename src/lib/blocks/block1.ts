@@ -173,12 +173,14 @@ export const block1: BlockData = {
     },
     {
       id: 6,
-      title: "Réseau des Référents Ambition",
-      objective: "Offrir à chaque citoyen engagé un suivi humain et bienveillant, capable de l'aider à évoluer sans jugement.",
+      title: "Référents Ambition pour l'emploi et la contribution",
+      objective: "Offrir à chaque citoyen en recherche d'emploi ou en transition un suivi humain et bienveillant.",
       details: [
-        "10 000 référents formés",
-        "Ratio : 1 pour 300 bénéficiaires",
-        "Mission : accompagnement, suivi, orientation, validation des parcours"
+        "10 000 référents formés spécialisés dans l'accompagnement professionnel",
+        "Ratio : 1 référent pour 300 bénéficiaires (RSA, SCA, PPI)",
+        "Mission : accompagnement vers l'emploi, suivi des contrats d'engagement, orientation, validation des parcours",
+        "",
+        "⚠️ À distinguer des Référents Projet & Ambition dans les établissements scolaires (voir Bloc 4)"
       ],
       cost: "400 millions €/an",
       financing: "Redéploiement partiel de Pôle Emploi + FSE+"

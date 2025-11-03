@@ -20,13 +20,15 @@ export const block4: BlockData = {
   detailedMeasures: [
     {
       id: 1,
-      title: "Référents \"Projet & Ambition\" dans chaque établissement",
-      objective: "Offrir à chaque élève un accompagnement individuel sur son parcours de vie, au-delà des simples notes",
+      title: "Référents Projet & Ambition dans chaque établissement scolaire",
+      objective: "Offrir à chaque élève un accompagnement individuel sur son parcours de vie et scolaire",
       details: [
         "Détection des blocages personnels ou scolaires",
         "Encouragement des parcours atypiques (art, double voie, création…)",
         "Co-construction du projet avec la famille et les partenaires de terrain",
-        "Accompagnement du collège jusqu'au post-bac"
+        "Accompagnement du collège jusqu'au post-bac",
+        "",
+        "⚠️ Dispositif différent des Référents Ambition pour l'emploi (voir Bloc 1 - RSA/SCA)"
       ],
       impact: "Fin de l'orientation par défaut au profit de choix réfléchis et accompagnés",
       cost: "800 millions € par an",
@@ -48,11 +50,12 @@ export const block4: BlockData = {
     },
     {
       id: 3,
-      title: "Passerelles réversibles et \"pass formation libre\" jusqu'à 25 ans",
+      title: "Passerelles réversibles et Pass Formation Libre",
       objective: "Supprimer la fatalité de l'erreur d'orientation",
       details: [
-        "Réorientation libre jusqu'à 25 ans sans perte de droits",
-        "Création d'un pass formation libre à 18 ans (valable 5 ans)",
+        "Réorientation libre de 18 à 30 ans sans perte de droits",
+        "Création d'un Pass Formation Libre de 10 000€ obtenu à 18 ans",
+        "Valable pendant 12 ans (jusqu'à 30 ans) pour formations, reconversions, certifications",
         "Possibilité de seconde chance (nouveau CAP, formation complémentaire…)",
         "Accompagnement personnalisé pour les pivots vers une autre voie"
       ],
