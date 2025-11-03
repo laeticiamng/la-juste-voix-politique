@@ -1,3 +1,10 @@
+export interface AideTransformation {
+  id: string;
+  name: string;
+  before: string;
+  after: string;
+  impact: string;
+}
 
 export interface DetailedMeasure {
   id: number;
@@ -7,6 +14,7 @@ export interface DetailedMeasure {
   impact?: string;
   cost?: string;
   financing?: string;
+  aidesTransformation?: AideTransformation[];
 }
 
 export interface BlockData {

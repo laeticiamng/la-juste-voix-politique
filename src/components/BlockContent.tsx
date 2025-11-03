@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { BlockData } from '../lib';
+import AidesTransformationTable from './AidesTransformationTable';
 
 interface BlockContentProps {
   block: BlockData;
@@ -57,33 +58,76 @@ const BlockContent: React.FC<BlockContentProps> = ({ block }) => {
                 </div>
                 
                 <div className="pl-14">
-                  <h4 className="text-lg font-medium mb-2">Détails:</h4>
-                  <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                    {measure.details.map((detail, i) => (
-                      <li key={i}>{detail}</li>
-                    ))}
-                  </ul>
+                  <div className="space-y-3">
+                    {measure.details.map((detail, i) => {
+                      if (detail === '') return <div key={i} className="h-2" />;
+                      if (detail === '---') return <hr key={i} className="my-6 border-gray-200" />;
+                      
+                      // Headers (bold text with **)
+                      if (detail.startsWith('**') && detail.endsWith('**')) {
+                        const text = detail.slice(2, -2);
+                        return (
+                          <h4 key={i} className="text-lg font-bold text-ljv-navy mt-4 mb-2">
+                            {text}
+                          </h4>
+                        );
+                      }
+                      
+                      // Bullet points
+                      if (detail.startsWith('•') || detail.startsWith('*')) {
+                        return (
+                          <div key={i} className="flex items-start gap-2 ml-4">
+                            <span className="text-ljv-gold mt-1">•</span>
+                            <span className="text-gray-700 flex-1">{detail.slice(1).trim()}</span>
+                          </div>
+                        );
+                      }
+                      
+                      // Arrows
+                      if (detail.startsWith('➡️')) {
+                        return (
+                          <p key={i} className="text-primary font-medium italic ml-4 mt-2">
+                            {detail}
+                          </p>
+                        );
+                      }
+                      
+                      // Regular text
+                      return (
+                        <p key={i} className="text-gray-700 leading-relaxed">
+                          {detail}
+                        </p>
+                      );
+                    })}
+                  </div>
+                  
+                  {measure.aidesTransformation && measure.aidesTransformation.length > 0 && (
+                    <div className="mt-8">
+                      <h4 className="text-2xl font-bold mb-6 text-ljv-navy">🔁 Transformation des aides</h4>
+                      <AidesTransformationTable transformations={measure.aidesTransformation} />
+                    </div>
+                  )}
                   
                   {measure.impact && (
-                    <div className="mt-4">
-                      <h4 className="text-lg font-medium mb-1">Impact estimé:</h4>
-                      <p className="text-gray-700">{measure.impact}</p>
+                    <div className="mt-6 bg-gradient-to-r from-primary/5 to-accent/5 p-4 rounded-lg border border-primary/10">
+                      <h4 className="text-lg font-bold mb-2 text-primary">💪 Impact estimé</h4>
+                      <p className="text-gray-700 leading-relaxed">{measure.impact}</p>
                     </div>
                   )}
                   
                   {(measure.cost || measure.financing) && (
                     <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
                       {measure.cost && (
-                        <div className="bg-gray-50 p-3 rounded">
-                          <h4 className="font-medium text-gray-700">Coût estimé:</h4>
-                          <p className="text-ljv-navy">{measure.cost}</p>
+                        <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                          <h4 className="font-bold text-gray-700 mb-1">💰 Coût estimé</h4>
+                          <p className="text-ljv-navy font-medium">{measure.cost}</p>
                         </div>
                       )}
                       
                       {measure.financing && (
-                        <div className="bg-gray-50 p-3 rounded">
-                          <h4 className="font-medium text-gray-700">Financement:</h4>
-                          <p className="text-ljv-navy">{measure.financing}</p>
+                        <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                          <h4 className="font-bold text-gray-700 mb-1">📊 Financement</h4>
+                          <p className="text-ljv-navy font-medium">{measure.financing}</p>
                         </div>
                       )}
                     </div>
