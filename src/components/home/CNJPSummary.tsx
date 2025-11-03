@@ -12,12 +12,14 @@ import {
 } from "@/components/ui/table";
 
 const CNJPSummary: React.FC = () => {
-  // Sélection de quelques utilisations principales de la CNJP pour le résumé
+  // Affectations RÉELLES de la CNJP selon le programme
   const keyUsages = [
-    { description: "Revaloriser de +1 000 € nets/mois 1 million de soignants", amount: "12 milliards €", percentage: "12 %" },
-    { description: "Revaloriser de +600 € nets/mois 900 000 enseignants", amount: "6,48 milliards €", percentage: "6,48 %" },
-    { description: "Plan climat territorial (mobilité, énergie, rénovation)", amount: "15 milliards €", percentage: "15 %" },
-    { description: "Moderniser tous les hôpitaux de proximité", amount: "10 milliards €", percentage: "10 %" },
+    { description: "Revalorisation métiers publics (enseignants, soignants, policiers, etc.)", amount: "17,5-28 Md€/an", percentage: "35%" },
+    { description: "FSCRD - Remboursement de la dette", amount: "12-19,2 Md€/an", percentage: "24%" },
+    { description: "Logement social + Plan zéro SDF", amount: "9-14,4 Md€/an", percentage: "18%" },
+    { description: "Transition écologique (rénovation, mobilité, emplois verts)", amount: "5,5-8,8 Md€/an", percentage: "11%" },
+    { description: "Fonds de garantie des retraites", amount: "4,5-7,2 Md€/an", percentage: "9%" },
+    { description: "Santé mentale et prévention", amount: "1,5-2,4 Md€/an", percentage: "3%" },
   ];
 
   return (
@@ -56,7 +58,7 @@ const CNJPSummary: React.FC = () => {
                 ))}
                 <TableRow className="bg-ljv-gold/10 font-bold">
                   <TableCell colSpan={3} className="text-center py-3">
-                    Total CNJP : 100 milliards € / an
+                    Total CNJP : 50-80 milliards € / an (100% affecté)
                   </TableCell>
                 </TableRow>
               </TableBody>
@@ -65,17 +67,17 @@ const CNJPSummary: React.FC = () => {
           
           <div className="my-8">
             <h3 className="text-xl font-bold mb-4 text-center">
-              RÉFORME DES RETRAITES — LA JUSTE VOIX
+              RETRAITES — LA JUSTE VOIX
             </h3>
             
             <div className="flex flex-col md:flex-row gap-6 justify-between mb-4">
               <div className="flex-1 bg-ljv-navy/5 rounded-lg p-4">
-                <h4 className="font-bold mb-2">Âge légal rétabli à 60 ans</h4>
-                <p>Pour respecter l'espérance de vie en bonne santé et garantir une retraite digne à tous.</p>
+                <h4 className="font-bold mb-2">Maintien à 64 ans</h4>
+                <p>Statu quo actuel sans nouvel allongement, avec élargissement de la base contributive et fonds de garantie (9% CNJP = 4,5-7,2 Md€/an).</p>
               </div>
               <div className="flex-1 bg-ljv-navy/5 rounded-lg p-4">
-                <h4 className="font-bold mb-2">Pension garantie à 60%</h4>
-                <p>Du salaire net de référence à vie, avec revalorisation annuelle indexée sur l'inflation.</p>
+                <h4 className="font-bold mb-2">Système sécurisé</h4>
+                <p>Cumul emploi/retraite encouragé, intégration des indépendants précaires, cotisation des personnes régularisées.</p>
               </div>
             </div>
           </div>

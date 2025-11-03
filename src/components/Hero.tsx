@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
           {/* Statistiques clés */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border border-ljv-gold/20 shadow-md">
-              <div className="text-2xl font-bold text-ljv-navy mb-2">100 Md€/an</div>
+              <div className="text-2xl font-bold text-ljv-navy mb-2">50-80 Md€/an</div>
               <div className="text-sm text-gray-600">CNJP pour financer les réformes</div>
             </div>
             <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border border-ljv-gold/20 shadow-md">
@@ -49,8 +49,8 @@ const Hero: React.FC = () => {
               <div className="text-sm text-gray-600">Travailleurs essentiels revalorisés</div>
             </div>
             <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border border-ljv-gold/20 shadow-md">
-              <div className="text-2xl font-bold text-ljv-navy mb-2">60 ans</div>
-              <div className="text-sm text-gray-600">Âge légal de départ à la retraite</div>
+              <div className="text-2xl font-bold text-ljv-navy mb-2">64 ans</div>
+              <div className="text-sm text-gray-600">Âge de départ à la retraite maintenu</div>
             </div>
           </div>
 
