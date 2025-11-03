@@ -35,35 +35,35 @@ const ManifesteContent: React.FC = () => {
               <div className="flex items-center justify-center bg-ljv-navy text-white p-3 rounded-full">
                 <Euro size={24} />
               </div>
-              <p className="text-lg font-medium text-ljv-primary dark:text-ljv-primary">
-                Notre nouvelle fiscalité ne pénalise pas le travail mais valorise le mérite et l'effort
-              </p>
-            </div>
-            
-            <p className="mb-4 text-ljv-primary dark:text-ljv-primary">
-              Nous proposons une refonte complète de la grille d'imposition sur le revenu avec un double objectif :
+            <p className="text-lg font-semibold text-ljv-primary dark:text-ljv-primary">
+              Notre nouvelle fiscalité ne pénalise pas le travail mais valorise le mérite et l'effort
             </p>
-            
-            <ul className="list-disc pl-6 space-y-2 mb-4 text-ljv-primary dark:text-ljv-primary">
-              <li>Alléger la pression fiscale sur les revenus du travail et de l'innovation</li>
-              <li>Augmenter la contribution sur les revenus patrimoniaux passifs et non-productifs</li>
-              <li>Créer un système fiscal plus juste qui ne pousse pas à l'exil fiscal</li>
-            </ul>
-            
-            <div className="flex flex-col md:flex-row items-center gap-4 mb-4 mt-6">
-              <div className="flex items-center justify-center bg-ljv-navy text-white p-3 rounded-full">
-                <Shield size={24} />
-              </div>
-              <p className="text-lg font-medium text-ljv-primary dark:text-ljv-primary">
-                Protection contre l'exil fiscal
-              </p>
+          </div>
+          
+          <p className="mb-4 text-base font-medium text-ljv-primary dark:text-ljv-primary">
+            Nous proposons une refonte complète de la grille d'imposition sur le revenu avec un double objectif :
+          </p>
+          
+          <ul className="list-disc pl-6 space-y-2 mb-4 text-base font-medium text-ljv-primary dark:text-ljv-primary">
+            <li>Alléger la pression fiscale sur les revenus du travail et de l'innovation</li>
+            <li>Augmenter la contribution sur les revenus patrimoniaux passifs et non-productifs</li>
+            <li>Créer un système fiscal plus juste qui ne pousse pas à l'exil fiscal</li>
+          </ul>
+          
+          <div className="flex flex-col md:flex-row items-center gap-4 mb-4 mt-6">
+            <div className="flex items-center justify-center bg-ljv-navy text-white p-3 rounded-full">
+              <Shield size={24} />
             </div>
-            
-            <p className="mb-4 text-ljv-primary dark:text-ljv-primary">
-              Notre système inclut des mécanismes anti-évasion robustes :
+            <p className="text-lg font-semibold text-ljv-primary dark:text-ljv-primary">
+              Protection contre l'exil fiscal
             </p>
-            
-            <ul className="list-disc pl-6 space-y-2 text-ljv-primary dark:text-ljv-primary">
+          </div>
+          
+          <p className="mb-4 text-base font-medium text-ljv-primary dark:text-ljv-primary">
+            Notre système inclut des mécanismes anti-évasion robustes :
+          </p>
+          
+          <ul className="list-disc pl-6 space-y-2 text-base font-medium text-ljv-primary dark:text-ljv-primary">
               <li>Imposition différée lors d'un départ à l'étranger pour motifs fiscaux</li>
               <li>Suivi des patrimoines pendant 10 ans après le départ fiscal</li>
               <li>Coopération internationale renforcée pour le partage d'informations fiscales</li>

@@ -61,15 +61,15 @@
 
 /* Custom LJV Design System - HSL Colors */
 :root {
-  /* LJV Brand Colors in HSL - Maximum contrast for readability */
-  --ljv-navy: 220 80% 10%;
-  --ljv-gold: 43 85% 40%;
-  --ljv-red: 354 70% 48%;
+  /* LJV Brand Colors in HSL - Maximum contrast */
+  --ljv-navy: 220 100% 8%;
+  --ljv-gold: 43 95% 35%;
+  --ljv-red: 354 75% 45%;
   
-  /* Text Colors - Very high contrast */
-  --ljv-text-primary: 220 70% 8%;
-  --ljv-text-secondary: 220 50% 25%;
-  --ljv-text-muted: 220 30% 40%;
+  /* Text Colors - Maximum contrast for perfect readability */
+  --ljv-text-primary: 0 0% 5%;  /* Presque noir */
+  --ljv-text-secondary: 0 0% 15%; /* Très foncé */
+  --ljv-text-muted: 0 0% 30%; /* Foncé mais distinct */
   
   /* LJV Gradients */
   --ljv-gradient-primary: linear-gradient(135deg, hsl(var(--ljv-navy)), hsl(var(--ljv-gold)));
@@ -135,13 +135,13 @@
 
 /* Dark mode support */
 .dark {
-  --ljv-navy: 220 70% 88%;
-  --ljv-gold: 43 75% 70%;
-  --ljv-red: 354 70% 68%;
+  --ljv-navy: 220 70% 90%;
+  --ljv-gold: 43 80% 75%;
+  --ljv-red: 354 70% 70%;
   
-  --ljv-text-primary: 220 60% 95%;
-  --ljv-text-secondary: 220 40% 80%;
-  --ljv-text-muted: 220 20% 65%;
+  --ljv-text-primary: 0 0% 95%;
+  --ljv-text-secondary: 0 0% 80%;
+  --ljv-text-muted: 0 0% 60%;
 }
 
 /* Button styles */
