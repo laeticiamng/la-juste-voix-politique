@@ -54,8 +54,8 @@ export const block3: BlockData = {
         "**Chiffrage :**",
         "• Coût par personne : ~15 000€/an (hébergement + accompagnement + salaire partiel)",
         "• Phase 1 (2026-2027) : 100 000 personnes → 1,5 Md€/an",
-        "• Phase 2 (2027-2028) : 200 000 personnes supplémentaires → 3 Md€/an",
-        "• Total en régime de croisière : 4,5 Md€/an pendant 3-4 ans"
+        "• Phase 2 (2028) : 200 000 personnes supplémentaires → 3 Md€/an",
+        "• Total en régime de croisière : 4,5 Md€/an pendant 3 ans (2026-2028)"
       ],
       impact: "Ce n'est ni de l'assistanat, ni du travail forcé, c'est un contrat d'engagement réciproque",
       cost: "4,5 milliards €/an pendant 3-4 ans",

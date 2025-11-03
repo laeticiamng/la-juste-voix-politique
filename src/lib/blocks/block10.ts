@@ -31,9 +31,17 @@ export const block10: BlockData = {
         "2 milliards € par an réservés à des projets locaux, culturels, sociaux, écologiques",
         "Plateforme ouverte à tous dès 16 ans",
         "Projets proposés, votés, et suivis par les citoyens",
-        "Portés par les collectivités, les associations, les habitants eux-mêmes"
+        "Portés par les collectivités, les associations, les habitants eux-mêmes",
+        "",
+        "**Exemples de projets finançables :**",
+        "• Rénovation d'espaces publics locaux",
+        "• Festivals culturels de quartier",
+        "• Jardins partagés et agriculture urbaine",
+        "• Équipements sportifs de proximité"
       ],
-      impact: "Participation directe des citoyens aux décisions budgétaires et développement de projets répondant aux besoins réels"
+      impact: "Participation directe des citoyens aux décisions budgétaires et développement de projets répondant aux besoins réels",
+      cost: "2 milliards €/an",
+      financing: "1% du budget de l'État (redéploiement de subventions existantes fragmentées)"
     },
     {
       id: 2,
@@ -45,9 +53,18 @@ export const block10: BlockData = {
         "Dans : solidarité, éducation, transition écologique, sécurité civile, numérique",
         "Rémunéré (600-800€/mois), reconnu, certifié",
         "Compatible avec études, formation, emploi",
-        "Avantages : points pour logement social, bonus Pass Culture, reconnaissance sur CV"
+        "Avantages : points pour logement social, bonus Pass Culture, reconnaissance sur CV",
+        "",
+        "**Chiffrage :**",
+        "• Objectif : 200 000 jeunes/an en régime de croisière",
+        "• Rémunération moyenne : 700€/mois",
+        "• Durée moyenne : 9 mois",
+        "• Coût par jeune : 6 300€/an (rémunération) + 800€ (formation/encadrement) = 7 100€",
+        "• Budget total : 200 000 × 7 100€ = 1,42 Md€/an"
       ],
-      impact: "Formation de citoyens actifs et engagés par l'expérience directe du service public, avec objectif de 200 000 jeunes/an"
+      impact: "Formation de citoyens actifs et engagés par l'expérience directe du service public",
+      cost: "1,42 milliard €/an en régime de croisière (montée progressive sur 3 ans)",
+      financing: "Budget de l'État (Éducation + Jeunesse) + FSE+ + Participation des collectivités"
     },
     {
       id: 3,
