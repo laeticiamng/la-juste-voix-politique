@@ -41,11 +41,11 @@ const ProgramBlocks: React.FC = () => {
                     <h3 className="text-xl font-serif font-semibold text-ljv-navy group-hover:text-ljv-gold transition-colors">
                       {block.title}
                     </h3>
-                    <p className="text-sm text-gray-500 mt-1">
+                    <p className="text-sm text-ljv-secondary dark:text-ljv-secondary mt-1">
                       {block.subtitle}
                     </p>
                     {block.quotes && block.quotes[0] && (
-                      <blockquote className="italic text-sm text-gray-600 mt-3 border-l-2 border-ljv-gold pl-3">
+                      <blockquote className="italic text-sm text-ljv-secondary dark:text-ljv-secondary mt-3 border-l-2 border-ljv-gold pl-3">
                         {block.quotes[0]}
                       </blockquote>
                     )}
@@ -65,11 +65,11 @@ const ProgramBlocks: React.FC = () => {
                   <h2 className="text-3xl font-serif font-bold mb-2 text-ljv-navy">
                     {block.title}
                   </h2>
-                  <p className="text-xl text-gray-500">
+                  <p className="text-xl text-ljv-secondary dark:text-ljv-secondary">
                     {block.subtitle}
                   </p>
                   {block.quotes && block.quotes[0] && (
-                    <blockquote className="italic text-lg text-gray-600 mt-4 border-l-4 border-ljv-gold pl-4">
+                    <blockquote className="italic text-lg text-ljv-secondary dark:text-ljv-secondary mt-4 border-l-4 border-ljv-gold pl-4">
                       {block.quotes[0]}
                     </blockquote>
                   )}
@@ -77,16 +77,16 @@ const ProgramBlocks: React.FC = () => {
               </div>
               
               <div className="mb-8">
-                <h3 className="text-xl font-serif font-semibold mb-4">Philosophie</h3>
-                <p className="text-gray-700">{block.description}</p>
+                <h3 className="text-xl font-serif font-semibold mb-4 text-ljv-navy dark:text-ljv-navy">Philosophie</h3>
+                <p className="text-ljv-primary dark:text-ljv-primary leading-relaxed">{block.description}</p>
               </div>
               
               <div>
-                <h3 className="text-xl font-serif font-semibold mb-6">Nos mesures</h3>
+                <h3 className="text-xl font-serif font-semibold mb-6 text-ljv-navy dark:text-ljv-navy">Nos mesures</h3>
                 <Accordion type="single" collapsible className="w-full">
                   {block.measures.map((measure, index) => (
                     <AccordionItem key={index} value={`measure-${index}`}>
-                      <AccordionTrigger className="text-left">
+                      <AccordionTrigger className="text-left text-ljv-primary dark:text-ljv-primary">
                         <div className="flex items-center gap-3">
                           <div className="flex-shrink-0 h-8 w-8 rounded-full bg-ljv-gold bg-opacity-10 flex items-center justify-center text-ljv-gold font-medium">
                             {index + 1}
@@ -95,7 +95,7 @@ const ProgramBlocks: React.FC = () => {
                         </div>
                       </AccordionTrigger>
                       <AccordionContent>
-                        <div className="pl-11 text-gray-700">
+                        <div className="pl-11 text-ljv-primary dark:text-ljv-primary leading-relaxed">
                           {measure.includes(' - ') ? measure.split(' - ').slice(1).join(' - ') : ''}
                         </div>
                       </AccordionContent>
