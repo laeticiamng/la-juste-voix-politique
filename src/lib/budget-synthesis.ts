@@ -34,7 +34,7 @@ export const budgetSynthesis = {
     title: "DÉPENSES TOTALES",
     
     viaCNJP: {
-      titre: "Affectations via CNJP (49,5-80 Md€/an = 100%)",
+      titre: "Affectations via CNJP (50-80 Md€/an = 100%)",
       details: [
         {
           poste: "Revalorisation métiers publics",
@@ -49,15 +49,15 @@ export const budgetSynthesis = {
           detail: "Inclut CER 5-6 Md€/an"
         },
         {
-          poste: "Fonds garantie retraites",
-          pourcentage: "15%",
-          montant: "7,5-12 Md€/an"
+          poste: "Logement social & Plan SDF",
+          pourcentage: "16%",
+          montant: "8-12,8 Md€/an",
+          detail: "500k logements 3,6-4,8Md€/an + Plan Habiter & Travailler 1,5-4,5Md€/an"
         },
         {
-          poste: "Logement social",
-          pourcentage: "13%",
-          montant: "6,5-10,4 Md€/an",
-          detail: "500k logements + Plan Habiter & Travailler"
+          poste: "Fonds garantie retraites",
+          pourcentage: "12%",
+          montant: "6-9,6 Md€/an"
         },
         {
           poste: "Santé mentale",
@@ -68,10 +68,10 @@ export const budgetSynthesis = {
           poste: "Transition écologique",
           pourcentage: "9%",
           montant: "4,5-7,2 Md€/an",
-          detail: "Rénovation 2Md€ + Mobilité 0,8Md€ + Emplois verts 1,5Md€ (montée progressive) + Divers 0,2Md€"
+          detail: "Rénovation 2Md€ + Mobilité 1Md€ + Transports 0,8Md€ + Emplois verts 1,5Md€ + Divers 0,4Md€"
         }
       ],
-      sousTotal: "49,5-80 Md€/an (100% de la CNJP)"
+      sousTotal: "50-80 Md€/an (100% de la CNJP)"
     },
 
     horsCNJP: {
@@ -120,7 +120,7 @@ export const budgetSynthesis = {
         {
           bloc: "Bloc 14 - Culture",
           mesures: [
-            { nom: "Pass Culture étendu + Pass Solidaire", montant: "0,3 Md€/an", financement: "Budget Culture + CNJP indirect" }
+            { nom: "Pass Culture étendu + Pass Solidaire", montant: "0,3 Md€/an", financement: "Budget Culture + FSE+" }
           ],
           sousTotal: "0,3 Md€/an"
         }
@@ -128,18 +128,18 @@ export const budgetSynthesis = {
       sousTotal: "8,18-9,18 Md€/an + 280M€ investissements initiaux"
     },
 
-    totalGeneral: "57,7-89,2 Md€/an nécessaires"
+    totalGeneral: "58,2-89,2 Md€/an nécessaires"
   },
 
   equilibre: {
     recettes: "57-89 Md€/an",
-    depenses: "57,7-89,2 Md€/an",
+    depenses: "58,2-89,2 Md€/an",
     solde: {
-      optimiste: "+0,3 Md€/an (équilibre positif dans scénario bas)",
+      optimiste: "-1,2 Md€/an (compensé par économies indirectes 5,6-9 Md€/an = solde final +4,4 à +7,8 Md€)",
       median: "±0 Md€/an (équilibre parfait autour de 70-75 Md€)",
-      pessimiste: "-0,2 Md€/an (quasi-équilibre dans scénario haut)"
+      pessimiste: "-0,2 Md€/an (compensé par économies indirectes = solde final +5,4 à +8,8 Md€)"
     },
-    note: "Le programme est à l'équilibre dans TOUS les scénarios (±0,3 Md€ max). Les pourcentages CNJP font exactement 100% : 35% + 25% + 15% + 13% + 3% + 9% = 100%. Le léger déficit du scénario pessimiste (-0,2 Md€) est immédiatement compensé par les économies indirectes (5,6-9 Md€/an)."
+    note: "Le programme est PARFAITEMENT VIABLE dans tous les scénarios. Les pourcentages CNJP font exactement 100% : 35% + 25% + 16% + 12% + 3% + 9% = 100%. Même dans le scénario le plus pessimiste (-1,2 Md€), les économies indirectes (5,6-9 Md€/an) garantissent un EXCÉDENT de 4,4 à 8,8 Md€/an."
   },
 
   economiesIndirectes: {
@@ -182,18 +182,19 @@ export const budgetSynthesis = {
   conclusion: `Le programme La Juste Voix est financièrement viable et PARFAITEMENT équilibré :
 
 ✅ Recettes : 57-89 Md€/an (CNJP + CER + lutte fraude)
-✅ Dépenses : 57,7-89,2 Md€/an (investissements massifs)
-✅ Solde : ÉQUILIBRE PARFAIT dans tous les scénarios (±0,3 Md€ max)
-✅ Pourcentages CNJP : 100% exactement (35%+25%+15%+13%+3%+9%)
-✅ Économies indirectes : 5,6-9 Md€/an supplémentaires NON comptabilisées
+✅ Dépenses : 58,2-89,2 Md€/an (investissements massifs)
+✅ Solde brut : -1,2 à +0 Md€/an selon scénario
+✅ Pourcentages CNJP : 100% exactement (35%+25%+16%+12%+3%+9%)
+✅ Économies indirectes : 5,6-9 Md€/an NON comptabilisées
+✅ SOLDE FINAL : +4,4 à +8,8 Md€/an d'EXCÉDENT dans tous les scénarios
 
 Le programme ne repose PAS sur un déficit mais sur une contribution juste des 0,1% les plus fortunés (1 500 foyers) pour financer la reconstruction des services publics et l'accompagnement de tous vers l'autonomie.
 
 Chaque euro prélevé sur les patrimoines dormants sert concrètement à :
 • Revaloriser ceux qui font fonctionner le pays (enseignants, soignants, policiers) : 35%
 • Rembourser la dette pour les générations futures : 25% + CER intégral
-• Sécuriser les retraites : 15%
-• Loger dignement chaque Français : 13%
+• Loger dignement chaque Français + Plan zéro SDF : 16%
+• Sécuriser les retraites : 12%
 • Santé mentale accessible à tous : 3%
 • Préparer la transition écologique : 9%
 
@@ -201,5 +202,5 @@ TOTAL = 100% des 50-80 Md€/an de CNJP parfaitement affectés
 
 C'est un programme JUSTE, CHIFFRÉ, VIABLE, PARFAITEMENT ÉQUILIBRÉ et TRANSFORMATEUR.
 
-Avec les économies indirectes (5,6-9 Md€/an), le programme génère même un EXCÉDENT structurel de 5-9 Md€/an qui peut financer d'autres priorités ou accélérer le remboursement de la dette.`
+Avec les économies indirectes (5,6-9 Md€/an), le programme génère un EXCÉDENT structurel de 4,4 à 8,8 Md€/an qui peut financer d'autres priorités ou accélérer le remboursement de la dette.`
 };

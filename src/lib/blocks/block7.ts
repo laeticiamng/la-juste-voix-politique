@@ -45,12 +45,12 @@ export const block7: BlockData = {
         "",
         "**Budget total écologie CNJP (4,5-7,2 Md€/an = 9%) réparti :**",
         "• Rénovation énergétique : 2 Md€/an",
-        "• Aide au remplacement véhicules polluants : 0,8 Md€/an",
-        "• Transports publics décarbonés (montée progressive) : 0,5 Md€/an",
+        "• Aide au remplacement véhicules polluants : 1 Md€/an",
+        "• Transports publics décarbonés (villes moyennes, zones rurales) : 0,8 Md€/an",
         "• Emplois verts (100 000 sur 5 ans, moyenne) : 1,5 Md€/an",
-        "• Contrats écologiques territoriaux : 0,3 Md€/an",
-        "• Écopass Citoyen : 0,1 Md€/an",
-        "**Total : 5,2 Md€/an** (dans l'enveloppe 4,5-7,2 Md€/an)"
+        "• Contrats écologiques territoriaux : 0,2 Md€/an",
+        "• Écopass Citoyen : 0,2 Md€/an",
+        "**Total : 5,7 Md€/an** (dans l'enveloppe 4,5-7,2 Md€/an)"
       ],
       impact: "Diminution significative des émissions de CO2 et des factures énergétiques",
       financing: "CNJP (part écologie 9%), Fonds européens, Crédit climatique public"
@@ -94,11 +94,11 @@ export const block7: BlockData = {
         "",
         "⚠️ Note : Le budget CNJP écologie (9% = 4,5-7,2 Md€/an) finance :",
         "• Rénovation énergétique : 2 Md€/an",
-        "• Aide remplacement véhicules : 0,8 Md€/an",
-        "• Transports publics décarbonés : 0,5 Md€/an (montée progressive)",
+        "• Aide remplacement véhicules : 1 Md€/an",
+        "• Transports publics décarbonés : 0,8 Md€/an",
         "• Emplois verts : 1,5 Md€/an (moyenne sur 5 ans)",
         "• Contrats territoriaux + Écopass : 0,4 Md€/an",
-        "**Total écologie : 5,2 Md€/an (dans l'enveloppe 4,5-7,2 Md€)**"
+        "**Total écologie : 5,7 Md€/an (dans l'enveloppe 4,5-7,2 Md€)**"
       ],
       impact: "Transformation de l'écologie en opportunité de création de richesse utile plutôt qu'en coût",
       cost: "1,5 milliard €/an en moyenne sur 5 ans (montée progressive de 0,76 à 3,8 Md€/an)",

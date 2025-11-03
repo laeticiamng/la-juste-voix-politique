@@ -64,11 +64,12 @@ export const block5: BlockData = {
         "  → dont Autres métiers publics essentiels : 9-18,5 Md€/an (pompiers, juges, agents territoriaux, travailleurs sociaux, etc.)",
         "  → Détail complet des revalorisations par métier disponible sur la page Revalorisations",
         "• 25% → FSCRD - Remboursement de la dette (12,5-20 Md€/an) + CER (5-6 Md€/an) = 17,5-26 Md€/an",
-        "• 15% → Fonds de garantie des retraites (7,5-12 Md€/an)",
-        "• 13% → Logement social et lutte contre le mal-logement (6,5-10,4 Md€/an)",
+        "• 16% → Logement social et lutte contre le mal-logement (8-12,8 Md€/an)",
+        "  → Inclut : 500 000 logements à loyers maîtrisés + Plan Habiter & Travailler (zéro SDF)",
+        "• 12% → Fonds de garantie des retraites (6-9,6 Md€/an)",
         "• 3% → Santé mentale et prévention (1,5-2,4 Md€/an)",
         "• 9% → Transition écologique (4,5-7,2 Md€/an)",
-        "  → Détail : Rénovation 2Md€ + Mobilité 0,8Md€ + Emplois verts 1,5Md€ + Contrats territoriaux 0,3Md€ + Écopass 0,1Md€"
+        "  → Détail : Rénovation 2Md€ + Mobilité 1Md€ + Transports publics 0,8Md€ + Emplois verts 1,5Md€ + Divers 0,4Md€"
       ],
       impact: "Environ 1 500 foyers fiscaux concernés, 50 à 80 milliards €/an mobilisables selon le patrimoine net total",
       financing: "Financement intégral via cette contribution des très grandes fortunes"
@@ -136,7 +137,7 @@ export const block5: BlockData = {
         "Cumul emploi/retraite encouragé pour ceux qui le souhaitent",
         "Intégration des indépendants précaires dans le système",
         "Cotisation des personnes régularisées ou en contrat de contribution",
-        "Fonds de garantie financé à 15% par la CNJP (7,5-12 Md€/an)"
+        "Fonds de garantie financé à 12% par la CNJP (6-9,6 Md€/an)"
       ],
       impact: "Système des retraites sécurisé sans nouvel allongement de l'âge légal"
     }

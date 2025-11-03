@@ -47,7 +47,7 @@ export const block14: BlockData = {
       ],
       impact: "Démocratisation de l'accès à la culture pour les populations les plus éloignées",
       cost: "300 millions €/an (extension Pass + nouveau Pass Solidaire)",
-      financing: "CNJP (part Santé/Culture) + Ministère de la Culture"
+      financing: "Budget du ministère de la Culture (redéploiement) + Fonds européens FSE+"
     },
     {
       id: 3,

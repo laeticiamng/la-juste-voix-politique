@@ -59,7 +59,7 @@ export const block3: BlockData = {
       ],
       impact: "Ce n'est ni de l'assistanat, ni du travail forcé, c'est un contrat d'engagement réciproque",
       cost: "4,5 milliards €/an pendant 3-4 ans",
-      financing: "CNJP (part logement/santé) + Fonds européens FSE+ + Réallocation des aides d'urgence existantes"
+      financing: "Inclus dans CNJP 16% Logement (8-12,8 Md€/an) aux côtés des 500 000 logements à loyers maîtrisés"
     },
     {
       id: 4,
