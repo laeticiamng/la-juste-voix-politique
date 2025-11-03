@@ -61,10 +61,15 @@
 
 /* Custom LJV Design System - HSL Colors */
 :root {
-  /* LJV Brand Colors in HSL */
-  --ljv-navy: 220 65% 15%;
-  --ljv-gold: 43 65% 52%;
-  --ljv-red: 354 70% 58%;
+  /* LJV Brand Colors in HSL - Optimized for readability */
+  --ljv-navy: 220 70% 12%;
+  --ljv-gold: 43 75% 45%;
+  --ljv-red: 354 70% 50%;
+  
+  /* Text Colors for Better Contrast */
+  --ljv-text-primary: 220 60% 10%;
+  --ljv-text-secondary: 220 40% 35%;
+  --ljv-text-muted: 220 20% 50%;
   
   /* LJV Gradients */
   --ljv-gradient-primary: linear-gradient(135deg, hsl(var(--ljv-navy)), hsl(var(--ljv-gold)));
@@ -86,6 +91,18 @@
 
 .text-ljv-red {
   color: hsl(var(--ljv-red));
+}
+
+.text-ljv-primary {
+  color: hsl(var(--ljv-text-primary));
+}
+
+.text-ljv-secondary {
+  color: hsl(var(--ljv-text-secondary));
+}
+
+.text-ljv-muted {
+  color: hsl(var(--ljv-text-muted));
 }
 
 .bg-ljv-navy {
@@ -118,9 +135,13 @@
 
 /* Dark mode support */
 .dark {
-  --ljv-navy: 220 65% 85%;
-  --ljv-gold: 43 65% 65%;
-  --ljv-red: 354 70% 65%;
+  --ljv-navy: 220 70% 88%;
+  --ljv-gold: 43 75% 70%;
+  --ljv-red: 354 70% 68%;
+  
+  --ljv-text-primary: 220 60% 95%;
+  --ljv-text-secondary: 220 40% 80%;
+  --ljv-text-muted: 220 20% 65%;
 }
 
 /* Button styles */
