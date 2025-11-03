@@ -10,7 +10,6 @@ export const block2: BlockData = {
     "Observatoire Citoyen de la Justice Sociale - Évaluer la justice non seulement dans les textes, mais dans ses effets concrets sur les citoyens",
     "Généralisation des Peines Réparatrices - Utiliser la peine comme un levier de réparation sociale, pas d'exclusion systématique",
     "Portail numérique \"Ma Justice\" - Offrir aux citoyens un accès clair, personnalisé et humanisé à leur parcours judiciaire",
-    "Prévention dès le collège - Ne pas attendre que le conflit éclate pour intervenir",
     "Justice de proximité : visible, rapide, utile - Ramener la justice dans les territoires, dans le quotidien, dans le concret"
   ],
   quotes: [
@@ -68,17 +67,6 @@ export const block2: BlockData = {
     },
     {
       id: 5,
-      title: "Prévention dès le collège",
-      objective: "Ne pas attendre que le conflit éclate pour intervenir.",
-      details: [
-        "Binômes éducateur-médiateur dans chaque collège",
-        "Stages de responsabilisation dès la 5e",
-        "Activités éducatives obligatoires en zones sensibles",
-        "Soutien parental ou \"responsabilisation parentale\""
-      ]
-    },
-    {
-      id: 6,
       title: "Justice de proximité : visible, rapide, utile",
       objective: "Ramener la justice dans les territoires, dans le quotidien, dans le concret.",
       details: [

@@ -11,8 +11,7 @@ export const block10: BlockData = {
     "Service civique universel et valorisé",
     "Référendum citoyen renforcé",
     "Compte Engagement Citoyen",
-    "Transparence publique active",
-    "Présence obligatoire à l'Assemblée nationale"
+    "Transparence publique active"
   ],
   quotes: [
     "Investir dans la démocratie, c'est investir dans les citoyens.",
@@ -82,17 +81,6 @@ export const block10: BlockData = {
       ],
       impact: "Renforcement de la confiance envers les institutions par la transparence et la responsabilité"
     },
-    {
-      id: 6,
-      title: "Présence obligatoire à l'Assemblée nationale",
-      objective: "Mettre fin à l'absentéisme parlementaire",
-      details: [
-        "25 % d'absences non justifiées = suspension des indemnités",
-        "10 absences injustifiées = déclenchement du remplacement par le suppléant",
-        "Inéligibilité pendant 5 ans en cas d'abus"
-      ],
-      impact: "Responsabilisation des représentants élus et amélioration de la qualité du travail parlementaire"
-    }
   ],
   conclusion: "Proposer une démocratie lisible dans son budget, présente dans la vie quotidienne, ouverte à la participation réelle, et exigeante avec ses représentants. Créer une République qui ne regarde pas les citoyens de haut, qui ne laisse personne derrière une boîte mail ou un délai, qui forme à la décision collective, au lieu de s'en méfier. Ne pas vouloir une démocratie tous les 5 ans, mais une démocratie tous les jours."
 };

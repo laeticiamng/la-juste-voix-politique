@@ -49,7 +49,7 @@ export const block5: BlockData = {
         "Exclut résidence principale, biens d'usage, immobilier actif",
         "Barème progressif allant de 3% (100-250M€) jusqu'à 42% (>50Md€)"
       ],
-      impact: "500 à 1 800 foyers fiscaux concernés, 70 à 100 milliards €/an mobilisables",
+      impact: "Environ 1 500 foyers fiscaux concernés, 50 à 80 milliards €/an mobilisables selon le patrimoine net total",
       financing: "Financement intégral de la revalorisation des métiers publics, plan santé mentale, logement, écologie et remboursement de la dette via le FSCRD"
     },
     {
@@ -72,7 +72,7 @@ export const block5: BlockData = {
         "Gouvernance : citoyens tirés au sort + experts + Cour des comptes",
         "Transparence : plateforme publique, rapport annuel"
       ],
-      impact: "Rembourser 40 milliards €/an pour ramener la dette publique à < 70% du PIB d'ici 15 ans"
+      impact: "Rembourser 25 à 35 milliards €/an pour ramener la dette publique à < 80% du PIB d'ici 15 ans"
     },
     {
       id: 5,

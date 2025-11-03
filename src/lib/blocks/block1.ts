@@ -86,7 +86,7 @@ export const block1: BlockData = {
         "**2. Contrat d'Engagement Emploi progressif**",
         "• Semaine 1 à 4 : 24 heures/semaine (mise en route + garde et transport réglés)",
         "• Semaine 5 à 12 : 30 heures/semaine (stabilisation du rythme)",
-        "• Semaine 13+ : 35 heures/semaine (travail réel, activité réelle, dignité retrouvée)",
+        "• À partir de la semaine 13 : 35 heures/semaine (travail réel, activité réelle, dignité retrouvée)",
         "• Même droits, mêmes devoirs",
         "",
         "**3. Levée des blocages avant d'exiger**",
@@ -99,8 +99,8 @@ export const block1: BlockData = {
         "**4. Système de bonus et sanctions**",
         "",
         "*Bonus de maintien :*",
-        "• +300 € après 3 mois d'activité continue",
-        "• +600 € après 6 mois d'activité continue",
+        "• +300 € après 4 mois d'activité continue à temps plein (35h)",
+        "• +600 € après 7 mois d'activité continue à temps plein",
         "➡️ On récompense l'effort, pas la déclaration d'intention",
         "",
         "*Sanctions progressives en cas de refus injustifié :*",
@@ -166,7 +166,7 @@ export const block1: BlockData = {
           id: "8️⃣",
           name: "Prime d'activité",
           before: "Versée dès les premiers jours d'un travail… Puis diminuée ou supprimée trop vite → peur de perdre → retour à l'inactivité.",
-          after: "Elle devient une prime de maintien dans l'emploi : +300 € après 3 mois tenus, +600 € après 6 mois.",
+          after: "Elle devient une prime de maintien dans l'emploi : +300 € après 4 mois tenus à temps plein, +600 € après 7 mois.",
           impact: "La personne a intérêt à continuer"
         }
       ]

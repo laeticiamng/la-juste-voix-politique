@@ -8,7 +8,7 @@ export const block3: BlockData = {
   measures: [
     "Crédit Santé Mentale Universel - Offrir à tous les Français un accès réel à un soutien psychologique",
     "Prévention Active & Populaire - Faire de la prévention une présence joyeuse, visible, accessible partout",
-    "Plan \"Habiter & Travailler\" — Objectif : zéro SDF en 2027",
+    "Plan \"Habiter & Travailler\" — Objectif : zéro SDF en 2028",
     "Santé mobile & numérique de proximité - Répondre aux déserts médicaux et aux exclusions numériques",
     "Inclusion par le travail pour tous (y compris sans-papiers)"
   ],
@@ -43,7 +43,7 @@ export const block3: BlockData = {
     },
     {
       id: 3,
-      title: "Plan \"Habiter & Travailler\" — Objectif : zéro SDF en 2027",
+      title: "Plan \"Habiter & Travailler\" — Objectif : zéro SDF en 2028",
       objective: "Sortir les personnes sans domicile de l'errance par le travail encadré et l'hébergement digne.",
       details: [
         "Structures mixtes logement + mission utile (recycleries, cantines, agriculture partagée…)",

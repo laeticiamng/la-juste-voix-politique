@@ -10,7 +10,7 @@ export const block4: BlockData = {
     "Orientation multiple & double cursus dans les filières professionnelles",
     "Passerelles réversibles et \"pass formation libre\" jusqu'à 25 ans",
     "Module \"Ouverture & Tolérance\" obligatoire au collège et lycée",
-    "Réduction des effectifs en classe à 20 élèves maximum",
+    "Classes à taille humaine pour garantir l'attention nécessaire",
     "Revalorisation du métier d'enseignant"
   ],
   quotes: [
