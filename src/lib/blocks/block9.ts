@@ -54,12 +54,20 @@ export const block9: BlockData = {
       title: "Prévention dès le collège",
       objective: "Intervenir avant que le lien se brise",
       details: [
-        "Binôme éducatif-médiateur dans chaque établissement",
+        "Binôme éducatif-médiateur dans chaque établissement (1 binôme pour 500 élèves)",
         "Stages de responsabilisation dès la 5e",
         "Activités éducatives obligatoires (soirées, week-ends)",
-        "Soutien parental ou responsabilisation encadrée en cas de démission éducative"
+        "Soutien parental ou responsabilisation encadrée en cas de démission éducative",
+        "",
+        "**Chiffrage :**",
+        "• ~7 000 collèges en France",
+        "• 1 binôme par établissement moyen = 7 000 binômes",
+        "• Coût par binôme : ~80 000€/an (salaires + formation)",
+        "• Total : 560 millions €/an"
       ],
-      impact: "Présence active et intervention précoce pour éviter les dérives"
+      impact: "Présence active et intervention précoce pour éviter les dérives",
+      cost: "560 millions €/an",
+      financing: "Budget Éducation nationale (40%) + Budget Intérieur/Prévention (40%) + Collectivités (20%)"
     },
     {
       id: 4,

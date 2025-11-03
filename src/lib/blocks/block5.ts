@@ -57,16 +57,18 @@ export const block5: BlockData = {
         "Barème progressif allant de 3% (100-250M€) jusqu'à 42% (>50Md€)",
         "",
         "**Affectation des recettes (50-80 Md€/an) :**",
-        "• 30% → Revalorisation métiers publics - enseignants, soignants, forces de l'ordre (15-24 Md€/an)",
+        "• 35% → Revalorisation métiers publics - enseignants, soignants, forces de l'ordre (17,5-28 Md€/an)",
         "  → dont Enseignants +20% : 3 Md€/an (inclus)",
         "  → dont Soignants hospitaliers +15% : 4-5 Md€/an (inclus)",
         "  → dont Forces de l'ordre +10% : 1,5 Md€/an (inclus)",
-        "  → dont Autres métiers publics (juges, magistrats, agents territoriaux) : 6,5-14,5 Md€/an",
-        "• 25-30% → FSCRD - Remboursement de la dette (12,5-24 Md€/an)",
+        "  → dont Autres métiers publics essentiels : 9-18,5 Md€/an (pompiers, juges, agents territoriaux, travailleurs sociaux, etc.)",
+        "  → Détail complet des revalorisations par métier disponible sur la page Revalorisations",
+        "• 25% → FSCRD - Remboursement de la dette (12,5-20 Md€/an) + CER (5-6 Md€/an) = 17,5-26 Md€/an",
         "• 15% → Fonds de garantie des retraites (7,5-12 Md€/an)",
-        "• 12-15% → Logement social et lutte contre le mal-logement (6-12 Md€/an)",
+        "• 13% → Logement social et lutte contre le mal-logement (6,5-10,4 Md€/an)",
         "• 3% → Santé mentale et prévention (1,5-2,4 Md€/an)",
-        "• 12-13% → Transition écologique (rénovation, mobilité, emplois verts) (6-10,4 Md€/an)"
+        "• 9% → Transition écologique (4,5-7,2 Md€/an)",
+        "  → Détail : Rénovation 2Md€ + Mobilité 0,8Md€ + Emplois verts 1,5Md€ + Contrats territoriaux 0,3Md€ + Écopass 0,1Md€"
       ],
       impact: "Environ 1 500 foyers fiscaux concernés, 50 à 80 milliards €/an mobilisables selon le patrimoine net total",
       financing: "Financement intégral via cette contribution des très grandes fortunes"
@@ -95,12 +97,12 @@ export const block5: BlockData = {
       title: "FSCRD : Fonds Souverain Citoyen de Réduction de la Dette",
       objective: "Utiliser les recettes exceptionnelles pour rembourser durablement la dette publique",
       details: [
-        "Financement : 25-30% CNJP (12,5-24 Md€/an) + 100% CER (5-6 Md€/an)",
-        "Total : 17,5 à 30 Md€/an affectés au remboursement de la dette",
+        "Financement : 25% CNJP (12,5-20 Md€/an) + 100% CER (5-6 Md€/an)",
+        "Total : 17,5 à 26 Md€/an affectés au remboursement de la dette",
         "Gouvernance : citoyens tirés au sort + experts + Cour des comptes",
         "Transparence : plateforme publique, rapport annuel"
       ],
-      impact: "Rembourser 17,5 à 30 milliards €/an pour ramener la dette publique de ~110% à < 80% du PIB d'ici 15-20 ans"
+      impact: "Rembourser 17,5 à 26 milliards €/an pour ramener la dette publique de ~110% à < 80% du PIB d'ici 15-20 ans"
     },
     {
       id: 5,

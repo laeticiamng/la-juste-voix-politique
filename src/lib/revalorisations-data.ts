@@ -158,6 +158,8 @@ export const revalorisationsData: RevalorisationCategory[] = [
 
 export const revalorisationsSummary = {
   beneficiaries: "Plus de 4 millions de Français concernés dès la première année",
-  cost: "45 milliards €/an, entièrement financé par la CNJP",
-  quote: "Quand on revalorise ceux qui soignent, enseignent, accompagnent, protègent ou transmettent…ce n'est pas une dépense. C'est un investissement dans la République."
+  cost: "17,5 à 28 milliards €/an selon le montant total de la CNJP, entièrement financé par la CNJP (35% des recettes)",
+  quote: "Quand on revalorise ceux qui soignent, enseignent, accompagnent, protègent ou transmettent…ce n'est pas une dépense. C'est un investissement dans la République.",
+  detail: "Cette enveloppe de 17,5-28 Md€/an finance les revalorisations salariales de TOUS les métiers publics essentiels : enseignants (+20% = 3 Md€), soignants hospitaliers (+15% = 4-5 Md€), forces de l'ordre (+10% = 1,5 Md€), pompiers, magistrats, agents territoriaux, travailleurs sociaux, aides à domicile, bibliothécaires, etc. (9-18,5 Md€).",
+  note: "Ces revalorisations représentent 35% de la CNJP, soit la part la plus importante du budget. C'est un choix politique fort : ceux qui font tenir la République au quotidien doivent être dignement rémunérés."
 };
