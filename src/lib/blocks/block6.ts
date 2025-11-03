@@ -34,22 +34,22 @@ export const block6: BlockData = {
         "Zones prioritaires: grandes métropoles, villes moyennes et zones rurales sous-dotées",
         "",
         "**Financement détaillé (40 Md€ sur 5 ans) :**",
-        "• CNJP (part logement 14%) : 24,5-35 Md€ sur 5 ans",
+        "• CNJP (part logement 11%) : 24,8-35,8 Md€ sur 5 ans",
         "  → dont 500k logements : 18-24 Md€ sur 5 ans (3,6-4,8 Md€/an)",
-        "  → dont Plan Habiter & Travailler (zéro SDF) : 4,5 Md€/an en phase 2",
+        "  → dont Plan Habiter & Travailler (zéro SDF) : 4,5-6 Md€/an",
         "• Collectivités territoriales : 7 Md€ sur 5 ans",
         "• Fonds européens FEDER : 8-10 Md€ sur 5 ans",
         "• Secteur privé (défiscalisation) : 2,5-4 Md€ sur 5 ans",
         "",
-        "⚠️ Note : Le budget CNJP Logement (14% = 9,8-14 Md€/an) finance :",
+        "⚠️ Note : Le budget CNJP Logement (11% = 9,9-14,3 Md€/an) finance :",
         "• Construction 500k logements : 3,6-4,8 Md€/an (part CNJP)",
         "• Plan SDF Phase 1 (2026-2027) : 1,5 Md€/an",
-        "• Plan SDF Phase 2 (2028+) : 4,5 Md€/an en régime de croisière",
-        "• Total Phase 2 : 9,3 Md€/an (dans l'enveloppe 9,8-14 Md€/an) ✅"
+        "• Plan SDF Phase 2 (2028+) : 4,5-6 Md€/an en régime de croisière",
+        "• Total Phase 2 : 9,3-10,8 Md€/an (dans l'enveloppe 9,9-14,3 Md€/an) ✅"
       ],
       impact: "Diminution significative de la crise du logement dans les zones tendues et revitalisation des territoires délaissés",
       cost: "40 milliards € sur 5 ans (8 Md€/an)",
-      financing: "CNJP 61-88% (14% de la CNJP) + Collectivités 18% + UE 20-25% + Privé 6-10%"
+      financing: "CNJP 62-86% (11% de la CNJP) + Collectivités 18% + UE 20-25% + Privé 6-10%"
     },
     {
       id: 2,
