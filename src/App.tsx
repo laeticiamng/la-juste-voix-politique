@@ -11,6 +11,7 @@ import Index from "./pages/Index";
 import Manifeste from "./pages/Manifeste";
 import Bloc from "./pages/Bloc";
 import NotFound from "./pages/NotFound";
+import RisksAndSafeguards from "./pages/RisksAndSafeguards";
 import Revalorisations from "./pages/Revalorisations";
 import TaxBrackets from "./pages/TaxBrackets";
 import FAQ from "./pages/FAQ";
@@ -32,6 +33,7 @@ function App() {
                 <Route path="/manifeste" element={<Manifeste />} />
                 <Route path="/revalorisations" element={<Revalorisations />} />
                 <Route path="/fiscalite" element={<TaxBrackets />} />
+                <Route path="/risques-securisations" element={<RisksAndSafeguards />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/bloc/:id" element={<Bloc />} />

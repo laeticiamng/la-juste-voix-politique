@@ -147,14 +147,23 @@ export const block5: BlockData = {
     },
     {
       id: 5,
-      title: "Anticipation des départs fiscaux",
-      objective: "Éviter toute évasion massive des grandes fortunes",
+      title: "Anticipation et prévention des départs fiscaux - SÉCURISATION RENFORCÉE",
+      objective: "Éviter toute évasion massive des grandes fortunes par un arsenal juridique et fiscal dissuasif",
       details: [
-        "Exit tax renforcée",
-        "Imposition sur les capitaux détenus en France même en cas de départ",
-        "Coopération avec la Suisse, le Luxembourg, Monaco",
-        "Suspension d'accès aux marchés publics pour les exilés fiscaux"
-      ]
+        "**Exit tax renforcée sur 15 ans** : taxation différée de 60% sur la plus-value latente au moment du départ",
+        "**Imposition territoriale** : Tout patrimoine détenu en France (immobilier, entreprises, actifs financiers) reste taxable même après départ",
+        "**Clause de retour fiscal** : Si retour en France dans les 10 ans, paiement rétroactif de la CNJP avec intérêts",
+        "**Gel des actifs** : Possibilité de bloquer les transferts massifs de capitaux (> 10M€) pendant 6 mois pour vérification fiscale",
+        "**Coopération internationale obligatoire** : Accords bilatéraux avec Suisse, Luxembourg, Monaco, Belgique, UK pour partage automatique d'informations",
+        "**Sanctions commerciales** : Interdiction d'accès aux marchés publics français et pénalités douanières pour les entreprises des exilés fiscaux",
+        "**Publicité des départs** : Liste publique des exilés fiscaux (transparence et pression sociale)",
+        "**Consolidation familiale** : Tout patrimoine détenu par le foyer fiscal + ascendants/descendants directs est consolidé",
+        "**Clause anti-abus familiale** : Les donations < 5 ans avant l'entrée en vigueur sont réintégrées dans l'assiette",
+        "**Cellule Tracfin dédiée** : 200 agents spécialisés dans le traçage des patrimoines complexes avec IA de détection"
+      ],
+      impact: "Réduction du risque de fuite fiscale de 60% grâce à un dispositif dissuasif multi-niveaux",
+      cost: "900 millions €/an",
+      financing: "Moyens de contrôle, coopération internationale, contentieux - financé par le budget général de l'État"
     },
     {
       id: 6,

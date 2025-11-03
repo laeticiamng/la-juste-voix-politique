@@ -28,6 +28,7 @@ const Header: React.FC = () => {
     { path: "/manifeste", label: "Manifeste" },
     { path: "/revalorisations", label: "Revalorisations" },
     { path: "/fiscalite", label: "Fiscalité" },
+    { path: "/risques-securisations", label: "Risques" },
     { path: "/faq", label: "FAQ" },
     { path: "/contact", label: "Contact" }
   ];

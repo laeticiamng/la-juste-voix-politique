@@ -195,11 +195,13 @@ export const budgetSynthesis = {
   conclusion: `Le programme La Juste Voix - VERSION HONNÊTETÉ TOTALE est financièrement viable et PARFAITEMENT équilibré :
 
 ✅ Recettes : 97-139 Md€/an (CNJP 90-130 Md€ + CER + lutte fraude)
-✅ Dépenses : 93,8-134,8 Md€/an (TOUS les coûts réels inclus)
-✅ Solde : +2,1 à +4,2 Md€/an d'EXCÉDENT dans tous les scénarios
-✅ Pourcentages CNJP : 100% exactement (25+20+15+11+8+5+4+4+3+2+2+1)
-✅ Taux max CNJP : 60% (au lieu de 50%) pour financer TOUT le programme
-✅ Économies indirectes : NON comptabilisées par prudence
+✅ Dépenses programme : 93,8-134,8 Md€/an (TOUS les coûts réels inclus)
+✅ Solde AVANT sécurisations : +2,1 à +4,2 Md€/an d'EXCÉDENT
+
+⚠️ AVEC sécurisations des risques (+13,8-17,4 Md€/an) :
+→ Scénario réaliste : Déficit transitoire de -3 à -5 Md€/an les 3 premières années
+→ Solution : CNJP à 100-145 Md€/an (taux max 62%) + montée en charge progressive sur 6 ans
+→ Résultat : Retour à l'équilibre en année 4-6
 
 Le programme ne repose PAS sur un déficit mais sur une contribution juste des 0,1% les plus fortunés (1 500 foyers) pour financer INTÉGRALEMENT la reconstruction des services publics et l'accompagnement de tous vers l'autonomie.
 
@@ -219,7 +221,9 @@ Chaque euro prélevé sur les patrimoines dormants sert concrètement à :
 
 TOTAL = 100% des 90-130 Md€/an de CNJP parfaitement affectés
 
-C'est un programme JUSTE, CHIFFRÉ HONNÊTEMENT, VIABLE, PARFAITEMENT ÉQUILIBRÉ et TRANSFORMATEUR.
+C'est un programme JUSTE, CHIFFRÉ HONNÊTEMENT, VIABLE AVEC SÉCURISATIONS, et TRANSFORMATEUR.
 
-Avec un excédent structurel de 2,1 à 4,2 Md€/an, le programme peut financer d'autres priorités émergentes ou accélérer le remboursement de la dette.`
+📊 Pour voir l'analyse complète des risques et sécurisations : /risques-securisations
+
+Avec un excédent structurel de 2,1 à 4,2 Md€/an avant sécurisations, le programme peut absorber les coûts de sécurisation via une légère augmentation de la CNJP (taux max 62% au lieu de 60%) et une montée en charge progressive.`
 };
