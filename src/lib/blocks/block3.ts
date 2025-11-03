@@ -9,8 +9,7 @@ export const block3: BlockData = {
     "Crédit Santé Mentale Universel - Offrir à tous les Français un accès réel à un soutien psychologique",
     "Prévention Active & Populaire - Faire de la prévention une présence joyeuse, visible, accessible partout",
     "Plan \"Habiter & Travailler\" — Objectif : zéro SDF en 2028",
-    "Santé mobile & numérique de proximité - Répondre aux déserts médicaux et aux exclusions numériques",
-    "Inclusion par le travail pour tous (y compris sans-papiers)"
+    "Santé mobile & numérique de proximité - Répondre aux déserts médicaux et aux exclusions numériques"
   ],
   quotes: [
     "Soigner, prévenir, élever, reconstruire. Chacun a droit de se sentir debout."
@@ -60,20 +59,11 @@ export const block3: BlockData = {
         "Camions de santé dans les zones sous-dotées",
         "Bornes de téléconsultation dans les mairies",
         "Maisons de santé ouvertes tard le soir",
-        "Médiateurs numériques pour les personnes âgées ou isolées"
+        "Médiateurs numériques pour les personnes âgées ou isolées",
+        "",
+        "Note : Pour l'inclusion par le travail des personnes sans papiers, voir le Bloc 8 - Immigration & Intégration"
       ],
       impact: "On ne soigne pas en fermant les services. On soigne en ouvrant des voies d'accès."
-    },
-    {
-      id: 5,
-      title: "Inclusion par le travail pour tous (y compris sans-papiers)",
-      objective: "Permettre à toute personne présente sur le territoire de contribuer légalement, dès qu'elle le peut.",
-      details: [
-        "Un contrat temporaire d'insertion avec droit au travail encadré",
-        "Un parcours de régularisation par l'effort réel et la valeur créée",
-        "Des droits ouverts si l'engagement est prouvé"
-      ],
-      impact: "Travailler pour soi, c'est déjà travailler pour la France."
     }
   ],
   conclusion: "Proposer une santé qui ne s'arrête pas à l'hôpital, qui commence dans le souffle, le lien, la reconnaissance, qui soigne le corps, mais aussi l'élan intérieur. Proposer une vision du travail comme un moteur d'estime de soi, comme un outil de reconstruction, comme un socle de réintégration. Ne pas soigner les symptômes. Soigner la société."

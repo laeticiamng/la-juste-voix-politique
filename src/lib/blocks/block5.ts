@@ -47,10 +47,17 @@ export const block5: BlockData = {
       details: [
         "Concerne uniquement patrimoines financiers nets > 100 millions €",
         "Exclut résidence principale, biens d'usage, immobilier actif",
-        "Barème progressif allant de 3% (100-250M€) jusqu'à 42% (>50Md€)"
+        "Barème progressif allant de 3% (100-250M€) jusqu'à 42% (>50Md€)",
+        "",
+        "**Affectation des recettes (50-80 Md€/an) :**",
+        "• 15% → Fonds de garantie des retraites (7,5-12 Md€/an)",
+        "• 25-30% → FSCRD - Remboursement de la dette (12,5-24 Md€/an)",
+        "• 25% → Revalorisation métiers publics (enseignants, soignants, forces de l'ordre) (12,5-20 Md€/an)",
+        "• 15% → Santé mentale, logement social, prévention (7,5-12 Md€/an)",
+        "• 15% → Transition écologique (rénovation énergétique, mobilité propre) (7,5-12 Md€/an)"
       ],
       impact: "Environ 1 500 foyers fiscaux concernés, 50 à 80 milliards €/an mobilisables selon le patrimoine net total",
-      financing: "Financement intégral de la revalorisation des métiers publics, plan santé mentale, logement, écologie et remboursement de la dette via le FSCRD"
+      financing: "Financement intégral via cette contribution des très grandes fortunes"
     },
     {
       id: 3,
@@ -58,21 +65,30 @@ export const block5: BlockData = {
       objective: "Prélever une contribution unique de solidarité sur les très grandes fortunes",
       details: [
         "Taux : 10% du patrimoine net > 100M€",
-        "Étalé sur 10 ans",
-        "Exonération possible jusqu'à 50% si réinvestissement dans la réindustrialisation, logements sociaux ou emplois de transition"
+        "Étalé sur 10 ans (donc 1% par an)",
+        "Exonération possible jusqu'à 50% si réinvestissement dans la réindustrialisation, logements sociaux ou emplois de transition",
+        "",
+        "**Estimation :**",
+        "• ~1 500 foyers concernés",
+        "• Patrimoine moyen estimé : 500M€ par foyer",
+        "• Total base taxable : ~750 Md€",
+        "• Recette théorique : 75 Md€ étalés sur 10 ans",
+        "• Soit ~7,5 Md€/an après déductions et exonérations partielles : ~5-6 Md€/an effectifs"
       ],
-      impact: "Participation historique à un redressement collectif"
+      impact: "Participation historique à un redressement collectif, 100% affecté au FSCRD",
+      financing: "Contribution exceptionnelle sur 10 ans"
     },
     {
       id: 4,
       title: "FSCRD : Fonds Souverain Citoyen de Réduction de la Dette",
       objective: "Utiliser les recettes exceptionnelles pour rembourser durablement la dette publique",
       details: [
-        "Financement : 20% CNJP + 100% CER",
+        "Financement : 25-30% CNJP (12,5-24 Md€/an) + 100% CER (5-6 Md€/an)",
+        "Total : 17,5 à 30 Md€/an affectés au remboursement de la dette",
         "Gouvernance : citoyens tirés au sort + experts + Cour des comptes",
         "Transparence : plateforme publique, rapport annuel"
       ],
-      impact: "Rembourser 25 à 35 milliards €/an pour ramener la dette publique à < 80% du PIB d'ici 15 ans"
+      impact: "Rembourser 17,5 à 30 milliards €/an pour ramener la dette publique de ~110% à < 80% du PIB d'ici 15-20 ans"
     },
     {
       id: 5,
@@ -100,14 +116,15 @@ export const block5: BlockData = {
     {
       id: 7,
       title: "Retraites : sauvegarde par élargissement de la base contributive",
-      objective: "Maintenir l'âge de départ à la retraite sans compromettre l'équilibre financier",
+      objective: "Maintenir l'âge de départ à la retraite à 64 ans (statu quo actuel) sans compromettre l'équilibre financier",
       details: [
-        "Maintien à 64 ans",
-        "Cumul emploi/retraite encouragé",
-        "Intégration des indépendants précaires",
+        "Maintien à 64 ans (réforme Macron conservée)",
+        "Cumul emploi/retraite encouragé pour ceux qui le souhaitent",
+        "Intégration des indépendants précaires dans le système",
         "Cotisation des personnes régularisées ou en contrat de contribution",
-        "Fonds de garantie financé à 15% par la CNJP"
-      ]
+        "Fonds de garantie financé à 15% par la CNJP (7,5-12 Md€/an)"
+      ],
+      impact: "Système des retraites sécurisé sans nouvel allongement de l'âge légal"
     }
   ],
   conclusion: "Proposer une économie qui protège les créateurs de valeur, qui ne punit pas l'innovation, qui responsabilise la rente silencieuse, et qui libère des ressources massives, sans austérité. Ne pas parler d'économie punitive. Parler d'économie équitable, ambitieuse et reconstruite."

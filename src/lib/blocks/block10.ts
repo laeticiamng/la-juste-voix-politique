@@ -41,11 +41,13 @@ export const block10: BlockData = {
       objective: "Offrir à chaque jeune une expérience de contribution réelle à la société",
       details: [
         "Service de 6 à 12 mois entre 16 et 25 ans",
+        "Volontaire mais fortement encouragé (incitations et valorisations)",
         "Dans : solidarité, éducation, transition écologique, sécurité civile, numérique",
-        "Rémunéré, reconnu, certifié",
-        "Compatible avec études, formation, emploi"
+        "Rémunéré (600-800€/mois), reconnu, certifié",
+        "Compatible avec études, formation, emploi",
+        "Avantages : points pour logement social, bonus Pass Culture, reconnaissance sur CV"
       ],
-      impact: "Formation de citoyens actifs et engagés par l'expérience directe du service public"
+      impact: "Formation de citoyens actifs et engagés par l'expérience directe du service public, avec objectif de 200 000 jeunes/an"
     },
     {
       id: 3,

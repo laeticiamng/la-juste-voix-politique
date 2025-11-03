@@ -39,11 +39,15 @@ export const block14: BlockData = {
       title: "Accès culturel universel pour les jeunes et les invisibles",
       objective: "Faire du beau un droit commun, et non un privilège",
       details: [
-        "Pass culture de 100 €/an utilisable pour spectacles, musées, cours artistiques, livres",
-        "Accès gratuit aux lieux nationaux pour boursiers, personnes en insertion, chômeurs longue durée",
+        "Extension du Pass Culture existant : passage de 300€ à 400€ pour les 18 ans",
+        "Nouveau Pass Culture Solidaire de 100€/an pour : boursiers, personnes en insertion, chômeurs longue durée, bénéficiaires RSA",
+        "Utilisable pour spectacles, musées, cours artistiques, livres, cinéma",
+        "Accès gratuit aux lieux nationaux pour ces publics",
         "Déploiement de maisons de culture mobile : bus itinérants, tentes culturelles, festivals nomades"
       ],
-      impact: "Démocratisation de l'accès à la culture pour les populations les plus éloignées"
+      impact: "Démocratisation de l'accès à la culture pour les populations les plus éloignées",
+      cost: "300 millions €/an (extension Pass + nouveau Pass Solidaire)",
+      financing: "CNJP (part Santé/Culture) + Ministère de la Culture"
     },
     {
       id: 3,

@@ -9,8 +9,7 @@ export const block2: BlockData = {
     "La Peine à Impact Équivalent (PIE) - Adapter la peine à la réalité de vie de la personne condamnée, pour qu'elle soit juste dans ses effets",
     "Observatoire Citoyen de la Justice Sociale - Évaluer la justice non seulement dans les textes, mais dans ses effets concrets sur les citoyens",
     "Généralisation des Peines Réparatrices - Utiliser la peine comme un levier de réparation sociale, pas d'exclusion systématique",
-    "Portail numérique \"Ma Justice\" - Offrir aux citoyens un accès clair, personnalisé et humanisé à leur parcours judiciaire",
-    "Justice de proximité : visible, rapide, utile - Ramener la justice dans les territoires, dans le quotidien, dans le concret"
+    "Portail numérique \"Ma Justice\" - Offrir aux citoyens un accès clair, personnalisé et humanisé à leur parcours judiciaire"
   ],
   quotes: [
     "Être jugé selon ses actes, puni selon son monde, réinséré selon son potentiel."
@@ -63,17 +62,8 @@ export const block2: BlockData = {
         "Accessibilité : Application mobile + bornes en mairie / France Services, Médiateurs numériques pour les publics fragiles"
       ],
       cost: "100 millions €",
-      financing: "Équivalent au développement du CPF"
-    },
-    {
-      id: 5,
-      title: "Justice de proximité : visible, rapide, utile",
-      objective: "Ramener la justice dans les territoires, dans le quotidien, dans le concret.",
-      details: [
-        "Création de Maisons de Justice de Proximité dans toutes les communes > 30 000 hab",
-        "Délits du quotidien jugés rapidement",
-        "Médiation, compensation, pédagogie priorisées"
-      ]
+      financing: "Équivalent au développement du CPF",
+      impact: "Note : Pour la Justice de proximité physique (Maisons de Justice), voir le Bloc 9 - Sécurité & Responsabilité"
     }
   ],
   conclusion: "Proposer une justice qui punit sans briser, qui responsabilise sans humilier, qui protège sans oppresser, qui éduque sans infantiliser. Ne pas parler de justice abstraite. Proposer une justice à hauteur de terrain, à hauteur d'humain, à hauteur de République."
