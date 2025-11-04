@@ -129,14 +129,14 @@ const TaxSimulator: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Profession technique */}
+                {/* Profession Bac+5+ grandes écoles */}
                 <div className="flex items-center justify-between p-4 bg-white rounded-lg border border-blue-300">
                   <div className="flex-1">
                     <Label htmlFor="tech-profession" className="text-base font-bold cursor-pointer">
-                      Profession technique / scientifique
+                      Diplômé Bac+5+ grandes écoles
                     </Label>
                     <p className="text-sm text-gray-600 mt-1">
-                      Crédit d'impôt de 15% (ingénieurs, développeurs, chercheurs...)
+                      Crédit d'impôt de 15% (ingénieurs, commerce, management, professions libérales...)
                     </p>
                   </div>
                   <Switch
@@ -176,7 +176,7 @@ const TaxSimulator: React.FC = () => {
                       <Alert className="mt-3 bg-green-50 border-green-200">
                         <Sparkles className="h-4 w-4 text-green-600" />
                         <AlertDescription className="text-sm text-green-800">
-                          <strong>Crédit d'impôt technique appliqué!</strong>
+                          <strong>Crédit d'impôt Bac+5+ appliqué!</strong>
                           <br />Économie: {Math.round(creditAmount).toLocaleString('fr-FR')} €/an
                           ({Math.round(creditAmount / 12).toLocaleString('fr-FR')} €/mois)
                         </AlertDescription>
@@ -278,7 +278,7 @@ const TaxSimulator: React.FC = () => {
                           <>
                             <Separator />
                             <div className="flex justify-between text-green-700 font-bold">
-                              <span>• Crédit 15% professions techniques</span>
+                              <span>• Crédit 15% diplômés Bac+5+</span>
                               <span className="font-mono">-{Math.round(creditAmount).toLocaleString('fr-FR')} €</span>
                             </div>
                           </>
@@ -351,7 +351,7 @@ const TaxSimulator: React.FC = () => {
               * Simulation basée sur les barèmes officiels du programme La Juste Voix
               {isProfessionTechnique && (
                 <span className="block text-green-700 font-semibold mt-1">
-                  Crédit d'impôt 15% professions techniques appliqué
+                  Crédit d'impôt 15% diplômés Bac+5+ grandes écoles appliqué
                 </span>
               )}
             </p>

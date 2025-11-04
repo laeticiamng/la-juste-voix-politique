@@ -12,7 +12,7 @@ import CNJPSection from './tax/CNJPSection';
 import CNJPUsageSection from './tax/CNJPUsageSection';
 import RetirementReformSection from './tax/RetirementReformSection';
 import TaxSimulator from './TaxSimulator';
-import TechnicalProfessionsTaxCredit from './tax/TechnicalProfessionsTaxCredit';
+import HigherEducationTaxCredit from './tax/HigherEducationTaxCredit';
 
 const TaxBracketsTable: React.FC = () => {
   return (
@@ -29,8 +29,8 @@ const TaxBracketsTable: React.FC = () => {
       <MeritFiscalityHeader />
       <IncomeTaxTable />
       
-      {/* Crédit d'impôt professions techniques */}
-      <TechnicalProfessionsTaxCredit />
+      {/* Crédit d'impôt diplômés Bac+5+ */}
+      <HigherEducationTaxCredit />
       
       <TaxFeaturesGrid />
       <TaxEvasionProtection />

@@ -28,12 +28,12 @@ export const budgetSynthesis = {
         description: "Allègement classes moyennes, hausse hauts revenus"
       },
       {
-        source: "Crédit d'impôt professions techniques",
-        montant: "-0,25 Md€/an",
-        description: "Crédit de 15% pour ~500k ingénieurs et professions scientifiques"
+        source: "Crédit d'impôt diplômés Bac+5+ grandes écoles",
+        montant: "-1,65 Md€/an",
+        description: "Crédit de 15% pour ~2M cadres supérieurs issus grandes écoles (commerce, ingénieurs, managers)"
       }
     ],
-    total: "96,75-138,75 Md€/an de recettes nouvelles nettes (après crédit impôt technique)"
+    total: "95,35-137,35 Md€/an de recettes nouvelles nettes (après crédit impôt Bac+5+)"
   },
 
   depenses: {
@@ -159,12 +159,12 @@ export const budgetSynthesis = {
   },
 
   equilibre: {
-    recettes: "96,75-138,75 Md€/an (après crédit impôt technique -0,25 Md€)",
+    recettes: "95,35-137,35 Md€/an (après crédit impôt Bac+5+ -1,65 Md€)",
     depenses: "93,8-134,8 Md€/an",
     solde: {
-      optimiste: "+2,95 Md€/an (scénario bas : 96,75-93,8)",
-      median: "+1,87 Md€/an (scénario moyen : 117,77-115,9)",
-      pessimiste: "+3,95 Md€/an (scénario haut : 138,75-134,8)"
+      optimiste: "+1,55 Md€/an (scénario bas : 95,35-93,8)",
+      median: "+1,47 Md€/an (scénario moyen : 116,37-114,9)",
+      pessimiste: "+2,55 Md€/an (scénario haut : 137,35-134,8)"
     },
     note: "Le programme est PARFAITEMENT ÉQUILIBRÉ dans TOUS les scénarios avec HONNÊTETÉ TOTALE. Les pourcentages CNJP font exactement 100% : 25+20+15+11+8+5+4+4+3+2+2+1 = 100%. TOUS les coûts sont inclus sans exception. Le taux max CNJP de 60% (au lieu de 50%) finance INTÉGRALEMENT toutes les réformes. Budget LOGEMENT 11% (9,9-14,3 Md€/an) couvre 500k logements + Plan SDF ✅. Budget ÉCOLOGIE 8% (7,2-10,4 Md€/an) couvre tous les besoins ✅. Budget RETRAITES 20% (18-26 Md€/an) finance le retour à 60 ans ✅. Budget ÉDUCATION 5% (4,5-6,5 Md€/an) couvre toutes les réformes éducatives ✅."
   },
@@ -199,9 +199,9 @@ export const budgetSynthesis = {
 
   conclusion: `Le programme La Juste Voix - VERSION HONNÊTETÉ TOTALE est financièrement viable et PARFAITEMENT équilibré :
 
-✅ Recettes : 96,75-138,75 Md€/an (CNJP 90-130 Md€ + CER + lutte fraude - crédit impôt technique 0,25 Md€)
+✅ Recettes : 95,35-137,35 Md€/an (CNJP 90-130 Md€ + CER + lutte fraude - crédit impôt Bac+5+ 1,65 Md€)
 ✅ Dépenses programme : 93,8-134,8 Md€/an (TOUS les coûts réels inclus)
-✅ Solde AVANT sécurisations : +1,87 à +3,95 Md€/an d'EXCÉDENT
+✅ Solde AVANT sécurisations : +1,47 à +2,55 Md€/an d'EXCÉDENT
 
 ⚠️ AVEC sécurisations des risques (+13,8-17,4 Md€/an) :
 → Scénario réaliste : Déficit transitoire de -3 à -5 Md€/an les 3 premières années

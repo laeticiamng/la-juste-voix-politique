@@ -37,12 +37,12 @@ export const calculateCNJP = (patrimoineM: number): number => {
 /**
  * Calcule l'impôt sur le revenu selon le barème La Juste Voix
  * @param revenuAnnuel Revenu annuel en euros
- * @param isProfessionTechnique Si le contribuable exerce une profession technique (crédit 15%)
+ * @param isHigherEducation Si le contribuable est diplômé Bac+5+ grandes écoles (crédit 15%)
  * @returns Montant IR en euros
  */
 export const calculateIncomeTax = (
   revenuAnnuel: number,
-  isProfessionTechnique: boolean = false
+  isHigherEducation: boolean = false
 ): number => {
   let impot = 0;
 
@@ -61,8 +61,8 @@ export const calculateIncomeTax = (
     impot = 15000 * 0.05 + 51000 * 0.14 + 90000 * 0.30 + 232000 * 0.41 + (revenuAnnuel - 400000) * 0.50;
   }
 
-  // Crédit d'impôt de 15% pour professions techniques et scientifiques
-  if (isProfessionTechnique && impot > 0) {
+  // Crédit d'impôt de 15% pour diplômés Bac+5+ grandes écoles
+  if (isHigherEducation && impot > 0) {
     impot = impot * 0.85; // Réduction de 15%
   }
 
@@ -105,41 +105,66 @@ export const calculateDisposableIncome = (
 };
 
 /**
- * Professions éligibles au crédit d'impôt technique (15%)
+ * Professions éligibles au crédit d'impôt de 15% pour diplômés Bac+5+
+ * Grandes écoles de commerce, d'ingénieurs, et cadres supérieurs qualifiés
  */
-export const TECHNICAL_PROFESSIONS = [
+export const HIGHER_EDUCATION_PROFESSIONS = [
+  // Ingénieurs et techniques
   'ingénieur',
   'informaticien',
   'développeur',
   'chercheur',
-  'technicien',
+  'technicien supérieur',
   'architecte',
   'data scientist',
   'expert r&d',
-  'manager r&d'
+  'manager r&d',
+  // Commerce et gestion
+  'cadre commercial',
+  'directeur commercial',
+  'responsable marketing',
+  'consultant',
+  'analyste financier',
+  'contrôleur de gestion',
+  'directeur financier',
+  'chef de produit',
+  'business developer',
+  // Management
+  'cadre supérieur',
+  'directeur',
+  'manager',
+  'responsable',
+  'chef de projet',
+  'chef de service',
+  // Professions libérales qualifiées
+  'expert-comptable',
+  'avocat',
+  'notaire',
+  'pharmacien',
+  'vétérinaire'
 ];
 
 /**
- * Vérifie si une profession est éligible au crédit d'impôt technique
+ * Vérifie si une profession est éligible au crédit d'impôt 15% (Bac+5+)
  * @param metier Nom du métier
  * @returns true si éligible au crédit d'impôt
  */
-export const isTechnicalProfession = (metier: string): boolean => {
+export const isHigherEducationProfession = (metier: string): boolean => {
   const metierLower = metier.toLowerCase();
-  return TECHNICAL_PROFESSIONS.some(prof => metierLower.includes(prof));
+  return HIGHER_EDUCATION_PROFESSIONS.some(prof => metierLower.includes(prof));
 };
 
 /**
- * Calcule le coût annuel total du crédit d'impôt technique
- * Estimation basée sur ~500 000 ingénieurs/professions techniques en France
+ * Calcule le coût annuel total du crédit d'impôt pour diplômés Bac+5+
+ * Estimation basée sur ~2 millions de cadres supérieurs Bac+5+ en France
  * @returns Coût estimé en milliards d'euros
  */
-export const estimateTechnicalTaxCreditCost = (): number => {
-  const numberOfTechnicalWorkers = 500000; // Estimation
-  const averageIncomeTax = 3300; // IR moyen annuel pour ces professions
+export const estimateHigherEducationTaxCreditCost = (): number => {
+  const numberOfQualifiedWorkers = 2000000; // ~2M cadres Bac+5+
+  const averageIncomeTax = 5500; // IR moyen annuel plus élevé pour ces professions
   const creditRate = 0.15;
   const averageCredit = averageIncomeTax * creditRate;
-  const totalCostMillions = (numberOfTechnicalWorkers * averageCredit) / 1000000;
+  const totalCostMillions = (numberOfQualifiedWorkers * averageCredit) / 1000000;
   const totalCostBillions = totalCostMillions / 1000;
   
   return Math.round(totalCostBillions * 100) / 100; // Arrondi à 2 décimales
