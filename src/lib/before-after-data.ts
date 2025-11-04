@@ -3,6 +3,13 @@ import { BeforeAfterData } from '../components/BeforeAfterCard';
 // Données réalistes basées sur le programme La Juste Voix
 // Calculs avec taux de cotisation ~23% et impôts actuels vs réforme
 
+export interface ProfilesBySector {
+  sector: string;
+  icon: string;
+  description: string;
+  profiles: BeforeAfterData[];
+}
+
 export const beforeAfterData: BeforeAfterData[] = [
   // SANTÉ
   {
@@ -1019,4 +1026,116 @@ export const beforeAfterData: BeforeAfterData[] = [
     salaireReformePostImpot: 700,
     description: "SMIC horaire obligatoire stages +223€",
   },
+];
+
+// Organisation des profils par secteur pour une meilleure ergonomie
+export const profilesBySector: ProfilesBySector[] = [
+  {
+    sector: "Santé",
+    icon: "heart",
+    description: "Médecins, infirmiers, aides-soignants, sages-femmes",
+    profiles: beforeAfterData.slice(0, 5)
+  },
+  {
+    sector: "Éducation",
+    icon: "book",
+    description: "Enseignants, professeurs, ATSEM",
+    profiles: beforeAfterData.slice(5, 9)
+  },
+  {
+    sector: "Sécurité & Justice",
+    icon: "shield",
+    description: "Policiers, gendarmes, pompiers",
+    profiles: beforeAfterData.slice(9, 12)
+  },
+  {
+    sector: "Élus & Politique",
+    icon: "gavel",
+    description: "Maires, députés, sénateurs, ministres",
+    profiles: [...beforeAfterData.slice(12, 16), ...beforeAfterData.slice(49, 51)]
+  },
+  {
+    sector: "Social & Petite Enfance",
+    icon: "users",
+    description: "Assistants sociaux, éducateurs, auxiliaires de puériculture",
+    profiles: [...beforeAfterData.slice(16, 19), ...beforeAfterData.slice(19, 21)]
+  },
+  {
+    sector: "Administration & Culture",
+    icon: "briefcase",
+    description: "Agents administratifs, bibliothécaires",
+    profiles: [...beforeAfterData.slice(21, 22), ...beforeAfterData.slice(25, 26)]
+  },
+  {
+    sector: "Agriculture & Environnement",
+    icon: "sprout",
+    description: "Agriculteurs, agents d'entretien des espaces verts",
+    profiles: [...beforeAfterData.slice(22, 23), ...beforeAfterData.slice(23, 24)]
+  },
+  {
+    sector: "Commerce & Artisanat",
+    icon: "store",
+    description: "Caissiers, vendeurs, plombiers, boulangers, électriciens",
+    profiles: [...beforeAfterData.slice(26, 30), ...beforeAfterData.slice(30, 34)]
+  },
+  {
+    sector: "Ingénieurs",
+    icon: "cpu",
+    description: "Du débutant au R&D Manager (6 niveaux)",
+    profiles: beforeAfterData.slice(34, 40)
+  },
+  {
+    sector: "Directeurs",
+    icon: "briefcase-business",
+    description: "PME, ETI, grandes entreprises, CAC 40 (8 postes)",
+    profiles: beforeAfterData.slice(40, 48)
+  },
+  {
+    sector: "Entrepreneurs",
+    icon: "rocket",
+    description: "Auto-entrepreneurs, TPE, PME, grandes entreprises (7 tailles)",
+    profiles: beforeAfterData.slice(51, 58)
+  },
+  {
+    sector: "Classe Moyenne Haute",
+    icon: "trending-up",
+    description: "Responsables, managers, consultants",
+    profiles: beforeAfterData.slice(58, 64)
+  },
+  {
+    sector: "Professions Libérales",
+    icon: "scale",
+    description: "Avocats, architectes, experts-comptables",
+    profiles: beforeAfterData.slice(64, 68)
+  },
+  {
+    sector: "Finance & Hauts Revenus",
+    icon: "landmark",
+    description: "Traders, cadres bancaires, directeurs",
+    profiles: beforeAfterData.slice(68, 71)
+  },
+  {
+    sector: "Très Hauts Revenus",
+    icon: "award",
+    description: "Chirurgiens réputés, DG CAC 40",
+    profiles: beforeAfterData.slice(71, 74)
+  },
+  {
+    sector: "Millionnaires & Ultra-riches",
+    icon: "gem",
+    description: "Patrimoine > 5M€ - Payeurs CNJP",
+    profiles: beforeAfterData.slice(74, 78)
+  },
+  {
+    sector: "Retraités",
+    icon: "heart-handshake",
+    description: "Carrière complète, modeste",
+    profiles: beforeAfterData.slice(78, 80)
+  },
+  {
+    sector: "Situations Précaires",
+    icon: "hand-helping",
+    description: "RSA, étudiants boursiers, apprentis",
+    profiles: beforeAfterData.slice(80, 83)
+  }
 ];

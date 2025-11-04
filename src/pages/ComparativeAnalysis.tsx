@@ -3,14 +3,15 @@ import { useSearchParams } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { comparativeAnalysis, syntheseComparative } from '../lib/comparative-analysis';
-import { Scale, TrendingUp, AlertTriangle, CheckCircle, XCircle, FileText, BarChart3, Award, Users } from 'lucide-react';
+import { Scale, TrendingUp, AlertTriangle, CheckCircle, XCircle, FileText, BarChart3, Award, Users, Heart, Book, Shield, Gavel, Briefcase, Sprout, Store, Cpu, Rocket, Landmark, Gem, HeartHandshake, HandHeart } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import SEOHead from '../components/SEOHead';
 import BeforeAfterCard from '../components/BeforeAfterCard';
-import { beforeAfterData } from '../lib/before-after-data';
+import { profilesBySector } from '../lib/before-after-data';
 
 const ComparativeAnalysis = () => {
   const [searchParams] = useSearchParams();
@@ -41,6 +42,30 @@ const ComparativeAnalysis = () => {
       case 'comparable': return <Scale className="h-5 w-5" />;
       default: return <Scale className="h-5 w-5" />;
     }
+  };
+
+  const getSectorIcon = (iconName: string) => {
+    const icons: Record<string, JSX.Element> = {
+      'heart': <Heart className="h-5 w-5" />,
+      'book': <Book className="h-5 w-5" />,
+      'shield': <Shield className="h-5 w-5" />,
+      'gavel': <Gavel className="h-5 w-5" />,
+      'users': <Users className="h-5 w-5" />,
+      'briefcase': <Briefcase className="h-5 w-5" />,
+      'sprout': <Sprout className="h-5 w-5" />,
+      'store': <Store className="h-5 w-5" />,
+      'cpu': <Cpu className="h-5 w-5" />,
+      'briefcase-business': <Briefcase className="h-5 w-5" />,
+      'rocket': <Rocket className="h-5 w-5" />,
+      'trending-up': <TrendingUp className="h-5 w-5" />,
+      'scale': <Scale className="h-5 w-5" />,
+      'landmark': <Landmark className="h-5 w-5" />,
+      'award': <Award className="h-5 w-5" />,
+      'gem': <Gem className="h-5 w-5" />,
+      'heart-handshake': <HeartHandshake className="h-5 w-5" />,
+      'hand-helping': <HandHeart className="h-5 w-5" />,
+    };
+    return icons[iconName] || <Users className="h-5 w-5" />;
   };
   
   return (
@@ -216,18 +241,44 @@ const ComparativeAnalysis = () => {
             <TabsContent value="profiles">
               <Alert className="border-ljv-navy bg-ljv-navy/5 mb-8">
                 <Users className="h-5 w-5 text-ljv-navy" />
-                <AlertTitle className="text-lg font-bold">95+ Profils métiers détaillés</AlertTitle>
+                <AlertTitle className="text-lg font-bold">95+ Profils métiers organisés par secteur</AlertTitle>
                 <AlertDescription className="text-base">
-                  Comparaison concrète du pouvoir d&apos;achat avant et après réforme pour 95+ profils représentatifs : 
-                  santé, éducation, ingénieurs (6 niveaux), directeurs (8 postes), entrepreneurs (7 tailles), élus nationaux, et bien plus.
+                  Comparaison concrète du pouvoir d&apos;achat avant et après réforme, classés par secteurs pour une navigation facile. 
+                  Cliquez sur un secteur pour voir les profils détaillés.
                 </AlertDescription>
               </Alert>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                {beforeAfterData.map((data, index) => (
-                  <BeforeAfterCard key={index} data={data} />
+              <Accordion type="multiple" className="space-y-4 mb-8">
+                {profilesBySector.map((sector, sectorIndex) => (
+                  <AccordionItem 
+                    key={sectorIndex} 
+                    value={`sector-${sectorIndex}`}
+                    className="border-2 border-gray-200 rounded-lg overflow-hidden"
+                  >
+                    <AccordionTrigger className="px-6 py-4 hover:bg-ljv-navy/5 hover:no-underline">
+                      <div className="flex items-center gap-4 text-left">
+                        <div className="bg-ljv-navy text-white rounded-full p-3 flex-shrink-0">
+                          {getSectorIcon(sector.icon)}
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">{sector.sector}</h3>
+                          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{sector.description}</p>
+                        </div>
+                        <Badge variant="secondary" className="text-base">
+                          {sector.profiles.length} profil{sector.profiles.length > 1 ? 's' : ''}
+                        </Badge>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 py-4 bg-gray-50">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {sector.profiles.map((profile, profileIndex) => (
+                          <BeforeAfterCard key={profileIndex} data={profile} />
+                        ))}
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
                 ))}
-              </div>
+              </Accordion>
 
               <Card className="border-2 border-ljv-gold bg-ljv-gold/5">
                 <CardHeader>
