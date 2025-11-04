@@ -72,15 +72,14 @@ const TaxSimulator: React.FC = () => {
   ];
 
   const budgetData = [
-    { name: 'Revalorisations', value: 25, color: '#10b981' },
-    { name: 'Retraites 60 ans', value: 20, color: '#3b82f6' },
-    { name: 'Dette (FSCRD)', value: 15, color: '#f59e0b' },
-    { name: 'Logement', value: 11, color: '#8b5cf6' },
-    { name: 'Écologie', value: 8, color: '#22c55e' },
-    { name: 'Éducation', value: 5, color: '#ec4899' },
-    { name: 'Santé mentale', value: 4, color: '#06b6d4' },
-    { name: 'Démocratie', value: 4, color: '#f97316' },
-    { name: 'Autres', value: 8, color: '#94a3b8' },
+    { name: 'Revalorisations +500€', value: 32, color: '#10b981' },
+    { name: 'RSA bonus activité', value: 13, color: '#3b82f6' },
+    { name: 'Logement 200k/an', value: 16, color: '#8b5cf6' },
+    { name: 'Transition écologique', value: 13, color: '#22c55e' },
+    { name: 'Éducation', value: 8, color: '#ec4899' },
+    { name: 'Santé mentale', value: 6, color: '#06b6d4' },
+    { name: 'Sécurité', value: 4, color: '#f97316' },
+    { name: 'Réserve imprévus', value: 8, color: '#94a3b8' },
   ];
 
   const COLORS = ['#10b981', '#3b82f6', '#f59e0b', '#8b5cf6', '#22c55e', '#ec4899', '#06b6d4', '#f97316', '#94a3b8'];
@@ -340,23 +339,23 @@ const TaxSimulator: React.FC = () => {
                 <ul className="text-sm text-green-700 space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-green-600">✓</span>
-                    <span><strong>25%</strong> Revalorisation des soignants, enseignants, policiers (+600€/mois)</span>
+                    <span><strong>32%</strong> Revalorisation métiers publics essentiels (+500€/mois)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-600">✓</span>
-                    <span><strong>20%</strong> Retour retraite à 60 ans avec système mixte</span>
+                    <span><strong>13%</strong> RSA avec bonus activité (+200€/mois si accompagnement)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-600">✓</span>
-                    <span><strong>15%</strong> Remboursement dette publique (FSCRD)</span>
+                    <span><strong>16%</strong> Logement social (200k logements/an)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-600">✓</span>
-                    <span><strong>11%</strong> Plan logement social + Zéro SDF</span>
+                    <span><strong>13%</strong> Transition écologique ciblée</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-600">✓</span>
-                    <span><strong>8%</strong> Transition écologique accélérée</span>
+                    <span><strong>14%</strong> Éducation, santé mentale, sécurité</span>
                   </li>
                 </ul>
                 <div className="mt-4 pt-4 border-t border-green-300">
@@ -600,11 +599,11 @@ const TaxSimulator: React.FC = () => {
                           </li>
                           <li className="flex items-start gap-2">
                             <span className="text-green-600">✓</span>
-                            <span>Retraite à 60 ans garantie</span>
+                            <span>Logement social massif (200k logements/an)</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <span className="text-green-600">✓</span>
-                            <span>Dette réduite pour générations futures</span>
+                            <span>RSA réformé avec bonus activité</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <span className="text-green-600">✓</span>
