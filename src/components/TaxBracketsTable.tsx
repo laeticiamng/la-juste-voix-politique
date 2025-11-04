@@ -12,6 +12,7 @@ import CNJPSection from './tax/CNJPSection';
 import CNJPUsageSection from './tax/CNJPUsageSection';
 import RetirementReformSection from './tax/RetirementReformSection';
 import TaxSimulator from './TaxSimulator';
+import TechnicalProfessionsTaxCredit from './tax/TechnicalProfessionsTaxCredit';
 
 const TaxBracketsTable: React.FC = () => {
   return (
@@ -27,6 +28,10 @@ const TaxBracketsTable: React.FC = () => {
       {/* Nouvelle fiscalité du mérite section */}
       <MeritFiscalityHeader />
       <IncomeTaxTable />
+      
+      {/* Crédit d'impôt professions techniques */}
+      <TechnicalProfessionsTaxCredit />
+      
       <TaxFeaturesGrid />
       <TaxEvasionProtection />
       <TaxVision />
