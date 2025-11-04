@@ -106,6 +106,51 @@ const Revalorisations = () => {
             </blockquote>
           </div>
 
+          <div className="bg-ljv-navy text-white p-8 rounded-xl shadow-lg mb-12">
+            <h3 className="text-2xl font-serif font-bold mb-6 text-center">
+              📊 Impact fiscal détaillé selon les revenus
+            </h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+              <div className="bg-white/10 rounded-lg p-6 text-center backdrop-blur-sm">
+                <div className="text-3xl font-bold text-green-400 mb-2">✓</div>
+                <div className="text-lg font-bold mb-2">Classes moyennes</div>
+                <div className="text-sm mb-3">Cadres, ingénieurs, professions intermédiaires</div>
+                <div className="text-2xl font-bold text-green-400 mb-2">-10€ à +80€</div>
+                <div className="text-xs">Impact mensuel moyen</div>
+              </div>
+              
+              <div className="bg-white/10 rounded-lg p-6 text-center backdrop-blur-sm">
+                <div className="text-3xl font-bold text-orange-400 mb-2">↑</div>
+                <div className="text-lg font-bold mb-2">Cadres supérieurs</div>
+                <div className="text-sm mb-3">Directeurs, managers, entrepreneurs PME</div>
+                <div className="text-2xl font-bold text-orange-400 mb-2">+130€ à +480€</div>
+                <div className="text-xs">Contribution plus importante</div>
+              </div>
+              
+              <div className="bg-white/10 rounded-lg p-6 text-center backdrop-blur-sm">
+                <div className="text-3xl font-bold text-red-400 mb-2">↑↑</div>
+                <div className="text-lg font-bold mb-2">Très hauts revenus</div>
+                <div className="text-sm mb-3">DG, chirurgiens, grandes fortunes</div>
+                <div className="text-2xl font-bold text-red-400 mb-2">+1500€ à +50k€</div>
+                <div className="text-xs">Solidarité nationale + CNJP</div>
+              </div>
+            </div>
+
+            <div className="bg-ljv-gold/20 rounded-lg p-6 text-center">
+              <h4 className="font-bold text-xl mb-3">65+ profils détaillés disponibles</h4>
+              <p className="text-base mb-4">
+                Ingénieurs (6 niveaux) • Directeurs (8 postes) • Entrepreneurs (7 tailles) • 
+                Députés & Sénateurs • Professions libérales • Traders • Et bien plus...
+              </p>
+              <div className="flex flex-wrap gap-2 justify-center text-sm">
+                <span className="bg-white/20 px-3 py-1 rounded-full">Du RSA (607€)</span>
+                <span className="bg-white/20 px-3 py-1 rounded-full">Aux milliardaires</span>
+                <span className="bg-white/20 px-3 py-1 rounded-full">Avec calcul CNJP</span>
+              </div>
+            </div>
+          </div>
+
           <div className="bg-ljv-gold/10 border-2 border-ljv-gold rounded-xl p-8 max-w-3xl mx-auto mb-8">
             <h3 className="text-2xl font-serif font-bold mb-4 text-gray-900 dark:text-gray-100 text-center">
               🏛️ Maires : Reconnaissance du rôle essentiel
