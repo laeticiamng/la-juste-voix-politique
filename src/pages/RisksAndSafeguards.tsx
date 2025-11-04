@@ -57,7 +57,7 @@ const RisksAndSafeguards = () => {
             <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-center">
               <span className="title-gradient">Risques & Sécurisations</span>
             </h1>
-            <p className="text-xl text-center text-gray-600 mb-8">
+            <p className="text-xl text-center text-gray-900 dark:text-gray-100 mb-8 font-semibold">
               Une analyse honnête des risques réels du programme et des mesures concrètes pour les anticiper.
             </p>
             
@@ -119,10 +119,10 @@ const RisksAndSafeguards = () => {
                       </div>
                     </div>
                   </div>
-                  <p className="text-gray-700 mb-3">{risk.description}</p>
+                  <p className="text-gray-900 dark:text-gray-100 mb-3 font-medium">{risk.description}</p>
                   <Alert className="bg-gray-50">
-                    <AlertTitle className="text-sm font-bold">État actuel</AlertTitle>
-                    <AlertDescription className="text-sm">{risk.currentStatus}</AlertDescription>
+                    <AlertTitle className="text-sm font-bold text-gray-900 dark:text-gray-100">État actuel</AlertTitle>
+                    <AlertDescription className="text-sm text-gray-900 dark:text-gray-100 font-medium">{risk.currentStatus}</AlertDescription>
                   </Alert>
                 </CardHeader>
                 <CardContent>

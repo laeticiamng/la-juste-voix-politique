@@ -210,7 +210,7 @@ const FAQ = () => {
             <h1 className="text-3xl md:text-5xl font-serif font-bold mb-4">
               <span className="title-gradient">Foire aux questions</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-900 dark:text-gray-100 max-w-2xl mx-auto font-semibold">
               Découvrez les réponses aux questions les plus fréquemment posées sur La Juste Voix, notre programme et nos propositions.
             </p>
           </div>
@@ -252,7 +252,7 @@ const FAQ = () => {
             {filteredItems.length === 0 ? (
               <div className="text-center py-8">
                 <HelpCircle className="mx-auto mb-3 text-gray-400" size={48} />
-                <p className="text-lg text-gray-500">Aucune question ne correspond à votre recherche.</p>
+                <p className="text-lg text-gray-900 dark:text-gray-100 font-semibold">Aucune question ne correspond à votre recherche.</p>
                 <Button 
                   className="mt-4 bg-ljv-navy hover:bg-ljv-gold text-white"
                   onClick={() => {setSearchTerm(''); setActiveCategory('general');}}
@@ -274,7 +274,7 @@ const FAQ = () => {
                     className="w-full p-5 flex items-center justify-between text-left bg-white hover:bg-gray-50 transition-colors"
                   >
                     <div className="flex items-center gap-3">
-                      <h3 className="text-xl font-medium">{item.question}</h3>
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">{item.question}</h3>
                       {item.badge && (
                         <Badge variant="outline" className="bg-ljv-gold/10 text-ljv-gold border-ljv-gold/30">
                           {item.badge}
@@ -290,10 +290,10 @@ const FAQ = () => {
                   
                   {openItems.includes(index) && (
                     <div className="p-5 bg-gray-50">
-                      <p className="text-gray-700">{item.answer}</p>
+                      <p className="text-gray-900 dark:text-gray-100 font-medium leading-relaxed">{item.answer}</p>
                       {activeCategory === 'initiatives' && (
                         <div className="mt-4">
-                          <Link to="/manifeste" className="text-ljv-navy hover:text-ljv-gold flex items-center gap-2">
+                          <Link to="/manifeste" className="text-gray-900 dark:text-gray-100 hover:text-ljv-gold flex items-center gap-2 font-semibold">
                             En savoir plus sur notre manifeste <ExternalLink size={16} />
                           </Link>
                         </div>

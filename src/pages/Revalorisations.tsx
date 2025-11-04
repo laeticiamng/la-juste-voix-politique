@@ -75,8 +75,8 @@ const Revalorisations = () => {
                       <TableBody>
                         {category.items.map((item, idx) => (
                           <TableRow key={idx}>
-                            <TableCell className="font-medium">{item.title}</TableCell>
-                            <TableCell className="font-bold text-right text-ljv-navy">{item.revalorisation}</TableCell>
+                            <TableCell className="font-semibold text-gray-900 dark:text-gray-100">{item.title}</TableCell>
+                            <TableCell className="font-bold text-right text-gray-900 dark:text-gray-100">{item.revalorisation}</TableCell>
                           </TableRow>
                         ))}
                       </TableBody>
@@ -93,24 +93,24 @@ const Revalorisations = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-white rounded-lg p-6 text-center shadow border border-gray-100">
-                <p className="text-gray-600 mb-2 text-lg">Bénéficiaires</p>
-                <p className="text-2xl font-bold text-ljv-navy">{revalorisationsSummary.beneficiaries}</p>
+                <p className="text-gray-900 dark:text-gray-100 mb-2 text-lg font-semibold">Bénéficiaires</p>
+                <p className="text-2xl font-bold text-gray-900 dark:text-gray-100">{revalorisationsSummary.beneficiaries}</p>
               </div>
               <div className="bg-white rounded-lg p-6 text-center shadow border border-gray-100">
-                <p className="text-gray-600 mb-2 text-lg">Coût total estimé</p>
-                <p className="text-2xl font-bold text-ljv-navy">{revalorisationsSummary.cost}</p>
+                <p className="text-gray-900 dark:text-gray-100 mb-2 text-lg font-semibold">Coût total estimé</p>
+                <p className="text-2xl font-bold text-gray-900 dark:text-gray-100">{revalorisationsSummary.cost}</p>
               </div>
             </div>
-            <blockquote className="italic text-center text-xl font-serif border-l-4 pl-6 py-2 border-ljv-gold bg-white/80 rounded-r-lg shadow-sm">
+            <blockquote className="italic text-center text-xl font-serif border-l-4 pl-6 py-2 border-ljv-gold bg-white/80 rounded-r-lg shadow-sm text-gray-900 dark:text-gray-100 font-semibold">
               "{revalorisationsSummary.quote}"
             </blockquote>
           </div>
 
-          <div className="text-center max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-sm">
-            <h3 className="text-2xl font-serif font-bold mb-4 text-ljv-navy">Comprendre le financement</h3>
-            <p className="mb-8 text-lg text-gray-800">
-              Pour savoir comment ces revalorisations seront financées par la Contribution Nationale de Justice Patrimoniale, consultez notre section dédiée.
-            </p>
+            <div className="text-center max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-sm">
+              <h3 className="text-2xl font-serif font-bold mb-4 text-gray-900 dark:text-gray-100">Comprendre le financement</h3>
+              <p className="mb-8 text-lg text-gray-900 dark:text-gray-100 font-semibold">
+                Pour savoir comment ces revalorisations seront financées par la Contribution Nationale de Justice Patrimoniale, consultez notre section dédiée.
+              </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button size="lg" className="bg-ljv-navy hover:bg-ljv-gold text-lg py-6" asChild>
                 <Link to="/manifeste">Lire le manifeste complet</Link>

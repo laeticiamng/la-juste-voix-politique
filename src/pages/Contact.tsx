@@ -52,14 +52,14 @@ const Contact = () => {
               {/* Contact Info */}
               <div className="lg:col-span-1 space-y-6">
                 <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                  <h2 className="font-serif text-xl font-bold mb-4 text-ljv-navy">Informations</h2>
+                  <h2 className="font-serif text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">Informations</h2>
                   
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <Mail className="h-5 w-5 text-ljv-gold mr-3 mt-0.5" />
                       <div>
-                        <p className="font-medium">Email</p>
-                        <a href="mailto:contact@lajustevoix.fr" className="text-gray-600 hover:text-ljv-navy">
+                        <p className="font-bold text-gray-900 dark:text-gray-100">Email</p>
+                        <a href="mailto:contact@lajustevoix.fr" className="text-gray-800 dark:text-gray-200 hover:text-ljv-gold font-medium">
                           contact@lajustevoix.fr
                         </a>
                       </div>
@@ -68,8 +68,8 @@ const Contact = () => {
                     <div className="flex items-start">
                       <Phone className="h-5 w-5 text-ljv-gold mr-3 mt-0.5" />
                       <div>
-                        <p className="font-medium">Téléphone</p>
-                        <a href="tel:+33123456789" className="text-gray-600 hover:text-ljv-navy">
+                        <p className="font-bold text-gray-900 dark:text-gray-100">Téléphone</p>
+                        <a href="tel:+33123456789" className="text-gray-800 dark:text-gray-200 hover:text-ljv-gold font-medium">
                           01 23 45 67 89
                         </a>
                       </div>
@@ -78,8 +78,8 @@ const Contact = () => {
                     <div className="flex items-start">
                       <MapPin className="h-5 w-5 text-ljv-gold mr-3 mt-0.5" />
                       <div>
-                        <p className="font-medium">Adresse</p>
-                        <address className="text-gray-600 not-italic">
+                        <p className="font-bold text-gray-900 dark:text-gray-100">Adresse</p>
+                        <address className="text-gray-800 dark:text-gray-200 not-italic font-medium">
                           123 Avenue de la République<br />
                           75011 Paris, France
                         </address>
@@ -110,7 +110,7 @@ const Contact = () => {
               {/* Contact Form */}
               <div className="lg:col-span-2">
                 <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                  <h2 className="font-serif text-xl font-bold mb-6 text-ljv-navy">Envoyez-nous un message</h2>
+                  <h2 className="font-serif text-xl font-bold mb-6 text-gray-900 dark:text-gray-100">Envoyez-nous un message</h2>
                   
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

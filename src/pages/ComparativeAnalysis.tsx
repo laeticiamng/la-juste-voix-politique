@@ -46,7 +46,7 @@ const ComparativeAnalysis = () => {
             <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-center">
               <span className="title-gradient">Analyse Comparative</span>
             </h1>
-            <p className="text-xl text-center text-gray-600 mb-8">
+            <p className="text-xl text-center text-gray-900 dark:text-gray-100 mb-8 font-semibold">
               Comparaison factuelle et objective entre La Juste Voix et le système actuel sur 12 dimensions clés
             </p>
             
@@ -65,25 +65,25 @@ const ComparativeAnalysis = () => {
             <Card className="border-green-500">
               <CardContent className="pt-6 text-center">
                 <div className="text-3xl font-bold text-green-600 mb-2">8/12</div>
-                <div className="text-sm text-gray-600">Points révolutionnaires</div>
+                <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">Points révolutionnaires</div>
               </CardContent>
             </Card>
             <Card className="border-blue-500">
               <CardContent className="pt-6 text-center">
                 <div className="text-3xl font-bold text-blue-600 mb-2">3/12</div>
-                <div className="text-sm text-gray-600">Points améliorateurs</div>
+                <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">Points améliorateurs</div>
               </CardContent>
             </Card>
             <Card className="border-ljv-gold">
               <CardContent className="pt-6 text-center">
                 <div className="text-3xl font-bold text-ljv-gold mb-2">90-130 Md€</div>
-                <div className="text-sm text-gray-600">CNJP vs 2 Md€ IFI</div>
+                <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">CNJP vs 2 Md€ IFI</div>
               </CardContent>
             </Card>
             <Card className="border-ljv-navy">
               <CardContent className="pt-6 text-center">
-                <div className="text-3xl font-bold text-ljv-navy mb-2">100%</div>
-                <div className="text-sm text-gray-600">Chiffré & financé</div>
+                <div className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">100%</div>
+                <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">Chiffré & financé</div>
               </CardContent>
             </Card>
           </div>
@@ -112,9 +112,9 @@ const ComparativeAnalysis = () => {
                     <div className="bg-red-50 rounded-lg p-4 border-2 border-red-200">
                       <div className="flex items-center gap-2 mb-3">
                         <XCircle className="h-5 w-5 text-red-600" />
-                        <h4 className="font-bold text-lg">Système actuel</h4>
+                        <h4 className="font-bold text-lg text-gray-900 dark:text-gray-100">Système actuel</h4>
                       </div>
-                      <p className="text-sm mb-3 text-gray-800">{point.systemActuel.description}</p>
+                      <p className="text-sm mb-3 text-gray-900 dark:text-gray-100 font-medium">{point.systemActuel.description}</p>
                       {point.systemActuel.montants && (
                         <p className="text-sm font-bold mb-3 text-red-700">💰 {point.systemActuel.montants}</p>
                       )}
@@ -123,7 +123,7 @@ const ComparativeAnalysis = () => {
                         {point.systemActuel.problemes.map((pb, i) => (
                           <div key={i} className="flex items-start gap-2">
                             <span className="text-red-500 text-xs mt-0.5">❌</span>
-                            <p className="text-xs text-gray-700">{pb}</p>
+                            <p className="text-xs text-gray-900 dark:text-gray-100 font-medium">{pb}</p>
                           </div>
                         ))}
                       </div>
@@ -133,9 +133,9 @@ const ComparativeAnalysis = () => {
                     <div className="bg-green-50 rounded-lg p-4 border-2 border-green-200">
                       <div className="flex items-center gap-2 mb-3">
                         <CheckCircle className="h-5 w-5 text-green-600" />
-                        <h4 className="font-bold text-lg">La Juste Voix</h4>
+                        <h4 className="font-bold text-lg text-gray-900 dark:text-gray-100">La Juste Voix</h4>
                       </div>
-                      <p className="text-sm mb-3 text-gray-800">{point.laJusteVoix.description}</p>
+                      <p className="text-sm mb-3 text-gray-900 dark:text-gray-100 font-medium">{point.laJusteVoix.description}</p>
                       {point.laJusteVoix.montants && (
                         <p className="text-sm font-bold mb-3 text-green-700">💰 {point.laJusteVoix.montants}</p>
                       )}
@@ -144,7 +144,7 @@ const ComparativeAnalysis = () => {
                         {point.laJusteVoix.avantages.map((av, i) => (
                           <div key={i} className="flex items-start gap-2">
                             <span className="text-green-500 text-xs mt-0.5">✅</span>
-                            <p className="text-xs text-gray-700">{av}</p>
+                            <p className="text-xs text-gray-900 dark:text-gray-100 font-medium">{av}</p>
                           </div>
                         ))}
                       </div>
