@@ -4,84 +4,56 @@
 import { taxBrackets } from './tax-brackets';
 
 /**
- * Calcule la CNJP selon le barème progressif officiel
- * AVEC CORRECTIFS JURIDIQUES:
- * - Exonération partielle patrimoine professionnel (participations >10% entreprises opérationnelles)
- * - Plafonnement à 50% du rendement annuel (éviter confiscation mathématique)
+ * CNJP ABANDONNÉE - Programme pivoté vers IR hauts revenus uniquement
+ * La CNJP comportait trop de failles juridiques fatales :
+ * - Atteinte propriété CEDH (extinction progressive patrimoine)
+ * - Évaluation patrimoine impossible (startups, art, crypto)
+ * - Exode Monaco inévitable et légal
  * 
- * @param patrimoineM Patrimoine total en millions d'euros
- * @param patrimoineProfessionnelM Patrimoine professionnel (parts >10% PME/ETI opérationnelles) en M€
- * @param rendementAnnuelPct Rendement annuel du patrimoine en % (défaut 3%)
- * @returns Montant CNJP en millions d'euros
+ * @deprecated Cette fonction est conservée pour compatibilité mais retourne toujours 0
+ * @returns 0 (CNJP supprimée du programme)
  */
 export const calculateCNJP = (
-  patrimoineM: number,
+  patrimoineM: number = 0,
   patrimoineProfessionnelM: number = 0,
   rendementAnnuelPct: number = 3
 ): number => {
-  if (patrimoineM < 100) return 0;
-
-  // CORRECTION FAILLE 13: Exonération patrimoine professionnel
-  // Participations >10% dans entreprises opérationnelles (CA >1M€, >5 salariés)
-  // Exonération à 75% plafonnée à 300M€
-  const exonerationProMax = 300; // 300M€ max
-  const patrimoineProfessionnelExonere = Math.min(patrimoineProfessionnelM, exonerationProMax) * 0.75;
-  const patrimoineImposable = Math.max(100, patrimoineM - patrimoineProfessionnelExonere);
-
-  // Calcul CNJP selon barème progressif
-  let cnjp = 0;
-  let previousMax = 100;
-
-  for (const bracket of taxBrackets) {
-    const bracketMin = bracket.min;
-    const bracketMax = bracket.max || Infinity;
-
-    if (patrimoineImposable > bracketMin) {
-      const taxableInBracket = Math.min(patrimoineImposable, bracketMax) - Math.max(previousMax, bracketMin);
-      if (taxableInBracket > 0) {
-        cnjp += taxableInBracket * (bracket.rate / 100);
-      }
-      previousMax = bracketMax;
-    }
-
-    if (bracket.max === null || patrimoineImposable <= bracket.max) {
-      break;
-    }
-  }
-
-  // CORRECTION FAILLE 20: Plafonnement à 50% du rendement annuel
-  // Évite confiscation mathématique (patrimoine qui disparaît en <10 ans)
-  const rendementAnnuel = patrimoineM * (rendementAnnuelPct / 100);
-  const plafondRendement = rendementAnnuel * 0.5; // Max 50% du rendement
-  
-  if (cnjp > plafondRendement) {
-    cnjp = plafondRendement;
-  }
-
-  return cnjp;
+  // CNJP ABANDONNÉE suite à analyse des failles juridiques
+  // Voir: SYNTHESE_FINALE_TOUTES_FAILLES.md
+  return 0;
 };
 
 /**
- * Calcule l'impôt sur le revenu selon le barème La Juste Voix
+ * Calcule l'impôt sur le revenu selon le NOUVEAU barème La Juste Voix (post-pivot)
+ * 
+ * CHANGEMENT MAJEUR : CNJP abandonnée → Nouvelles tranches IR très hauts revenus
+ * 
  * @param revenuAnnuel Revenu annuel en euros
  * @param isHigherEducation Si le contribuable est diplômé Bac+5+ grandes écoles (crédit 15%)
- * @param isSubjectToCNJP Si le contribuable paie la CNJP (patrimoine >= 100M€)
+ * @param isSubjectToCNJP Paramètre conservé pour compatibilité mais non utilisé (CNJP supprimée)
  * @returns Montant IR en euros
  * 
- * RÈGLES DE NON-CUMUL DU CRÉDIT 15% :
- * 1. Non cumulable avec la CNJP (patrimoine >= 100M€)
- * 2. Non applicable aux très hauts revenus (> 1 000 000 €/an)
- * 3. Dégressivité progressive entre 800k€ et 1,2M€ (éviter seuil brutal)
- * Le crédit vise les cadres qualifiés, pas les ultra-fortunés.
+ * NOUVEAU BARÈME POST-PIVOT (juridiquement solide) :
+ * - 0-12k€: 0%
+ * - 12-27k€: 5%
+ * - 27-78k€: 14%
+ * - 78-168k€: 30%
+ * - 168-400k€: 41%
+ * - 400k-1M€: 50%
+ * - 1-5M€: 55% ⬆️ NOUVEAU
+ * - 5-10M€: 60% ⬆️ NOUVEAU
+ * - >10M€: 65% ⬆️ NOUVEAU
+ * 
+ * Le crédit 15% Bac+5+ est maintenu pour encourager les compétences rares.
  */
 export const calculateIncomeTax = (
   revenuAnnuel: number,
   isHigherEducation: boolean = false,
-  isSubjectToCNJP: boolean = false
+  isSubjectToCNJP: boolean = false // Paramètre conservé mais ignoré
 ): number => {
   let impot = 0;
 
-  // Barème progressif La Juste Voix
+  // Nouveau barème progressif La Juste Voix (post-pivot)
   if (revenuAnnuel <= 12000) {
     impot = 0;
   } else if (revenuAnnuel <= 27000) {
@@ -92,26 +64,31 @@ export const calculateIncomeTax = (
     impot = 15000 * 0.05 + 51000 * 0.14 + (revenuAnnuel - 78000) * 0.30;
   } else if (revenuAnnuel <= 400000) {
     impot = 15000 * 0.05 + 51000 * 0.14 + 90000 * 0.30 + (revenuAnnuel - 168000) * 0.41;
-  } else {
+  } else if (revenuAnnuel <= 1000000) {
     impot = 15000 * 0.05 + 51000 * 0.14 + 90000 * 0.30 + 232000 * 0.41 + (revenuAnnuel - 400000) * 0.50;
+  } else if (revenuAnnuel <= 5000000) {
+    // NOUVELLE TRANCHE 1-5M€ : 55%
+    impot = 15000 * 0.05 + 51000 * 0.14 + 90000 * 0.30 + 232000 * 0.41 + 600000 * 0.50 + (revenuAnnuel - 1000000) * 0.55;
+  } else if (revenuAnnuel <= 10000000) {
+    // NOUVELLE TRANCHE 5-10M€ : 60%
+    impot = 15000 * 0.05 + 51000 * 0.14 + 90000 * 0.30 + 232000 * 0.41 + 600000 * 0.50 + 4000000 * 0.55 + (revenuAnnuel - 5000000) * 0.60;
+  } else {
+    // NOUVELLE TRANCHE >10M€ : 65%
+    impot = 15000 * 0.05 + 51000 * 0.14 + 90000 * 0.30 + 232000 * 0.41 + 600000 * 0.50 + 4000000 * 0.55 + 5000000 * 0.60 + (revenuAnnuel - 10000000) * 0.65;
   }
 
-  // Crédit d'impôt de 15% pour diplômés Bac+5+ grandes écoles
-  // RÈGLES D'EXCLUSION :
-  // - Ultra-riches patrimoniaux : CNJP (>= 100M€)
-  // - Ultra-hauts revenus : > 1M€ avec dégressivité
+  // Crédit d'impôt de 15% pour diplômés Bac+5+ grandes écoles MAINTENU
+  // Exclusion uniquement ultra-hauts revenus >1,2M€
   let creditRate = 0;
   
-  if (isHigherEducation && !isSubjectToCNJP) {
+  if (isHigherEducation) {
     if (revenuAnnuel <= 800000) {
-      // Crédit plein 15%
       creditRate = 0.15;
     } else if (revenuAnnuel <= 1200000) {
       // Dégressivité progressive entre 800k€ et 1,2M€
       const degressivityFactor = (1200000 - revenuAnnuel) / 400000;
       creditRate = 0.15 * degressivityFactor;
     }
-    // Au-delà de 1,2M€: pas de crédit
   }
   
   if (creditRate > 0 && impot > 0) {
@@ -122,53 +99,30 @@ export const calculateIncomeTax = (
 };
 
 /**
- * Calcule la contribution totale avec plafonnement global à 75%
- * AVEC CORRECTION FAILLE 16: Option paiement différé pour retraités fortunés
+ * Calcule la contribution fiscale totale (IR uniquement, CNJP supprimée)
+ * 
+ * CHANGEMENT POST-PIVOT : CNJP abandonnée, seul l'IR subsiste
+ * Plus besoin de plafonnement global car IR seul ne peut pas être confiscatoire
  * 
  * @param revenuAnnuel Revenu annuel en euros
- * @param patrimoineM Patrimoine en millions d'euros
+ * @param patrimoineM Patrimoine en M€ (conservé pour compatibilité mais non utilisé)
  * @param isHigherEducation Si diplômé Bac+5+
- * @param patrimoineProfessionnelM Patrimoine professionnel exonéré (défaut 0)
- * @param rendementAnnuelPct Rendement patrimoine en % (défaut 3%)
- * @returns { ir: number, cnjp: number, total: number, plafonne: boolean, paiementDiffere: boolean }
+ * @returns { ir: number, cnjp: number (toujours 0), total: number, plafonne: boolean (toujours false) }
  */
 export const calculateTotalContribution = (
   revenuAnnuel: number,
-  patrimoineM: number,
-  isHigherEducation: boolean = false,
-  patrimoineProfessionnelM: number = 0,
-  rendementAnnuelPct: number = 3
+  patrimoineM: number = 0,
+  isHigherEducation: boolean = false
 ): { ir: number; cnjp: number; total: number; plafonne: boolean; paiementDiffere: boolean } => {
-  const isSubjectToCNJP = patrimoineM >= 100;
-  const ir = calculateIncomeTax(revenuAnnuel, isHigherEducation, isSubjectToCNJP);
-  const cnjp = isSubjectToCNJP ? calculateCNJP(patrimoineM, patrimoineProfessionnelM, rendementAnnuelPct) * 1000000 : 0;
-  
-  const totalBeforeCap = ir + cnjp;
-  
-  // CORRECTION FAILLE 16: Paiement différé si CNJP > 50% du revenu annuel
-  // Pour retraités fortunés avec faibles revenus
-  const paiementDiffere = cnjp > (revenuAnnuel * 0.5) && revenuAnnuel > 0;
-  
-  // Plafond à 75% du revenu (si revenus suffisants)
-  const cap75 = revenuAnnuel * 0.75;
-  
-  if (totalBeforeCap > cap75 && revenuAnnuel > 0 && !paiementDiffere) {
-    // Plafonnement appliqué
-    return {
-      ir: ir * (cap75 / totalBeforeCap), // Réduction proportionnelle
-      cnjp: cnjp * (cap75 / totalBeforeCap),
-      total: cap75,
-      plafonne: true,
-      paiementDiffere: false
-    };
-  }
+  const ir = calculateIncomeTax(revenuAnnuel, isHigherEducation, false);
+  const cnjp = 0; // CNJP supprimée du programme
   
   return {
     ir,
-    cnjp,
-    total: totalBeforeCap,
-    plafonne: false,
-    paiementDiffere
+    cnjp: 0,
+    total: ir,
+    plafonne: false, // Plus de plafonnement nécessaire (IR seul)
+    paiementDiffere: false // Plus de paiement différé (pas de CNJP)
   };
 };
 
@@ -259,19 +213,21 @@ export const isHigherEducationProfession = (metier: string): boolean => {
 
 /**
  * Calcule le coût annuel total du crédit d'impôt pour diplômés Bac+5+
+ * POST-PIVOT : Crédit maintenu car juridiquement solide et encourageant
+ * 
  * Estimation basée sur ~1,95 millions de cadres supérieurs Bac+5+ en France
- * APRÈS EXCLUSIONS : Ultra-riches CNJP (≥100M€) et ultra-hauts revenus (>1M€)
+ * Exclusion uniquement ultra-hauts revenus >1,2M€ (plus de CNJP)
  * @returns Coût estimé en milliards d'euros
  */
 export const estimateHigherEducationTaxCreditCost = (): number => {
   const numberOfQualifiedWorkers = 2000000; // ~2M cadres Bac+5+
-  const exclusionRate = 0.025; // 2,5% exclus (CNJP + >1M€)
+  const exclusionRate = 0.015; // 1,5% exclus (revenus >1,2M€ uniquement, plus de CNJP)
   const eligibleWorkers = numberOfQualifiedWorkers * (1 - exclusionRate);
-  const averageIncomeTax = 5500; // IR moyen annuel plus élevé pour ces professions
+  const averageIncomeTax = 5500; // IR moyen annuel
   const creditRate = 0.15;
   const averageCredit = averageIncomeTax * creditRate;
   const totalCostMillions = (eligibleWorkers * averageCredit) / 1000000;
   const totalCostBillions = totalCostMillions / 1000;
   
-  return Math.round(totalCostBillions * 100) / 100; // Arrondi à 2 décimales = 1.61 Md€
+  return Math.round(totalCostBillions * 100) / 100; // ~1.62 Md€
 };

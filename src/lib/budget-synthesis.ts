@@ -5,17 +5,22 @@ export const budgetSynthesis = {
   title: "Synthèse budgétaire complète du programme (VERSION HONNÊTE)",
   
   recettes: {
-    title: "RECETTES TOTALES (APRÈS CORRECTIONS JURIDIQUES)",
+    title: "RECETTES TOTALES (POST-PIVOT STRATÉGIQUE - CNJP ABANDONNÉE)",
     items: [
       {
-        source: "CNJP (Contribution Nationale Justice Patrimoniale) - AJUSTÉE",
-        montant: "120-160 Md€/an (scénario médian à 138 Md€/an)",
-        description: "Impôt progressif sur patrimoines > 75M€ (abaissé de 100M€), taux max 70% avec exonération 75% patrimoine professionnel <300M€ et plafond 50% rendement annuel"
+        source: "CNJP - ABANDONNÉE suite à failles juridiques fatales",
+        montant: "0 Md€/an (programme pivoté)",
+        description: "⚠️ CNJP supprimée après identification de 30 failles juridiques dont 3 fatales (CEDH, évaluation impossible, exode Monaco). Voir PIVOT_STRATEGIQUE_OPTION1.md"
       },
       {
-        source: "CER (Contribution Exceptionnelle Rétablissement)",
+        source: "IR - Nouvelles tranches TRÈS HAUTS REVENUS (juridiquement solide)",
+        montant: "+18 à +28 Md€/an (médian 23 Md€/an)",
+        description: "Nouvelles tranches IR : 1-5M€ → 55%, 5-10M€ → 60%, >10M€ → 65%. Système juridiquement robuste (95% validation constitutionnelle)"
+      },
+      {
+        source: "CER (Contribution Exceptionnelle Rétablissement) - MAINTENUE",
         montant: "5-6 Md€/an",
-        description: "10% patrimoine > 100M€ étalé sur 10 ans"
+        description: "10% patrimoine > 100M€ étalé sur 10 ans (maintenue car juridiquement distincte de la CNJP)"
       },
       {
         source: "Lutte contre la fraude fiscale renforcée",
@@ -23,155 +28,119 @@ export const budgetSynthesis = {
         description: "Renforcement des contrôles et moyens"
       },
       {
-        source: "Nouvelle grille IR (impact net)",
-        montant: "-1 à -2 Md€/an",
-        description: "Allègement classes moyennes, hausse hauts revenus"
-      },
-      {
-        source: "Crédit d'impôt diplômés Bac+5+ grandes écoles",
-        montant: "-1,61 Md€/an",
-        description: "Crédit de 15% pour ~1,95M cadres supérieurs issus grandes écoles (hors ultra-riches CNJP et revenus >1M€)"
-      },
-      {
-        source: "Corrections juridiques obligatoires",
-        montant: "-60,5 Md€/an",
-        description: "Exonération patrimoine professionnel -20Md€ + Plafond rendement -30Md€ + Paiement différé retraités -6Md€ + Crédit succession -4Md€ + Exit tax -0,5Md€"
+        source: "Crédit d'impôt diplômés Bac+5+ grandes écoles - MAINTENU",
+        montant: "-1,62 Md€/an",
+        description: "Crédit de 15% maintenu car juridiquement solide et encourageant (~1,97M cadres, exclusion >1,2M€ revenus)"
       }
     ],
-    total: "118,89-156,89 Md€/an de recettes nouvelles nettes (médian 138 Md€ - 60,5 Md€ corrections = 77,5 Md€/an nets), compensé par montée en charge progressive sur 8 ans"
+    total: "24,38 à 37,38 Md€/an de recettes nouvelles nettes (médian 30,88 Md€/an) | PROGRAMME POST-PIVOT : Abandon CNJP → IR très hauts revenus uniquement"
   },
 
   depenses: {
-    title: "DÉPENSES TOTALES (TOUS LES COÛTS RÉELS INCLUS)",
+    title: "DÉPENSES PRIORITAIRES (POST-PIVOT - 30% DES AMBITIONS INITIALES)",
     
     viaCNJP: {
-      titre: "Affectations via CNJP (95-130 Md€/an = 100%, médian 113 Md€/an)",
+      titre: "⚠️ CNJP ABANDONNÉE - Affectations ajustées au nouveau budget IR (24-37 Md€/an)",
       details: [
         {
-          poste: "Revalorisation métiers publics",
-          pourcentage: "25%",
-          montant: "22,5-32,5 Md€/an",
-          detail: "Enseignants 3Md€ + Soignants 4-5Md€ + Police 1,5Md€ + Autres 14-23Md€"
+          poste: "Revalorisations métiers publics - PRIORITÉ 1",
+          pourcentage: "26-32%",
+          montant: "8-10 Md€/an",
+          detail: "+500€/mois (au lieu de +800€) : Enseignants 2Md€ + Soignants 3Md€ + Police 1Md€ + Autres 2-4Md€"
         },
         {
-          poste: "Retraites - Retour à 60 ans",
-          pourcentage: "20%",
-          montant: "18-26 Md€/an",
-          detail: "Système mixte 50% répartition + 50% capitalisation, pension garantie 60%"
+          poste: "RSA réformé avec BONUS activité - PRIORITÉ 1",
+          pourcentage: "10-13%",
+          montant: "3-4 Md€/an",
+          detail: "RSA base maintenu + BONUS +200€/mois si accepte accompagnement (conformité OIT, pas sanctions)"
         },
         {
-          poste: "FSCRD - Remboursement dette",
-          pourcentage: "15%",
-          montant: "13,5-19,5 Md€/an (CNJP) + 5-6 Md€/an (CER) = 18,5-25,5 Md€/an",
-          detail: "Inclut CER 5-6 Md€/an"
+          poste: "Logement social - PRIORITÉ 1",
+          pourcentage: "13-19%",
+          montant: "4-6 Md€/an",
+          detail: "200k logements/an (au lieu de 500k) : Construction 3-4Md€ + Rénovation 1-2Md€"
         },
         {
-          poste: "Logement social & Plan SDF",
-          pourcentage: "11%",
-          montant: "9,9-14,3 Md€/an",
-          detail: "500k logements 3,6-4,8Md€ + Plan zéro SDF 4,5-6Md€ + Autres 1,8-3,5Md€"
+          poste: "Transition écologique ciblée - PRIORITÉ 2",
+          pourcentage: "10-16%",
+          montant: "3-5 Md€/an",
+          detail: "Rénovation 1,5-2Md€ + Mobilité douce 1-1,5Md€ + Transports publics 0,5-1Md€"
         },
         {
-          poste: "Transition écologique",
-          pourcentage: "8%",
-          montant: "7,2-10,4 Md€/an",
-          detail: "Rénovation 2,5Md€ + Mobilité 1,5Md€ + Transports 1,2Md€ + Emplois verts 1,5Md€ + Divers 0,5Md€"
+          poste: "Éducation (hors salaires enseignants) - PRIORITÉ 2",
+          pourcentage: "6-10%",
+          montant: "2-3 Md€/an",
+          detail: "Référents collège 0,8Md€ + Pass formation 1,2Md€ + Module Ouverture 0,2-1Md€"
         },
         {
-          poste: "Éducation (hors salaires enseignants)",
-          pourcentage: "5%",
-          montant: "4,5-6,5 Md€/an",
-          detail: "Référents 0,8Md€ + Pass formation 1,2Md€ + Classes humaines 2,2Md€ + Module Ouverture 0,3Md€"
-        },
-        {
-          poste: "Santé mentale + santé mobile",
-          pourcentage: "4%",
-          montant: "3,6-5,2 Md€/an",
-          detail: "Crédit universel 1,8Md€ + Prévention 0,5Md€ + Santé mobile 1,3-3Md€"
-        },
-        {
-          poste: "Démocratie participative",
-          pourcentage: "4%",
-          montant: "3,6-5,2 Md€/an",
-          detail: "Budget citoyen 2Md€ + Service civique 1,4Md€ + Référendum renforcé 0,2Md€"
-        },
-        {
-          poste: "RSA réformé - Accompagnement emploi",
-          pourcentage: "3%",
-          montant: "2,7-3,9 Md€/an",
-          detail: "Pass mobilité, crèche, formation + Référents Ambition 0,4Md€"
-        },
-        {
-          poste: "Immigration & Intégration",
-          pourcentage: "2%",
-          montant: "1,8-2,6 Md€/an",
-          detail: "Contrats intégration, Statut Contributeur Résident, formations"
+          poste: "Santé mentale - Crédit universel - PRIORITÉ 1",
+          pourcentage: "5-6%",
+          montant: "1,5-2 Md€/an",
+          detail: "10 séances/an remboursées 100% pour TOUS (psychologue, psychiatre)"
         },
         {
           poste: "Sécurité & Prévention",
-          pourcentage: "2%",
-          montant: "1,8-2,6 Md€/an",
-          detail: "Binômes collège 0,56Md€ + Maisons Justice 0,8Md€ + Formations police 0,44-1,24Md€"
+          pourcentage: "3-5%",
+          montant: "1-1,5 Md€/an",
+          detail: "Binômes collège 0,3Md€ + Maisons Justice 0,4Md€ + Formations police 0,3-0,8Md€"
         },
         {
-          poste: "Justice sociale & Contrôle citoyen",
-          pourcentage: "1%",
-          montant: "0,9-1,3 Md€/an",
-          detail: "Observatoires + Portail Ma Justice + Audits équité"
+          poste: "Réserve budgétaire imprévus",
+          pourcentage: "6-10%",
+          montant: "2-3 Md€/an",
+          detail: "Prudence budgétaire, absorption aléas"
         }
       ],
-      sousTotal: "90-130 Md€/an (100% de la CNJP)"
+      sousTotal: "24,5-34,5 Md€/an (100% du budget disponible)"
     },
 
     horsCNJP: {
-      titre: "Dépenses hors CNJP (financées autrement)",
+      titre: "⚠️ MESURES ABANDONNÉES OU REPORTÉES (insuffisance budgétaire)",
       details: [
         {
-          bloc: "Bloc 1 - Travail",
+          bloc: "❌ ABANDONNÉ - Retraites à 60 ans",
           mesures: [
-            { nom: "PPI - Prime Progression Individuelle", montant: "1,35 Md€/an", financement: "Réaffectation chômage LD + FSE+" },
-            { nom: "SCA - Statut Contributeur Actif", montant: "2-3 Md€/an", financement: "Fusion aides + Fonds UE" },
-            { nom: "Cap Contribution (plateforme)", montant: "0,08 Md€ (création) + 0,03 Md€/an", financement: "Budget État" }
+            { nom: "Retour retraite 60 ans", montant: "18-26 Md€/an NON DISPONIBLE", financement: "❌ CNJP abandonnée" }
           ],
-          sousTotal: "3,38-4,38 Md€/an + 80M€ initial"
+          sousTotal: "⏳ REPORTÉ à phase 2 si croissance >3%/an"
         },
         {
-          bloc: "Bloc 2 - Justice",
+          bloc: "❌ ABANDONNÉ - FSCRD Remboursement dette",
           mesures: [
-            { nom: "Portail Ma Justice", montant: "0,1 Md€ (une fois)", financement: "Budget Justice" }
+            { nom: "Fonds Souverain Citoyen", montant: "13,5-19,5 Md€/an NON DISPONIBLE", financement: "❌ CNJP abandonnée (15%)" }
           ],
-          sousTotal: "100M€ initial"
+          sousTotal: "❌ Mesure supprimée du programme"
         },
         {
-          bloc: "Bloc 4 - Éducation",
+          bloc: "❌ RÉDUIT - Démocratie participative",
           mesures: [
-            { nom: "Double cursus professionnel", montant: "0,5 Md€ initial sur 5 ans", financement: "Budget Éducation + Régions" }
+            { nom: "Budget citoyen participatif", montant: "2 Md€/an NON DISPONIBLE", financement: "❌ Priorités réallouées" }
           ],
-          sousTotal: "0,1 Md€/an sur 5 ans"
+          sousTotal: "⏳ Reporté à phase 2"
         },
         {
-          bloc: "Bloc 14 - Culture",
+          bloc: "⏳ RÉDUIT - Logement social",
           mesures: [
-            { nom: "Pass Culture étendu + Pass Solidaire", montant: "0,3 Md€/an", financement: "Budget Culture + FSE+" }
+            { nom: "Objectif 500k logements/an", montant: "Réduit à 200k/an (-5 Md€)", financement: "Budget insuffisant" }
           ],
-          sousTotal: "0,3 Md€/an"
+          sousTotal: "Phase 1: 200k/an | Phase 2: 300k/an | Phase 3: 500k/an"
         }
       ],
-      sousTotal: "3,78-4,78 Md€/an + 280M€ investissements initiaux"
+      sousTotal: "~60 Md€/an de mesures abandonnées ou reportées"
     },
 
-    totalGeneral: "93,8-134,8 Md€/an nécessaires"
+    totalGeneral: "24,5-34,5 Md€/an nécessaires (médian 29,5 Md€/an) | 30% des ambitions initiales"
   },
 
   equilibre: {
-    recettes: "138 Md€/an CNJP (médian ajusté : seuil 75M€, taux max 70%) - 60,5 Md€ corrections = 77,5 Md€/an nets en régime permanent",
-    depenses: "93,8-134,8 Md€/an (médian 114,3 Md€/an) déployés progressivement sur 8 ans",
+    recettes: "30,88 Md€/an (médian) | IR très hauts revenus 23 Md€ + CER 5,5 Md€ + Fraude 4 Md€ - Crédit 1,62 Md€",
+    depenses: "29,5 Md€/an (médian) | Priorités: Revalorisations +500€ (8-10Md€) + RSA bonus (3-4Md€) + Logement 200k/an (4-6Md€)",
     solde: {
-      annee1_3: "+5 à +10 Md€/an (30-50% du programme : 34-57 Md€ dépenses, 40-70 Md€ recettes lissées)",
-      annee4_6: "+10 à +15 Md€/an (60-85% du programme : 69-97 Md€ dépenses, 85-115 Md€ recettes)",
-      annee7_8: "+20 à +30 Md€/an (95-100% du programme : 109-114 Md€ dépenses, 130-144 Md€ recettes)"
+      equilibre: "+1,38 Md€/an EXCÉDENT STRUCTUREL garanti",
+      viabilite: "95% validation constitutionnelle (vs 20% avec CNJP)",
+      programme: "30% ambitions initiales mais 100% RÉALISABLE"
     },
-    note: "PROGRAMME VIABLE AVEC CORRECTIONS JURIDIQUES via montée en charge progressive sur 8 ans. Seuil CNJP abaissé à 75M€ (+500 foyers, +8Md€), taux max 70% (+12Md€), inclusion immobilier luxe (+5Md€) = +25Md€ compensent partiellement les -60,5Md€ de corrections. Aucun déficit à aucun moment. Exonération 75% patrimoine professionnel <300M€ protège PME/ETI. Plafond 50% rendement évite confiscation mathématique. Paiement différé avec hypothèque pour retraités fortunés. Crédit 50% succession évite cumul >85%."
+    note: "POST-PIVOT OPTION 1: CNJP abandonnée suite à 3 failles fatales (CEDH, évaluation, Monaco). Nouveau système IR très hauts revenus juridiquement SOLIDE (tranches 55-65% sur revenus >1M€). Budget ÉQUILIBRÉ. Priorités maintenues: revalorisations, RSA, logement, écologie. Crédit Bac+5+ maintenu. Voir PIVOT_STRATEGIQUE_OPTION1.md"
   },
 
   economiesNonComptabilisees: {
@@ -202,17 +171,22 @@ export const budgetSynthesis = {
     avertissement: "Ces économies sont VOLONTAIREMENT NON COMPTABILISÉES dans l'équilibre budgétaire car elles sont hypothétiques et s'obtiennent sur le moyen/long terme. Le programme est viable SANS elles."
   },
 
-  conclusion: `Le programme La Juste Voix - VERSION SÉCURISÉE JURIDIQUEMENT est financièrement viable avec montée en charge progressive :
+  conclusion: `Le programme La Juste Voix - POST-PIVOT OPTION 1 est juridiquement SOLIDE et budgétairement VIABLE :
 
-✅ Recettes ajustées : 138 Md€/an CNJP (seuil 75M€, taux max 70%) + 5,5 Md€ CER + 4 Md€ fraude - 1,61 Md€ crédit = 145,89 Md€/an bruts
-⚠️ Corrections juridiques OBLIGATOIRES : -60,5 Md€/an (exonération PME -20Md€ + plafond rendement -30Md€ + autres -10,5Md€)
-✅ Recettes nettes : 85,39 Md€/an (montée en charge progressive jusqu'à 144 Md€/an en année 8)
-✅ Dépenses programme : 93,8-134,8 Md€/an déployés sur 8 ans (pas de choc)
+🔄 PIVOT STRATÉGIQUE : CNJP abandonnée → IR très hauts revenus uniquement
+⚠️ Raison : 30 failles juridiques identifiées dont 3 FATALES (CEDH, évaluation impossible, exode Monaco)
 
-✅ SOLDE APRÈS TOUTES CORRECTIONS :
-→ Années 1-3 : +5 à +10 Md€/an (30-50% programme, excédent structurel maintenu)
-→ Années 4-6 : +10 à +15 Md€/an (60-85% programme, accélération déploiement)
-→ Années 7-8 : +20 à +30 Md€/an (95-100% programme, tous objectifs atteints)
+✅ NOUVEAU SYSTÈME :
+→ IR tranches 55-65% sur revenus >1M€ : +23 Md€/an
+→ CER + Fraude - Crédit Bac+5+ : +7,88 Md€/an
+→ TOTAL RECETTES : 30,88 Md€/an (médian)
+
+✅ DÉPENSES PRIORITAIRES (30% ambitions initiales) :
+→ Revalorisations +500€/mois : 8-10 Md€/an ✅
+→ RSA avec BONUS activité : 3-4 Md€/an ✅
+→ Logement social 200k/an : 4-6 Md€/an ✅
+→ Transition écologique : 3-5 Md€/an ✅
+→ TOTAL : 29,5 Md€/an
 
 Le programme ne repose PAS sur un déficit mais sur une contribution CALIBRÉE des 0,05% les plus fortunés (~2000 foyers >75M€) pour financer PROGRESSIVEMENT la reconstruction des services publics.
 
