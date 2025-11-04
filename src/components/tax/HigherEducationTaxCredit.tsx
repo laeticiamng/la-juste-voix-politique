@@ -94,12 +94,11 @@ const HigherEducationTaxCredit: React.FC = () => {
               <p className="font-bold text-orange-800 mb-2">⚠️ Règles de non-cumul importantes:</p>
               <ul className="text-orange-700 space-y-1">
                 <li>
-                  <strong>1. Non cumulable avec la CNJP:</strong> Les contribuables assujettis 
-                  à la CNJP (patrimoine ≥ 100M€) ne peuvent pas bénéficier du crédit.
+                  <strong>1. Dégressivité progressive:</strong> Le crédit est dégressif pour les revenus entre 800k€ et 1,2M€/an.
                 </li>
                 <li>
                   <strong>2. Exclusion des ultra-hauts revenus:</strong> Le crédit ne s'applique 
-                  pas aux revenus supérieurs à 1 000 000 €/an.
+                  pas aux revenus supérieurs à 1 200 000 €/an.
                 </li>
                 <li className="text-xs italic mt-2">
                   Ces exclusions garantissent que le crédit bénéficie aux cadres qualifiés, 
@@ -128,7 +127,7 @@ const HigherEducationTaxCredit: React.FC = () => {
               </div>
             </div>
             <p className="text-xs text-gray-600 mt-3 text-center italic">
-              Coût après exclusion des ultra-riches CNJP (≥100M€) et ultra-hauts revenus (&gt;1M€)
+              Coût après exclusion des ultra-hauts revenus (&gt;1,2M€/an)
             </p>
           </div>
 

@@ -14,7 +14,7 @@ interface SEOProps {
 const SEOHead: React.FC<SEOProps> = ({
   title = 'La Juste Voix',
   description = 'Un programme politique qui remet la justice, la dignité et la contribution au centre de la République.',
-  keywords = 'politique, france, justice sociale, fiscalité, revalorisations, CNJP',
+  keywords = 'politique, france, justice sociale, fiscalité, revalorisations, IR ultra-hauts revenus',
   image = '/og-image.jpg',
   url = 'https://lajustevoix.fr',
   type = 'website',
