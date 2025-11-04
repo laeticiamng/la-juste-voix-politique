@@ -48,7 +48,7 @@ const faqItems: FAQItem[] = [
   },
   {
     question: "Comment seront financées ces revalorisations ?",
-    answer: "Ces revalorisations seront financées principalement par la Contribution Nationale de Justice Patrimoniale (CNJP) qui génère 90 à 130 milliards €/an en ciblant les patrimoines financiers nets supérieurs à 100 millions €. Les revalorisations des métiers publics représentent 25% de la CNJP, soit 22,5 à 32,5 milliards €/an, complétées par la lutte contre l'évasion fiscale et une réforme fiscale plus progressive.",
+    answer: "Ces revalorisations seront financées principalement par le nouvel impôt sur le revenu renforcé pour les ultra-hauts revenus (taux de 55% à 65% sur les revenus > 1M€/an), générant 24 à 37 milliards €/an. Les revalorisations des métiers publics représentent environ 30% de ces recettes (8-10 milliards €/an), complétées par la Contribution Exceptionnelle de Rétablissement (CER) et la lutte renforcée contre l'évasion fiscale.",
     category: 'revalorisations',
   },
   {
@@ -64,13 +64,13 @@ const faqItems: FAQItem[] = [
   
   // Fiscalité questions
   {
-    question: "Qu'est-ce que la CNJP ?",
-    answer: "La Contribution Nationale de Justice Patrimoniale est une mesure fiscale ciblant les 0,1% des Français les plus fortunés, dont le patrimoine financier net dépasse 100 millions d'euros. Elle ne concerne pas les classes moyennes, ni les entrepreneurs actifs, ni les résidences principales. Son objectif est de réduire les inégalités extrêmes de patrimoine et de financer les services publics essentiels.",
+    question: "Comment le programme est-il financé ?",
+    answer: "Le programme La Juste Voix est financé par un impôt sur le revenu renforcé pour les ultra-hauts revenus (55%, 60%, 65% sur revenus > 1M€/an), une Contribution Exceptionnelle de Rétablissement (CER) de 10% sur patrimoines > 100M€ étalée sur 10 ans, et une lutte accrue contre l'évasion fiscale. Ces mesures ciblent les 0,01% les plus aisés et génèrent 24 à 37 milliards €/an.",
     category: 'fiscalite',
   },
   {
-    question: "Comment sera appliquée la CNJP ?",
-    answer: "La CNJP sera appliquée sur le patrimoine réel des personnes concernées, en tenant compte des actifs détenus directement ou indirectement via des sociétés qu'elles contrôlent. Un dispositif anti-évasion robuste sera mis en place, avec une coopération internationale renforcée pour éviter les stratégies d'évitement. Les résidences principales et les actifs professionnels sont exclus de l'assiette.",
+    question: "Comment sera appliqué l'IR renforcé ?",
+    answer: "L'impôt sur le revenu renforcé s'applique uniquement sur les revenus annuels supérieurs à 1 million d'euros, avec trois tranches progressives : 55% (1-5M€), 60% (5-10M€) et 65% (>10M€). Les revenus inférieurs à 1M€ ne sont pas concernés par ces nouveaux taux. Un crédit d'impôt de 15% pour diplômés Bac+5+ est maintenu (dégressif au-delà de 800k€).",
     category: 'fiscalite',
   },
   {
@@ -108,14 +108,14 @@ const faqItems: FAQItem[] = [
   
   // Initiatives phares
   {
-    question: "Qu'est-ce que la CNJP (Contribution Nationale de Justice Patrimoniale) ?",
-    answer: "La CNJP est un impôt progressif sur les patrimoines financiers nets supérieurs à 100 millions d'euros, appliqué aux personnes physiques, même si leur fortune est logée dans une société. Elle vise les ultra-riches réels et non les entrepreneurs, passe à travers les écrans juridiques (holdings, SCI…), et peut générer entre 90 et 130 milliards d'euros par an grâce à un taux maximal de 60% sur les patrimoines > 50 Md€. Cette mesure est inédite en France et dans le monde par sa clarté et son barème détaillé.",
+    question: "Qu'est-ce que l'Impôt sur le Revenu renforcé pour ultra-hauts revenus ?",
+    answer: "Notre système fiscal pivoté introduit trois nouvelles tranches d'IR exclusivement pour les revenus exceptionnels : 55% (1-5M€/an), 60% (5-10M€/an), et 65% (>10M€/an). Ces taux ne concernent que 0,01% des contribuables et génèrent 24 à 37 milliards d'euros par an. Cette approche remplace la CNJP abandonnée pour garantir une viabilité juridique de 95% (vs 20% avec CNJP). Un crédit d'impôt de 15% pour diplômés Bac+5+ est maintenu avec dégressivité.",
     category: 'initiatives',
     badge: 'Phare',
   },
   {
     question: "Comment fonctionnent les revalorisations des travailleurs essentiels ?",
-    answer: "Notre plan prévoit la revalorisation immédiate de plus de 4 millions de travailleurs essentiels. Par exemple : +1 000 €/mois pour les médecins internes, +600 € pour les infirmiers, SMIC horaire obligatoire pour tous les étudiants hospitaliers et stagiaires, et +500-600 € pour les enseignants, assistants sociaux, éducateurs et ATSEM. Ce qui rend cette mesure inédite est qu'elle lie un financement clair (CNJP) à une revalorisation immédiate, avec des montants précis et des bénéficiaires clairement identifiés.",
+    answer: "Notre plan prévoit la revalorisation de plus de 1,5 million de travailleurs essentiels. Par exemple : +500 €/mois pour les infirmiers, enseignants, assistants sociaux, éducateurs et ATSEM. Ce qui rend cette mesure inédite est qu'elle lie un financement clair (IR ultra-hauts revenus + CER) à une revalorisation immédiate, avec des montants précis et des bénéficiaires clairement identifiés. Budget total : 8-10 Md€/an.",
     category: 'initiatives',
     badge: 'Phare',
   },
@@ -127,9 +127,9 @@ const faqItems: FAQItem[] = [
   },
   {
     question: "Qu'est-ce que le FSCRD (Fonds Souverain Citoyen de Réduction de la Dette) ?",
-    answer: "Le FSCRD est un fonds souverain dont l'objectif est de rembourser la dette publique sans austérité, en la finançant par la CNJP et la CER. Ce qui rend ce fonds particulièrement innovant est qu'il sera géré par des citoyens tirés au sort assistés d'experts, avec 18,5 à 25,5 milliards d'euros par an dédiés à la réduction de la dette (15% de la CNJP de 90-130 Md€ + 100% de la CER de 5-6 Md€/an). Cette mesure supprime l'excuse du 'y a pas d'argent' souvent utilisée pour justifier l'inaction.",
+    answer: "Le FSCRD est un projet ambitieux de fonds souverain visant à rembourser la dette publique sans austérité. Cependant, suite au pivot stratégique du programme (abandon CNJP), cette mesure est actuellement reportée à une phase ultérieure du programme, conditionnée à une croissance économique supérieure à 3%/an. Le financement initial prévu (15% CNJP + CER) n'est plus disponible dans le budget actuel de 24-37 Md€/an.",
     category: 'initiatives',
-    badge: 'Phare',
+    badge: 'Reporté',
   },
   {
     question: "Comment allez-vous réformer les consultations médicales ?",

@@ -557,10 +557,10 @@ const TaxSimulator: React.FC = () => {
                     </Card>
                   </div>
 
-                  {/* Graphique affectation du budget CNJP */}
+                  {/* Graphique affectation du budget IR ultra-hauts revenus */}
                   <div className="bg-white p-6 rounded-lg">
                     <h4 className="text-lg font-bold mb-4 text-gray-800">
-                      Affectation de la CNJP collectée (90-130 Md€/an)
+                      Affectation budget IR ultra-hauts revenus (24-37 Md€/an)
                     </h4>
                     <ResponsiveContainer width="100%" height={400}>
                       <PieChart>

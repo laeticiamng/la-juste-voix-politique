@@ -49,7 +49,7 @@ const Revalorisations = () => {
                 Notre engagement
               </h2>
               <p className="text-xl leading-relaxed">
-                Grâce à la Contribution Nationale de Justice Patrimoniale (CNJP), nous proposons une revalorisation immédiate et massive des métiers qui tiennent ce pays debout.
+                Grâce à l'impôt sur le revenu renforcé pour les ultra-hauts revenus (55-65% sur revenus {'>'} 1M€/an) et à la Contribution Exceptionnelle de Rétablissement, nous proposons une revalorisation immédiate des métiers qui tiennent ce pays debout.
               </p>
             </div>
 
@@ -116,7 +116,7 @@ const Revalorisations = () => {
             </p>
             <div className="bg-ljv-navy/10 rounded-lg p-3 text-center">
               <p className="text-sm font-bold text-gray-900 dark:text-gray-100">
-                💰 Financé par la CNJP (inclus dans les 25% dédiés aux revalorisations)
+                💰 Financé par l'IR ultra-hauts revenus (inclus dans les 30% dédiés aux revalorisations)
               </p>
             </div>
           </div>

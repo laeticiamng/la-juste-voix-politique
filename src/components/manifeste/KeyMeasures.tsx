@@ -6,28 +6,28 @@ import KeyMeasureCard, { KeyMeasure } from './KeyMeasureCard';
 const keyMeasures: KeyMeasure[] = [
   {
     id: 1,
-    title: "CNJP — CONTRIBUTION NATIONALE DE JUSTICE PATRIMONIALE",
-    description: "Un impôt progressif sur les patrimoines financiers nets > 100 M€, appliqué aux personnes physiques, même si leur fortune est logée dans une société.",
+    title: "IR ULTRA-HAUTS REVENUS — Tranches renforcées 55-65%",
+    description: "Trois nouvelles tranches d'impôt sur le revenu exclusivement pour les revenus exceptionnels (> 1M€/an) : 55% (1-5M€), 60% (5-10M€), 65% (>10M€).",
     strengths: [
-      "Vise les ultra-riches réels, pas les entrepreneurs",
-      "Passe à travers les écrans juridiques (holdings, SCI…)",
-      "Peut générer 90 à 130 Mds €/an grâce au taux max 60%",
-      "Inédit en France et dans le monde par sa clarté et son barème détaillé"
+      "Vise uniquement les 0,01% des contribuables (revenus > 1M€/an)",
+      "Viabilité juridique 95% (vs 20% avec CNJP abandonnée)",
+      "Génère 24 à 37 Mds €/an de recettes nettes",
+      "Crédit d'impôt Bac+5+ maintenu (15% avec dégressivité)"
     ]
   },
   {
     id: 2,
-    title: "Revalorisation immédiate de plus de 4 millions de travailleurs essentiels",
+    title: "Revalorisation de 1,5 million de travailleurs essentiels",
     description: "Exemples chiffrés :",
     examples: [
-      "+1 000 €/mois pour médecins internes",
-      "+600 € pour infirmiers",
-      "SMIC horaire obligatoire pour tous les étudiants hospitaliers et stagiaires",
-      "+500–600 € pour enseignants, assistants sociaux, éducateurs, ATSEM"
+      "+500 € pour infirmiers, enseignants, assistants sociaux",
+      "+500 € pour ATSEM, éducateurs spécialisés",
+      "+750 € pour maires ruraux et moyennes communes",
+      "Augmentation SMIC et soutiens secteur privé"
     ],
     strengths: [
-      "Financement clair (CNJP) lié à revalorisation immédiate",
-      "Engagement concret avec montants, échéances et bénéficiaires précis"
+      "Financement clair (IR ultra-hauts revenus + CER)",
+      "Engagement concret : 8-10 Md€/an dédiés aux revalorisations"
     ]
   },
   {
@@ -43,12 +43,12 @@ const keyMeasures: KeyMeasure[] = [
   },
   {
     id: 4,
-    title: "FSCRD — Fonds Souverain Citoyen de Réduction de la Dette",
-    description: "Objectif : Rembourser la dette publique sans austérité, en la finançant par la CNJP et la CER.",
+    title: "FSCRD — Fonds Souverain de Réduction de la Dette (REPORTÉ)",
+    description: "Objectif : Rembourser la dette publique sans austérité. Suite au pivot stratégique (CNJP abandonnée), cette mesure est reportée à Phase 2.",
     strengths: [
-      "Géré par citoyens tirés au sort + experts",
-      "18,5 à 25,5 Md€/an dédiés à la réduction de dette (15% CNJP + 100% CER)",
-      "Supprime l'excuse du \"y a pas d'argent\""
+      "Reporté à Phase 2 conditionnée à croissance >3%/an",
+      "Budget actuel insuffisant (24-37 Md€/an vs 130 Md€ prévu)",
+      "Maintenu comme objectif à moyen terme"
     ]
   },
   {

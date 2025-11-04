@@ -1,5 +1,7 @@
 
 import React from 'react';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { AlertTriangle } from 'lucide-react';
 
 interface ComparisonItem {
   current: string;
@@ -42,8 +44,15 @@ const RetirementReformSection: React.FC = () => {
             Ce que je propose : Un système mixte, responsable et durable
           </h3>
           <p className="mb-4">
-            Grâce à la CNJP, je propose un nouveau modèle de retraite, plus juste, plus stable, et plus lisible :
+            Grâce aux recettes du programme La Juste Voix (IR ultra-hauts revenus + CER), nous proposons à moyen terme un nouveau modèle de retraite, plus juste, plus stable, et plus lisible :
           </p>
+          
+          <Alert className="mb-6 bg-orange-50 border-orange-300">
+            <AlertTriangle className="h-5 w-5 text-orange-600" />
+            <AlertDescription className="text-orange-800">
+              <strong>⚠️ MESURE REPORTÉE</strong> : Suite au pivot stratégique (abandon CNJP), le retour à la retraite à 60 ans est reporté à Phase 2, conditionné à une croissance économique soutenue ({'>'}3%/an). Le budget actuel de 24-37 Md€/an ne permet pas de financer cette réforme (coût estimé : 18-26 Md€/an).
+            </AlertDescription>
+          </Alert>
           
           <div className="bg-ljv-navy/5 p-5 rounded-lg mb-6">
             <h4 className="font-bold mb-2">1. L'âge légal de départ à la retraite est rétabli à 60 ans pour tous</h4>
@@ -116,8 +125,8 @@ const RetirementReformSection: React.FC = () => {
               <span>Ce système protège la solidarité nationale tout en redonnant du pouvoir de projection à chacun.</span>
             </li>
             <li className="flex items-start gap-2 mb-2">
-              <span className="text-green-600 font-bold flex-shrink-0">✅</span> 
-              <span>Il est financé durablement par <strong>20% de la CNJP (18-26 Md€/an)</strong> et les cotisations sociales équilibrées.</span>
+              <span className="text-orange-600 font-bold flex-shrink-0">⚠️</span> 
+              <span>Financement prévu : <strong>18-26 Md€/an nécessaires</strong> — actuellement reporté à Phase 2 (budget actuel 24-37 Md€/an alloué aux priorités immédiates).</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-green-600 font-bold flex-shrink-0">✅</span> 
