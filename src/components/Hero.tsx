@@ -20,10 +20,10 @@ const Hero: React.FC = () => {
           <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 leading-tight">
             <span className="title-gradient">La Juste Voix</span>
           </h1>
-          <p className="text-xl md:text-2xl text-ljv-secondary dark:text-ljv-secondary mb-8 leading-relaxed font-medium">
+          <p className="text-xl md:text-2xl text-gray-800 dark:text-gray-200 mb-8 leading-relaxed font-semibold">
             Un programme politique qui remet la justice, la dignité et la contribution au centre de la République.
           </p>
-          <blockquote className="italic text-xl md:text-2xl text-ljv-primary dark:text-ljv-primary mb-10 px-6 border-l-4 border-ljv-gold font-medium">
+          <blockquote className="italic text-xl md:text-2xl text-gray-900 dark:text-gray-100 mb-10 px-6 border-l-4 border-ljv-gold font-semibold">
             "Parce qu'un pays ne tient pas sur des privilèges, mais sur celles et ceux qui agissent."
           </blockquote>
 
@@ -41,16 +41,16 @@ const Hero: React.FC = () => {
           {/* Statistiques clés */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border border-ljv-gold/20 shadow-md">
-              <div className="text-2xl md:text-3xl font-bold text-ljv-navy dark:text-ljv-navy mb-2">90-130 Md€/an</div>
-              <div className="text-sm md:text-base text-ljv-secondary dark:text-ljv-secondary font-medium">CNJP pour financer les réformes</div>
+              <div className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">90-130 Md€/an</div>
+              <div className="text-sm md:text-base text-gray-800 dark:text-gray-200 font-semibold">CNJP pour financer les réformes</div>
             </div>
             <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border border-ljv-gold/20 shadow-md">
-              <div className="text-2xl md:text-3xl font-bold text-ljv-navy dark:text-ljv-navy mb-2">4M+</div>
-              <div className="text-sm md:text-base text-ljv-secondary dark:text-ljv-secondary font-medium">Travailleurs essentiels revalorisés</div>
+              <div className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">4M+</div>
+              <div className="text-sm md:text-base text-gray-800 dark:text-gray-200 font-semibold">Travailleurs essentiels revalorisés</div>
             </div>
             <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border border-ljv-gold/20 shadow-md">
-              <div className="text-2xl md:text-3xl font-bold text-ljv-navy dark:text-ljv-navy mb-2">60 ans</div>
-              <div className="text-sm md:text-base text-ljv-secondary dark:text-ljv-secondary font-medium">Âge de départ à la retraite rétabli</div>
+              <div className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">60 ans</div>
+              <div className="text-sm md:text-base text-gray-800 dark:text-gray-200 font-semibold">Âge de départ à la retraite rétabli</div>
             </div>
           </div>
 
@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
           </div>
           
           <div className="mt-12 flex justify-center">
-            <a href="#blocks" className="text-ljv-navy hover:text-ljv-gold transition-colors flex flex-col items-center">
+            <a href="#blocks" className="text-gray-900 dark:text-gray-100 hover:text-ljv-gold transition-colors flex flex-col items-center font-semibold">
               <span className="text-sm mb-2">Découvrir les 14 blocs</span>
               <ChevronDown className="h-6 w-6 animate-bounce" />
             </a>

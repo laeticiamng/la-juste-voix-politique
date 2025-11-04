@@ -61,15 +61,15 @@
 
 /* Custom LJV Design System - HSL Colors */
 :root {
-  /* LJV Brand Colors in HSL - Maximum contrast */
-  --ljv-navy: 220 100% 8%;
-  --ljv-gold: 43 95% 35%;
-  --ljv-red: 354 75% 45%;
+  /* LJV Brand Colors in HSL - Contraste maximum WCAG AAA */
+  --ljv-navy: 220 100% 10%;
+  --ljv-gold: 43 100% 25%;
+  --ljv-red: 354 85% 35%;
   
   /* Text Colors - Maximum contrast for perfect readability */
-  --ljv-text-primary: 0 0% 5%;  /* Presque noir */
-  --ljv-text-secondary: 0 0% 15%; /* Très foncé */
-  --ljv-text-muted: 0 0% 30%; /* Foncé mais distinct */
+  --ljv-text-primary: 0 0% 10%;  /* Très foncé */
+  --ljv-text-secondary: 0 0% 20%; /* Foncé */
+  --ljv-text-muted: 0 0% 35%; /* Gris foncé lisible */
   
   /* LJV Gradients */
   --ljv-gradient-primary: linear-gradient(135deg, hsl(var(--ljv-navy)), hsl(var(--ljv-gold)));

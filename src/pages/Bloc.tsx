@@ -32,19 +32,19 @@ const Bloc = () => {
           
           <div className="max-w-4xl mx-auto py-12 flex justify-between">
             {prevBlock ? (
-              <Link to={`/bloc/${prevBlock}`} className="text-ljv-navy hover:text-ljv-gold transition-colors flex items-center gap-2">
+              <Link to={`/bloc/${prevBlock}`} className="text-gray-900 dark:text-gray-100 hover:text-ljv-gold transition-colors flex items-center gap-2 font-semibold">
                 ← Bloc précédent 
               </Link>
             ) : (
               <div></div>
             )}
             
-            <Link to="/#blocks" className="text-ljv-navy hover:text-ljv-gold transition-colors">
+            <Link to="/#blocks" className="text-gray-900 dark:text-gray-100 hover:text-ljv-gold transition-colors font-semibold">
               Tous les blocs
             </Link>
             
             {nextBlock ? (
-              <Link to={`/bloc/${nextBlock}`} className="text-ljv-navy hover:text-ljv-gold transition-colors flex items-center gap-2">
+              <Link to={`/bloc/${nextBlock}`} className="text-gray-900 dark:text-gray-100 hover:text-ljv-gold transition-colors flex items-center gap-2 font-semibold">
                 Bloc suivant →
               </Link>
             ) : (
