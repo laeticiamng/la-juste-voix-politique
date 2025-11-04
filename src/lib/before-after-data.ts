@@ -429,7 +429,7 @@ export const beforeAfterData: BeforeAfterData[] = [
     description: "Revalorisation +200€ brut",
   },
 
-  // INGÉNIEURS - TOUTES SPÉCIALITÉS
+  // INGÉNIEURS - TOUTES SPÉCIALITÉS (avec crédit d'impôt 15% professions techniques)
   {
     metier: "Ingénieur débutant",
     statut: "Junior - 0-2 ans exp",
@@ -438,9 +438,9 @@ export const beforeAfterData: BeforeAfterData[] = [
     impotActuel: 220,
     salaireActuelPostImpot: 2090,
     salaireReformeNet: 2310,
-    impotReforme: 185,
-    salaireReformePostImpot: 2125,
-    description: "Légère baisse d'impôt -35€/mois",
+    impotReforme: 155,
+    salaireReformePostImpot: 2155,
+    description: "Crédit d'impôt technique : +65€/mois",
   },
   {
     metier: "Ingénieur confirmé",
@@ -450,9 +450,9 @@ export const beforeAfterData: BeforeAfterData[] = [
     impotActuel: 470,
     salaireActuelPostImpot: 2764,
     salaireReformeNet: 3234,
-    impotReforme: 440,
-    salaireReformePostImpot: 2794,
-    description: "Légère baisse d'impôt -30€/mois",
+    impotReforme: 370,
+    salaireReformePostImpot: 2864,
+    description: "Crédit d'impôt technique : +100€/mois",
   },
   {
     metier: "Ingénieur informatique",
@@ -462,9 +462,9 @@ export const beforeAfterData: BeforeAfterData[] = [
     impotActuel: 520,
     salaireActuelPostImpot: 2945,
     salaireReformeNet: 3465,
-    impotReforme: 490,
-    salaireReformePostImpot: 2975,
-    description: "Légère baisse d'impôt -30€/mois",
+    impotReforme: 415,
+    salaireReformePostImpot: 3050,
+    description: "Crédit d'impôt technique : +105€/mois",
   },
   {
     metier: "Ingénieur senior",
@@ -474,9 +474,9 @@ export const beforeAfterData: BeforeAfterData[] = [
     impotActuel: 770,
     salaireActuelPostImpot: 3465,
     salaireReformeNet: 4235,
-    impotReforme: 800,
-    salaireReformePostImpot: 3435,
-    description: "Légère hausse d'impôt +30€/mois",
+    impotReforme: 680,
+    salaireReformePostImpot: 3555,
+    description: "Crédit d'impôt technique : +90€/mois",
   },
   {
     metier: "Ingénieur expert",
@@ -486,9 +486,9 @@ export const beforeAfterData: BeforeAfterData[] = [
     impotActuel: 1020,
     salaireActuelPostImpot: 3985,
     salaireReformeNet: 5005,
-    impotReforme: 1150,
-    salaireReformePostImpot: 3855,
-    description: "Hausse d'impôt +130€/mois",
+    impotReforme: 975,
+    salaireReformePostImpot: 4030,
+    description: "Crédit d'impôt technique : +45€/mois",
   },
   {
     metier: "Ingénieur R&D Manager",
@@ -498,9 +498,9 @@ export const beforeAfterData: BeforeAfterData[] = [
     impotActuel: 1220,
     salaireActuelPostImpot: 4170,
     salaireReformeNet: 5390,
-    impotReforme: 1400,
-    salaireReformePostImpot: 3990,
-    description: "Hausse d'impôt +180€/mois",
+    impotReforme: 1190,
+    salaireReformePostImpot: 4200,
+    description: "Crédit d'impôt technique : +30€/mois",
   },
 
   // DIRECTEURS - TOUS NIVEAUX
