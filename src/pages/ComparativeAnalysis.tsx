@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { comparativeAnalysis, syntheseComparative } from '../lib/comparative-analysis';
@@ -12,7 +13,15 @@ import BeforeAfterCard from '../components/BeforeAfterCard';
 import { beforeAfterData } from '../lib/before-after-data';
 
 const ComparativeAnalysis = () => {
-  const [activeTab, setActiveTab] = useState<string>("overview");
+  const [searchParams] = useSearchParams();
+  const tabParam = searchParams.get('tab');
+  const [activeTab, setActiveTab] = useState<string>(tabParam || "overview");
+
+  useEffect(() => {
+    if (tabParam) {
+      setActiveTab(tabParam);
+    }
+  }, [tabParam]);
   
   const getVerdictColor = (type: string) => {
     switch(type) {

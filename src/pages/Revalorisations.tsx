@@ -106,6 +106,23 @@ const Revalorisations = () => {
             </blockquote>
           </div>
 
+          <div className="bg-ljv-gold/10 border-2 border-ljv-gold rounded-xl p-8 max-w-3xl mx-auto mb-8">
+            <h3 className="text-2xl font-serif font-bold mb-4 text-gray-900 dark:text-gray-100 text-center">
+              💰 Quel sera l'impact réel sur votre pouvoir d'achat ?
+            </h3>
+            <p className="mb-6 text-lg text-gray-900 dark:text-gray-100 font-semibold text-center">
+              Découvrez métier par métier votre salaire net disponible après impôts avec 21 profils détaillés avant/après réforme.
+            </p>
+            <div className="text-center">
+              <Button size="lg" className="bg-ljv-navy hover:bg-ljv-gold text-lg py-6" asChild>
+                <Link to="/comparaison-systeme?tab=profiles">
+                  <Coins className="mr-2 h-5 w-5" />
+                  Voir l'impact détaillé sur mon métier
+                </Link>
+              </Button>
+            </div>
+          </div>
+
           <div className="text-center max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-sm">
             <h3 className="text-2xl font-serif font-bold mb-4 text-gray-900 dark:text-gray-100">Comprendre le financement</h3>
             <p className="mb-8 text-lg text-gray-900 dark:text-gray-100 font-semibold">
