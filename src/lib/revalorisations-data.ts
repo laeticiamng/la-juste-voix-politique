@@ -19,11 +19,11 @@ export const revalorisationsData: RevalorisationCategory[] = [
     items: [
       {
         title: "Médecins et internes en médecine",
-        revalorisation: "+1 000 €"
+        revalorisation: "+500 €"
       },
       {
         title: "Infirmiers",
-        revalorisation: "+600 €"
+        revalorisation: "+500 €"
       },
       {
         title: "Aides-soignants",
@@ -31,7 +31,7 @@ export const revalorisationsData: RevalorisationCategory[] = [
       },
       {
         title: "Techniciens de laboratoire",
-        revalorisation: "+400 €"
+        revalorisation: "+500 €"
       },
       {
         title: "Étudiants en médecine (externes)",
@@ -50,15 +50,15 @@ export const revalorisationsData: RevalorisationCategory[] = [
     items: [
       {
         title: "Enseignants (école, collège, lycée)",
-        revalorisation: "+500 à +600 €"
+        revalorisation: "+500 €"
       },
       {
         title: "ATSEM / Agents de cantine scolaire",
-        revalorisation: "+400 €"
+        revalorisation: "+500 €"
       },
       {
         title: "Professeurs contractuels / remplaçants",
-        revalorisation: "+600 €"
+        revalorisation: "+500 €"
       }
     ]
   },
@@ -73,11 +73,11 @@ export const revalorisationsData: RevalorisationCategory[] = [
       },
       {
         title: "Éducateurs spécialisés",
-        revalorisation: "+550 €"
+        revalorisation: "+500 €"
       },
       {
         title: "Assistants sociaux",
-        revalorisation: "+550 €"
+        revalorisation: "+500 €"
       },
       {
         title: "Auxiliaires de crèche",
@@ -85,11 +85,11 @@ export const revalorisationsData: RevalorisationCategory[] = [
       },
       {
         title: "Personnels non médicaux en EHPAD",
-        revalorisation: "+450 €"
+        revalorisation: "+500 €"
       },
       {
         title: "Bibliothécaires / animateurs socio-culturels",
-        revalorisation: "+450 €"
+        revalorisation: "+500 €"
       }
     ]
   },
@@ -100,7 +100,7 @@ export const revalorisationsData: RevalorisationCategory[] = [
     items: [
       {
         title: "Pompiers professionnels",
-        revalorisation: "+600 €"
+        revalorisation: "+500 €"
       },
       {
         title: "Agents de justice / PJJ / MJPM",
@@ -112,7 +112,7 @@ export const revalorisationsData: RevalorisationCategory[] = [
       },
       {
         title: "Métiers du funéraire",
-        revalorisation: "+400 €"
+        revalorisation: "+500 €"
       },
       {
         title: "Agents territoriaux polyvalents",
@@ -157,9 +157,9 @@ export const revalorisationsData: RevalorisationCategory[] = [
 ];
 
 export const revalorisationsSummary = {
-  beneficiaries: "Plus de 4 millions de Français concernés dès la première année",
-  cost: "22,5 à 32,5 milliards €/an selon le montant total de la CNJP, entièrement financé par la CNJP (25% des recettes)",
+  beneficiaries: "Plus de 1,5 million d'agents publics essentiels concernés",
+  cost: "8 à 10 milliards €/an, entièrement financé par l'impôt sur les ultra-hauts revenus",
   quote: "Quand on revalorise ceux qui soignent, enseignent, accompagnent, protègent ou transmettent…ce n'est pas une dépense. C'est un investissement dans la République.",
-  detail: "Cette enveloppe de 22,5-32,5 Md€/an finance les revalorisations salariales de TOUS les métiers publics essentiels : enseignants (+20% = 3 Md€), soignants hospitaliers (+15% = 4-5 Md€), forces de l'ordre (+10% = 1,5 Md€), pompiers, magistrats, agents territoriaux, travailleurs sociaux, aides à domicile, bibliothécaires, etc. (14-23 Md€).",
-  note: "Ces revalorisations représentent 25% de la CNJP (90-130 Md€/an). C'est un choix politique fort : ceux qui font tenir la République au quotidien doivent être dignement rémunérés."
+  detail: "Cette revalorisation uniforme de +500€ brut/mois concerne tous les agents publics essentiels : enseignants, soignants hospitaliers, forces de l'ordre, pompiers, magistrats, agents territoriaux, travailleurs sociaux, aides à domicile, bibliothécaires, etc. Un message simple et égalitaire.",
+  note: "Ces revalorisations représentent environ 35% des recettes de la réforme fiscale (24-37 Md€/an via IR ultra-hauts revenus). C'est un choix politique fort : ceux qui font tenir la République au quotidien doivent être dignement rémunérés."
 };
