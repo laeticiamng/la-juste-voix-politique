@@ -29,11 +29,11 @@ export const budgetSynthesis = {
       },
       {
         source: "Crédit d'impôt diplômés Bac+5+ grandes écoles",
-        montant: "-1,65 Md€/an",
-        description: "Crédit de 15% pour ~2M cadres supérieurs issus grandes écoles (commerce, ingénieurs, managers)"
+        montant: "-1,61 Md€/an",
+        description: "Crédit de 15% pour ~1,95M cadres supérieurs issus grandes écoles (hors ultra-riches CNJP et revenus >1M€)"
       }
     ],
-    total: "98,35-137,35 Md€/an de recettes nouvelles nettes (après crédit impôt Bac+5+), scénario médian à 119,35 Md€/an"
+    total: "98,39-137,39 Md€/an de recettes nouvelles nettes (après crédit impôt Bac+5+ -1,61 Md€), scénario médian à 119,39 Md€/an"
   },
 
   depenses: {
@@ -159,12 +159,12 @@ export const budgetSynthesis = {
   },
 
   equilibre: {
-    recettes: "98,35-137,35 Md€/an (médian 119,35 Md€/an, après crédit impôt Bac+5+ -1,65 Md€)",
+    recettes: "98,39-137,39 Md€/an (médian 119,39 Md€/an, après crédit impôt Bac+5+ -1,61 Md€)",
     depenses: "93,8-134,8 Md€/an (médian 114,3 Md€/an)",
     solde: {
-      optimiste: "+4,55 Md€/an (scénario bas : 98,35-93,8)",
-      median: "+5,05 Md€/an (scénario moyen : 119,35-114,3)",
-      pessimiste: "+2,55 Md€/an (scénario haut : 137,35-134,8)"
+      optimiste: "+4,59 Md€/an (scénario bas : 98,39-93,8)",
+      median: "+5,09 Md€/an (scénario moyen : 119,39-114,3)",
+      pessimiste: "+2,59 Md€/an (scénario haut : 137,39-134,8)"
     },
     note: "Le programme est PARFAITEMENT ÉQUILIBRÉ dans TOUS les scénarios avec HONNÊTETÉ TOTALE. Les pourcentages CNJP font exactement 100% : 25+20+15+11+8+5+4+4+3+2+2+1 = 100%. TOUS les coûts sont inclus sans exception. Le taux max CNJP de 60% (au lieu de 50%) finance INTÉGRALEMENT toutes les réformes. Budget LOGEMENT 11% (9,9-14,3 Md€/an) couvre 500k logements + Plan SDF ✅. Budget ÉCOLOGIE 8% (7,2-10,4 Md€/an) couvre tous les besoins ✅. Budget RETRAITES 20% (18-26 Md€/an) finance le retour à 60 ans ✅. Budget ÉDUCATION 5% (4,5-6,5 Md€/an) couvre toutes les réformes éducatives ✅."
   },
@@ -199,12 +199,13 @@ export const budgetSynthesis = {
 
   conclusion: `Le programme La Juste Voix - VERSION HONNÊTETÉ TOTALE est financièrement viable et PARFAITEMENT équilibré :
 
-✅ Recettes : 98,35-137,35 Md€/an (CNJP 95-130 Md€, médian 113 Md€ + CER + lutte fraude - crédit impôt Bac+5+ 1,65 Md€)
+✅ Recettes : 98,39-137,39 Md€/an (CNJP 95-130 Md€, médian 113 Md€ + CER + lutte fraude - crédit impôt Bac+5+ 1,61 Md€)
 ✅ Dépenses programme : 93,8-134,8 Md€/an (TOUS les coûts réels inclus)
-✅ Solde AVANT sécurisations : +5,05 Md€/an d'EXCÉDENT (scénario médian)
+✅ Solde AVANT sécurisations : +5,09 Md€/an d'EXCÉDENT (scénario médian)
 
-⚠️ AVEC sécurisations des risques (+15,45-19,05 Md€/an incluant crédit Bac+5+) :
-→ Scénario médian ajusté : CNJP à 113 Md€/an (au lieu de 110) réduit le déficit à -7,65 Md€/an
+⚠️ AVEC sécurisations des risques (+15,41-18,97 Md€/an incluant crédit Bac+5+ ajusté) :
+→ Scénario médian ajusté : CNJP à 113 Md€/an (au lieu de 110) améliore le solde
+→ Exclusions crédit 15% (CNJP + revenus >1M€) économisent 40M€/an supplémentaires
 → Solution : Montée en charge progressive sur 6 ans + CNJP optimisée
 → Résultat : Retour à l'équilibre en année 4-6
 

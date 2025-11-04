@@ -195,12 +195,12 @@ export const programRisks: Risk[] = [
 ];
 
 export const securisationSummary = {
-  totalAdditionalCost: "15,45-19,05 Md€/an de coûts de sécurisation",
+  totalAdditionalCost: "15,41-18,97 Md€/an de coûts de sécurisation",
   breakdown: [
     { item: "Réserve budgétaire de précaution", cost: "5 Md€/an" },
     { item: "Provisions contentieux", cost: "3 Md€/an" },
     { item: "Renforcement contrôle fiscal", cost: "2-2,6 Md€/an" },
-    { item: "Crédit d'impôt Bac+5+ grandes écoles", cost: "1,65 Md€/an" },
+    { item: "Crédit d'impôt Bac+5+ grandes écoles (après exclusions)", cost: "1,61 Md€/an" },
     { item: "Moyens anti-évasion internationaux", cost: "0,9 Md€/an" },
     { item: "Agence de transformation", cost: "0,8 Md€/an" },
     { item: "Cellule Tracfin + IA détection", cost: "0,4 Md€/an" },
@@ -213,18 +213,18 @@ export const securisationSummary = {
   
   impact: `AVEC ces sécurisations :
   
-  Recettes attendues : 95-130 Md€/an (CNJP) + 5-6 Md€/an (CER) + 3-5 Md€/an (fraude) - 1,65 Md€/an (crédit Bac+5+)
-  = 101,35-139,35 Md€/an
+  Recettes attendues : 95-130 Md€/an (CNJP) + 5-6 Md€/an (CER) + 3-5 Md€/an (fraude) - 1,61 Md€/an (crédit Bac+5+)
+  = 101,39-139,39 Md€/an
   
-  Dépenses totales : 93,8-134,8 Md€/an (programme) + 13,8-17,4 Md€/an (sécurisations)
-  = 107,6-152,2 Md€/an
+  Dépenses totales : 93,8-134,8 Md€/an (programme) + 13,8-17,36 Md€/an (sécurisations hors crédit)
+  = 107,6-152,16 Md€/an
   
   NOUVEAU SOLDE (CNJP ajustée à 113 Md€ médian) :
-  • Scénario optimiste : 101,35 - 107,6 = -6,25 Md€/an (DÉFICIT LÉGER)
-  • Scénario médian : 122,35 - 130 = -7,65 Md€/an (DÉFICIT LÉGER)
-  • Scénario pessimiste : 139,35 - 152,2 = -12,85 Md€/an (DÉFICIT)
+  • Scénario optimiste : 101,39 - 107,6 = -6,21 Md€/an (DÉFICIT LÉGER)
+  • Scénario médian : 122,39 - 130 = -7,61 Md€/an (DÉFICIT LÉGER)
+  • Scénario pessimiste : 139,39 - 152,16 = -12,77 Md€/an (DÉFICIT)
   
-  ⚠️ Avec CNJP à 113 Md€ (médian), le déficit est réduit à -7,65 Md€/an, acceptable dans le cadre d'une montée en charge progressive.`,
+  ⚠️ Avec CNJP à 113 Md€ (médian) et exclusions crédit 15% (+40M€/an), le déficit reste maîtrisé à -7,61 Md€/an.`,
   
   solutions: [
     {
@@ -277,15 +277,15 @@ export const recommendedPath = {
   
   newBalance: `NOUVEAU BILAN SÉCURISÉ :
   
-  Recettes : 100-145 Md€/an (CNJP à 62%) + 5-6 Md€/an (CER) + 3-5 Md€/an (fraude) - 1,65 Md€/an (crédit Bac+5+)
-  = **106,35-154,35 Md€/an**
+  Recettes : 100-145 Md€/an (CNJP à 62%) + 5-6 Md€/an (CER) + 3-5 Md€/an (fraude) - 1,61 Md€/an (crédit Bac+5+)
+  = **106,39-154,39 Md€/an**
   
-  Dépenses : 93,8-134,8 Md€/an (programme) + 15,45-19,05 Md€/an (sécurisations incluant crédit Bac+5+)
-  = **109,25-153,85 Md€/an**
+  Dépenses : 93,8-134,8 Md€/an (programme) + 15,41-18,97 Md€/an (sécurisations incluant crédit ajusté)
+  = **109,21-153,77 Md€/an**
   
   SOLDE FINAL :
   • Année 1-3 : -3 à -5 Md€/an (déficit transitoire maîtrisé)
-  • Année 4-6 : 0 à +0,5 Md€/an (équilibre atteint)
+  • Année 4-6 : 0 à +0,62 Md€/an (équilibre atteint)
   
-  ✅ Programme VIABLE, SÉCURISÉ, HONNÊTE avec tous les risques anticipés (incluant crédit Bac+5+ de 1,65 Md€/an)`
+  ✅ Programme VIABLE, SÉCURISÉ, HONNÊTE avec tous les risques anticipés (crédit Bac+5+ à 1,61 Md€/an après exclusions ultra-riches)`
 };

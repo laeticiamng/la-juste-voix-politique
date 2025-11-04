@@ -113,18 +113,23 @@ const HigherEducationTaxCredit: React.FC = () => {
             <h4 className="font-bold mb-3 text-ljv-navy">💰 Impact budgétaire</h4>
             <div className="grid md:grid-cols-3 gap-4 text-center">
               <div>
-                <div className="text-2xl font-bold text-ljv-navy mb-1">~2M</div>
-                <div className="text-sm text-gray-700">Bénéficiaires</div>
+                <div className="text-2xl font-bold text-ljv-navy mb-1">~1,95M</div>
+                <div className="text-sm text-gray-700">Bénéficiaires éligibles</div>
+                <div className="text-xs text-gray-500 mt-1">(97,5% des Bac+5+)</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-ljv-navy mb-1">825€</div>
+                <div className="text-2xl font-bold text-ljv-navy mb-1">826€</div>
                 <div className="text-sm text-gray-700">Crédit moyen/an</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-ljv-navy mb-1">1,65 Md€</div>
+                <div className="text-2xl font-bold text-ljv-navy mb-1">1,61 Md€</div>
                 <div className="text-sm text-gray-700">Coût total/an</div>
+                <div className="text-xs text-orange-600 mt-1">(-40M€ vs initial)</div>
               </div>
             </div>
+            <p className="text-xs text-gray-600 mt-3 text-center italic">
+              Coût après exclusion des ultra-riches CNJP (≥100M€) et ultra-hauts revenus (&gt;1M€)
+            </p>
           </div>
 
           <div className="text-center pt-4">

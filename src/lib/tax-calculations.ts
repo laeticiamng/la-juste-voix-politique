@@ -170,16 +170,19 @@ export const isHigherEducationProfession = (metier: string): boolean => {
 
 /**
  * Calcule le coût annuel total du crédit d'impôt pour diplômés Bac+5+
- * Estimation basée sur ~2 millions de cadres supérieurs Bac+5+ en France
+ * Estimation basée sur ~1,95 millions de cadres supérieurs Bac+5+ en France
+ * APRÈS EXCLUSIONS : Ultra-riches CNJP (≥100M€) et ultra-hauts revenus (>1M€)
  * @returns Coût estimé en milliards d'euros
  */
 export const estimateHigherEducationTaxCreditCost = (): number => {
   const numberOfQualifiedWorkers = 2000000; // ~2M cadres Bac+5+
+  const exclusionRate = 0.025; // 2,5% exclus (CNJP + >1M€)
+  const eligibleWorkers = numberOfQualifiedWorkers * (1 - exclusionRate);
   const averageIncomeTax = 5500; // IR moyen annuel plus élevé pour ces professions
   const creditRate = 0.15;
   const averageCredit = averageIncomeTax * creditRate;
-  const totalCostMillions = (numberOfQualifiedWorkers * averageCredit) / 1000000;
+  const totalCostMillions = (eligibleWorkers * averageCredit) / 1000000;
   const totalCostBillions = totalCostMillions / 1000;
   
-  return Math.round(totalCostBillions * 100) / 100; // Arrondi à 2 décimales
+  return Math.round(totalCostBillions * 100) / 100; // Arrondi à 2 décimales = 1.61 Md€
 };
