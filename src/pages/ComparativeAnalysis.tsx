@@ -296,9 +296,9 @@ const ComparativeAnalysis = () => {
                   <div>
                     <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2">Calculs avec la réforme :</h4>
                     <ul className="list-disc list-inside space-y-1 text-sm text-gray-900 dark:text-gray-100 font-medium">
-                      <li>Revalorisation salariale selon le secteur (+400€ à +500€ brut)</li>
-                      <li>Nouveau barème d'imposition progressif simplifié</li>
-                      <li>Financement garanti par l'IR ultra-hauts revenus (24-37 Md€/an)</li>
+                      <li>Revalorisation salariale uniforme +500€ brut/mois (agents publics essentiels)</li>
+                      <li>Nouveau barème d&apos;imposition progressif : 55-65% sur revenus {'>'}1M€</li>
+                      <li>Financement garanti par l&apos;IR ultra-hauts revenus (24-37 Md€/an)</li>
                     </ul>
                   </div>
                   <Alert>
