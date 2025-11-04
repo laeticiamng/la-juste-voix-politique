@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { comparativeAnalysis, syntheseComparative } from '../lib/comparative-analysis';
-import { Scale, TrendingUp, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
+import { Scale, TrendingUp, AlertTriangle, CheckCircle, XCircle, FileText, BarChart3, Award } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import SEOHead from '../components/SEOHead';
 
 const ComparativeAnalysis = () => {
-  const [selectedTheme, setSelectedTheme] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<string>("overview");
   
   const getVerdictColor = (type: string) => {
     switch(type) {
@@ -42,153 +43,186 @@ const ComparativeAnalysis = () => {
       <main className="flex-grow pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Header */}
-          <div className="max-w-5xl mx-auto mb-12">
+          <div className="max-w-5xl mx-auto mb-8">
             <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-center">
               <span className="title-gradient">Analyse Comparative</span>
             </h1>
             <p className="text-xl text-center text-gray-900 dark:text-gray-100 mb-8 font-semibold">
               Comparaison factuelle et objective entre La Juste Voix et le système actuel sur 12 dimensions clés
             </p>
-            
-            <Alert className="border-ljv-navy bg-ljv-navy/5">
-              <Scale className="h-5 w-5 text-ljv-navy" />
-              <AlertTitle className="text-lg font-bold">Analyse objective</AlertTitle>
-              <AlertDescription className="text-base">
-                Cette comparaison s'appuie sur des données chiffrées et des faits vérifiables. 
-                Elle ne cache ni les forces du système actuel, ni les défis du programme La Juste Voix.
-              </AlertDescription>
-            </Alert>
           </div>
 
-          {/* Stats rapides */}
-          <div className="max-w-5xl mx-auto mb-12 grid grid-cols-1 md:grid-cols-4 gap-4">
-            <Card className="border-green-500">
-              <CardContent className="pt-6 text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">8/12</div>
-                <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">Points révolutionnaires</div>
-              </CardContent>
-            </Card>
-            <Card className="border-blue-500">
-              <CardContent className="pt-6 text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">3/12</div>
-                <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">Points améliorateurs</div>
-              </CardContent>
-            </Card>
-            <Card className="border-ljv-gold">
-              <CardContent className="pt-6 text-center">
-                <div className="text-3xl font-bold text-ljv-gold mb-2">90-130 Md€</div>
-                <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">CNJP vs 2 Md€ IFI</div>
-              </CardContent>
-            </Card>
-            <Card className="border-ljv-navy">
-              <CardContent className="pt-6 text-center">
-                <div className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">100%</div>
-                <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">Chiffré & financé</div>
-              </CardContent>
-            </Card>
-          </div>
+          {/* Tabs Navigation */}
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="max-w-6xl mx-auto">
+            <TabsList className="grid w-full grid-cols-3 mb-8">
+              <TabsTrigger value="overview" className="text-base font-semibold">
+                <BarChart3 className="h-4 w-4 mr-2" />
+                Vue d'ensemble
+              </TabsTrigger>
+              <TabsTrigger value="comparison" className="text-base font-semibold">
+                <Scale className="h-4 w-4 mr-2" />
+                Comparaisons détaillées
+              </TabsTrigger>
+              <TabsTrigger value="synthesis" className="text-base font-semibold">
+                <Award className="h-4 w-4 mr-2" />
+                Synthèse & Verdict
+              </TabsTrigger>
+            </TabsList>
 
-          {/* Comparaisons détaillées */}
-          <div className="max-w-6xl mx-auto space-y-8 mb-16">
-            {comparativeAnalysis.map((point, idx) => (
-              <Card key={idx} className="border-2 hover:border-ljv-gold transition-all">
+            {/* ONGLET 1: Vue d'ensemble */}
+            <TabsContent value="overview">
+              <Alert className="border-ljv-navy bg-ljv-navy/5 mb-8">
+                <Scale className="h-5 w-5 text-ljv-navy" />
+                <AlertTitle className="text-lg font-bold">Analyse objective</AlertTitle>
+                <AlertDescription className="text-base">
+                  Cette comparaison s'appuie sur des données chiffrées et des faits vérifiables. 
+                  Elle ne cache ni les forces du système actuel, ni les défis du programme La Juste Voix.
+                </AlertDescription>
+              </Alert>
+
+              {/* Stats rapides */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+                <Card className="border-green-500">
+                  <CardContent className="pt-6 text-center">
+                    <div className="text-3xl font-bold text-green-600 mb-2">8/12</div>
+                    <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">Points révolutionnaires</div>
+                  </CardContent>
+                </Card>
+                <Card className="border-blue-500">
+                  <CardContent className="pt-6 text-center">
+                    <div className="text-3xl font-bold text-blue-600 mb-2">3/12</div>
+                    <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">Points améliorateurs</div>
+                  </CardContent>
+                </Card>
+                <Card className="border-ljv-gold">
+                  <CardContent className="pt-6 text-center">
+                    <div className="text-3xl font-bold text-ljv-gold mb-2">90-130 Md€</div>
+                    <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">CNJP vs 2 Md€ IFI</div>
+                  </CardContent>
+                </Card>
+                <Card className="border-ljv-navy">
+                  <CardContent className="pt-6 text-center">
+                    <div className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">100%</div>
+                    <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">Chiffré & financé</div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className="bg-gradient-to-br from-ljv-navy/5 to-ljv-gold/5 rounded-xl p-8">
+                <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100 text-center">
+                  📊 Résumé de l'analyse comparative
+                </h2>
+                <p className="text-lg text-gray-900 dark:text-gray-100 font-medium text-center leading-relaxed">
+                  Le programme La Juste Voix propose <strong>8 mesures révolutionnaires</strong> et <strong>3 améliorations significatives</strong> par rapport au système actuel. 
+                  Avec un financement garanti de <strong>90-130 milliards d'euros par an</strong> via la CNJP, 
+                  ce programme est <strong>100% chiffré et financé</strong>, contrairement aux promesses habituelles.
+                </p>
+              </div>
+            </TabsContent>
+
+            {/* ONGLET 2: Comparaisons détaillées */}
+            <TabsContent value="comparison">
+              <div className="space-y-8">
+                {comparativeAnalysis.map((point, idx) => (
+                  <Card key={idx} className="border-2 hover:border-ljv-gold transition-all">
+                    <CardHeader>
+                      <div className="flex items-start justify-between gap-4">
+                        <CardTitle className="text-2xl flex items-center gap-3">
+                          <Scale className="h-6 w-6 text-ljv-navy" />
+                          {point.theme}
+                        </CardTitle>
+                        <Badge className={getVerdictColor(point.verdict.type)}>
+                          <span className="flex items-center gap-2">
+                            {getVerdictIcon(point.verdict.type)}
+                            {point.verdict.type.toUpperCase()}
+                          </span>
+                        </Badge>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="grid md:grid-cols-2 gap-6 mb-6">
+                        {/* Système actuel */}
+                        <div className="bg-red-50 rounded-lg p-4 border-2 border-red-200">
+                          <div className="flex items-center gap-2 mb-3">
+                            <XCircle className="h-5 w-5 text-red-600" />
+                            <h4 className="font-bold text-lg text-gray-900 dark:text-gray-100">Système actuel</h4>
+                          </div>
+                          <p className="text-sm mb-3 text-gray-900 dark:text-gray-100 font-medium">{point.systemActuel.description}</p>
+                          {point.systemActuel.montants && (
+                            <p className="text-sm font-bold mb-3 text-red-700">💰 {point.systemActuel.montants}</p>
+                          )}
+                          <div className="space-y-2">
+                            <p className="text-xs font-bold text-red-700">Problèmes :</p>
+                            {point.systemActuel.problemes.map((pb, i) => (
+                              <div key={i} className="flex items-start gap-2">
+                                <span className="text-red-500 text-xs mt-0.5">❌</span>
+                                <p className="text-xs text-gray-900 dark:text-gray-100 font-medium">{pb}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* La Juste Voix */}
+                        <div className="bg-green-50 rounded-lg p-4 border-2 border-green-200">
+                          <div className="flex items-center gap-2 mb-3">
+                            <CheckCircle className="h-5 w-5 text-green-600" />
+                            <h4 className="font-bold text-lg text-gray-900 dark:text-gray-100">La Juste Voix</h4>
+                          </div>
+                          <p className="text-sm mb-3 text-gray-900 dark:text-gray-100 font-medium">{point.laJusteVoix.description}</p>
+                          {point.laJusteVoix.montants && (
+                            <p className="text-sm font-bold mb-3 text-green-700">💰 {point.laJusteVoix.montants}</p>
+                          )}
+                          <div className="space-y-2">
+                            <p className="text-xs font-bold text-green-700">Avantages :</p>
+                            {point.laJusteVoix.avantages.map((av, i) => (
+                              <div key={i} className="flex items-start gap-2">
+                                <span className="text-green-500 text-xs mt-0.5">✅</span>
+                                <p className="text-xs text-gray-900 dark:text-gray-100 font-medium">{av}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Verdict */}
+                      <Alert className="bg-ljv-navy/5 border-ljv-navy">
+                        <AlertTitle className="font-bold text-lg">Verdict</AlertTitle>
+                        <AlertDescription className="text-base mt-2">
+                          {point.verdict.commentaire}
+                        </AlertDescription>
+                      </Alert>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </TabsContent>
+
+            {/* ONGLET 3: Synthèse et verdict */}
+            <TabsContent value="synthesis">
+              <Card className="border-4 border-ljv-gold">
                 <CardHeader>
-                  <div className="flex items-start justify-between gap-4">
-                    <CardTitle className="text-2xl flex items-center gap-3">
-                      <Scale className="h-6 w-6 text-ljv-navy" />
-                      {point.theme}
-                    </CardTitle>
-                    <Badge className={getVerdictColor(point.verdict.type)}>
-                      <span className="flex items-center gap-2">
-                        {getVerdictIcon(point.verdict.type)}
-                        {point.verdict.type.toUpperCase()}
-                      </span>
-                    </Badge>
-                  </div>
+                  <CardTitle className="text-3xl text-center">{syntheseComparative.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid md:grid-cols-2 gap-6 mb-6">
-                    {/* Système actuel */}
-                    <div className="bg-red-50 rounded-lg p-4 border-2 border-red-200">
-                      <div className="flex items-center gap-2 mb-3">
-                        <XCircle className="h-5 w-5 text-red-600" />
-                        <h4 className="font-bold text-lg text-gray-900 dark:text-gray-100">Système actuel</h4>
-                      </div>
-                      <p className="text-sm mb-3 text-gray-900 dark:text-gray-100 font-medium">{point.systemActuel.description}</p>
-                      {point.systemActuel.montants && (
-                        <p className="text-sm font-bold mb-3 text-red-700">💰 {point.systemActuel.montants}</p>
-                      )}
-                      <div className="space-y-2">
-                        <p className="text-xs font-bold text-red-700">Problèmes :</p>
-                        {point.systemActuel.problemes.map((pb, i) => (
-                          <div key={i} className="flex items-start gap-2">
-                            <span className="text-red-500 text-xs mt-0.5">❌</span>
-                            <p className="text-xs text-gray-900 dark:text-gray-100 font-medium">{pb}</p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* La Juste Voix */}
-                    <div className="bg-green-50 rounded-lg p-4 border-2 border-green-200">
-                      <div className="flex items-center gap-2 mb-3">
-                        <CheckCircle className="h-5 w-5 text-green-600" />
-                        <h4 className="font-bold text-lg text-gray-900 dark:text-gray-100">La Juste Voix</h4>
-                      </div>
-                      <p className="text-sm mb-3 text-gray-900 dark:text-gray-100 font-medium">{point.laJusteVoix.description}</p>
-                      {point.laJusteVoix.montants && (
-                        <p className="text-sm font-bold mb-3 text-green-700">💰 {point.laJusteVoix.montants}</p>
-                      )}
-                      <div className="space-y-2">
-                        <p className="text-xs font-bold text-green-700">Avantages :</p>
-                        {point.laJusteVoix.avantages.map((av, i) => (
-                          <div key={i} className="flex items-start gap-2">
-                            <span className="text-green-500 text-xs mt-0.5">✅</span>
-                            <p className="text-xs text-gray-900 dark:text-gray-100 font-medium">{av}</p>
-                          </div>
-                        ))}
-                      </div>
+                  {/* Points forts */}
+                  <div className="mb-8">
+                    <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                      <TrendingUp className="h-6 w-6 text-green-600" />
+                      Points forts du programme
+                    </h3>
+                    <div className="space-y-4">
+                      {syntheseComparative.pointsForts.map((pf, idx) => (
+                        <div key={idx} className="bg-green-50 rounded-lg p-4 border-l-4 border-green-500">
+                          <h4 className="font-bold text-lg mb-2">{pf.theme}</h4>
+                          <p className="text-sm mb-2 font-medium text-green-800">{pf.comparaison}</p>
+                          <p className="text-sm text-gray-700">{pf.details}</p>
+                        </div>
+                      ))}
                     </div>
                   </div>
 
-                  {/* Verdict */}
-                  <Alert className="bg-ljv-navy/5 border-ljv-navy">
-                    <AlertTitle className="font-bold text-lg">Verdict</AlertTitle>
-                    <AlertDescription className="text-base mt-2">
-                      {point.verdict.commentaire}
-                    </AlertDescription>
-                  </Alert>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* Synthèse globale */}
-          <div className="max-w-5xl mx-auto mb-12">
-            <Card className="border-4 border-ljv-gold">
-              <CardHeader>
-                <CardTitle className="text-3xl text-center">{syntheseComparative.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                {/* Points forts */}
-                <div className="mb-8">
-                  <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-                    <TrendingUp className="h-6 w-6 text-green-600" />
-                    Points forts du programme
-                  </h3>
-                  <div className="space-y-4">
-                    {syntheseComparative.pointsForts.map((pf, idx) => (
-                      <div key={idx} className="bg-green-50 rounded-lg p-4 border-l-4 border-green-500">
-                        <h4 className="font-bold text-lg mb-2">{pf.theme}</h4>
-                        <p className="text-sm mb-2 font-medium text-green-800">{pf.comparaison}</p>
-                        <p className="text-sm text-gray-700">{pf.details}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Points faibles */}
-                <div className="mb-8">
+                  {/* Points faibles */}
+                  <div className="mb-8">
                   <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
                     <AlertTriangle className="h-6 w-6 text-orange-600" />
                     Défis et points de vigilance
@@ -291,7 +325,8 @@ const ComparativeAnalysis = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
+            </TabsContent>
+          </Tabs>
         </div>
       </main>
       <Footer />
