@@ -1,15 +1,17 @@
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 import { Badge } from '@/components/ui/badge';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
-import { Calculator, TrendingUp, DollarSign, Info, ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
+import { Calculator, TrendingUp, DollarSign, Info, ChevronDown, ChevronUp, Sparkles, ArrowRight, Home, GraduationCap, Briefcase } from 'lucide-react';
 import { calculateCNJP, calculateIncomeTax } from '@/lib/tax-calculations';
 import { Separator } from '@/components/ui/separator';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
 // Profils prédéfinis
 const PREDEFINED_PROFILES = [
@@ -29,6 +31,32 @@ const TaxSimulator: React.FC = () => {
   const [revenuAnnuel, setRevenuAnnuel] = useState([50000]); // en euros
   const [isProfessionTechnique, setIsProfessionTechnique] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
+  const [activeTab, setActiveTab] = useState('simulator');
+
+  // Calcul système actuel (approximation simplifiée)
+  const calculateCurrentSystem = useMemo(() => {
+    // IR actuel (barème 2024 simplifié)
+    let currentIR = 0;
+    const revenu = revenuAnnuel[0];
+    
+    if (revenu > 11294) currentIR += Math.min(revenu - 11294, 17555 - 11294) * 0.11;
+    if (revenu > 17555) currentIR += Math.min(revenu - 17555, 78570 - 17555) * 0.30;
+    if (revenu > 78570) currentIR += Math.min(revenu - 78570, 168994 - 78570) * 0.41;
+    if (revenu > 168994) currentIR += (revenu - 168994) * 0.45;
+    
+    // IFI actuel (si patrimoine > 1,3M€)
+    const patrimoineEuros = patrimoine[0] * 1000000;
+    let currentIFI = 0;
+    if (patrimoineEuros > 1300000) {
+      if (patrimoineEuros <= 10000000) {
+        currentIFI = (patrimoineEuros - 1300000) * 0.005;
+      } else {
+        currentIFI = (10000000 - 1300000) * 0.005 + (patrimoineEuros - 10000000) * 0.0125;
+      }
+    }
+    
+    return { ir: currentIR, ifi: currentIFI, total: currentIR + currentIFI };
+  }, [revenuAnnuel, patrimoine]);
 
   // Utilisation des fonctions de calcul centralisées
   const cnjpAmount = calculateCNJP(patrimoine[0]);
@@ -37,8 +65,41 @@ const TaxSimulator: React.FC = () => {
   const creditAmount = incomeTaxWithoutCredit - incomeTaxAmount;
   const isSubjectToCNJP = patrimoine[0] >= 100;
 
-  // Taux effectif d'imposition
+  // Calculs additionnels
   const effectiveTaxRate = revenuAnnuel[0] > 0 ? (incomeTaxAmount / revenuAnnuel[0]) * 100 : 0;
+  const newSystemTotal = incomeTaxAmount + (isSubjectToCNJP ? cnjpAmount * 1000000 : 0);
+  const difference = newSystemTotal - calculateCurrentSystem.total;
+  const revenuDisponible = revenuAnnuel[0] - incomeTaxAmount;
+  
+  // Données pour les graphiques
+  const comparisonData = [
+    {
+      name: 'Système actuel',
+      'Impôt sur le revenu': Math.round(calculateCurrentSystem.ir),
+      'IFI/CNJP': Math.round(calculateCurrentSystem.ifi),
+      total: Math.round(calculateCurrentSystem.total)
+    },
+    {
+      name: 'La Juste Voix',
+      'Impôt sur le revenu': Math.round(incomeTaxAmount),
+      'IFI/CNJP': isSubjectToCNJP ? Math.round(cnjpAmount * 1000000) : 0,
+      total: Math.round(newSystemTotal)
+    }
+  ];
+
+  const budgetData = [
+    { name: 'Revalorisations', value: 25, color: '#10b981' },
+    { name: 'Retraites 60 ans', value: 20, color: '#3b82f6' },
+    { name: 'Dette (FSCRD)', value: 15, color: '#f59e0b' },
+    { name: 'Logement', value: 11, color: '#8b5cf6' },
+    { name: 'Écologie', value: 8, color: '#22c55e' },
+    { name: 'Éducation', value: 5, color: '#ec4899' },
+    { name: 'Santé mentale', value: 4, color: '#06b6d4' },
+    { name: 'Démocratie', value: 4, color: '#f97316' },
+    { name: 'Autres', value: 8, color: '#94a3b8' },
+  ];
+
+  const COLORS = ['#10b981', '#3b82f6', '#f59e0b', '#8b5cf6', '#22c55e', '#ec4899', '#06b6d4', '#f97316', '#94a3b8'];
 
   // Appliquer un profil prédéfini
   const applyProfile = (profile: typeof PREDEFINED_PROFILES[0]) => {
@@ -48,7 +109,7 @@ const TaxSimulator: React.FC = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto my-16">
+    <div className="max-w-7xl mx-auto my-16">
       <Card className="border-2 border-ljv-gold/20 shadow-xl">
         <CardHeader className="bg-gradient-to-r from-ljv-navy via-ljv-navy to-ljv-gold/20 text-white">
           <CardTitle className="flex items-center gap-3 text-3xl">
@@ -60,6 +121,23 @@ const TaxSimulator: React.FC = () => {
           </p>
         </CardHeader>
         <CardContent className="p-8">
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="mb-6">
+            <TabsList className="grid w-full grid-cols-3">
+              <TabsTrigger value="simulator" className="flex items-center gap-2">
+                <Calculator className="h-4 w-4" />
+                Simulateur
+              </TabsTrigger>
+              <TabsTrigger value="comparison" className="flex items-center gap-2">
+                <TrendingUp className="h-4 w-4" />
+                Comparaison
+              </TabsTrigger>
+              <TabsTrigger value="impact" className="flex items-center gap-2">
+                <DollarSign className="h-4 w-4" />
+                Impact
+              </TabsTrigger>
+            </TabsList>
+
+            <TabsContent value="simulator" className="mt-6">
           {/* Profils prédéfinis */}
           <div className="mb-8">
             <div className="flex items-center gap-2 mb-4">
@@ -346,7 +424,273 @@ const TaxSimulator: React.FC = () => {
             </div>
           </div>
 
-          <div className="text-center space-y-4">
+          </TabsContent>
+
+            <TabsContent value="comparison" className="mt-6">
+              {/* Comparaison avant/après */}
+              <div className="space-y-6">
+                <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-lg border border-blue-200">
+                  <h3 className="text-2xl font-bold mb-6 text-ljv-navy flex items-center gap-2">
+                    <ArrowRight className="h-6 w-6 text-ljv-gold" />
+                    Système actuel vs La Juste Voix
+                  </h3>
+
+                  {/* Graphique comparatif */}
+                  <div className="bg-white p-6 rounded-lg mb-6">
+                    <ResponsiveContainer width="100%" height={300}>
+                      <BarChart data={comparisonData}>
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="name" />
+                        <YAxis />
+                        <Tooltip formatter={(value: number) => `${value.toLocaleString('fr-FR')} €`} />
+                        <Legend />
+                        <Bar dataKey="Impôt sur le revenu" fill="#3b82f6" />
+                        <Bar dataKey="IFI/CNJP" fill="#f59e0b" />
+                      </BarChart>
+                    </ResponsiveContainer>
+                  </div>
+
+                  {/* Cartes de comparaison */}
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <Card className="border-2 border-gray-300">
+                      <CardHeader className="bg-gray-100">
+                        <CardTitle className="text-lg">Système actuel</CardTitle>
+                      </CardHeader>
+                      <CardContent className="pt-6">
+                        <div className="space-y-3">
+                          <div className="flex justify-between">
+                            <span className="text-gray-600">Impôt sur le revenu</span>
+                            <span className="font-bold">{Math.round(calculateCurrentSystem.ir).toLocaleString('fr-FR')} €</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-gray-600">IFI</span>
+                            <span className="font-bold">{Math.round(calculateCurrentSystem.ifi).toLocaleString('fr-FR')} €</span>
+                          </div>
+                          <Separator />
+                          <div className="flex justify-between text-lg">
+                            <span className="font-bold">Total</span>
+                            <span className="font-bold text-gray-700">{Math.round(calculateCurrentSystem.total).toLocaleString('fr-FR')} €</span>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+
+                    <Card className="border-2 border-ljv-gold">
+                      <CardHeader className="bg-ljv-gold/10">
+                        <CardTitle className="text-lg text-ljv-navy">La Juste Voix</CardTitle>
+                      </CardHeader>
+                      <CardContent className="pt-6">
+                        <div className="space-y-3">
+                          <div className="flex justify-between">
+                            <span className="text-gray-600">Impôt sur le revenu</span>
+                            <span className="font-bold">{Math.round(incomeTaxAmount).toLocaleString('fr-FR')} €</span>
+                          </div>
+                          {isProfessionTechnique && creditAmount > 0 && (
+                            <div className="flex justify-between text-green-600 text-sm">
+                              <span>dont crédit Bac+5+</span>
+                              <span className="font-bold">-{Math.round(creditAmount).toLocaleString('fr-FR')} €</span>
+                            </div>
+                          )}
+                          <div className="flex justify-between">
+                            <span className="text-gray-600">CNJP</span>
+                            <span className="font-bold">{isSubjectToCNJP ? Math.round(cnjpAmount * 1000000).toLocaleString('fr-FR') : '0'} €</span>
+                          </div>
+                          <Separator />
+                          <div className="flex justify-between text-lg">
+                            <span className="font-bold">Total</span>
+                            <span className="font-bold text-ljv-navy">{Math.round(newSystemTotal).toLocaleString('fr-FR')} €</span>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+
+                  {/* Différence */}
+                  <Alert className={`mt-6 ${difference > 0 ? 'bg-orange-50 border-orange-300' : 'bg-green-50 border-green-300'}`}>
+                    <AlertDescription className="text-center">
+                      <div className="text-2xl font-bold mb-2">
+                        {difference > 0 ? '+' : ''}{Math.round(difference).toLocaleString('fr-FR')} €/an
+                      </div>
+                      <div className={`text-sm ${difference > 0 ? 'text-orange-700' : 'text-green-700'}`}>
+                        {difference > 0 
+                          ? 'Contribution légèrement supérieure avec La Juste Voix' 
+                          : 'Économie avec La Juste Voix'}
+                      </div>
+                      {Math.abs(difference) > 0 && (
+                        <div className="text-xs mt-2 text-gray-600">
+                          Soit {difference > 0 ? '+' : ''}{Math.round(difference / 12).toLocaleString('fr-FR')} €/mois
+                        </div>
+                      )}
+                    </AlertDescription>
+                  </Alert>
+
+                  {/* Impact social */}
+                  {isSubjectToCNJP && (
+                    <div className="mt-6 bg-green-50 p-4 rounded-lg border border-green-300">
+                      <h4 className="font-bold text-green-800 mb-2">💚 Votre contribution finance concrètement :</h4>
+                      <ul className="text-sm text-green-700 space-y-1">
+                        <li>• {Math.round(cnjpAmount * 1000000 * 0.25).toLocaleString('fr-FR')} € pour les revalorisations (infirmiers, profs...)</li>
+                        <li>• {Math.round(cnjpAmount * 1000000 * 0.20).toLocaleString('fr-FR')} € pour les retraites à 60 ans</li>
+                        <li>• {Math.round(cnjpAmount * 1000000 * 0.15).toLocaleString('fr-FR')} € pour rembourser la dette</li>
+                        <li>• {Math.round(cnjpAmount * 1000000 * 0.11).toLocaleString('fr-FR')} € pour le logement social</li>
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </TabsContent>
+
+            <TabsContent value="impact" className="mt-6">
+              {/* Impact et affectation du budget */}
+              <div className="space-y-6">
+                <div className="bg-gradient-to-br from-green-50 to-green-100/50 p-6 rounded-lg border border-green-300">
+                  <h3 className="text-2xl font-bold mb-6 text-green-800 flex items-center gap-2">
+                    <Home className="h-6 w-6" />
+                    Votre situation financière
+                  </h3>
+
+                  <div className="grid md:grid-cols-3 gap-4 mb-6">
+                    <Card>
+                      <CardHeader className="pb-3">
+                        <CardTitle className="text-sm text-gray-600">Revenu brut annuel</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="text-2xl font-bold text-ljv-navy">
+                          {revenuAnnuel[0].toLocaleString('fr-FR')} €
+                        </div>
+                        <div className="text-xs text-gray-500 mt-1">
+                          {Math.round(revenuAnnuel[0] / 12).toLocaleString('fr-FR')} €/mois
+                        </div>
+                      </CardContent>
+                    </Card>
+
+                    <Card>
+                      <CardHeader className="pb-3">
+                        <CardTitle className="text-sm text-gray-600">Impôts payés</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="text-2xl font-bold text-orange-600">
+                          -{Math.round(newSystemTotal).toLocaleString('fr-FR')} €
+                        </div>
+                        <div className="text-xs text-gray-500 mt-1">
+                          {effectiveTaxRate.toFixed(1)}% du revenu
+                        </div>
+                      </CardContent>
+                    </Card>
+
+                    <Card className="bg-green-50 border-green-300">
+                      <CardHeader className="pb-3">
+                        <CardTitle className="text-sm text-green-700">Revenu disponible</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="text-2xl font-bold text-green-700">
+                          {Math.round(revenuDisponible).toLocaleString('fr-FR')} €
+                        </div>
+                        <div className="text-xs text-green-600 mt-1">
+                          {Math.round(revenuDisponible / 12).toLocaleString('fr-FR')} €/mois
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+
+                  {/* Graphique affectation du budget CNJP */}
+                  <div className="bg-white p-6 rounded-lg">
+                    <h4 className="text-lg font-bold mb-4 text-gray-800">
+                      Affectation de la CNJP collectée (90-130 Md€/an)
+                    </h4>
+                    <ResponsiveContainer width="100%" height={400}>
+                      <PieChart>
+                        <Pie
+                          data={budgetData}
+                          cx="50%"
+                          cy="50%"
+                          labelLine={false}
+                          label={({ name, value }) => `${name}: ${value}%`}
+                          outerRadius={120}
+                          fill="#8884d8"
+                          dataKey="value"
+                        >
+                          {budgetData.map((entry, index) => (
+                            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                          ))}
+                        </Pie>
+                        <Tooltip formatter={(value: number) => `${value}%`} />
+                      </PieChart>
+                    </ResponsiveContainer>
+                  </div>
+
+                  {/* Bénéfices concrets */}
+                  <div className="mt-6 grid md:grid-cols-2 gap-4">
+                    <Card className="border-green-300">
+                      <CardHeader className="bg-green-50">
+                        <CardTitle className="text-sm flex items-center gap-2">
+                          <GraduationCap className="h-4 w-4" />
+                          Vous bénéficiez de
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="pt-4">
+                        <ul className="text-sm space-y-2">
+                          <li className="flex items-start gap-2">
+                            <span className="text-green-600">✓</span>
+                            <span>Services publics revalorisés (santé, éducation)</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-green-600">✓</span>
+                            <span>Retraite à 60 ans garantie</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-green-600">✓</span>
+                            <span>Dette réduite pour générations futures</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-green-600">✓</span>
+                            <span>Transition écologique accélérée</span>
+                          </li>
+                          {isProfessionTechnique && (
+                            <li className="flex items-start gap-2">
+                              <span className="text-green-600">✓</span>
+                              <span className="font-bold">Crédit d'impôt 15% Bac+5+</span>
+                            </li>
+                          )}
+                        </ul>
+                      </CardContent>
+                    </Card>
+
+                    <Card className="border-blue-300">
+                      <CardHeader className="bg-blue-50">
+                        <CardTitle className="text-sm flex items-center gap-2">
+                          <Briefcase className="h-4 w-4" />
+                          Garanties
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="pt-4">
+                        <ul className="text-sm space-y-2">
+                          <li className="flex items-start gap-2">
+                            <span className="text-blue-600">✓</span>
+                            <span>Transparence totale des dépenses (audit citoyen)</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-blue-600">✓</span>
+                            <span>Budget participatif (10% décidé par citoyens)</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-blue-600">✓</span>
+                            <span>Lutte contre l'évasion fiscale renforcée</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-blue-600">✓</span>
+                            <span>Clause de révision annuelle</span>
+                          </li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              </div>
+            </TabsContent>
+          </Tabs>
+
+          <div className="text-center space-y-4 mt-8">
             <p className="text-sm text-gray-600">
               * Simulation basée sur les barèmes officiels du programme La Juste Voix
               {isProfessionTechnique && (
