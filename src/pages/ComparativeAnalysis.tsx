@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { comparativeAnalysis, syntheseComparative } from '../lib/comparative-analysis';
-import { Scale, TrendingUp, AlertTriangle, CheckCircle, XCircle, FileText, BarChart3, Award } from 'lucide-react';
+import { Scale, TrendingUp, AlertTriangle, CheckCircle, XCircle, FileText, BarChart3, Award, Users } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import SEOHead from '../components/SEOHead';
+import BeforeAfterCard from '../components/BeforeAfterCard';
+import { beforeAfterData } from '../lib/before-after-data';
 
 const ComparativeAnalysis = () => {
   const [activeTab, setActiveTab] = useState<string>("overview");
@@ -54,18 +56,22 @@ const ComparativeAnalysis = () => {
 
           {/* Tabs Navigation */}
           <Tabs value={activeTab} onValueChange={setActiveTab} className="max-w-6xl mx-auto">
-            <TabsList className="grid w-full grid-cols-3 mb-8">
+            <TabsList className="grid w-full grid-cols-4 mb-8">
               <TabsTrigger value="overview" className="text-base font-semibold">
                 <BarChart3 className="h-4 w-4 mr-2" />
                 Vue d'ensemble
               </TabsTrigger>
               <TabsTrigger value="comparison" className="text-base font-semibold">
                 <Scale className="h-4 w-4 mr-2" />
-                Comparaisons détaillées
+                Comparaisons
+              </TabsTrigger>
+              <TabsTrigger value="profiles" className="text-base font-semibold">
+                <Users className="h-4 w-4 mr-2" />
+                Profils métiers
               </TabsTrigger>
               <TabsTrigger value="synthesis" className="text-base font-semibold">
                 <Award className="h-4 w-4 mr-2" />
-                Synthèse & Verdict
+                Synthèse
               </TabsTrigger>
             </TabsList>
 
@@ -197,7 +203,55 @@ const ComparativeAnalysis = () => {
               </div>
             </TabsContent>
 
-            {/* ONGLET 3: Synthèse et verdict */}
+            {/* ONGLET 3: Profils métiers */}
+            <TabsContent value="profiles">
+              <Alert className="border-ljv-navy bg-ljv-navy/5 mb-8">
+                <Users className="h-5 w-5 text-ljv-navy" />
+                <AlertTitle className="text-lg font-bold">20 Profils métiers détaillés</AlertTitle>
+                <AlertDescription className="text-base">
+                  Comparaison concrète du pouvoir d'achat avant et après réforme pour 20 métiers représentatifs 
+                  dans les secteurs de la santé, l'éducation, la sécurité, le social et l'agriculture.
+                </AlertDescription>
+              </Alert>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                {beforeAfterData.map((data, index) => (
+                  <BeforeAfterCard key={index} data={data} />
+                ))}
+              </div>
+
+              <Card className="border-2 border-ljv-gold bg-ljv-gold/5">
+                <CardHeader>
+                  <CardTitle className="text-xl">📊 Méthodologie de calcul</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div>
+                    <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2">Calculs actuels :</h4>
+                    <ul className="list-disc list-inside space-y-1 text-sm text-gray-900 dark:text-gray-100 font-medium">
+                      <li>Salaire net = Salaire brut - cotisations sociales (~23%)</li>
+                      <li>Impôt sur le revenu calculé selon le barème progressif actuel</li>
+                      <li>Net après impôt = Salaire net - Impôt sur le revenu</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2">Calculs avec la réforme :</h4>
+                    <ul className="list-disc list-inside space-y-1 text-sm text-gray-900 dark:text-gray-100 font-medium">
+                      <li>Revalorisation salariale selon le secteur (+400€ à +1000€ brut)</li>
+                      <li>Nouveau barème d'imposition progressif simplifié</li>
+                      <li>Financement garanti par la CNJP (90-130 Md€/an)</li>
+                    </ul>
+                  </div>
+                  <Alert>
+                    <AlertDescription className="text-sm">
+                      <strong>Note :</strong> Ces calculs sont des estimations réalistes basées sur le programme La Juste Voix. 
+                      Les montants exacts peuvent varier selon la situation individuelle (charges de famille, crédits d'impôt, etc.).
+                    </AlertDescription>
+                  </Alert>
+                </CardContent>
+              </Card>
+            </TabsContent>
+
+            {/* ONGLET 4: Synthèse et verdict */}
             <TabsContent value="synthesis">
               <Card className="border-4 border-ljv-gold">
                 <CardHeader>
