@@ -5,7 +5,7 @@ import Hero from "../components/Hero";
 import BlockCard from "../components/BlockCard";
 import Footer from "../components/Footer";
 import { blocksData } from "../lib/blocks";
-import CNJPSummary from "../components/home/CNJPSummary";
+import CNJPSummaryArchived from "../components/home/CNJPSummaryArchived";
 import TestimonialsSection from "../components/home/TestimonialsSection";
 import NewsletterSignup from "../components/NewsletterSignup";
 import SEOHead, { organizationSchema } from "../components/SEOHead";
@@ -25,7 +25,7 @@ const Index = () => {
         
         {/* CNJP Summary Section */}
         <div className="container mx-auto px-4 my-16">
-          <CNJPSummary />
+          <CNJPSummaryArchived />
         </div>
 
         {/* Testimonials Section */}

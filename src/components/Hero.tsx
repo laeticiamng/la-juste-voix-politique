@@ -49,8 +49,8 @@ const Hero: React.FC = () => {
               <div className="text-sm md:text-base text-gray-800 dark:text-gray-200 font-semibold">Travailleurs essentiels revalorisés</div>
             </div>
             <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border border-ljv-gold/20 shadow-md">
-              <div className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">60 ans</div>
-              <div className="text-sm md:text-base text-gray-800 dark:text-gray-200 font-semibold">Âge de départ à la retraite rétabli</div>
+              <div className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">0,01%</div>
+              <div className="text-sm md:text-base text-gray-800 dark:text-gray-200 font-semibold">Contribuables ultra-hauts revenus concernés</div>
             </div>
           </div>
 

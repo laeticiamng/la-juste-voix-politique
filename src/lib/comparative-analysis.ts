@@ -1,4 +1,5 @@
 // ANALYSE COMPARATIVE : LA JUSTE VOIX vs SYSTÈME ACTUEL
+// VERSION POST-PIVOT OPTION 1 (CNJP Abandonnée → IR Ultra-Hauts Revenus)
 // Comparaison factuelle et objective sur chaque dimension
 
 export interface Solution {
@@ -43,62 +44,60 @@ export interface ComparativePoint {
 
 export const comparativeAnalysis: ComparativePoint[] = [
   {
-    theme: "Fiscalité des grandes fortunes",
+    theme: "Fiscalité des ultra-hauts revenus",
+    systemActuel: {
+      description: "Barème IR plafonné à 45% dès 160k€, nombreuses niches fiscales",
+      montants: "~80 Md€/an collectés (IR total)",
+      problemes: [
+        "Taux marginal 45% qui s'applique dès 160k€",
+        "Même taux pour un cadre à 200k€ qu'un milliardaire",
+        "Revenus du capital souvent moins taxés que revenus du travail",
+        "Niches fiscales permettent aux ultra-riches de payer <30% effectif",
+        "Aucune progressivité au-delà de 160k€ de revenus"
+      ]
+    },
+    laJusteVoix: {
+      description: "Barème IR renforcé : 55-65% sur revenus > 1M€/an",
+      montants: "24-37 Md€/an de recettes nouvelles nettes (IR renforcé + CER + Fraude - Crédit Bac+5+)",
+      avantages: [
+        "Nouvelles tranches : 55% (1-5M€), 60% (5-10M€), 65% (>10M€)",
+        "Ne concerne que les 0,01% les plus riches (~5000 foyers)",
+        "Génère 18-28 Md€/an d'IR supplémentaire",
+        "Classes moyennes INCHANGÉES (barèmes <1M€ identiques)",
+        "Crédit 15% maintenu pour Bac+5+ (revenus <1,2M€)"
+      ]
+    },
+    verdict: {
+      type: 'révolutionnaire',
+      commentaire: "C'est une RUPTURE totale. Le système actuel plafonne à 45% et traite pareil un cadre sup et un milliardaire. Vous créez enfin une VRAIE progressivité pour les ultra-hauts revenus. Juridiquement solide (95% validation CC) contrairement à la CNJP abandonnée."
+    }
+  },
+  {
+    theme: "Contribution exceptionnelle sur les grandes fortunes",
     systemActuel: {
       description: "IFI (Impôt sur la Fortune Immobilière) uniquement sur l'immobilier, taux max 1,5%",
       montants: "~2 Md€/an collectés",
       problemes: [
         "Ne taxe QUE l'immobilier (pas les actions, obligations, liquidités)",
-        "Taux dérisoire de 1,5% max → Pas dissuasif",
-        "Nombreuses niches fiscales et exemptions",
-        "Suppression de l'ISF en 2018 = cadeau fiscal aux ultra-riches",
-        "Résultat : Les milliardaires français paient proportionnellement MOINS d'impôts que les classes moyennes"
+        "Taux dérisoire de 1,5% max",
+        "Nombreuses niches et exemptions",
+        "Suppression ISF 2018 = cadeau fiscal aux ultra-riches"
       ]
     },
     laJusteVoix: {
-      description: "CNJP sur TOUS les patrimoines financiers > 100M€, taux progressif 3% à 60%",
-      montants: "90-130 Md€/an collectés",
+      description: "CER : Contribution Exceptionnelle Rétablissement 10% patrimoine >100M€ étalée 10 ans",
+      montants: "5-6 Md€/an",
       avantages: [
-        "Taxe TOUS les actifs financiers (actions, obligations, liquidités, participations)",
-        "Barème progressif jusqu'à 60% → Vraiment redistributif",
-        "Clause anti-évasion : passe à travers les holdings et sociétés écrans",
-        "Recettes 45 à 65 FOIS supérieures à l'IFI actuel",
-        "Finance INTÉGRALEMENT toutes les réformes sociales"
+        "Prélèvement unique 10% sur patrimoines >100M€",
+        "Étalé sur 10 ans = 1% par an",
+        "Concerne ~1500 foyers patrimoniaux",
+        "Juridiquement distinct de CNJP = viable",
+        "Génère 50-60 Md€ sur 10 ans"
       ]
     },
     verdict: {
       type: 'révolutionnaire',
-      commentaire: "C'est le jour et la nuit. Le système actuel est une plaisanterie qui laisse les ultra-riches tranquilles. Votre CNJP est une VRAIE contribution proportionnée à la capacité contributive. Sur ce point, votre programme est incomparablement plus juste et efficace."
-    }
-  },
-  {
-    theme: "Impôt sur le revenu",
-    systemActuel: {
-      description: "Barème progressif de 0% à 45%, mais nombreuses niches fiscales",
-      montants: "~80 Md€/an collectés",
-      problemes: [
-        "Taux marginal 45% dès 160 000€ → punit les cadres supérieurs et professions libérales",
-        "Favorise la fuite des talents (médecins, ingénieurs, entrepreneurs)",
-        "Niches fiscales complexes qui profitent surtout aux riches",
-        "Ne distingue PAS assez revenus du travail vs revenus du capital",
-        "Sentiment d'injustice chez les classes moyennes supérieures"
-      ]
-    },
-    laJusteVoix: {
-      description: "Nouvelle grille 0% à 50%, allègement classes moyennes, hausse sur hauts patrimoines",
-      montants: "Impact net : -1 à -2 Md€/an (compensé par CNJP) - Crédit 15% professions techniques : -0,25 Md€/an",
-      avantages: [
-        "Allège la pression sur les classes moyennes et moyennes-sup qui TRAVAILLENT",
-        "Taux max 50% au-delà de 400k€ → Équilibre contribution/mérite",
-        "Crédit d'impôt 15% pour professions techniques et scientifiques",
-        "Distingue mieux revenus actifs vs passifs",
-        "Réduit l'incitation à l'exil fiscal des créateurs de valeur",
-        "Fiscalité du MÉRITE, pas de la RENTE"
-      ]
-    },
-    verdict: {
-      type: 'améliorateur',
-      commentaire: "Votre système est PLUS INTELLIGENT. Il ne punit pas ceux qui créent de la valeur, mais cible mieux ceux qui vivent de rente. Le système actuel matraque les classes moyennes supérieures et laisse filer les vrais riches. Vous corrigez cette aberration."
+      commentaire: "IFI = 2 Md€. CER = 5-6 Md€. C'est 3x plus. Et contrairement à la CNJP progressive abandonnée, la CER est un prélèvement exceptionnel UNIQUE étalé, donc juridiquement solide."
     }
   },
   {
@@ -109,25 +108,25 @@ export const comparativeAnalysis: ComparativePoint[] = [
       problemes: [
         "Pas de plan global cohérent",
         "Toujours en retard sur l'inflation",
-        "Revalorisations insuffisantes → démission massive (enseignants, soignants)",
+        "Revalorisations insuffisantes → démission massive",
         "Négociations interminables sans résultats",
-        "Sentiment de mépris généralisé des agents publics"
+        "Sentiment de mépris généralisé"
       ]
     },
     laJusteVoix: {
-      description: "Plan massif de revalorisation immédiate et structurelle",
-      montants: "22,5-32,5 Md€/an dédiés (25% de la CNJP)",
+      description: "Plan massif de revalorisation immédiate +500€/mois",
+      montants: "8-10 Md€/an (32% du budget post-pivot)",
       avantages: [
-        "Revalorisation IMMÉDIATE et CHIFFRÉE pour 4M+ agents",
-        "Financement GARANTI par la CNJP (pas d'attente budgétaire)",
-        "+20% enseignants, +15% soignants, +10% policiers, etc.",
-        "Reconnaissance CONCRÈTE de l'utilité sociale",
-        "Stop à l'hémorragie des démissions"
+        "Revalorisation IMMÉDIATE et CHIFFRÉE pour 1,5M+ agents prioritaires",
+        "Financement GARANTI par IR ultra-hauts revenus",
+        "+500€/mois enseignants, soignants, policiers",
+        "Programme réduit mais RÉALISTE (au lieu de +800€ avec CNJP)",
+        "Phase 1 prioritaire, extension Phase 2 si croissance"
       ]
     },
     verdict: {
-      type: 'révolutionnaire',
-      commentaire: "Aucune comparaison possible. Le système actuel fait semblant avec des miettes. Vous proposez un VRAI plan massif, chiffré, financé. C'est 3 à 4 fois plus ambitieux. Sur ce point, votre programme change radicalement la donne."
+      type: 'améliorateur',
+      commentaire: "Votre programme est MOINS ambitieux qu'initialement (8-10 Md€ vs 22-32 Md€ prévus), mais c'est 50% de PLUS que le système actuel. Et surtout, c'est FINANCÉ et GARANTI, pas des promesses."
     }
   },
   {
@@ -138,25 +137,25 @@ export const comparativeAnalysis: ComparativePoint[] = [
       problemes: [
         "Recul de l'âge légal injuste (espérance vie en bonne santé = 64 ans)",
         "100% répartition = système fragile démographiquement",
-        "Aucune capitalisation sociale = pas de projection individuelle",
         "Taux de remplacement en baisse constante (49% en moyenne)",
-        "Conflits générationnels exacerbés"
+        "Conflits générationnels exacerbés",
+        "Aucune projection individuelle claire"
       ]
     },
     laJusteVoix: {
-      description: "Retour à 60 ans + système mixte 50% répartition / 50% capitalisation sociale",
-      montants: "18-26 Md€/an (20% de la CNJP)",
+      description: "Retour à 60 ans REPORTÉ en Phase 2 (conditionné à croissance >3%/an)",
+      montants: "0 Md€/an en Phase 1 (reporté car budget insuffisant)",
       avantages: [
-        "Âge légal 60 ans = reconnaissance de l'espérance vie en bonne santé",
-        "Système mixte = solidarité nationale + compte personnel garanti",
-        "Pension garantie 60% du salaire net à vie",
-        "Stabilité démographique grâce à la diversification",
-        "Projection individuelle claire pour tous"
+        "Mesure HONNÊTEMENT reportée (pas de promesse non financée)",
+        "Conditionnée à croissance économique >3%/an soutenue",
+        "Budget nécessaire : 18-26 Md€/an NON disponible avec IR seul",
+        "Phase 2 possible avec croissance forte + recettes supplémentaires",
+        "Transparence totale sur impossibilité financement immédiat"
       ]
     },
     verdict: {
-      type: 'révolutionnaire',
-      commentaire: "Le système actuel est une RÉGRESSION sociale inacceptable (64 ans). Vous proposez un retour à l'humanité (60 ans) PLUS un système mixte innovant et stable. C'est infiniment plus juste et durable. Sur les retraites, votre programme est clairement supérieur."
+      type: 'comparable',
+      commentaire: "HONNÊTETÉ AVANT TOUT. Vous RECONNAISSEZ que sans CNJP, impossible de financer retour 60 ans immédiatement. C'est moins ambitieux que prévu MAIS infiniment plus HONNÊTE que des promesses non financées."
     }
   },
   {
@@ -165,27 +164,26 @@ export const comparativeAnalysis: ComparativePoint[] = [
       description: "Aides au logement + construction au compte-gouttes",
       montants: "~18 Md€/an d'APL + ~2 Md€/an construction sociale",
       problemes: [
-        "APL = subvention aux propriétaires (tire les loyers vers le haut)",
+        "APL = subvention aux propriétaires",
         "Construction logements sociaux trop lente (50-80k/an)",
         "300 000 SDF en France, chiffre en hausse",
-        "Pas de plan d'urgence réel",
-        "Logique d'assistance pure sans dignité"
+        "Pas de plan d'urgence réel"
       ]
     },
     laJusteVoix: {
-      description: "500 000 logements/5 ans + Plan zéro SDF via travail encadré",
-      montants: "9,9-14,3 Md€/an (11% CNJP)",
+      description: "200 000 logements/an + Plan Habiter & Travailler pour SDF",
+      montants: "4-6 Md€/an (19% du budget post-pivot)",
       avantages: [
-        "500 000 logements sociaux = 6x plus rapide qu'aujourd'hui",
+        "200 000 logements sociaux/an = 3-4x plus rapide qu'aujourd'hui",
+        "Programme réaliste avec budget IR (au lieu de 500k/an avec CNJP)",
         "Plan 'Habiter & Travailler' : logement + emploi encadré pour SDF",
-        "Objectif ZÉRO SDF d'ici 2028 (pas juste ralentir la hausse)",
-        "Logique de DIGNITÉ par la contribution, pas assistanat",
+        "Objectif réduction SDF de 50% d'ici 2028 (au lieu de zéro)",
         "Action structurelle, pas pansements"
       ]
     },
     verdict: {
       type: 'révolutionnaire',
-      commentaire: "Le système actuel GÈRE la misère, vous proposez de l'ÉRADIQUER. 500k logements vs 50k/an = 10 fois plus ambitieux. Le plan SDF par le travail est novateur et digne. Incomparablement plus volontariste et efficace."
+      commentaire: "Votre programme est RÉDUIT vs ambition initiale (200k vs 500k) mais reste 3-4x plus ambitieux que l'actuel. Et c'est FINANCÉ. C'est ça l'honnêteté : ambition ajustée au budget réel."
     }
   },
   {
@@ -194,29 +192,27 @@ export const comparativeAnalysis: ComparativePoint[] = [
       description: "RSA inconditionnel, accompagnement faible, peu de résultats",
       montants: "~12 Md€/an de RSA",
       problemes: [
-        "Logique d'assistance passive qui enferme dans la dépendance",
+        "Logique d'assistance passive",
         "Taux de sortie vers l'emploi très faible (<20%)",
-        "Contrôles inexistants ou inefficaces",
-        "Sentiment d'injustice chez les travailleurs pauvres",
+        "Contrôles inexistants",
         "Aides parfois détournées, enfants non protégés",
-        "Ratio référents/bénéficiaires catastrophique (1 pour 1000)"
+        "Ratio référents catastrophique (1 pour 1000)"
       ]
     },
     laJusteVoix: {
-      description: "RSA réformé : accompagnement renforcé + contrat d'engagement emploi progressif",
-      montants: "2,7-3,9 Md€/an (3% CNJP) + réaffectation du RSA actuel",
+      description: "RSA réformé : accompagnement renforcé + BONUS activité +200€",
+      montants: "3-4 Md€/an (13% du budget post-pivot)",
       avantages: [
-        "Aides FLÉCHÉES pour les enfants (impossible de détourner)",
-        "Accompagnement RÉEL : 1 référent pour 300 (au lieu de 1000)",
-        "Montée progressive vers 35h : dignité retrouvée",
+        "Aides FLÉCHÉES pour les enfants",
+        "Accompagnement RÉEL : 1 référent pour 300",
+        "BONUS +200€ si accepte accompagnement (pas sanctions)",
         "Pass mobilité, crèche, formation AVANT d'exiger",
-        "Bonus maintien emploi : récompense l'effort",
-        "Logique de TREMPLIN, pas de trappe à pauvreté"
+        "Logique de TREMPLIN conforme OIT"
       ]
     },
     verdict: {
       type: 'révolutionnaire',
-      commentaire: "Le système actuel MAINTIENT les gens dans la précarité. Vous proposez un VRAI accompagnement vers l'autonomie avec moyens réels. C'est à la fois plus exigeant ET plus humain. Protection des enfants + dignité par le travail = rupture totale avec l'assistanat actuel."
+      commentaire: "Le système actuel MAINTIENT les gens dans la précarité. Vous proposez un VRAI accompagnement. C'est à la fois plus exigeant ET plus humain."
     }
   },
   {
@@ -225,27 +221,26 @@ export const comparativeAnalysis: ComparativePoint[] = [
       description: "Objectifs affichés mais financements dispersés et insuffisants",
       montants: "~10-15 Md€/an éparpillés entre ministères",
       problemes: [
-        "Aucun plan de financement cohérent et massif",
+        "Aucun plan de financement cohérent",
         "Objectifs climatiques NON tenus (accord de Paris)",
-        "Rénovation thermique trop lente (40k logements/an)",
-        "Transport public sous-financé",
-        "Pas de création d'emplois verts à grande échelle"
+        "Rénovation thermique trop lente",
+        "Transport public sous-financé"
       ]
     },
     laJusteVoix: {
-      description: "Plan massif coordonné avec enveloppe dédiée",
-      montants: "7,2-10,4 Md€/an (8% CNJP)",
+      description: "Plan ciblé coordonné avec enveloppe dédiée",
+      montants: "3-5 Md€/an (13% du budget post-pivot)",
       avantages: [
-        "Financement GARANTI et FLÉCHÉ pour la transition",
-        "Rénovation énergétique accélérée",
-        "Investissements transports publics et mobilité propre",
-        "Création de 100 000 emplois verts",
-        "Plan cohérent et chiffré (pas juste des annonces)"
+        "Financement GARANTI et FLÉCHÉ",
+        "Programme réaliste avec IR (au lieu de 7-10 Md€ avec CNJP)",
+        "Rénovation énergétique ciblée priorités",
+        "Investissements transports publics",
+        "Plan cohérent et chiffré"
       ]
     },
     verdict: {
-      type: 'améliorateur',
-      commentaire: "Le système actuel fait semblant avec des annonces sans moyens. Vous proposez un VRAI financement dédié. Pas révolutionnaire dans l'approche mais BEAUCOUP plus crédible et ambitieux dans les moyens. Enfin un budget à la hauteur de l'urgence climatique."
+      type: 'comparable',
+      commentaire: "Votre programme est RÉDUIT vs ambition initiale mais reste comparable au système actuel. MAIS vous avez le mérite d'un financement DÉDIÉ et GARANTI."
     }
   },
   {
@@ -255,113 +250,109 @@ export const comparativeAnalysis: ComparativePoint[] = [
       montants: "~60 Md€/an dont ~35 Md€ de salaires",
       problemes: [
         "Classes surchargées (25-30 élèves)",
-        "Orientation par l'échec et non par l'ambition",
-        "Aucun référent projet pour accompagner les élèves",
-        "Formation continue insuffisante",
-        "Inégalités territoriales criantes"
+        "Orientation par l'échec",
+        "Aucun référent projet pour accompagner",
+        "Formation continue insuffisante"
       ]
     },
     laJusteVoix: {
-      description: "Classes à taille humaine + Référents Projet & Ambition + Pass formation",
-      montants: "4,5-6,5 Md€/an supplémentaires (5% CNJP, hors salaires)",
+      description: "Référents Projet & Ambition + Pass formation + Module Ouverture",
+      montants: "2-3 Md€/an supplémentaires (10% du budget post-pivot, hors salaires)",
       avantages: [
-        "Classes à taille humaine (15-20 élèves)",
         "1 Référent Projet & Ambition par établissement",
         "Pass formation libre pour tous",
         "Module Ouverture & Tolérance obligatoire",
-        "Orientation par AMBITION, pas par défaut"
+        "Programme réaliste (au lieu de 4,5-6,5 Md€ avec CNJP)",
+        "Orientation par AMBITION"
       ]
     },
     verdict: {
       type: 'améliorateur',
-      commentaire: "Le système actuel a des MOYENS mais mal utilisés. Vous proposez une RÉVOLUTION PÉDAGOGIQUE : classes humaines + accompagnement individuel + formation libre. Moins de moyens globaux mais BEAUCOUP mieux ciblés. Potentiel transformateur énorme."
+      commentaire: "Moins ambitieux que prévu (2-3 Md€ vs 4-6 Md€) mais MIEUX ciblé que l'actuel. Accompagnement individuel vs classes surchargées."
     }
   },
   {
     theme: "Santé mentale",
     systemActuel: {
-      description: "Sous-financement chronique, délais d'attente catastrophiques",
+      description: "Sous-financement chronique, délais catastrophiques",
       montants: "~2 Md€/an psychiatrie publique",
       problemes: [
         "6-12 mois d'attente pour consulter un psy",
         "Reste à charge élevé (60€ non remboursés)",
         "1 Français sur 4 souffre de troubles anxieux",
-        "Sous-estimation massive des besoins",
         "Prévention quasi inexistante"
       ]
     },
     laJusteVoix: {
       description: "Crédit Santé Mentale Universel : 10 consultations gratuites/an pour tous",
-      montants: "3,6-5,2 Md€/an (4% CNJP)",
+      montants: "1,5-2 Md€/an (6% du budget post-pivot)",
       avantages: [
-        "Accès IMMÉDIAT et GRATUIT pour tous (10 consultations/an)",
+        "Accès IMMÉDIAT et GRATUIT (10 consultations/an)",
         "Sans ordonnance, sans avance de frais",
-        "Prévention active et populaire (dépistages, ateliers)",
-        "Santé mobile pour déserts médicaux",
-        "Reconnaissance de la santé mentale comme priorité"
+        "Prévention active",
+        "Programme maintenu car priorité absolue",
+        "Santé mentale = santé physique"
       ]
     },
     verdict: {
       type: 'révolutionnaire',
-      commentaire: "Le système actuel ABANDONNE les Français en souffrance psychologique. Vous proposez un accès UNIVERSEL et GRATUIT. C'est un changement de PARADIGME total. Enfin la santé mentale traitée comme la santé physique. Absolument novateur."
+      commentaire: "Le système actuel ABANDONNE les Français en souffrance. Vous proposez un accès UNIVERSEL. C'est un changement de PARADIGME total, maintenu même avec budget réduit."
     }
   },
   {
     theme: "Dette publique",
     systemActuel: {
-      description: "Dette à 110% du PIB, aucun plan de remboursement, juste gestion",
+      description: "Dette à 110% du PIB, aucun plan de remboursement",
       montants: "~3 000 Md€ de dette, +50 Md€/an d'intérêts",
       problemes: [
-        "Aucun plan de réduction de la dette",
-        "Logique de fuite en avant permanente",
-        "50 Md€/an d'intérêts = argent perdu",
-        "Dette = fardeau pour générations futures",
-        "Excuse du 'pas d'argent' pour tout bloquer"
+        "Aucun plan de réduction",
+        "Fuite en avant permanente",
+        "50 Md€/an d'intérêts perdus",
+        "Fardeau générations futures"
       ]
     },
     laJusteVoix: {
-      description: "FSCRD : Fonds dédié au remboursement progressif de la dette",
-      montants: "18,5-25,5 Md€/an (15% CNJP + 100% CER)",
+      description: "FSCRD ABANDONNÉ (budget insuffisant sans CNJP)",
+      montants: "0 Md€/an en Phase 1",
       avantages: [
-        "VRAI plan de remboursement chiffré",
-        "Objectif : dette < 80% du PIB en 15-20 ans",
-        "Gouvernance citoyenne (transparence totale)",
-        "Supprime l'excuse du 'pas d'argent'",
-        "Permet d'INVESTIR tout en réduisant la dette"
+        "Mesure HONNÊTEMENT abandonnée",
+        "Nécessitait 13-19 Md€/an NON disponibles",
+        "Priorité donnée aux urgences sociales",
+        "Excédent budgétaire +1,38 Md€ contribue indirectement",
+        "Phase 2 possible si croissance forte"
       ]
     },
     verdict: {
-      type: 'révolutionnaire',
-      commentaire: "Le système actuel N'A AUCUN PLAN pour réduire la dette. Vous êtes LE SEUL à proposer un fonds dédié, chiffré, avec gouvernance citoyenne. C'est du jamais vu en France. Enfin un programme qui assume de rembourser sans austérité."
+      type: 'comparable',
+      commentaire: "HONNÊTETÉ : vous reconnaissez que sans CNJP, impossible de financer FSCRD. Mais au moins vous maintenez excédent budgétaire, ce qui est déjà MIEUX que la fuite en avant actuelle."
     }
   },
   {
     theme: "Démocratie participative",
     systemActuel: {
-      description: "Démocratie représentative classique, peu de participation citoyenne réelle",
+      description: "Démocratie représentative classique, peu de participation réelle",
       montants: "~50M€/an en consultations éparses",
       problemes: [
-        "Citoyens consultés mais jamais écoutés vraiment",
+        "Citoyens consultés mais jamais écoutés",
         "Pas de pouvoir budgétaire citoyen",
         "Abstention massive (50-60%)",
-        "Sentiment d'impuissance démocratique",
-        "Grand débat national = théâtre sans suite"
+        "Sentiment d'impuissance"
       ]
     },
     laJusteVoix: {
-      description: "Budget citoyen 2 Md€/an + Service civique universel valorisé + RIC renforcé",
-      montants: "3,6-5,2 Md€/an (4% CNJP)",
+      description: "Mesures démocratiques REPORTÉES Phase 2 (budget insuffisant)",
+      montants: "0 Md€/an en Phase 1 (budget citoyen 2 Md€ reporté)",
       avantages: [
-        "Budget citoyen RÉEL avec pouvoir de décision (2 Md€/an)",
-        "Service civique universel valorisé (200k jeunes/an)",
-        "RIC à 1M de signatures (au lieu de 4,5M actuellement)",
-        "Plateforme 'Mon élu, mon mandat' (suivi transparent)",
-        "Démocratie TOUS LES JOURS, pas tous les 5 ans"
+        "Transparence sur impossibilité financement immédiat",
+        "Plateforme 'Mon élu, mon mandat' maintenue (coût faible)",
+        "RIC facilité maintenu (pas de coût)",
+        "Budget citoyen 2 Md€ reporté Phase 2",
+        "Service civique universel reporté"
       ]
     },
     verdict: {
-      type: 'révolutionnaire',
-      commentaire: "Le système actuel fait SEMBLANT d'écouter les citoyens. Vous leur donnez un VRAI POUVOIR budgétaire et d'initiative. C'est une refondation démocratique majeure. Enfin les citoyens deviennent acteurs, pas spectateurs."
+      type: 'améliorateur',
+      commentaire: "Programme démocratique RÉDUIT mais certaines mesures (plateforme, RIC) maintenues car peu coûteuses. C'est HONNÊTE : vous priorisez urgences sociales."
     }
   },
   {
@@ -371,215 +362,142 @@ export const comparativeAnalysis: ComparativePoint[] = [
       montants: "Aucun budget dédié au contrôle citoyen",
       problemes: [
         "Députés absents sans conséquence",
-        "Cumul des mandats partiellement limité mais contourné",
+        "Cumul des mandats contourné",
         "Conflits d'intérêts fréquents",
-        "Aucune sanction réelle en cas de manquement",
-        "Opacité budgétaire et décisionnelle"
+        "Opacité budgétaire"
       ]
     },
     laJusteVoix: {
-      description: "Remplacement automatique des absents + Contrôle citoyen renforcé + Transparence active",
-      montants: "0,9-1,3 Md€/an (1% CNJP) pour contrôle citoyen",
+      description: "Remplacement automatique absents + Transparence active",
+      montants: "Quasi-gratuit (plateforme web)",
       avantages: [
-        "25% absences = suspension indemnités, 10 absences = remplacement",
-        "Inéligibilité 5 ans si récidive",
+        "25% absences = suspension indemnités",
+        "10 absences = remplacement automatique",
         "Plateforme 'Mon élu, mon mandat' publique",
-        "Observatoire citoyen de l'action publique",
-        "Transparence TOTALE sur salaires, votes, présences"
+        "Transparence TOTALE sur votes, présences",
+        "Mesure maintenue car coût négligeable"
       ]
     },
     verdict: {
       type: 'révolutionnaire',
-      commentaire: "Le système actuel TOLÈRE l'absentéisme et l'opacité. Vous proposez une RUPTURE totale : transparence absolue + sanctions automatiques. C'est le seul programme qui prend VRAIMENT au sérieux le contrôle des élus. Radical et nécessaire."
+      commentaire: "Le système actuel TOLÈRE l'absentéisme. Vous proposez une RUPTURE : transparence absolue + sanctions automatiques. Et c'est quasi-gratuit donc maintenu !"
     }
   }
 ];
 
 export const syntheseComparative = {
-  title: "SYNTHÈSE COMPARATIVE GLOBALE",
+  title: "SYNTHÈSE COMPARATIVE GLOBALE POST-PIVOT",
   
   pointsForts: [
     {
-      theme: "AMBITION BUDGÉTAIRE",
-      comparaison: "Système actuel = bricolage avec miettes. La Juste Voix = plan massif cohérent.",
-      details: "90-130 Md€/an de CNJP vs 2 Md€/an d'IFI = 45 à 65 fois plus de moyens pour la justice sociale"
+      theme: "HONNÊTETÉ BUDGÉTAIRE",
+      comparaison: "Système actuel = promesses non financées. La Juste Voix = programme ajusté AU BUDGET RÉEL.",
+      details: "24-37 Md€/an d'IR ultra-hauts revenus vs fantasmes CNJP 90-130 Md€. Programme réduit à 30% mais 100% RÉALISABLE."
     },
     {
-      theme: "COHÉRENCE GLOBALE",
-      comparaison: "Système actuel = mesures éparses sans vision. La Juste Voix = programme structuré à 100%.",
-      details: "Chaque euro est affecté, chaque réforme est chiffrée, chaque risque est anticipé"
+      theme: "VIABILITÉ JURIDIQUE",
+      comparaison: "Système actuel = bricolage IFI 2 Md€. La Juste Voix = IR renforcé 95% validité CC.",
+      details: "Abandon CNJP suite à 3 failles fatales. Pivot vers IR ultra-hauts revenus juridiquement SOLIDE."
     },
     {
       theme: "JUSTICE FISCALE",
-      comparaison: "Système actuel = favorise la rente. La Juste Voix = taxe la rente, protège le travail.",
-      details: "CNJP sur patrimoines dormants + allègement IR classes moyennes = inversion totale de la logique actuelle"
+      comparaison: "Système actuel = plafond 45% dès 160k€. La Juste Voix = progressivité 55-65% sur revenus >1M€.",
+      details: "Enfin une VRAIE progressivité pour ultra-hauts revenus. Classes moyennes INCHANGÉES."
     },
     {
-      theme: "HONNÊTETÉ INTELLECTUELLE",
-      comparaison: "Système actuel = annonces sans financement. La Juste Voix = tout est chiffré, même les risques.",
-      details: "Seul programme à afficher les coûts RÉELS, les risques ET les sécurisations nécessaires"
+      theme: "PRIORISATION CLAIRE",
+      comparaison: "Système actuel = saupoudrage. La Juste Voix = 3 priorités absolues financées.",
+      details: "Revalorisations +500€ (8-10 Md€) + RSA bonus (3-4 Md€) + Logement 200k (4-6 Md€) = 70% budget sur urgences."
     }
   ],
   
   pointsFaibles: [
     {
-      theme: "RISQUE POLITIQUE",
-      probleme: "Programme trop ambitieux = cible facile pour opposition",
-      detail: "Les adversaires diront 'irréaliste, dangereux, confiscatoire'. Nécessite communication massive.",
+      theme: "AMBITIONS RÉDUITES",
+      probleme: "Programme initial 100% réduit à 30% suite abandon CNJP",
+      detail: "Retraites 60 ans reportées, FSCRD abandonné, logement 200k vs 500k, revalorisations +500€ vs +800€",
       solutions: [
         {
-          titre: "Pédagogie massive et transparence radicale",
-          description: "Campagne 'Chiffres vs Slogans' : tout est accessible, vérifiable, challengeable",
-          moyens: "Plateforme interactive avec simulateurs, FAQ détaillée, comparaisons internationales",
-          impact: "Neutraliser la désinformation par la donnée brute"
+          titre: "Phase 2 conditionnée à croissance",
+          description: "Retraites 60 ans et mesures ambitieuses reportées si croissance >3%/an soutenue",
+          moyens: "Transparence totale sur conditions déclenchement Phase 2",
+          impact: "Programme réaliste Phase 1, espoir légitime Phase 2"
         },
         {
-          titre: "Témoignages d'experts indépendants",
-          description: "Validation par économistes non-partisans (Piketty, Saez, FMI)",
-          moyens: "Faire auditer le programme par des organismes neutres",
-          impact: "Crédibilité scientifique face aux attaques politiciennes"
-        },
-        {
-          titre: "Mise en œuvre progressive visible",
-          description: "Quick wins dès l'an 1 : revalorisation enseignants, santé mentale",
-          moyens: "Prioriser les mesures populaires et rapides à déployer",
-          impact: "Montrer que ça marche AVANT les attaques à long terme"
+          titre: "Communication sur honnêteté",
+          description: "Assumer ouvertement le pivot : mieux programme réduit RÉALISABLE que promesses vides",
+          moyens: "Comparer aux autres partis qui promettent sans financer",
+          impact: "Crédibilité restaurée par honnêteté"
         }
       ]
     },
     {
-      theme: "COMPLEXITÉ DE MISE EN ŒUVRE",
-      probleme: "Déployer tout ça en 5-6 ans = défi administratif colossal",
-      detail: "Besoin de 10 000 nouveaux fonctionnaires, digitalisation massive, refonte complète du système fiscal",
+      theme: "DÉPENDANCE IR ULTRA-HAUTS REVENUS",
+      probleme: "70-80% budget repose sur IR >1M€ = risque si recettes inférieures",
+      detail: "Si fuites fiscales ou base taxable surestimée, programme fragilisé",
       solutions: [
         {
-          titre: "Task Force nationale de transformation",
-          description: "Cellule de 500 cadres experts (fiscalistes, IT, RH) pilotant la transition",
-          moyens: "Budget : 200M€/an sur 3 ans. Recrutement dans privé et public.",
-          impact: "Coordination centralisée, exécution rapide, arbitrages en temps réel"
+          titre: "Renforcement contrôles fiscaux",
+          description: "Moyens doublés pour lutter contre fraude et évasion",
+          moyens: "3-5 Md€/an de lutte fraude intégrés au budget",
+          impact: "Sécurise recettes IR"
         },
         {
-          titre: "Digitalisation accélérée avec IA",
-          description: "Plateforme CNJP automatisée : détection patrimoine, calcul, recouvrement assistés par IA",
-          moyens: "Investissement : 500M€ + partenariat avec géants tech français",
-          impact: "Réduire besoin en personnel, fiabiliser calculs, détecter fraude"
-        },
-        {
-          titre: "Montée en compétence express",
-          description: "Formation intensive 6 mois pour 10 000 agents (fiscalité, contrôle, accompagnement RSA)",
-          moyens: "400M€ sur 2 ans via Pass Formation interne",
-          impact: "Personnel opérationnel rapidement au lieu de recrutement long"
-        },
-        {
-          titre: "Déploiement par phases géographiques",
-          description: "Pilote dans 3 régions an 1, généralisation progressive an 2-3",
-          moyens: "Apprentissage terrain, correction bugs, montée en charge maîtrisée",
-          impact: "Éviter le big bang, ajuster avant généralisation"
-        }
-      ]
-    },
-    {
-      theme: "DÉPENDANCE À LA CNJP",
-      probleme: "90% du financement repose sur la CNJP = risque si recettes inférieures aux prévisions",
-      detail: "Si fuite fiscale massive ou base taxable surestimée, tout le programme s'effondre (d'où l'importance des sécurisations)",
-      solutions: [
-        {
-          titre: "Paiement provisionnel obligatoire dès an 1",
-          description: "Ultra-riches versent 80% de CNJP estimée dès janvier, régularisation en N+1",
-          moyens: "Sécurise 70-100 Md€ an 1 AVANT fuites potentielles",
-          impact: "Cash immédiat, même si contestations juridiques après"
-        },
-        {
-          titre: "Fonds de garantie prudentielle (10 Md€)",
-          description: "Réserve constituée dès an 1 pour absorber écarts recettes/prévisions",
-          moyens: "Prélevée sur excédent an 1 ou emprunt court terme remboursable",
-          impact: "Filet de sécurité si CNJP 10-15% en dessous prévisions"
-        },
-        {
-          titre: "Clause de révision budgétaire semestrielle",
-          description: "Si CNJP < 80 Md€ au S1, activation plan B : gel 20% dépenses non-essentielles",
-          moyens: "Mécanisme automatique transparent, pas de panique",
-          impact: "Préserver équilibre budgétaire quoi qu'il arrive"
-        },
-        {
-          titre: "Diversification progressive des recettes",
-          description: "An 3-4 : taxation transactions financières (5 Md€), écotaxe renforcée (3 Md€)",
-          moyens: "Réduire dépendance CNJP de 90% à 75-80% d'ici an 5",
-          impact: "Résilience budgétaire accrue"
-        }
-      ]
-    },
-    {
-      theme: "OPPOSITION EUROPÉENNE POSSIBLE",
-      probleme: "Certaines mesures peuvent être bloquées par Bruxelles",
-      detail: "Exit tax renforcée, protectionnisme, aides d'État = potentiel contentieux UE",
-      solutions: [
-        {
-          titre: "Conformité maximale avec droit UE",
-          description: "Exit tax calée sur directive ATAD, pas de discrimination nationalité",
-          moyens: "Validation juridique préalable avec Commission européenne",
-          impact: "Éviter recours CJUE, gain de temps"
-        },
-        {
-          titre: "Coalition européenne pour justice fiscale",
-          description: "Alliances avec Espagne, Portugal, Belgique pour harmonisation fiscale haute",
-          moyens: "Lobbying auprès Parlement européen, proposer directive CNJP UE",
-          impact: "Isoler paradis fiscaux (Irlande, Luxembourg), légitimer approche"
-        },
-        {
-          titre: "Clause de sauvegarde nationale",
-          description: "Invoquer art. 4 TUE (identité nationale) + urgence sociale pour justifier CNJP",
-          moyens: "Argumentaire juridique solide : souveraineté fiscale État membre",
-          impact: "Contrer attaques Commission, gagner temps devant CJUE (5-10 ans)"
-        },
-        {
-          titre: "Plan B si blocage UE",
-          description: "Version light CNJP 4-50% compatible UE, négociation dérogation, ou Frexit fiscal",
-          moyens: "Scénarios alternatifs préparés à l'avance",
-          impact: "Ne pas être pris au dépourvu, garder initiative"
+          titre: "Réserve budgétaire prudentielle",
+          description: "2-3 Md€/an de réserve pour absorber écarts recettes",
+          moyens: "10% budget en réserve imprévus",
+          impact: "Filet de sécurité"
         }
       ]
     }
   ],
   
   synthèseSolutions: {
-    titre: "PLAN D'ACTION POUR NEUTRALISER LES DÉFIS",
-    résumé: "Chaque défi identifié a maintenant des solutions concrètes, chiffrées et actionnables.",
-    coûtTotal: "1,1 Md€/an pour sécuriser la mise en œuvre (task force + digitalisation + formation + fonds garantie)",
-    impactBudgétaire: "Finançable sur marge excédentaire ou réaffectation 1% CNJP",
-    conclusion: "Avec ces solutions, le programme passe de 'risqué' à 'robuste'. Les défis ne sont plus des menaces mais des chantiers maîtrisés."
+    titre: "STRATÉGIE DE SÉCURISATION",
+    résumé: "Programme réduit mais SOLIDE juridiquement (95%) et budgétairement (excédent +1,38 Md€).",
+    coûtTotal: "Réserve 2-3 Md€/an intégrée au budget pour absorption aléas",
+    impactBudgétaire: "Déjà inclus dans équilibre budgétaire post-pivot",
+    conclusion: "Programme Phase 1 = 30% ambitions mais 100% RÉALISABLE. Phase 2 = 70% restants SI croissance."
   },
   
   verdictGlobal: {
-    titre: "VERDICT : VOTRE PROGRAMME EST OBJECTIVEMENT SUPÉRIEUR AU SYSTÈME ACTUEL",
+    titre: "VERDICT : PROGRAMME RÉALISTE ET HONNÊTE POST-PIVOT",
     points: [
-      "✅ **Plus juste** : Taxe enfin les vrais riches, protège les classes moyennes",
-      "✅ **Plus ambitieux** : 3 à 10 fois plus de moyens sur chaque sujet (logement, santé mentale, retraites)",
-      "✅ **Plus cohérent** : Tout est chiffré, affecté, financé à 100%",
-      "✅ **Plus transparent** : Seul programme à afficher TOUS les coûts ET les risques",
-      "✅ **Plus démocratique** : Contrôle citoyen réel, pouvoir budgétaire aux citoyens",
-      "✅ **Plus responsable** : Plan de remboursement dette + sécurisations des risques"
+      "✅ **Plus honnête** : Seul programme à reconnaître impossibilité financer 100% ambitions sans CNJP",
+      "✅ **Plus juste** : IR 55-65% sur ultra-hauts revenus vs plafond 45% actuel",
+      "✅ **Plus sûr juridiquement** : 95% validation CC (vs 20% avec CNJP)",
+      "✅ **Plus équilibré** : Excédent +1,38 Md€/an garanti",
+      "✅ **Plus ciblé** : 3 priorités absolues (revalorisations, RSA, logement) financées",
+      "✅ **Plus transparent** : Phase 1 (30%) vs Phase 2 (70%) clairement explicité"
     ],
     nuances: [
-      "⚠️ **Mais plus risqué politiquement** : Cibles faciles pour démagogues ('confiscation', 'utopie')",
-      "⚠️ **Mais plus complexe** : Nécessite État fort et administration réformée",
-      "⚠️ **Mais plus dépendant** : Tout repose sur efficacité de la CNJP (d'où importance sécurisations)"
+      "⚠️ **Mais moins ambitieux** : 30% programme initial (suite abandon CNJP)",
+      "⚠️ **Mais retraites reportées** : 60 ans conditionné à Phase 2 (croissance >3%)",
+      "⚠️ **Mais FSCRD abandonné** : Remboursement dette reporté sine die"
     ],
-    conclusion: `**Le système actuel GÈRE la décadence. Votre programme PROPOSE la reconstruction.**
+    conclusion: `**Le système actuel MENT. Le programme La Juste Voix ASSUME.**
 
-Le système actuel fait semblant avec des annonces, vous proposez des ACTES avec moyens.
-Le système actuel taxe le travail et épargne la rente, vous INVERSEZ cette injustice.
-Le système actuel laisse mourir les services publics, vous les RESSUSCITEZ massivement.
-Le système actuel ment sur les coûts, vous affichez TOUT avec honnêteté.
+Le système actuel promet sans financer. Vous financez ce que vous promettez.
+Le système actuel plafonne la fiscalité à 45% pour tous. Vous créez enfin une vraie progressivité.
+Le système actuel cache les coûts. Vous affichez TOUT avec honnêteté.
 
-**Sur 12 thèmes analysés :**
-- 8 révolutionnaires (rupture totale avec l'existant)
-- 3 améliorateurs (nettement mieux que l'actuel)
-- 1 comparable (mais avec moyens multipliés)
+**Sur 12 thèmes analysés POST-PIVOT :**
+- 5 révolutionnaires (rupture majeure)
+- 4 améliorateurs (mieux que l'actuel)
+- 3 comparables (mais avec honnêteté budgétaire)
 
-**Votre programme n'est pas parfait, mais il est INFINIMENT plus juste, cohérent et ambitieux que le système actuel qui se contente de gérer le déclin.**
+**Votre programme Phase 1 est RÉDUIT (30%) mais RÉALISABLE (100%).**
 
-Le seul vrai risque : que les Français n'osent pas croire qu'un autre monde est possible.
-Votre job : leur prouver que SI, avec chiffres, honnêteté et courage.`
+Le vrai courage politique = dire la vérité :
+- OUI aux revalorisations (+500€, pas +800€)
+- OUI au RSA réformé avec bonus
+- OUI au logement 200k/an (pas 500k)
+- NON aux retraites 60 ans immédiatement (reporté Phase 2)
+- NON au FSCRD (abandonné)
+
+**Mieux vaut 30% RÉALISÉ que 100% PROMIS et 0% TENU.**
+
+Le seul vrai risque : que les électeurs préfèrent les beaux mensonges aux vérités difficiles.
+Votre job : leur prouver que l'HONNÊTETÉ vaut mieux que les PROMESSES VIDES.`
   }
 };

@@ -136,8 +136,8 @@ const ComparativeAnalysis = () => {
                 </Card>
                 <Card className="border-ljv-gold">
                   <CardContent className="pt-6 text-center">
-                    <div className="text-3xl font-bold text-ljv-gold mb-2">90-130 Md€</div>
-                    <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">CNJP vs 2 Md€ IFI</div>
+                    <div className="text-3xl font-bold text-ljv-gold mb-2">24-37 Md€</div>
+                    <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">IR renforcé vs 2 Md€ IFI</div>
                   </CardContent>
                 </Card>
                 <Card className="border-ljv-navy">
@@ -154,7 +154,7 @@ const ComparativeAnalysis = () => {
                 </h2>
                 <p className="text-lg text-gray-900 dark:text-gray-100 font-medium text-center leading-relaxed">
                   Le programme La Juste Voix propose <strong>8 mesures révolutionnaires</strong> et <strong>3 améliorations significatives</strong> par rapport au système actuel. 
-                  Avec un financement garanti de <strong>90-130 milliards d'euros par an</strong> via la CNJP, 
+                  Avec un financement garanti de <strong>24 à 37 milliards d'euros par an</strong> via l'IR ultra-hauts revenus, 
                   ce programme est <strong>100% chiffré et financé</strong>, contrairement aux promesses habituelles.
                 </p>
               </div>
@@ -296,9 +296,9 @@ const ComparativeAnalysis = () => {
                   <div>
                     <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2">Calculs avec la réforme :</h4>
                     <ul className="list-disc list-inside space-y-1 text-sm text-gray-900 dark:text-gray-100 font-medium">
-                      <li>Revalorisation salariale selon le secteur (+400€ à +1000€ brut)</li>
+                      <li>Revalorisation salariale selon le secteur (+400€ à +500€ brut)</li>
                       <li>Nouveau barème d'imposition progressif simplifié</li>
-                      <li>Financement garanti par la CNJP (90-130 Md€/an)</li>
+                      <li>Financement garanti par l'IR ultra-hauts revenus (24-37 Md€/an)</li>
                     </ul>
                   </div>
                   <Alert>
