@@ -66,8 +66,16 @@ const IncomeTaxTable: React.FC = () => {
               <TableCell className="font-bold text-center text-ljv-navy">50 %</TableCell>
             </TableRow>
             <TableRow className="bg-gray-50">
-              <TableCell>Plus de 1 000 000 €</TableCell>
+              <TableCell>1 000 001 € – 5 000 000 €</TableCell>
               <TableCell className="font-bold text-center text-ljv-navy">55 %</TableCell>
+            </TableRow>
+            <TableRow className="bg-ljv-gold/10">
+              <TableCell>5 000 001 € – 10 000 000 €</TableCell>
+              <TableCell className="font-bold text-center text-ljv-navy">60 %</TableCell>
+            </TableRow>
+            <TableRow className="bg-orange-50">
+              <TableCell>Plus de 10 000 000 €</TableCell>
+              <TableCell className="font-bold text-center text-ljv-navy">65 %</TableCell>
             </TableRow>
           </TableBody>
         </Table>
@@ -76,9 +84,18 @@ const IncomeTaxTable: React.FC = () => {
       <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
         <blockquote className="italic text-gray-700 text-lg">
           "Quand tu gagnes 45 000 € par an, tu ne devrais pas être taxé comme si tu étais riche. 
-          Mais quand tu gagnes 1 million d'euros par an, contribuer à 55 %, ce n'est pas du vol.
+          Mais quand tu gagnes plus de 10 millions d'euros par an, contribuer à 65 %, ce n'est pas du vol.
           C'est du respect pour ceux qui font vivre la République au quotidien."
         </blockquote>
+      </div>
+      
+      <div className="mt-4 p-4 bg-ljv-navy/5 rounded-lg border border-ljv-navy/20">
+        <p className="text-sm text-gray-700">
+          <strong>Note importante :</strong> Ces nouveaux barèmes ultra-hauts revenus (55%, 60%, 65%) 
+          ne concernent que 0,01% des contribuables français (revenus {'>'} 1 M€/an). 
+          Ils remplacent la CNJP abandonnée pour des raisons juridiques et garantissent 
+          un financement viable du programme à hauteur de 24-37 Md€/an.
+        </p>
       </div>
     </div>
   );

@@ -8,8 +8,6 @@ import IncomeTaxTable from './tax/IncomeTaxTable';
 import TaxFeaturesGrid from './tax/TaxFeaturesGrid';
 import TaxEvasionProtection from './tax/TaxEvasionProtection';
 import TaxVision from './tax/TaxVision';
-import CNJPSection from './tax/CNJPSection';
-import CNJPUsageSection from './tax/CNJPUsageSection';
 import RetirementReformSection from './tax/RetirementReformSection';
 import TaxSimulator from './TaxSimulator';
 import HigherEducationTaxCredit from './tax/HigherEducationTaxCredit';
@@ -36,11 +34,6 @@ const TaxBracketsTable: React.FC = () => {
       <TaxEvasionProtection />
       <TaxVision />
       
-      {/* CNJP Section */}
-      <CNJPSection />
-      
-      {/* Nouvelles sections */}
-      <CNJPUsageSection />
       <RetirementReformSection />
     </div>
   );

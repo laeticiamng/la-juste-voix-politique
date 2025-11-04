@@ -15,19 +15,18 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 
 // Profils prédéfinis
 const PREDEFINED_PROFILES = [
-  { name: 'SMIC', revenu: 21000, patrimoine: 0 },
-  { name: 'Infirmier', revenu: 33000, patrimoine: 0 },
-  { name: 'Professeur', revenu: 36000, patrimoine: 0 },
-  { name: 'Ingénieur', revenu: 45000, patrimoine: 0, isTech: true },
-  { name: 'Cadre', revenu: 70000, patrimoine: 1 },
-  { name: 'Dirigeant PME', revenu: 120000, patrimoine: 5 },
-  { name: 'Entrepreneur tech', revenu: 200000, patrimoine: 10, isTech: true },
-  { name: 'Fortune 100M€', revenu: 500000, patrimoine: 100 },
-  { name: 'Milliardaire', revenu: 2000000, patrimoine: 1000 },
+  { name: 'SMIC', revenu: 21000, isTech: false },
+  { name: 'Infirmier', revenu: 33000, isTech: false },
+  { name: 'Professeur', revenu: 36000, isTech: false },
+  { name: 'Ingénieur', revenu: 45000, isTech: true },
+  { name: 'Cadre', revenu: 70000, isTech: false },
+  { name: 'Cadre sup', revenu: 120000, isTech: false },
+  { name: 'Dirigeant', revenu: 300000, isTech: false },
+  { name: 'Ultra-haut revenu', revenu: 2000000, isTech: false },
+  { name: 'Revenu extrême', revenu: 15000000, isTech: false },
 ];
 
 const TaxSimulator: React.FC = () => {
-  const [patrimoine, setPatrimoine] = useState([500]); // en millions
   const [revenuAnnuel, setRevenuAnnuel] = useState([50000]); // en euros
   const [isProfessionTechnique, setIsProfessionTechnique] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
@@ -44,30 +43,17 @@ const TaxSimulator: React.FC = () => {
     if (revenu > 78570) currentIR += Math.min(revenu - 78570, 168994 - 78570) * 0.41;
     if (revenu > 168994) currentIR += (revenu - 168994) * 0.45;
     
-    // IFI actuel (si patrimoine > 1,3M€)
-    const patrimoineEuros = patrimoine[0] * 1000000;
-    let currentIFI = 0;
-    if (patrimoineEuros > 1300000) {
-      if (patrimoineEuros <= 10000000) {
-        currentIFI = (patrimoineEuros - 1300000) * 0.005;
-      } else {
-        currentIFI = (10000000 - 1300000) * 0.005 + (patrimoineEuros - 10000000) * 0.0125;
-      }
-    }
-    
-    return { ir: currentIR, ifi: currentIFI, total: currentIR + currentIFI };
-  }, [revenuAnnuel, patrimoine]);
+    return { ir: currentIR, total: currentIR };
+  }, [revenuAnnuel]);
 
   // Utilisation des fonctions de calcul centralisées
-  const cnjpAmount = calculateCNJP(patrimoine[0]);
-  const isSubjectToCNJP = patrimoine[0] >= 100;
-  const incomeTaxAmount = calculateIncomeTax(revenuAnnuel[0], isProfessionTechnique, isSubjectToCNJP);
-  const incomeTaxWithoutCredit = calculateIncomeTax(revenuAnnuel[0], false, isSubjectToCNJP);
+  const incomeTaxAmount = calculateIncomeTax(revenuAnnuel[0], isProfessionTechnique, false);
+  const incomeTaxWithoutCredit = calculateIncomeTax(revenuAnnuel[0], false, false);
   const creditAmount = incomeTaxWithoutCredit - incomeTaxAmount;
 
   // Calculs additionnels
   const effectiveTaxRate = revenuAnnuel[0] > 0 ? (incomeTaxAmount / revenuAnnuel[0]) * 100 : 0;
-  const newSystemTotal = incomeTaxAmount + (isSubjectToCNJP ? cnjpAmount * 1000000 : 0);
+  const newSystemTotal = incomeTaxAmount;
   const difference = newSystemTotal - calculateCurrentSystem.total;
   const revenuDisponible = revenuAnnuel[0] - incomeTaxAmount;
   
@@ -76,13 +62,11 @@ const TaxSimulator: React.FC = () => {
     {
       name: 'Système actuel',
       'Impôt sur le revenu': Math.round(calculateCurrentSystem.ir),
-      'IFI/CNJP': Math.round(calculateCurrentSystem.ifi),
       total: Math.round(calculateCurrentSystem.total)
     },
     {
       name: 'La Juste Voix',
       'Impôt sur le revenu': Math.round(incomeTaxAmount),
-      'IFI/CNJP': isSubjectToCNJP ? Math.round(cnjpAmount * 1000000) : 0,
       total: Math.round(newSystemTotal)
     }
   ];
@@ -104,7 +88,6 @@ const TaxSimulator: React.FC = () => {
   // Appliquer un profil prédéfini
   const applyProfile = (profile: typeof PREDEFINED_PROFILES[0]) => {
     setRevenuAnnuel([profile.revenu]);
-    setPatrimoine([profile.patrimoine]);
     setIsProfessionTechnique(profile.isTech || false);
   };
 
@@ -165,26 +148,6 @@ const TaxSimulator: React.FC = () => {
             <div className="space-y-8">
               <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-lg border border-blue-200">
                 <h3 className="text-xl font-bold mb-6 text-ljv-navy">Vos paramètres</h3>
-              <div>
-                <label className="block text-lg font-medium mb-4">
-                  Patrimoine financier net
-                  <Badge variant="outline" className="ml-2 text-xs">
-                    {patrimoine[0]} M€
-                  </Badge>
-                </label>
-                <Slider
-                  value={patrimoine}
-                  onValueChange={setPatrimoine}
-                  max={2000}
-                  min={0}
-                  step={10}
-                  className="mb-2"
-                />
-                <div className="flex justify-between text-sm text-gray-500">
-                  <span>0 M€</span>
-                  <span>2 000 M€</span>
-                </div>
-              </div>
 
                 <div>
                   <label className="block text-lg font-medium mb-4">
@@ -209,7 +172,7 @@ const TaxSimulator: React.FC = () => {
 
                 {/* Profession Bac+5+ grandes écoles */}
                 <div className={`flex items-center justify-between p-4 rounded-lg border ${
-                  isSubjectToCNJP || revenuAnnuel[0] > 1000000 
+                  revenuAnnuel[0] > 1200000
                     ? 'bg-gray-100 border-gray-300 opacity-60' 
                     : 'bg-white border-blue-300'
                 }`}>
@@ -217,7 +180,7 @@ const TaxSimulator: React.FC = () => {
                     <Label 
                       htmlFor="tech-profession" 
                       className={`text-base font-bold ${
-                        isSubjectToCNJP || revenuAnnuel[0] > 1000000 
+                        revenuAnnuel[0] > 1200000
                           ? 'cursor-not-allowed' 
                           : 'cursor-pointer'
                       }`}
@@ -225,18 +188,16 @@ const TaxSimulator: React.FC = () => {
                       Diplômé Bac+5+ grandes écoles
                     </Label>
                     <p className="text-sm text-gray-600 mt-1">
-                      {isSubjectToCNJP 
-                        ? '⚠️ Non cumulable avec la CNJP (patrimoine ≥ 100M€)'
-                        : revenuAnnuel[0] > 1000000
-                          ? '⚠️ Non applicable aux revenus > 1M€/an'
-                          : 'Crédit d\'impôt de 15% (ingénieurs, commerce, management, professions libérales...)'}
+                      {revenuAnnuel[0] > 1200000
+                        ? '⚠️ Crédit dégressif au-delà de 800k€, nul au-delà de 1,2M€'
+                        : 'Crédit d\'impôt de 15% (ingénieurs, commerce, management, professions libérales...)'}
                     </p>
                   </div>
                   <Switch
                     id="tech-profession"
-                    checked={isProfessionTechnique && !isSubjectToCNJP && revenuAnnuel[0] <= 1000000}
+                    checked={isProfessionTechnique && revenuAnnuel[0] <= 1200000}
                     onCheckedChange={setIsProfessionTechnique}
-                    disabled={isSubjectToCNJP || revenuAnnuel[0] > 1000000}
+                    disabled={revenuAnnuel[0] > 1200000}
                   />
                 </div>
               </div>
@@ -266,73 +227,43 @@ const TaxSimulator: React.FC = () => {
                       Soit {Math.round(incomeTaxAmount / 12).toLocaleString('fr-FR')} €/mois
                     </div>
                     
-                    {isProfessionTechnique && !isSubjectToCNJP && revenuAnnuel[0] <= 1000000 && creditAmount > 0 && (
+                    {isProfessionTechnique && revenuAnnuel[0] <= 1200000 && creditAmount > 0 && (
                       <Alert className="mt-3 bg-green-50 border-green-200">
                         <Sparkles className="h-4 w-4 text-green-600" />
                         <AlertDescription className="text-sm text-green-800">
                           <strong>Crédit d'impôt Bac+5+ appliqué!</strong>
                           <br />Économie: {Math.round(creditAmount).toLocaleString('fr-FR')} €/an
                           ({Math.round(creditAmount / 12).toLocaleString('fr-FR')} €/mois)
+                          {revenuAnnuel[0] > 800000 && (
+                            <span className="block mt-1 text-xs">
+                              (Crédit dégressif entre 800k€ et 1,2M€)
+                            </span>
+                          )}
                         </AlertDescription>
                       </Alert>
                     )}
-                    {isProfessionTechnique && isSubjectToCNJP && (
+                    {isProfessionTechnique && revenuAnnuel[0] > 1200000 && (
                       <Alert className="mt-3 bg-orange-50 border-orange-200">
                         <Info className="h-4 w-4 text-orange-600" />
                         <AlertDescription className="text-sm text-orange-800">
                           <strong>Crédit d'impôt non applicable</strong>
-                          <br />Non cumulable avec la CNJP (patrimoine ≥ 100M€)
+                          <br />Le crédit devient nul au-delà de 1,2M€/an (ultra-hauts revenus)
                         </AlertDescription>
                       </Alert>
                     )}
-                    {isProfessionTechnique && revenuAnnuel[0] > 1000000 && (
-                      <Alert className="mt-3 bg-orange-50 border-orange-200">
-                        <Info className="h-4 w-4 text-orange-600" />
-                        <AlertDescription className="text-sm text-orange-800">
-                          <strong>Crédit d'impôt non applicable</strong>
-                          <br />Non applicable aux revenus {'>'} 1M€/an (ultra-hauts revenus)
-                        </AlertDescription>
-                      </Alert>
-                    )}
-                  </div>
-                  
-                  {/* CNJP */}
-                  <div className={`rounded-lg p-4 shadow-sm border ${
-                    isSubjectToCNJP 
-                      ? 'bg-orange-50 border-orange-300' 
-                      : 'bg-gray-50 border-gray-200'
-                  }`}>
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <span className="font-bold text-lg">CNJP</span>
-                        <p className="text-xs text-gray-600">
-                          {isSubjectToCNJP 
-                            ? `Patrimoine ${patrimoine[0]}M€ > 100M€` 
-                            : 'Non concerné (< 100M€)'}
-                        </p>
-                      </div>
-                      <span className={`text-2xl font-bold ${
-                        isSubjectToCNJP ? 'text-orange-600' : 'text-gray-400'
-                      }`}>
-                        {isSubjectToCNJP 
-                          ? `${Math.round(cnjpAmount * 1000000).toLocaleString('fr-FR')} €`
-                          : '0 €'
-                        }
-                      </span>
-                    </div>
                   </div>
 
                   {/* Total contributions */}
                   <Separator />
                   <div className="bg-ljv-navy text-white rounded-lg p-4 shadow-md">
                     <div className="flex justify-between items-center">
-                      <span className="font-bold text-lg">TOTAL CONTRIBUTIONS</span>
+                      <span className="font-bold text-lg">IMPÔT SUR LE REVENU</span>
                       <span className="text-3xl font-bold">
-                        {(Math.round(incomeTaxAmount) + (isSubjectToCNJP ? Math.round(cnjpAmount * 1000000) : 0)).toLocaleString('fr-FR')} €
+                        {Math.round(incomeTaxAmount).toLocaleString('fr-FR')} €
                       </span>
                     </div>
                     <div className="text-sm text-ljv-gold/90 mt-2">
-                      Soit {Math.round((incomeTaxAmount + (isSubjectToCNJP ? cnjpAmount * 1000000 : 0)) / 12).toLocaleString('fr-FR')} €/mois
+                      Soit {Math.round(incomeTaxAmount / 12).toLocaleString('fr-FR')} €/mois
                     </div>
                   </div>
 
@@ -442,19 +373,19 @@ const TaxSimulator: React.FC = () => {
           
           <div className="grid md:grid-cols-3 gap-4 mb-8">
             <div className="bg-gradient-to-br from-ljv-navy to-ljv-gold/20 text-white p-6 rounded-lg text-center">
-              <div className="text-3xl font-bold mb-2">90-130 Md€</div>
-              <div className="text-sm opacity-90">CNJP collectée/an</div>
-              <div className="text-xs opacity-75 mt-1">Sur 1 500 ultra-riches uniquement</div>
+              <div className="text-3xl font-bold mb-2">24-37 Md€</div>
+              <div className="text-sm opacity-90">IR ultra-hauts revenus/an</div>
+              <div className="text-xs opacity-75 mt-1">Revenus {'>'} 1 M€ uniquement</div>
             </div>
             <div className="bg-gradient-to-br from-green-600 to-green-500 text-white p-6 rounded-lg text-center">
-              <div className="text-3xl font-bold mb-2">4M+</div>
+              <div className="text-3xl font-bold mb-2">1,5M+</div>
               <div className="text-sm opacity-90">Travailleurs revalorisés</div>
               <div className="text-xs opacity-75 mt-1">Infirmiers, profs, policiers...</div>
             </div>
             <div className="bg-gradient-to-br from-blue-600 to-purple-500 text-white p-6 rounded-lg text-center">
-              <div className="text-3xl font-bold mb-2">0,1%</div>
-              <div className="text-sm opacity-90">Français concernés CNJP</div>
-              <div className="text-xs opacity-75 mt-1">Patrimoine {'>'} 100M€ uniquement</div>
+              <div className="text-3xl font-bold mb-2">0,01%</div>
+              <div className="text-sm opacity-90">Français ultra-hauts revenus</div>
+              <div className="text-xs opacity-75 mt-1">Revenus {'>'} 1 M€/an</div>
             </div>
           </div>
 
@@ -479,7 +410,6 @@ const TaxSimulator: React.FC = () => {
                         <Tooltip formatter={(value: number) => `${value.toLocaleString('fr-FR')} €`} />
                         <Legend />
                         <Bar dataKey="Impôt sur le revenu" fill="#3b82f6" />
-                        <Bar dataKey="IFI/CNJP" fill="#f59e0b" />
                       </BarChart>
                     </ResponsiveContainer>
                   </div>
@@ -495,10 +425,6 @@ const TaxSimulator: React.FC = () => {
                           <div className="flex justify-between">
                             <span className="text-gray-600">Impôt sur le revenu</span>
                             <span className="font-bold">{Math.round(calculateCurrentSystem.ir).toLocaleString('fr-FR')} €</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span className="text-gray-600">IFI</span>
-                            <span className="font-bold">{Math.round(calculateCurrentSystem.ifi).toLocaleString('fr-FR')} €</span>
                           </div>
                           <Separator />
                           <div className="flex justify-between text-lg">
@@ -519,24 +445,18 @@ const TaxSimulator: React.FC = () => {
                             <span className="text-gray-600">Impôt sur le revenu</span>
                             <span className="font-bold">{Math.round(incomeTaxAmount).toLocaleString('fr-FR')} €</span>
                           </div>
-                  {isProfessionTechnique && !isSubjectToCNJP && revenuAnnuel[0] <= 1000000 && creditAmount > 0 && (
+                  {isProfessionTechnique && creditAmount > 0 && (
                     <div className="flex justify-between text-green-600 text-sm">
                       <span>dont crédit Bac+5+</span>
                       <span className="font-bold">-{Math.round(creditAmount).toLocaleString('fr-FR')} €</span>
                     </div>
                   )}
-                  {isProfessionTechnique && (isSubjectToCNJP || revenuAnnuel[0] > 1000000) && (
+                  {isProfessionTechnique && revenuAnnuel[0] > 1200000 && (
                     <div className="flex justify-between text-orange-600 text-sm">
                       <span>crédit Bac+5+ non applicable</span>
-                      <span className="font-bold text-xs">
-                        {isSubjectToCNJP ? '(CNJP)' : '(> 1M€)'}
-                      </span>
+                      <span className="font-bold text-xs">({'>'} 1,2M€)</span>
                     </div>
                   )}
-                          <div className="flex justify-between">
-                            <span className="text-gray-600">CNJP</span>
-                            <span className="font-bold">{isSubjectToCNJP ? Math.round(cnjpAmount * 1000000).toLocaleString('fr-FR') : '0'} €</span>
-                          </div>
                           <Separator />
                           <div className="flex justify-between text-lg">
                             <span className="font-bold">Total</span>
@@ -567,14 +487,16 @@ const TaxSimulator: React.FC = () => {
                   </Alert>
 
                   {/* Impact social */}
-                  {isSubjectToCNJP && (
+                  {revenuAnnuel[0] > 1000000 && (
                     <div className="mt-6 bg-green-50 p-4 rounded-lg border border-green-300">
-                      <h4 className="font-bold text-green-800 mb-2">💚 Votre contribution finance concrètement :</h4>
+                      <h4 className="font-bold text-green-800 mb-2">💚 Votre contribution IR finance concrètement :</h4>
+                      <p className="text-sm text-green-700 mb-2">
+                        En tant qu'ultra-haut revenu, votre contribution via l'IR renforcé permet de financer les priorités du programme La Juste Voix.
+                      </p>
                       <ul className="text-sm text-green-700 space-y-1">
-                        <li>• {Math.round(cnjpAmount * 1000000 * 0.25).toLocaleString('fr-FR')} € pour les revalorisations (infirmiers, profs...)</li>
-                        <li>• {Math.round(cnjpAmount * 1000000 * 0.20).toLocaleString('fr-FR')} € pour les retraites à 60 ans</li>
-                        <li>• {Math.round(cnjpAmount * 1000000 * 0.15).toLocaleString('fr-FR')} € pour rembourser la dette</li>
-                        <li>• {Math.round(cnjpAmount * 1000000 * 0.11).toLocaleString('fr-FR')} € pour le logement social</li>
+                        <li>• Revalorisations des métiers essentiels (infirmiers, profs, policiers...)</li>
+                        <li>• Soutien aux retraites et aux services publics</li>
+                        <li>• Investissements dans le logement social et l'écologie</li>
                       </ul>
                     </div>
                   )}
