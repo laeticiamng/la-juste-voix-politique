@@ -30,6 +30,7 @@ export const calculateCNJP = (
  * 
  * @param revenuAnnuel Revenu annuel en euros
  * @param isHigherEducation Si le contribuable est diplômé Bac+5+ grandes écoles (crédit 15%)
+ * @param isDoctorate Si le contribuable est titulaire d'un doctorat Bac+10 médecine/pharmacie (crédit 20%)
  * @param isSubjectToCNJP Paramètre conservé pour compatibilité mais non utilisé (CNJP supprimée)
  * @returns Montant IR en euros
  * 
@@ -44,11 +45,14 @@ export const calculateCNJP = (
  * - 5-10M€: 60% ⬆️ NOUVEAU
  * - >10M€: 65% ⬆️ NOUVEAU
  * 
- * Le crédit 15% Bac+5+ est maintenu pour encourager les compétences rares.
+ * Crédits d'impôt :
+ * - 15% Bac+5+ grandes écoles (cadres qualifiés)
+ * - 20% Bac+10 doctorats médecine/pharmacie appliqués (non cumulable avec 15%)
  */
 export const calculateIncomeTax = (
   revenuAnnuel: number,
   isHigherEducation: boolean = false,
+  isDoctorate: boolean = false,
   isSubjectToCNJP: boolean = false // Paramètre conservé mais ignoré
 ): number => {
   let impot = 0;
@@ -77,11 +81,21 @@ export const calculateIncomeTax = (
     impot = 15000 * 0.05 + 51000 * 0.14 + 90000 * 0.30 + 232000 * 0.41 + 600000 * 0.50 + 4000000 * 0.55 + 5000000 * 0.60 + (revenuAnnuel - 10000000) * 0.65;
   }
 
-  // Crédit d'impôt de 15% pour diplômés Bac+5+ grandes écoles MAINTENU
-  // Exclusion uniquement ultra-hauts revenus >1,2M€
+  // Crédits d'impôt : 15% Bac+5+ OU 20% Bac+10 doctorats (non cumulables)
   let creditRate = 0;
   
-  if (isHigherEducation) {
+  // Crédit 20% pour doctorats Bac+10 médecine/pharmacie (prioritaire si applicable)
+  if (isDoctorate) {
+    if (revenuAnnuel <= 1000000) {
+      creditRate = 0.20;
+    } else if (revenuAnnuel <= 1500000) {
+      // Dégressivité progressive entre 1M€ et 1,5M€
+      const degressivityFactor = (1500000 - revenuAnnuel) / 500000;
+      creditRate = 0.20 * degressivityFactor;
+    }
+  }
+  // Sinon, crédit 15% pour diplômés Bac+5+ grandes écoles
+  else if (isHigherEducation) {
     if (revenuAnnuel <= 800000) {
       creditRate = 0.15;
     } else if (revenuAnnuel <= 1200000) {
@@ -107,14 +121,16 @@ export const calculateIncomeTax = (
  * @param revenuAnnuel Revenu annuel en euros
  * @param patrimoineM Patrimoine en M€ (conservé pour compatibilité mais non utilisé)
  * @param isHigherEducation Si diplômé Bac+5+
+ * @param isDoctorate Si titulaire doctorat Bac+10 médecine/pharmacie
  * @returns { ir: number, cnjp: number (toujours 0), total: number, plafonne: boolean (toujours false) }
  */
 export const calculateTotalContribution = (
   revenuAnnuel: number,
   patrimoineM: number = 0,
-  isHigherEducation: boolean = false
+  isHigherEducation: boolean = false,
+  isDoctorate: boolean = false
 ): { ir: number; cnjp: number; total: number; plafonne: boolean; paiementDiffere: boolean } => {
-  const ir = calculateIncomeTax(revenuAnnuel, isHigherEducation, false);
+  const ir = calculateIncomeTax(revenuAnnuel, isHigherEducation, isDoctorate, false);
   const cnjp = 0; // CNJP supprimée du programme
   
   return {
@@ -197,8 +213,38 @@ export const HIGHER_EDUCATION_PROFESSIONS = [
   'expert-comptable',
   'avocat',
   'notaire',
-  'pharmacien',
-  'vétérinaire'
+];
+
+/**
+ * Professions éligibles au crédit d'impôt de 20% pour doctorats Bac+10
+ * Médecine, pharmacie et disciplines connexes appliquées
+ */
+export const DOCTORATE_MEDICAL_PROFESSIONS = [
+  // Médecine
+  'médecin spécialiste',
+  'chirurgien',
+  'cardiologue',
+  'oncologue',
+  'neurologue',
+  'radiologue',
+  'anesthésiste',
+  'pédiatre',
+  'gynécologue',
+  'psychiatre',
+  'médecin chercheur',
+  'chef de service',
+  'professeur médecine',
+  // Pharmacie
+  'pharmacien hospitalier',
+  'pharmacien chercheur',
+  'docteur en pharmacie',
+  // Biologie et recherche médicale
+  'docteur en biologie médicale',
+  'chercheur clinique',
+  'biologiste médical',
+  // Vétérinaire
+  'vétérinaire chercheur',
+  'docteur vétérinaire'
 ];
 
 /**
@@ -209,6 +255,16 @@ export const HIGHER_EDUCATION_PROFESSIONS = [
 export const isHigherEducationProfession = (metier: string): boolean => {
   const metierLower = metier.toLowerCase();
   return HIGHER_EDUCATION_PROFESSIONS.some(prof => metierLower.includes(prof));
+};
+
+/**
+ * Vérifie si une profession est éligible au crédit d'impôt 20% (Bac+10 doctorats)
+ * @param metier Nom du métier
+ * @returns true si éligible au crédit d'impôt doctorat
+ */
+export const isDoctorateMedialProfession = (metier: string): boolean => {
+  const metierLower = metier.toLowerCase();
+  return DOCTORATE_MEDICAL_PROFESSIONS.some(prof => metierLower.includes(prof));
 };
 
 /**
@@ -230,4 +286,23 @@ export const estimateHigherEducationTaxCreditCost = (): number => {
   const totalCostBillions = totalCostMillions / 1000;
   
   return Math.round(totalCostBillions * 100) / 100; // ~1.62 Md€
+};
+
+/**
+ * Calcule le coût annuel total du crédit d'impôt pour doctorats Bac+10 médecine/pharmacie
+ * 
+ * Estimation basée sur ~50k médecins spécialistes et pharmaciens hospitaliers en France
+ * Exclusion ultra-hauts revenus >1,5M€
+ * @returns Coût estimé en millions d'euros
+ */
+export const estimateDoctorateMedialTaxCreditCost = (): number => {
+  const numberOfDoctors = 50000; // ~50k médecins spé + pharmaciens hospitaliers
+  const exclusionRate = 0.04; // 4% exclus (revenus >1,5M€)
+  const eligibleDoctors = numberOfDoctors * (1 - exclusionRate);
+  const averageIncomeTax = 7900; // IR moyen annuel (revenus plus élevés que Bac+5+)
+  const creditRate = 0.20;
+  const averageCredit = averageIncomeTax * creditRate;
+  const totalCostMillions = (eligibleDoctors * averageCredit) / 1000000;
+  
+  return Math.round(totalCostMillions); // ~76 M€
 };

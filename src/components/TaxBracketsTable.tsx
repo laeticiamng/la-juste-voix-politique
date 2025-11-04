@@ -11,6 +11,7 @@ import TaxVision from './tax/TaxVision';
 import RetirementReformSection from './tax/RetirementReformSection';
 import TaxSimulator from './TaxSimulator';
 import HigherEducationTaxCredit from './tax/HigherEducationTaxCredit';
+import DoctorateMedicalTaxCredit from './tax/DoctorateMedicalTaxCredit';
 
 const TaxBracketsTable: React.FC = () => {
   return (
@@ -29,6 +30,9 @@ const TaxBracketsTable: React.FC = () => {
       
       {/* Crédit d'impôt diplômés Bac+5+ */}
       <HigherEducationTaxCredit />
+      
+      {/* Crédit d'impôt doctorats Bac+10 médecine/pharmacie */}
+      <DoctorateMedicalTaxCredit />
       
       <TaxFeaturesGrid />
       <TaxEvasionProtection />
