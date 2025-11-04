@@ -41,8 +41,10 @@ export const calculateCNJP = (patrimoineM: number): number => {
  * @param isSubjectToCNJP Si le contribuable paie la CNJP (patrimoine >= 100M€)
  * @returns Montant IR en euros
  * 
- * NOTE IMPORTANTE: Le crédit d'impôt 15% Bac+5+ n'est PAS cumulable avec la CNJP.
- * Les ultra-riches (patrimoine >= 100M€) ne peuvent pas bénéficier du crédit.
+ * RÈGLES DE NON-CUMUL DU CRÉDIT 15% :
+ * 1. Non cumulable avec la CNJP (patrimoine >= 100M€)
+ * 2. Non applicable aux très hauts revenus (> 1 000 000 €/an)
+ * Le crédit vise les cadres qualifiés, pas les ultra-fortunés.
  */
 export const calculateIncomeTax = (
   revenuAnnuel: number,
@@ -67,8 +69,14 @@ export const calculateIncomeTax = (
   }
 
   // Crédit d'impôt de 15% pour diplômés Bac+5+ grandes écoles
-  // IMPORTANT: Non cumulable avec la CNJP (ultra-riches exclus)
-  if (isHigherEducation && impot > 0 && !isSubjectToCNJP) {
+  // RÈGLES D'EXCLUSION :
+  // - Ultra-riches patrimoniaux : CNJP (>= 100M€)
+  // - Ultra-hauts revenus : > 1 000 000 €/an
+  const isEligibleForCredit = isHigherEducation && 
+                              !isSubjectToCNJP && 
+                              revenuAnnuel <= 1000000;
+  
+  if (isEligibleForCredit && impot > 0) {
     impot = impot * 0.85; // Réduction de 15%
   }
 

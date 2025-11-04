@@ -91,13 +91,21 @@ const HigherEducationTaxCredit: React.FC = () => {
               </ul>
             </div>
             <div className="bg-orange-50 rounded-lg p-3 text-sm border border-orange-300">
-              <p className="font-bold text-orange-800 mb-1">⚠️ Règle de non-cumul importante:</p>
-              <p className="text-orange-700">
-                Ce crédit d'impôt <strong>n'est PAS cumulable avec la CNJP</strong>. 
-                Les contribuables assujettis à la CNJP (patrimoine ≥ 100M€) ne peuvent 
-                pas bénéficier du crédit d'impôt de 15%, conformément au principe 
-                de progressivité et de justice fiscale.
-              </p>
+              <p className="font-bold text-orange-800 mb-2">⚠️ Règles de non-cumul importantes:</p>
+              <ul className="text-orange-700 space-y-1">
+                <li>
+                  <strong>1. Non cumulable avec la CNJP:</strong> Les contribuables assujettis 
+                  à la CNJP (patrimoine ≥ 100M€) ne peuvent pas bénéficier du crédit.
+                </li>
+                <li>
+                  <strong>2. Exclusion des ultra-hauts revenus:</strong> Le crédit ne s'applique 
+                  pas aux revenus supérieurs à 1 000 000 €/an.
+                </li>
+                <li className="text-xs italic mt-2">
+                  Ces exclusions garantissent que le crédit bénéficie aux cadres qualifiés, 
+                  pas aux ultra-fortunés, conformément au principe de justice fiscale.
+                </li>
+              </ul>
             </div>
           </div>
 
