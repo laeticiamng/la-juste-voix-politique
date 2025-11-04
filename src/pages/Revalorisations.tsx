@@ -108,16 +108,45 @@ const Revalorisations = () => {
 
           <div className="bg-ljv-gold/10 border-2 border-ljv-gold rounded-xl p-8 max-w-3xl mx-auto mb-8">
             <h3 className="text-2xl font-serif font-bold mb-4 text-gray-900 dark:text-gray-100 text-center">
-              💰 Quel sera l'impact réel sur votre pouvoir d'achat ?
+              🏛️ Maires : Reconnaissance du rôle essentiel
+            </h3>
+            <p className="mb-4 text-lg text-gray-900 dark:text-gray-100 font-semibold text-center">
+              Les maires des communes rurales et moyennes verront leur indemnité augmentée de <strong>+750€ nets par mois</strong>, 
+              en reconnaissance de leur engagement quotidien au service de leurs concitoyens.
+            </p>
+            <div className="bg-white rounded-lg p-6 mb-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                <div>
+                  <div className="text-3xl font-bold text-ljv-navy mb-2">+750€</div>
+                  <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">Par mois nets</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-ljv-navy mb-2">30 000</div>
+                  <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">Maires concernés</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-ljv-navy mb-2">+40%</div>
+                  <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">Hausse moyenne</div>
+                </div>
+              </div>
+            </div>
+            <p className="text-base text-gray-900 dark:text-gray-100 font-medium text-center italic">
+              "Ceux qui font vivre la République au plus près des citoyens méritent une vraie reconnaissance."
+            </p>
+          </div>
+
+          <div className="bg-ljv-gold/10 border-2 border-ljv-gold rounded-xl p-8 max-w-3xl mx-auto mb-8">
+            <h3 className="text-2xl font-serif font-bold mb-4 text-gray-900 dark:text-gray-100 text-center">
+              💰 Quel sera l&apos;impact réel sur votre pouvoir d&apos;achat ?
             </h3>
             <p className="mb-6 text-lg text-gray-900 dark:text-gray-100 font-semibold text-center">
-              Découvrez métier par métier votre salaire net disponible après impôts avec 21 profils détaillés avant/après réforme.
+              Découvrez métier par métier votre salaire net disponible après impôts avec 65+ profils détaillés avant/après réforme.
             </p>
             <div className="text-center">
               <Button size="lg" className="bg-ljv-navy hover:bg-ljv-gold text-lg py-6" asChild>
                 <Link to="/comparaison-systeme?tab=profiles">
                   <Coins className="mr-2 h-5 w-5" />
-                  Voir l'impact détaillé sur mon métier
+                  Voir l&apos;impact détaillé sur mon métier
                 </Link>
               </Button>
             </div>
