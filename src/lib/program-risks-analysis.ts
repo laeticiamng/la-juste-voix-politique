@@ -23,13 +23,13 @@ export const programRisks: Risk[] = [
     impact: 'critique',
     currentStatus: 'PARTIELLEMENT PROTÉGÉ (exit tax basique existante)',
     securisations: [
-      "**Exit tax renforcée sur 15 ans** : taxation différée de 60% sur la plus-value latente au moment du départ",
+      "**Exit tax renforcée sur 10 ans** : taxation différée de 60% sur la plus-value latente au moment du départ (conformité UE)",
       "**Imposition territoriale** : tout patrimoine détenu en France (immobilier, entreprises, actifs financiers) reste taxable même après départ",
       "**Clause de retour fiscal** : Si la personne revient en France dans les 10 ans, elle paie rétroactivement la CNJP avec intérêts",
       "**Gel des actifs** : possibilité de bloquer les transferts massifs de capitaux (> 10M€) pendant 6 mois pour vérification fiscale",
       "**Coopération internationale obligatoire** : Accords bilatéraux avec Suisse, Luxembourg, Monaco, Belgique, UK pour partage automatique d'informations",
       "**Sanctions commerciales** : Interdiction d'accès aux marchés publics français et pénalités douanières pour les entreprises des exilés fiscaux",
-      "**Publicité des départs** : Liste publique des exilés fiscaux (transparence)",
+      "**Publicité des gros départs** : Liste publique (anonymisée partiellement) des exilés fiscaux >50M€ patrimoine",
       "**Évaluation indépendante annuelle** : Observatoire des flux de capitaux avec audit citoyen"
     ],
     coûtSecurisation: "500M€/an (moyens de contrôle, coopération internationale, contentieux)"
@@ -96,11 +96,13 @@ export const programRisks: Risk[] = [
     impact: 'critique',
     currentStatus: 'PARTIELLEMENT TRAITÉ (clause transparence)',
     securisations: [
-      "**Consolidation automatique** : Tout patrimoine détenu par le foyer fiscal + ascendants/descendants directs est consolidé",
-      "**Clause anti-abus familiale** : Les donations < 5 ans avant l'entrée en vigueur sont réintégrées dans l'assiette",
+      "**Clause anti-abus familiale PROPORTIONNÉE** : Donations < 5 ans avant l'entrée en vigueur réintégrées UNIQUEMENT si intention d'évitement prouvée par l'Administration",
+      "**Exemptions donations normales** : Mariages, naissances, transmissions familiales légitimes exclues",
+      "**Charge de la preuve sur l'Administration** : Le contribuable doit pouvoir prouver la légitimité de la donation",
       "**Tracabilité internationale des trusts** : Obligation de déclaration sous peine de présomption de détention (inversion de la charge de la preuve)",
       "**Taxation des 'bénéficiaires économiques réels'** : Même si le patrimoine est au nom d'une fondation/trust, si vous en profitez, vous payez",
-      "**Intelligence artificielle de détection** : Système automatisé de détection des schémas d'évitement (croisement de données)",
+      "**Intelligence artificielle de détection avec validation humaine** : Système automatisé de détection des schémas d'évitement, TOUJOURS validé par un inspecteur humain",
+      "**Transparence de l'algorithme IA** : Critères de détection publiés (anonymisés), droit de contestation et explication détaillée",
       "**Cellule Tracfin dédiée** : 200 agents spécialisés dans le traçage des patrimoines complexes"
     ],
     coûtSecurisation: "400M€/an (personnel, IA, coopération internationale)"
@@ -131,7 +133,7 @@ export const programRisks: Risk[] = [
     impact: 'modéré',
     currentStatus: 'PARTIELLEMENT ANTICIPÉ',
     securisations: [
-      "**Clause d'exemption médicale/sociale** : Dispense automatique pour handicap, maladie, charge d'enfant < 3 ans, formation longue",
+      "**Clause d'exemption médicale/sociale RENFORCÉE** : Dispense automatique pour handicap, maladie, charge d'enfant < 3 ans, formation longue, situations exceptionnelles",
       "**Accompagnement renforcé AVANT exigence** : 6 mois d'accompagnement intensif avant toute sanction",
       "**Référents humains** : 1 référent pour 300 bénéficiaires (au lieu de 1 pour 1000 actuellement)",
       "**Revenu minimum garanti** : Même en cas de sanction, plancher à 70% du RSA (pour éviter la misère absolue)",
@@ -191,6 +193,23 @@ export const programRisks: Risk[] = [
       "**Benchmarking international** : Missions d'étude en Norvège, Suisse, Allemagne pour copier les bonnes pratiques"
     ],
     coûtSecurisation: "800M€/an (agence, recrutement, formation, digital)"
+  },
+  {
+    id: 'R11',
+    category: 'juridique',
+    title: "Cumul IR + CNJP excessif pour ultra-riches",
+    description: "Un ultra-riche avec 500M€ patrimoine + 2M€ revenu paierait >85% d'impôts (spoliation).",
+    probabilité: 'élevée',
+    impact: 'critique',
+    currentStatus: 'RISQUE CRITIQUE - Nécessite plafonnement',
+    securisations: [
+      "**Plafonnement global à 75% du revenu** : Le total IR + CNJP ne peut pas dépasser 75% du revenu annuel (OBLIGATOIRE)",
+      "**Réduction proportionnelle si dépassement** : Si IR+CNJP > 75% revenu, réduction proportionnelle de chaque impôt",
+      "**Clause de lissage** : Étalement sur 3 ans si pic exceptionnel de revenus",
+      "**Déduction partielle CNJP de l'IR** : Possibilité de déduire 30% de la CNJP payée de l'assiette IR",
+      "**Communication claire** : Les ultra-riches savent qu'ils ne seront jamais taxés à plus de 75% du revenu"
+    ],
+    coûtSecurisation: "5-8 Md€/an (réduction recettes CNJP+IR pour les cas extrêmes)"
   }
 ];
 

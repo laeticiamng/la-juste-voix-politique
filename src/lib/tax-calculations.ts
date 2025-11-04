@@ -44,6 +44,7 @@ export const calculateCNJP = (patrimoineM: number): number => {
  * RÈGLES DE NON-CUMUL DU CRÉDIT 15% :
  * 1. Non cumulable avec la CNJP (patrimoine >= 100M€)
  * 2. Non applicable aux très hauts revenus (> 1 000 000 €/an)
+ * 3. Dégressivité progressive entre 800k€ et 1,2M€ (éviter seuil brutal)
  * Le crédit vise les cadres qualifiés, pas les ultra-fortunés.
  */
 export const calculateIncomeTax = (
@@ -71,16 +72,63 @@ export const calculateIncomeTax = (
   // Crédit d'impôt de 15% pour diplômés Bac+5+ grandes écoles
   // RÈGLES D'EXCLUSION :
   // - Ultra-riches patrimoniaux : CNJP (>= 100M€)
-  // - Ultra-hauts revenus : > 1 000 000 €/an
-  const isEligibleForCredit = isHigherEducation && 
-                              !isSubjectToCNJP && 
-                              revenuAnnuel <= 1000000;
+  // - Ultra-hauts revenus : > 1M€ avec dégressivité
+  let creditRate = 0;
   
-  if (isEligibleForCredit && impot > 0) {
-    impot = impot * 0.85; // Réduction de 15%
+  if (isHigherEducation && !isSubjectToCNJP) {
+    if (revenuAnnuel <= 800000) {
+      // Crédit plein 15%
+      creditRate = 0.15;
+    } else if (revenuAnnuel <= 1200000) {
+      // Dégressivité progressive entre 800k€ et 1,2M€
+      const degressivityFactor = (1200000 - revenuAnnuel) / 400000;
+      creditRate = 0.15 * degressivityFactor;
+    }
+    // Au-delà de 1,2M€: pas de crédit
+  }
+  
+  if (creditRate > 0 && impot > 0) {
+    impot = impot * (1 - creditRate);
   }
 
   return Math.max(0, impot);
+};
+
+/**
+ * Calcule la contribution totale avec plafonnement global à 75%
+ * @param revenuAnnuel Revenu annuel en euros
+ * @param patrimoineM Patrimoine en millions d'euros
+ * @param isHigherEducation Si diplômé Bac+5+
+ * @returns { ir: number, cnjp: number, total: number, plafonne: boolean }
+ */
+export const calculateTotalContribution = (
+  revenuAnnuel: number,
+  patrimoineM: number,
+  isHigherEducation: boolean = false
+): { ir: number; cnjp: number; total: number; plafonne: boolean } => {
+  const isSubjectToCNJP = patrimoineM >= 100;
+  const ir = calculateIncomeTax(revenuAnnuel, isHigherEducation, isSubjectToCNJP);
+  const cnjp = isSubjectToCNJP ? calculateCNJP(patrimoineM) * 1000000 : 0;
+  
+  const totalBeforeCap = ir + cnjp;
+  const cap75 = revenuAnnuel * 0.75; // Plafond à 75% du revenu
+  
+  if (totalBeforeCap > cap75 && revenuAnnuel > 0) {
+    // Plafonnement appliqué
+    return {
+      ir: ir * (cap75 / totalBeforeCap), // Réduction proportionnelle
+      cnjp: cnjp * (cap75 / totalBeforeCap),
+      total: cap75,
+      plafonne: true
+    };
+  }
+  
+  return {
+    ir,
+    cnjp,
+    total: totalBeforeCap,
+    plafonne: false
+  };
 };
 
 /**
