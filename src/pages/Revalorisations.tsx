@@ -87,6 +87,40 @@ const Revalorisations = () => {
             </div>
           </div>
 
+          <div className="bg-ljv-gold/10 border-2 border-ljv-gold rounded-xl p-8 max-w-3xl mx-auto mb-8">
+            <h3 className="text-2xl font-serif font-bold mb-4 text-gray-900 dark:text-gray-100 text-center">
+              🏛️ Maires : Reconnaissance du rôle essentiel
+            </h3>
+            <p className="mb-4 text-lg text-gray-900 dark:text-gray-100 font-semibold text-center">
+              Les maires des communes rurales et moyennes verront leur indemnité augmentée de <strong>+750€ nets par mois</strong>, 
+              en reconnaissance de leur engagement quotidien au service de leurs concitoyens.
+            </p>
+            <div className="bg-white rounded-lg p-6 mb-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                <div>
+                  <div className="text-3xl font-bold text-ljv-navy mb-2">+750€</div>
+                  <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">Par mois nets</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-ljv-navy mb-2">30 000</div>
+                  <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">Maires concernés</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-ljv-navy mb-2">+40%</div>
+                  <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">Hausse moyenne</div>
+                </div>
+              </div>
+            </div>
+            <p className="text-base text-gray-900 dark:text-gray-100 font-medium text-center italic mb-3">
+              "Ceux qui font vivre la République au plus près des citoyens méritent une vraie reconnaissance."
+            </p>
+            <div className="bg-ljv-navy/10 rounded-lg p-3 text-center">
+              <p className="text-sm font-bold text-gray-900 dark:text-gray-100">
+                💰 Financé par la CNJP (inclus dans les 25% dédiés aux revalorisations)
+              </p>
+            </div>
+          </div>
+
           <div className="bg-gradient-to-br from-ljv-gold/20 to-ljv-navy/5 rounded-xl p-8 max-w-4xl mx-auto mb-12 shadow-md">
             <h2 className="text-3xl font-serif font-bold mb-6 text-center flex items-center justify-center gap-2">
               <Coins className="inline-block text-ljv-gold" /> TOTAL REVALORISATIONS
@@ -138,10 +172,10 @@ const Revalorisations = () => {
             </div>
 
             <div className="bg-ljv-gold/20 rounded-lg p-6 text-center">
-              <h4 className="font-bold text-xl mb-3">65+ profils détaillés disponibles</h4>
+              <h4 className="font-bold text-xl mb-3">95+ profils détaillés disponibles</h4>
               <p className="text-base mb-4">
                 Ingénieurs (6 niveaux) • Directeurs (8 postes) • Entrepreneurs (7 tailles) • 
-                Députés & Sénateurs • Professions libérales • Traders • Et bien plus...
+                Députés & Sénateurs • Maires • Professions libérales • Traders • Et bien plus...
               </p>
               <div className="flex flex-wrap gap-2 justify-center text-sm">
                 <span className="bg-white/20 px-3 py-1 rounded-full">Du RSA (607€)</span>
@@ -151,41 +185,13 @@ const Revalorisations = () => {
             </div>
           </div>
 
-          <div className="bg-ljv-gold/10 border-2 border-ljv-gold rounded-xl p-8 max-w-3xl mx-auto mb-8">
-            <h3 className="text-2xl font-serif font-bold mb-4 text-gray-900 dark:text-gray-100 text-center">
-              🏛️ Maires : Reconnaissance du rôle essentiel
-            </h3>
-            <p className="mb-4 text-lg text-gray-900 dark:text-gray-100 font-semibold text-center">
-              Les maires des communes rurales et moyennes verront leur indemnité augmentée de <strong>+750€ nets par mois</strong>, 
-              en reconnaissance de leur engagement quotidien au service de leurs concitoyens.
-            </p>
-            <div className="bg-white rounded-lg p-6 mb-6">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                <div>
-                  <div className="text-3xl font-bold text-ljv-navy mb-2">+750€</div>
-                  <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">Par mois nets</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-ljv-navy mb-2">30 000</div>
-                  <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">Maires concernés</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-ljv-navy mb-2">+40%</div>
-                  <div className="text-sm text-gray-900 dark:text-gray-100 font-semibold">Hausse moyenne</div>
-                </div>
-              </div>
-            </div>
-            <p className="text-base text-gray-900 dark:text-gray-100 font-medium text-center italic">
-              "Ceux qui font vivre la République au plus près des citoyens méritent une vraie reconnaissance."
-            </p>
-          </div>
 
           <div className="bg-ljv-gold/10 border-2 border-ljv-gold rounded-xl p-8 max-w-3xl mx-auto mb-8">
             <h3 className="text-2xl font-serif font-bold mb-4 text-gray-900 dark:text-gray-100 text-center">
               💰 Quel sera l&apos;impact réel sur votre pouvoir d&apos;achat ?
             </h3>
             <p className="mb-6 text-lg text-gray-900 dark:text-gray-100 font-semibold text-center">
-              Découvrez métier par métier votre salaire net disponible après impôts avec 65+ profils détaillés avant/après réforme.
+              Découvrez métier par métier votre salaire net disponible après impôts avec 95+ profils détaillés avant/après réforme.
             </p>
             <div className="text-center">
               <Button size="lg" className="bg-ljv-navy hover:bg-ljv-gold text-lg py-6" asChild>

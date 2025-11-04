@@ -216,10 +216,10 @@ const ComparativeAnalysis = () => {
             <TabsContent value="profiles">
               <Alert className="border-ljv-navy bg-ljv-navy/5 mb-8">
                 <Users className="h-5 w-5 text-ljv-navy" />
-                <AlertTitle className="text-lg font-bold">20 Profils métiers détaillés</AlertTitle>
+                <AlertTitle className="text-lg font-bold">95+ Profils métiers détaillés</AlertTitle>
                 <AlertDescription className="text-base">
-                  Comparaison concrète du pouvoir d'achat avant et après réforme pour 20 métiers représentatifs 
-                  dans les secteurs de la santé, l'éducation, la sécurité, le social et l'agriculture.
+                  Comparaison concrète du pouvoir d&apos;achat avant et après réforme pour 95+ profils représentatifs : 
+                  santé, éducation, ingénieurs (6 niveaux), directeurs (8 postes), entrepreneurs (7 tailles), élus nationaux, et bien plus.
                 </AlertDescription>
               </Alert>
 
