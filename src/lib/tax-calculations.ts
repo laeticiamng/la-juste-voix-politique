@@ -5,12 +5,30 @@ import { taxBrackets } from './tax-brackets';
 
 /**
  * Calcule la CNJP selon le barème progressif officiel
- * @param patrimoineM Patrimoine en millions d'euros
+ * AVEC CORRECTIFS JURIDIQUES:
+ * - Exonération partielle patrimoine professionnel (participations >10% entreprises opérationnelles)
+ * - Plafonnement à 50% du rendement annuel (éviter confiscation mathématique)
+ * 
+ * @param patrimoineM Patrimoine total en millions d'euros
+ * @param patrimoineProfessionnelM Patrimoine professionnel (parts >10% PME/ETI opérationnelles) en M€
+ * @param rendementAnnuelPct Rendement annuel du patrimoine en % (défaut 3%)
  * @returns Montant CNJP en millions d'euros
  */
-export const calculateCNJP = (patrimoineM: number): number => {
+export const calculateCNJP = (
+  patrimoineM: number,
+  patrimoineProfessionnelM: number = 0,
+  rendementAnnuelPct: number = 3
+): number => {
   if (patrimoineM < 100) return 0;
 
+  // CORRECTION FAILLE 13: Exonération patrimoine professionnel
+  // Participations >10% dans entreprises opérationnelles (CA >1M€, >5 salariés)
+  // Exonération à 75% plafonnée à 300M€
+  const exonerationProMax = 300; // 300M€ max
+  const patrimoineProfessionnelExonere = Math.min(patrimoineProfessionnelM, exonerationProMax) * 0.75;
+  const patrimoineImposable = Math.max(100, patrimoineM - patrimoineProfessionnelExonere);
+
+  // Calcul CNJP selon barème progressif
   let cnjp = 0;
   let previousMax = 100;
 
@@ -18,17 +36,26 @@ export const calculateCNJP = (patrimoineM: number): number => {
     const bracketMin = bracket.min;
     const bracketMax = bracket.max || Infinity;
 
-    if (patrimoineM > bracketMin) {
-      const taxableInBracket = Math.min(patrimoineM, bracketMax) - Math.max(previousMax, bracketMin);
+    if (patrimoineImposable > bracketMin) {
+      const taxableInBracket = Math.min(patrimoineImposable, bracketMax) - Math.max(previousMax, bracketMin);
       if (taxableInBracket > 0) {
         cnjp += taxableInBracket * (bracket.rate / 100);
       }
       previousMax = bracketMax;
     }
 
-    if (bracket.max === null || patrimoineM <= bracket.max) {
+    if (bracket.max === null || patrimoineImposable <= bracket.max) {
       break;
     }
+  }
+
+  // CORRECTION FAILLE 20: Plafonnement à 50% du rendement annuel
+  // Évite confiscation mathématique (patrimoine qui disparaît en <10 ans)
+  const rendementAnnuel = patrimoineM * (rendementAnnuelPct / 100);
+  const plafondRendement = rendementAnnuel * 0.5; // Max 50% du rendement
+  
+  if (cnjp > plafondRendement) {
+    cnjp = plafondRendement;
   }
 
   return cnjp;
@@ -96,30 +123,43 @@ export const calculateIncomeTax = (
 
 /**
  * Calcule la contribution totale avec plafonnement global à 75%
+ * AVEC CORRECTION FAILLE 16: Option paiement différé pour retraités fortunés
+ * 
  * @param revenuAnnuel Revenu annuel en euros
  * @param patrimoineM Patrimoine en millions d'euros
  * @param isHigherEducation Si diplômé Bac+5+
- * @returns { ir: number, cnjp: number, total: number, plafonne: boolean }
+ * @param patrimoineProfessionnelM Patrimoine professionnel exonéré (défaut 0)
+ * @param rendementAnnuelPct Rendement patrimoine en % (défaut 3%)
+ * @returns { ir: number, cnjp: number, total: number, plafonne: boolean, paiementDiffere: boolean }
  */
 export const calculateTotalContribution = (
   revenuAnnuel: number,
   patrimoineM: number,
-  isHigherEducation: boolean = false
-): { ir: number; cnjp: number; total: number; plafonne: boolean } => {
+  isHigherEducation: boolean = false,
+  patrimoineProfessionnelM: number = 0,
+  rendementAnnuelPct: number = 3
+): { ir: number; cnjp: number; total: number; plafonne: boolean; paiementDiffere: boolean } => {
   const isSubjectToCNJP = patrimoineM >= 100;
   const ir = calculateIncomeTax(revenuAnnuel, isHigherEducation, isSubjectToCNJP);
-  const cnjp = isSubjectToCNJP ? calculateCNJP(patrimoineM) * 1000000 : 0;
+  const cnjp = isSubjectToCNJP ? calculateCNJP(patrimoineM, patrimoineProfessionnelM, rendementAnnuelPct) * 1000000 : 0;
   
   const totalBeforeCap = ir + cnjp;
-  const cap75 = revenuAnnuel * 0.75; // Plafond à 75% du revenu
   
-  if (totalBeforeCap > cap75 && revenuAnnuel > 0) {
+  // CORRECTION FAILLE 16: Paiement différé si CNJP > 50% du revenu annuel
+  // Pour retraités fortunés avec faibles revenus
+  const paiementDiffere = cnjp > (revenuAnnuel * 0.5) && revenuAnnuel > 0;
+  
+  // Plafond à 75% du revenu (si revenus suffisants)
+  const cap75 = revenuAnnuel * 0.75;
+  
+  if (totalBeforeCap > cap75 && revenuAnnuel > 0 && !paiementDiffere) {
     // Plafonnement appliqué
     return {
       ir: ir * (cap75 / totalBeforeCap), // Réduction proportionnelle
       cnjp: cnjp * (cap75 / totalBeforeCap),
       total: cap75,
-      plafonne: true
+      plafonne: true,
+      paiementDiffere: false
     };
   }
   
@@ -127,7 +167,8 @@ export const calculateTotalContribution = (
     ir,
     cnjp,
     total: totalBeforeCap,
-    plafonne: false
+    plafonne: false,
+    paiementDiffere
   };
 };
 
