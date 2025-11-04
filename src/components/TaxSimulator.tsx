@@ -1,36 +1,19 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 import { Badge } from '@/components/ui/badge';
 import { Calculator, TrendingUp, DollarSign } from 'lucide-react';
+import { calculateCNJP, calculateIncomeTax } from '@/lib/tax-calculations';
 
 const TaxSimulator: React.FC = () => {
   const [patrimoine, setPatrimoine] = useState([500]); // en millions
   const [revenuAnnuel, setRevenuAnnuel] = useState([50000]); // en euros
 
-  // Calcul CNJP
-  const calculateCNJP = (patrimoineM: number) => {
-    if (patrimoineM < 100) return 0;
-    if (patrimoineM <= 500) return patrimoineM * 0.01; // 1%
-    if (patrimoineM <= 1000) return 100 * 0.01 + (patrimoineM - 100) * 0.015; // 1.5%
-    if (patrimoineM <= 5000) return 100 * 0.01 + 400 * 0.015 + (patrimoineM - 500) * 0.02; // 2%
-    return 100 * 0.01 + 400 * 0.015 + 4500 * 0.02 + (patrimoineM - 5000) * 0.025; // 2.5%
-  };
-
-  // Calcul Impôt sur le revenu (barème La Juste Voix)
-  const calculateIncomeTax = (revenu: number) => {
-    if (revenu <= 12000) return 0;
-    if (revenu <= 27000) return (revenu - 12000) * 0.05;
-    if (revenu <= 78000) return 15000 * 0.05 + (revenu - 27000) * 0.14;
-    if (revenu <= 168000) return 15000 * 0.05 + 51000 * 0.14 + (revenu - 78000) * 0.30;
-    if (revenu <= 400000) return 15000 * 0.05 + 51000 * 0.14 + 90000 * 0.30 + (revenu - 168000) * 0.41;
-    return 15000 * 0.05 + 51000 * 0.14 + 90000 * 0.30 + 232000 * 0.41 + (revenu - 400000) * 0.50;
-  };
-
+  // Utilisation des fonctions de calcul centralisées
   const cnjpAmount = calculateCNJP(patrimoine[0]);
-  const incomeTaxAmount = calculateIncomeTax(revenuAnnuel[0]);
+  const incomeTaxAmount = calculateIncomeTax(revenuAnnuel[0], false);
   const isSubjectToCNJP = patrimoine[0] >= 100;
 
   return (

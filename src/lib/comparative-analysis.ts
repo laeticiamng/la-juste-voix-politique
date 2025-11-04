@@ -85,11 +85,12 @@ export const comparativeAnalysis: ComparativePoint[] = [
       ]
     },
     laJusteVoix: {
-      description: "Nouvelle grille 0% à 55%, allègement classes moyennes, hausse sur hauts patrimoines",
-      montants: "Impact net : -1 à -2 Md€/an (compensé par CNJP)",
+      description: "Nouvelle grille 0% à 50%, allègement classes moyennes, hausse sur hauts patrimoines",
+      montants: "Impact net : -1 à -2 Md€/an (compensé par CNJP) - Crédit 15% professions techniques : -0,25 Md€/an",
       avantages: [
         "Allège la pression sur les classes moyennes et moyennes-sup qui TRAVAILLENT",
-        "Taux max 55% seulement au-delà de 1M€ → Garde les talents",
+        "Taux max 50% au-delà de 400k€ → Équilibre contribution/mérite",
+        "Crédit d'impôt 15% pour professions techniques et scientifiques",
         "Distingue mieux revenus actifs vs passifs",
         "Réduit l'incitation à l'exil fiscal des créateurs de valeur",
         "Fiscalité du MÉRITE, pas de la RENTE"
