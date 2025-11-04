@@ -30,7 +30,7 @@ export const beforeAfterData: BeforeAfterData[] = [
     description: "Revalorisation +500€ brut",
   },
   {
-    metier: "Médecin interne",
+    metier: "Interne en médecine",
     statut: "CHU",
     salaireActuelBrut: 1800,
     salaireActuelNet: 1386,
@@ -40,6 +40,18 @@ export const beforeAfterData: BeforeAfterData[] = [
     impotReforme: 37,
     salaireReformePostImpot: 2119,
     description: "Revalorisation +1 000€ brut",
+  },
+  {
+    metier: "Médecin généraliste",
+    statut: "Libéral",
+    salaireActuelBrut: 4500,
+    salaireActuelNet: 3465,
+    impotActuel: 520,
+    salaireActuelPostImpot: 2945,
+    salaireReformeNet: 4235,
+    impotReforme: 690,
+    salaireReformePostImpot: 3545,
+    description: "Consultation à 50€ remboursée 100% Sécu",
   },
   {
     metier: "Sage-femme hospitalière",
