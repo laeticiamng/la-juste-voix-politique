@@ -38,11 +38,16 @@ export const calculateCNJP = (patrimoineM: number): number => {
  * Calcule l'impôt sur le revenu selon le barème La Juste Voix
  * @param revenuAnnuel Revenu annuel en euros
  * @param isHigherEducation Si le contribuable est diplômé Bac+5+ grandes écoles (crédit 15%)
+ * @param isSubjectToCNJP Si le contribuable paie la CNJP (patrimoine >= 100M€)
  * @returns Montant IR en euros
+ * 
+ * NOTE IMPORTANTE: Le crédit d'impôt 15% Bac+5+ n'est PAS cumulable avec la CNJP.
+ * Les ultra-riches (patrimoine >= 100M€) ne peuvent pas bénéficier du crédit.
  */
 export const calculateIncomeTax = (
   revenuAnnuel: number,
-  isHigherEducation: boolean = false
+  isHigherEducation: boolean = false,
+  isSubjectToCNJP: boolean = false
 ): number => {
   let impot = 0;
 
@@ -62,7 +67,8 @@ export const calculateIncomeTax = (
   }
 
   // Crédit d'impôt de 15% pour diplômés Bac+5+ grandes écoles
-  if (isHigherEducation && impot > 0) {
+  // IMPORTANT: Non cumulable avec la CNJP (ultra-riches exclus)
+  if (isHigherEducation && impot > 0 && !isSubjectToCNJP) {
     impot = impot * 0.85; // Réduction de 15%
   }
 

@@ -80,16 +80,24 @@ const HigherEducationTaxCredit: React.FC = () => {
             <p className="text-sm text-gray-700 leading-relaxed mb-3">
               Le crédit d'impôt de 15% s'applique automatiquement sur l'impôt sur le revenu 
               des diplômés Bac+5+ des grandes écoles et professions libérales qualifiées. 
-              Il est cumulable avec les autres dispositifs fiscaux et vise à reconnaître 
-              la contribution de ces métiers à l'innovation et à la compétitivité.
+              Il vise à reconnaître la contribution de ces métiers à l'innovation et à la compétitivité.
             </p>
-            <div className="bg-white/80 rounded-lg p-3 text-sm">
+            <div className="bg-white/80 rounded-lg p-3 text-sm mb-3">
               <p className="font-bold text-gray-900 mb-1">📊 Critères d'éligibilité:</p>
               <ul className="text-gray-700 space-y-1">
                 <li>• Diplôme Bac+5 minimum d'une grande école (ingénieurs, commerce, management)</li>
                 <li>• Profession libérale réglementée (avocat, expert-comptable, notaire, pharmacien...)</li>
                 <li>• Cadre supérieur avec fonctions de direction ou expertise avérée</li>
               </ul>
+            </div>
+            <div className="bg-orange-50 rounded-lg p-3 text-sm border border-orange-300">
+              <p className="font-bold text-orange-800 mb-1">⚠️ Règle de non-cumul importante:</p>
+              <p className="text-orange-700">
+                Ce crédit d'impôt <strong>n'est PAS cumulable avec la CNJP</strong>. 
+                Les contribuables assujettis à la CNJP (patrimoine ≥ 100M€) ne peuvent 
+                pas bénéficier du crédit d'impôt de 15%, conformément au principe 
+                de progressivité et de justice fiscale.
+              </p>
             </div>
           </div>
 

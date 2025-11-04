@@ -60,10 +60,10 @@ const TaxSimulator: React.FC = () => {
 
   // Utilisation des fonctions de calcul centralisées
   const cnjpAmount = calculateCNJP(patrimoine[0]);
-  const incomeTaxAmount = calculateIncomeTax(revenuAnnuel[0], isProfessionTechnique);
-  const incomeTaxWithoutCredit = calculateIncomeTax(revenuAnnuel[0], false);
-  const creditAmount = incomeTaxWithoutCredit - incomeTaxAmount;
   const isSubjectToCNJP = patrimoine[0] >= 100;
+  const incomeTaxAmount = calculateIncomeTax(revenuAnnuel[0], isProfessionTechnique, isSubjectToCNJP);
+  const incomeTaxWithoutCredit = calculateIncomeTax(revenuAnnuel[0], false, isSubjectToCNJP);
+  const creditAmount = incomeTaxWithoutCredit - incomeTaxAmount;
 
   // Calculs additionnels
   const effectiveTaxRate = revenuAnnuel[0] > 0 ? (incomeTaxAmount / revenuAnnuel[0]) * 100 : 0;
@@ -208,19 +208,27 @@ const TaxSimulator: React.FC = () => {
                 </div>
 
                 {/* Profession Bac+5+ grandes écoles */}
-                <div className="flex items-center justify-between p-4 bg-white rounded-lg border border-blue-300">
+                <div className={`flex items-center justify-between p-4 rounded-lg border ${
+                  isSubjectToCNJP ? 'bg-gray-100 border-gray-300 opacity-60' : 'bg-white border-blue-300'
+                }`}>
                   <div className="flex-1">
-                    <Label htmlFor="tech-profession" className="text-base font-bold cursor-pointer">
+                    <Label 
+                      htmlFor="tech-profession" 
+                      className={`text-base font-bold ${isSubjectToCNJP ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+                    >
                       Diplômé Bac+5+ grandes écoles
                     </Label>
                     <p className="text-sm text-gray-600 mt-1">
-                      Crédit d'impôt de 15% (ingénieurs, commerce, management, professions libérales...)
+                      {isSubjectToCNJP 
+                        ? '⚠️ Non cumulable avec la CNJP (ultra-riches exclus)'
+                        : 'Crédit d\'impôt de 15% (ingénieurs, commerce, management, professions libérales...)'}
                     </p>
                   </div>
                   <Switch
                     id="tech-profession"
-                    checked={isProfessionTechnique}
+                    checked={isProfessionTechnique && !isSubjectToCNJP}
                     onCheckedChange={setIsProfessionTechnique}
+                    disabled={isSubjectToCNJP}
                   />
                 </div>
               </div>
@@ -250,13 +258,22 @@ const TaxSimulator: React.FC = () => {
                       Soit {Math.round(incomeTaxAmount / 12).toLocaleString('fr-FR')} €/mois
                     </div>
                     
-                    {isProfessionTechnique && creditAmount > 0 && (
+                    {isProfessionTechnique && !isSubjectToCNJP && creditAmount > 0 && (
                       <Alert className="mt-3 bg-green-50 border-green-200">
                         <Sparkles className="h-4 w-4 text-green-600" />
                         <AlertDescription className="text-sm text-green-800">
                           <strong>Crédit d'impôt Bac+5+ appliqué!</strong>
                           <br />Économie: {Math.round(creditAmount).toLocaleString('fr-FR')} €/an
                           ({Math.round(creditAmount / 12).toLocaleString('fr-FR')} €/mois)
+                        </AlertDescription>
+                      </Alert>
+                    )}
+                    {isProfessionTechnique && isSubjectToCNJP && (
+                      <Alert className="mt-3 bg-orange-50 border-orange-200">
+                        <Info className="h-4 w-4 text-orange-600" />
+                        <AlertDescription className="text-sm text-orange-800">
+                          <strong>Crédit d'impôt non applicable</strong>
+                          <br />Le crédit de 15% n'est pas cumulable avec la CNJP (patrimoine ≥ 100M€)
                         </AlertDescription>
                       </Alert>
                     )}
@@ -485,12 +502,18 @@ const TaxSimulator: React.FC = () => {
                             <span className="text-gray-600">Impôt sur le revenu</span>
                             <span className="font-bold">{Math.round(incomeTaxAmount).toLocaleString('fr-FR')} €</span>
                           </div>
-                          {isProfessionTechnique && creditAmount > 0 && (
-                            <div className="flex justify-between text-green-600 text-sm">
-                              <span>dont crédit Bac+5+</span>
-                              <span className="font-bold">-{Math.round(creditAmount).toLocaleString('fr-FR')} €</span>
-                            </div>
-                          )}
+                  {isProfessionTechnique && !isSubjectToCNJP && creditAmount > 0 && (
+                    <div className="flex justify-between text-green-600 text-sm">
+                      <span>dont crédit Bac+5+</span>
+                      <span className="font-bold">-{Math.round(creditAmount).toLocaleString('fr-FR')} €</span>
+                    </div>
+                  )}
+                  {isProfessionTechnique && isSubjectToCNJP && (
+                    <div className="flex justify-between text-orange-600 text-sm">
+                      <span>crédit Bac+5+ non applicable</span>
+                      <span className="font-bold text-xs">(non cumulable CNJP)</span>
+                    </div>
+                  )}
                           <div className="flex justify-between">
                             <span className="text-gray-600">CNJP</span>
                             <span className="font-bold">{isSubjectToCNJP ? Math.round(cnjpAmount * 1000000).toLocaleString('fr-FR') : '0'} €</span>
