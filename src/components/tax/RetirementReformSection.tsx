@@ -50,7 +50,7 @@ const RetirementReformSection: React.FC = () => {
           <Alert className="mb-6 bg-orange-50 border-orange-300">
             <AlertTriangle className="h-5 w-5 text-orange-600" />
             <AlertDescription className="text-orange-800">
-              <strong>⚠️ MESURE REPORTÉE</strong> : Suite au pivot stratégique (abandon CNJP), le retour à la retraite à 60 ans est reporté à Phase 2, conditionné à une croissance économique soutenue ({'>'}3%/an). Le budget actuel de 24-37 Md€/an ne permet pas de financer cette réforme (coût estimé : 18-26 Md€/an).
+              <strong>⚠️ MESURE REPORTÉE</strong> : Le retour à la retraite à 60 ans est reporté à Phase 2, conditionné à une croissance économique soutenue ({'>'}3%/an). Le budget actuel de 24-37 Md€/an (IR ultra-hauts revenus) ne permet pas de financer cette réforme (coût estimé : 18-26 Md€/an).
             </AlertDescription>
           </Alert>
           

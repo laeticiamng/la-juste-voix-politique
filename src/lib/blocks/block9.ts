@@ -67,7 +67,7 @@ export const block9: BlockData = {
       ],
       impact: "Présence active et intervention précoce pour éviter les dérives",
       cost: "560 millions €/an",
-      financing: "Inclus dans les 2% CNJP Sécurité & Prévention (1,8-2,6 Md€/an)"
+      financing: "Budget IR ultra-hauts revenus (sécurité & prévention)"
     },
     {
       id: 4,
@@ -114,5 +114,5 @@ export const block9: BlockData = {
       impact: "Justice crédible et accessible qui évite les vides institutionnels"
     }
   ],
-  conclusion: "Proposer une sécurité présente sans brutalité, visible sans domination, ferme sans humiliation, et réparatrice plutôt que destructrice. Créer des sanctions utiles, des jeunes citoyens actifs, et une police respectée car respectable. Ne pas vouloir une sécurité spectacle, mais une sécurité qui répare la société sans jamais l'abîmer.\n\n**💰 Financement - Sécurité & Prévention (2% CNJP = 1,8-2,6 Md€/an) :**\n• Binômes éducatif-médiateur collèges : 0,56 Md€/an\n• Maisons de Justice de proximité : 0,8 Md€/an\n• Formations police renforcée, caméras-piétons, équipements : 0,44-1,24 Md€/an\n**Total : 1,8-2,6 Md€/an financés par CNJP**"
+  conclusion: "Proposer une sécurité présente sans brutalité, visible sans domination, ferme sans humiliation, et réparatrice plutôt que destructrice. Créer des sanctions utiles, des jeunes citoyens actifs, et une police respectée car respectable. Ne pas vouloir une sécurité spectacle, mais une sécurité qui répare la société sans jamais l'abîmer.\n\n**💰 Financement - Sécurité & Prévention :**\nBudget IR ultra-hauts revenus (sécurité & prévention)\n• Binômes éducatif-médiateur collèges : 0,56 Md€/an\n• Maisons de Justice de proximité : 0,8 Md€/an\n• Formations police renforcée, caméras-piétons, équipements : prioritaire"
 };

@@ -27,7 +27,7 @@ export const block3: BlockData = {
       ],
       cost: "1,8 milliard €/an",
       impact: "1 Français sur 4 souffre de troubles anxieux, 60% des arrêts maladie longue durée sont d'origine psychique",
-      financing: "CNJP 4% santé mentale (3,6-5,2 Md€/an)"
+      financing: "Budget IR ultra-hauts revenus (santé mentale)"
     },
     {
       id: 2,
@@ -60,7 +60,7 @@ export const block3: BlockData = {
       ],
       impact: "Ce n'est ni de l'assistanat, ni du travail forcé, c'est un contrat d'engagement réciproque",
       cost: "4,5-6 milliards €/an pendant 3-4 ans",
-      financing: "Inclus dans CNJP 11% Logement (9,9-14,3 Md€/an) aux côtés des 500 000 logements à loyers maîtrisés"
+      financing: "Budget IR ultra-hauts revenus (logement) aux côtés des 200 000 logements à loyers maîtrisés/an"
     },
     {
       id: 4,
@@ -76,7 +76,7 @@ export const block3: BlockData = {
       ],
       impact: "On ne soigne pas en fermant les services. On soigne en ouvrant des voies d'accès.",
       cost: "1,3-3 milliards €/an",
-      financing: "CNJP 4% santé (3,6-5,2 Md€/an)"
+      financing: "Budget IR ultra-hauts revenus (santé)"
     }
   ],
   conclusion: "Proposer une santé qui ne s'arrête pas à l'hôpital, qui commence dans le souffle, le lien, la reconnaissance, qui soigne le corps, mais aussi l'élan intérieur. Proposer une vision du travail comme un moteur d'estime de soi, comme un outil de reconstruction, comme un socle de réintégration. Ne pas soigner les symptômes. Soigner la société."

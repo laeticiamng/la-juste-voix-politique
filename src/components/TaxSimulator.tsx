@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { Calculator, TrendingUp, DollarSign, Info, ChevronDown, ChevronUp, Sparkles, ArrowRight, Home, GraduationCap, Briefcase } from 'lucide-react';
-import { calculateCNJP, calculateIncomeTax } from '@/lib/tax-calculations';
+import { calculateIncomeTax } from '@/lib/tax-calculations';
 import { Separator } from '@/components/ui/separator';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';

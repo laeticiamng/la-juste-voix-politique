@@ -913,7 +913,7 @@ export const beforeAfterData: BeforeAfterData[] = [
     description: "Hausse d'impôt +5480€/mois",
   },
 
-  // MILLIONNAIRES & ULTRA-RICHES (PAYEURS CNJP)
+  // MILLIONNAIRES & ULTRA-RICHES (IR RENFORCÉ)
   {
     metier: "Entrepreneur millionnaire",
     statut: "Patrimoine 5M€ - Dividendes",
@@ -924,7 +924,7 @@ export const beforeAfterData: BeforeAfterData[] = [
     salaireReformeNet: 85000,
     impotReforme: 48000,
     salaireReformePostImpot: 37000,
-    description: "Impôt +9980€/mois + Pas de CNJP (<100M€)",
+    description: "Impôt +9980€/mois (IR 55-65%)",
   },
   {
     metier: "Héritier grande fortune",
@@ -936,7 +936,7 @@ export const beforeAfterData: BeforeAfterData[] = [
     salaireReformeNet: 170000,
     impotReforme: 98000,
     salaireReformePostImpot: 72000,
-    description: "Impôt +19980€/mois + CNJP 250k€/mois (150M€ à 2%)",
+    description: "Impôt +19980€/mois (IR 55-65%)",
   },
   {
     metier: "Milliardaire",
@@ -948,7 +948,7 @@ export const beforeAfterData: BeforeAfterData[] = [
     salaireReformeNet: 425000,
     impotReforme: 248000,
     salaireReformePostImpot: 177000,
-    description: "Impôt +49980€/mois + CNJP 833k€/mois (2Md€ à 5%)",
+    description: "Impôt +49980€/mois (IR 55-65%)",
   },
   {
     metier: "Ultra-riche (Top 0,01%)",
@@ -960,7 +960,7 @@ export const beforeAfterData: BeforeAfterData[] = [
     salaireReformeNet: 850000,
     impotReforme: 498000,
     salaireReformePostImpot: 352000,
-    description: "Impôt +99980€/mois + CNJP 2,5M€/mois (10Md€ à 30%)",
+    description: "Impôt +99980€/mois (IR 55-65%)",
   },
 
   // RETRAITÉS
@@ -1123,7 +1123,7 @@ export const profilesBySector: ProfilesBySector[] = [
   {
     sector: "Millionnaires & Ultra-riches",
     icon: "gem",
-    description: "Patrimoine > 5M€ - Payeurs CNJP",
+    description: "Patrimoine > 5M€ - IR renforcé 55-65%",
     profiles: beforeAfterData.slice(74, 78)
   },
   {

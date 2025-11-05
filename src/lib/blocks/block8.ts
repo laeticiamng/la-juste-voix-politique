@@ -81,5 +81,5 @@ export const block8: BlockData = {
       impact: "Valorisation de la contribution plutôt que de l'ancienneté administrative seule"
     }
   ],
-  conclusion: "Proposer une immigration organisée et non subie, méritocratique et non symbolique, humaine mais exigeante. Construire une France qui n'a pas peur de l'intégration active mais qui refuse le flou administratif permanent. Ne pas parler de migration, mais d'investissement humain, et encadrer cette contribution avec respect et courage.\n\n**💰 Financement :**\nL'ensemble des mesures d'intégration par la contribution (contrat d'intégration, statut Contributeur Résident, parcours républicain renforcé) est financé par **2% de la CNJP, soit 1,8-2,6 milliards €/an**."
+  conclusion: "Proposer une immigration organisée et non subie, méritocratique et non symbolique, humaine mais exigeante. Construire une France qui n'a pas peur de l'intégration active mais qui refuse le flou administratif permanent. Ne pas parler de migration, mais d'investissement humain, et encadrer cette contribution avec respect et courage.\n\n**💰 Financement :**\nL'ensemble des mesures d'intégration par la contribution est financé par le **budget IR ultra-hauts revenus**."
 };

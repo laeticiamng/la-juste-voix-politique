@@ -32,7 +32,7 @@ export const block4: BlockData = {
       ],
       impact: "Fin de l'orientation par défaut au profit de choix réfléchis et accompagnés",
       cost: "800 millions € par an",
-      financing: "CNJP 5% éducation (4,5-6,5 Md€/an)"
+      financing: "Budget IR ultra-hauts revenus (éducation)"
     },
     {
       id: 2,
@@ -61,7 +61,7 @@ export const block4: BlockData = {
       ],
       impact: "Réduction du décrochage scolaire et du chômage des jeunes",
       cost: "1,2 milliard € par an",
-      financing: "CNJP 5% éducation (4,5-6,5 Md€/an)"
+      financing: "Budget IR ultra-hauts revenus (éducation)"
     },
     {
       id: 4,
@@ -77,7 +77,7 @@ export const block4: BlockData = {
       ],
       impact: "Transformation de l'école en lieu d'ouverture plutôt que de reproduction des stéréotypes",
       cost: "300 millions € par an",
-      financing: "CNJP 5% éducation (4,5-6,5 Md€/an)"
+      financing: "Budget IR ultra-hauts revenus (éducation)"
     },
     {
       id: 5,
@@ -91,7 +91,7 @@ export const block4: BlockData = {
       ],
       impact: "Réduction de 30% du décrochage scolaire précoce",
       cost: "2,2 milliards € par an",
-      financing: "CNJP 5% éducation (4,5-6,5 Md€/an)"
+      financing: "Budget IR ultra-hauts revenus (éducation)"
     },
     {
       id: 6,
@@ -106,8 +106,8 @@ export const block4: BlockData = {
       ],
       impact: "Réduction de 50% des postes vacants en 3 ans",
       cost: "3 milliards € par an",
-      financing: "CNJP 25% revalorisation métiers publics (22,5-32,5 Md€/an) - INCLUS dans l'enveloppe globale"
+      financing: "Budget IR ultra-hauts revenus (revalorisation métiers publics 8-10 Md€/an)"
     }
   ],
-  conclusion: "Proposer une école qui sème l'ambition dès le collège, qui valorise les chemins non linéaires, qui offre des secondes chances sans stigmatiser, et qui prépare au réel, pas seulement aux diplômes. Transformer l'école en espace de liberté intérieure, en tremplin de projet, et en communauté qui accompagne. Ne pas changer l'école pour qu'elle fasse rêver, mais pour qu'elle ne brise plus l'élan.\n\n**💰 Synthèse budgétaire totale du Bloc Éducation :**\n• Référents Projet & Ambition : 800 M€/an\n• Double cursus professionnel : 500 M€ (investissement initial sur 5 ans)\n• Pass formation libre : 1,2 Md€/an\n• Module Ouverture & Tolérance : 300 M€/an\n• Classes à taille humaine : 2,2 Md€/an\n• Revalorisation enseignants : 3 Md€/an (INCLUS dans CNJP 25%)\n\n**Total annuel stabilisé : ~4,5 milliards €/an (hors revalorisation enseignants)**\n\n**Financement :**\n• Mesures éducatives hors salaires : 4,5 Md€/an → CNJP 5% (4,5-6,5 Md€/an)\n• Revalorisation enseignants : 3 Md€/an → INCLUSE dans CNJP 25% (22,5-32,5 Md€/an dédiés à la revalorisation de TOUS les métiers publics : enseignants, soignants, forces de l'ordre, etc.)"
+  conclusion: "Proposer une école qui sème l'ambition dès le collège, qui valorise les chemins non linéaires, qui offre des secondes chances sans stigmatiser, et qui prépare au réel, pas seulement aux diplômes. Transformer l'école en espace de liberté intérieure, en tremplin de projet, et en communauté qui accompagne. Ne pas changer l'école pour qu'elle fasse rêver, mais pour qu'elle ne brise plus l'élan.\n\n**💰 Synthèse budgétaire totale du Bloc Éducation :**\n• Référents Projet & Ambition : 800 M€/an\n• Double cursus professionnel : 500 M€ (investissement initial sur 5 ans)\n• Pass formation libre : 1,2 Md€/an\n• Module Ouverture & Tolérance : 300 M€/an\n• Classes à taille humaine : 2,2 Md€/an (⚠️ REPORTÉ)\n• Revalorisation enseignants : 3 Md€/an (INCLUS dans revalorisation métiers publics 8-10 Md€/an)\n\n**Total annuel prioritaire : ~2,3 milliards €/an**\n\n**Financement :**\nBudget IR ultra-hauts revenus (éducation 2-4 Md€/an)"
 };

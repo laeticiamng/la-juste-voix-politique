@@ -77,12 +77,12 @@ export const block13: BlockData = {
         "Progressions de carrière accélérées",
         "Temps partiel choisi (et non subi)",
         "",
-        "⚠️ **Note budgétaire :** Cette revalorisation est INCLUSE dans le Bloc 5 - CNJP 25% (22,5-32,5 Md€/an) affectés à la revalorisation de tous les métiers publics (enseignants, soignants, forces de l'ordre, etc.)",
+        "⚠️ **Note budgétaire :** Cette revalorisation est INCLUSE dans le budget IR ultra-hauts revenus (8-10 Md€/an) affectés à la revalorisation de tous les métiers publics (enseignants, soignants, forces de l'ordre, etc.)",
         "",
         "Cette mesure précise les modalités d'application spécifiques aux métiers féminisés historiquement sous-valorisés."
       ],
       impact: "Reconnaissance sociale et économique des métiers essentiels traditionnellement sous-valorisés",
-      financing: "Inclus dans CNJP 25% revalorisation métiers publics (Bloc 5)"
+      financing: "Inclus dans budget IR ultra-hauts revenus (revalorisation métiers publics 8-10 Md€/an)"
     }
   ],
   conclusion: "Proposer une politique qui ne simplifie pas les parcours, qui voit les efforts que l'État ne voit plus, qui corrige les angles morts de la République. Faire de l'équité une boussole de justice, un levier de reconnaissance, une force de cohésion sociale. Ne pas promettre le même destin à tous, mais refuser qu'un mérite soit ignoré parce qu'il est silencieux."

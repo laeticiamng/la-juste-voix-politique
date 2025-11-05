@@ -43,7 +43,7 @@ export const block7: BlockData = {
         "Avancer automatiquement les frais (pas de reste à charge immédiat)",
         "Offrir un bonus pour les bailleurs vertueux",
         "",
-        "**Budget total écologie CNJP (7,2-10,4 Md€/an = 8%) réparti :**",
+        "**Budget total écologie IR ultra-hauts revenus (3-5 Md€/an) réparti :**",
         "• Rénovation énergétique : 2,5 Md€/an",
         "• Aide au remplacement véhicules polluants : 1,5 Md€/an",
         "• Transports publics décarbonés (villes moyennes, zones rurales) : 1,2 Md€/an",
@@ -53,7 +53,7 @@ export const block7: BlockData = {
         "**Total : 7,2 Md€/an** (dans l'enveloppe 7,2-10,4 Md€/an) ✅"
       ],
       impact: "Diminution significative des émissions de CO2 et des factures énergétiques",
-      financing: "CNJP (part écologie 8% = 7,2-10,4 Md€/an), Fonds européens, Crédit climatique public"
+      financing: "Budget IR ultra-hauts revenus (écologie 3-5 Md€/an), Fonds européens, Crédit climatique public"
     },
     {
       id: 3,
@@ -92,7 +92,7 @@ export const block7: BlockData = {
         "• Année 4-5 : 60-100 000 emplois × 38 000€ = 2,3-3,8 Md€/an",
         "• Coût moyen sur 5 ans : ~1,5 Md€/an",
         "",
-        "⚠️ Note : Le budget CNJP écologie (8% = 7,2-10,4 Md€/an) finance :",
+        "⚠️ Note : Le budget IR ultra-hauts revenus (écologie 3-5 Md€/an) finance :",
         "• Rénovation énergétique : 2,5 Md€/an",
         "• Aide remplacement véhicules : 1,5 Md€/an",
         "• Transports publics décarbonés : 1,2 Md€/an",
@@ -102,7 +102,7 @@ export const block7: BlockData = {
       ],
       impact: "Transformation de l'écologie en opportunité de création de richesse utile plutôt qu'en coût",
       cost: "1,5 milliard €/an en moyenne sur 5 ans (montée progressive de 0,76 à 3,8 Md€/an)",
-      financing: "CNJP (part écologie 8% = 7,2-10,4 Md€/an) + Crédit écologique européen + Partenariats publics-privés + Taxe carbone redirigée"
+      financing: "Budget IR ultra-hauts revenus (écologie 3-5 Md€/an) + Crédit écologique européen + Partenariats publics-privés + Taxe carbone redirigée"
     }
   ],
   conclusion: "Proposer une écologie juste qui ne stigmatise pas, populaire qui inclut chacun, ancrée qui part du terrain, et créatrice de valeur qui relance l'économie locale. Concevoir une transition qui répare autant qu'elle prévient, qui reconnecte les citoyens à leur environnement, qui revalorise les gestes simples et le lien au territoire. Ne pas vouloir une écologie contre les gens, mais une écologie avec eux."
