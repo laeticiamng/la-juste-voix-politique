@@ -167,7 +167,7 @@ const Revalorisations = () => {
                 <div className="text-lg font-bold mb-2">Très hauts revenus</div>
                 <div className="text-sm mb-3">DG, chirurgiens, grandes fortunes</div>
                 <div className="text-2xl font-bold text-red-400 mb-2">+1500€ à +50k€</div>
-                <div className="text-xs">Solidarité nationale + CNJP</div>
+                <div className="text-xs">Solidarité nationale via IR ultra-hauts revenus</div>
               </div>
             </div>
 
@@ -180,7 +180,7 @@ const Revalorisations = () => {
               <div className="flex flex-wrap gap-2 justify-center text-sm">
                 <span className="bg-white/20 px-3 py-1 rounded-full">Du RSA (607€)</span>
                 <span className="bg-white/20 px-3 py-1 rounded-full">Aux milliardaires</span>
-                <span className="bg-white/20 px-3 py-1 rounded-full">Avec calcul CNJP</span>
+                <span className="bg-white/20 px-3 py-1 rounded-full">Avec IR renforcé 55-65%</span>
               </div>
             </div>
           </div>
@@ -206,7 +206,7 @@ const Revalorisations = () => {
           <div className="text-center max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-sm">
             <h3 className="text-2xl font-serif font-bold mb-4 text-gray-900 dark:text-gray-100">Comprendre le financement</h3>
             <p className="mb-8 text-lg text-gray-900 dark:text-gray-100 font-semibold">
-              Pour savoir comment ces revalorisations seront financées par la Contribution Nationale de Justice Patrimoniale, consultez notre section dédiée.
+              Pour savoir comment ces revalorisations seront financées par l'impôt sur le revenu renforcé pour les ultra-hauts revenus (55-65% sur revenus &gt;1M€/an) et la Contribution Exceptionnelle de Rétablissement, consultez notre section dédiée.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button size="lg" className="bg-ljv-navy hover:bg-ljv-gold text-lg py-6" asChild>

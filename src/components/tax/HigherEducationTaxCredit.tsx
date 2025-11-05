@@ -53,8 +53,11 @@ const HigherEducationTaxCredit: React.FC = () => {
                 <li><strong>• Management</strong> (directeurs, responsables, chefs de projet)</li>
                 <li><strong>• Finance</strong> (contrôleurs, directeurs financiers, analystes)</li>
                 <li><strong>• Conseil</strong> (consultants, experts, chefs de produit)</li>
-                <li><strong>• Professions libérales</strong> (avocats, experts-comptables, notaires, pharmaciens, vétérinaires)</li>
+                <li><strong>• Professions libérales</strong> (avocats, experts-comptables, notaires)</li>
               </ul>
+              <div className="text-xs text-gray-600 mt-3 italic bg-purple-50 p-2 rounded border border-purple-200">
+                Note: Les pharmaciens et vétérinaires bénéficient du crédit Bac+10 doctorats (20%) s'ils exercent en recherche ou milieu hospitalier.
+              </div>
             </div>
 
             <div className="bg-white/80 p-5 rounded-lg border border-green-200">

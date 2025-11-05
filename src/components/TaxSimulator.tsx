@@ -29,6 +29,7 @@ const PREDEFINED_PROFILES = [
 const TaxSimulator: React.FC = () => {
   const [revenuAnnuel, setRevenuAnnuel] = useState([50000]); // en euros
   const [isProfessionTechnique, setIsProfessionTechnique] = useState(false);
+  const [isDoctorate, setIsDoctorate] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
   const [activeTab, setActiveTab] = useState('simulator');
 
@@ -47,8 +48,8 @@ const TaxSimulator: React.FC = () => {
   }, [revenuAnnuel]);
 
   // Utilisation des fonctions de calcul centralisées
-  const incomeTaxAmount = calculateIncomeTax(revenuAnnuel[0], isProfessionTechnique, false);
-  const incomeTaxWithoutCredit = calculateIncomeTax(revenuAnnuel[0], false, false);
+  const incomeTaxAmount = calculateIncomeTax(revenuAnnuel[0], isProfessionTechnique, isDoctorate, false);
+  const incomeTaxWithoutCredit = calculateIncomeTax(revenuAnnuel[0], false, false, false);
   const creditAmount = incomeTaxWithoutCredit - incomeTaxAmount;
 
   // Calculs additionnels
@@ -194,9 +195,43 @@ const TaxSimulator: React.FC = () => {
                   </div>
                   <Switch
                     id="tech-profession"
-                    checked={isProfessionTechnique && revenuAnnuel[0] <= 1200000}
+                    checked={isProfessionTechnique && revenuAnnuel[0] <= 1200000 && !isDoctorate}
                     onCheckedChange={setIsProfessionTechnique}
-                    disabled={revenuAnnuel[0] > 1200000}
+                    disabled={revenuAnnuel[0] > 1200000 || isDoctorate}
+                  />
+                </div>
+
+                {/* Profession Bac+10 doctorats médecine/pharmacie */}
+                <div className={`flex items-center justify-between p-4 rounded-lg border mt-4 ${
+                  revenuAnnuel[0] > 1500000
+                    ? 'bg-gray-100 border-gray-300 opacity-60' 
+                    : 'bg-white border-purple-300'
+                }`}>
+                  <div className="flex-1">
+                    <Label 
+                      htmlFor="doctorate-profession" 
+                      className={`text-base font-bold ${
+                        revenuAnnuel[0] > 1500000
+                          ? 'cursor-not-allowed' 
+                          : 'cursor-pointer'
+                      }`}
+                    >
+                      Diplômé Bac+10 doctorat médecine/pharmacie
+                    </Label>
+                    <p className="text-sm text-gray-600 mt-1">
+                      {revenuAnnuel[0] > 1500000
+                        ? '⚠️ Crédit dégressif au-delà de 1M€, nul au-delà de 1,5M€'
+                        : 'Crédit d\'impôt de 20% (médecins spécialistes, pharmaciens hospitaliers, chercheurs médicaux...)'}
+                    </p>
+                  </div>
+                  <Switch
+                    id="doctorate-profession"
+                    checked={isDoctorate && revenuAnnuel[0] <= 1500000}
+                    onCheckedChange={(checked) => {
+                      setIsDoctorate(checked);
+                      if (checked) setIsProfessionTechnique(false);
+                    }}
+                    disabled={revenuAnnuel[0] > 1500000}
                   />
                 </div>
               </div>
@@ -230,7 +265,7 @@ const TaxSimulator: React.FC = () => {
                       <Alert className="mt-3 bg-green-50 border-green-200">
                         <Sparkles className="h-4 w-4 text-green-600" />
                         <AlertDescription className="text-sm text-green-800">
-                          <strong>Crédit d'impôt Bac+5+ appliqué!</strong>
+                          <strong>Crédit d'impôt 15% Bac+5+ appliqué!</strong>
                           <br />Économie: {Math.round(creditAmount).toLocaleString('fr-FR')} €/an
                           ({Math.round(creditAmount / 12).toLocaleString('fr-FR')} €/mois)
                           {revenuAnnuel[0] > 800000 && (
@@ -241,12 +276,36 @@ const TaxSimulator: React.FC = () => {
                         </AlertDescription>
                       </Alert>
                     )}
+                    {isDoctorate && revenuAnnuel[0] <= 1500000 && creditAmount > 0 && (
+                      <Alert className="mt-3 bg-purple-50 border-purple-200">
+                        <Sparkles className="h-4 w-4 text-purple-600" />
+                        <AlertDescription className="text-sm text-purple-800">
+                          <strong>Crédit d'impôt 20% Bac+10 doctorat appliqué!</strong>
+                          <br />Économie: {Math.round(creditAmount).toLocaleString('fr-FR')} €/an
+                          ({Math.round(creditAmount / 12).toLocaleString('fr-FR')} €/mois)
+                          {revenuAnnuel[0] > 1000000 && (
+                            <span className="block mt-1 text-xs">
+                              (Crédit dégressif entre 1M€ et 1,5M€)
+                            </span>
+                          )}
+                        </AlertDescription>
+                      </Alert>
+                    )}
                     {isProfessionTechnique && revenuAnnuel[0] > 1200000 && (
                       <Alert className="mt-3 bg-orange-50 border-orange-200">
                         <Info className="h-4 w-4 text-orange-600" />
                         <AlertDescription className="text-sm text-orange-800">
-                          <strong>Crédit d'impôt non applicable</strong>
+                          <strong>Crédit d'impôt Bac+5+ non applicable</strong>
                           <br />Le crédit devient nul au-delà de 1,2M€/an (ultra-hauts revenus)
+                        </AlertDescription>
+                      </Alert>
+                    )}
+                    {isDoctorate && revenuAnnuel[0] > 1500000 && (
+                      <Alert className="mt-3 bg-orange-50 border-orange-200">
+                        <Info className="h-4 w-4 text-orange-600" />
+                        <AlertDescription className="text-sm text-orange-800">
+                          <strong>Crédit d'impôt Bac+10 non applicable</strong>
+                          <br />Le crédit devient nul au-delà de 1,5M€/an (ultra-hauts revenus)
                         </AlertDescription>
                       </Alert>
                     )}
