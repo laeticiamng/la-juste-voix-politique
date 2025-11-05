@@ -5,7 +5,6 @@ import Hero from "../components/Hero";
 import BlockCard from "../components/BlockCard";
 import Footer from "../components/Footer";
 import { blocksData } from "../lib/blocks";
-import CNJPSummaryArchived from "../components/home/CNJPSummaryArchived";
 import TestimonialsSection from "../components/home/TestimonialsSection";
 import NewsletterSignup from "../components/NewsletterSignup";
 import SEOHead, { organizationSchema } from "../components/SEOHead";
@@ -22,11 +21,6 @@ const Index = () => {
       <Header />
       <main className="flex-grow pt-24">
         <Hero />
-        
-        {/* CNJP Summary Section */}
-        <div className="container mx-auto px-4 my-16">
-          <CNJPSummaryArchived />
-        </div>
 
         {/* Testimonials Section */}
         <TestimonialsSection />

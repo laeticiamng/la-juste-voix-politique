@@ -4,37 +4,29 @@
 import { taxBrackets } from './tax-brackets';
 
 /**
- * CNJP ABANDONNÉE - Programme pivoté vers IR hauts revenus uniquement
- * La CNJP comportait trop de failles juridiques fatales :
- * - Atteinte propriété CEDH (extinction progressive patrimoine)
- * - Évaluation patrimoine impossible (startups, art, crypto)
- * - Exode Monaco inévitable et légal
+ * Fonction de contribution patrimoniale (non utilisée dans le programme actuel)
  * 
- * @deprecated Cette fonction est conservée pour compatibilité mais retourne toujours 0
- * @returns 0 (CNJP supprimée du programme)
+ * @deprecated Cette fonction retourne toujours 0 - Le programme est financé par l'IR ultra-hauts revenus
+ * @returns 0
  */
 export const calculateCNJP = (
   patrimoineM: number = 0,
   patrimoineProfessionnelM: number = 0,
   rendementAnnuelPct: number = 3
 ): number => {
-  // CNJP ABANDONNÉE suite à analyse des failles juridiques
-  // Voir: SYNTHESE_FINALE_TOUTES_FAILLES.md
-  return 0;
+  return 0; // Programme financé par IR ultra-hauts revenus
 };
 
 /**
- * Calcule l'impôt sur le revenu selon le NOUVEAU barème La Juste Voix (post-pivot)
- * 
- * CHANGEMENT MAJEUR : CNJP abandonnée → Nouvelles tranches IR très hauts revenus
+ * Calcule l'impôt sur le revenu selon le barème La Juste Voix
  * 
  * @param revenuAnnuel Revenu annuel en euros
  * @param isHigherEducation Si le contribuable est diplômé Bac+5+ grandes écoles (crédit 15%)
  * @param isDoctorate Si le contribuable est titulaire d'un doctorat Bac+10 médecine/pharmacie (crédit 20%)
- * @param isSubjectToCNJP Paramètre conservé pour compatibilité mais non utilisé (CNJP supprimée)
+ * @param isSubjectToCNJP Paramètre conservé pour compatibilité (non utilisé)
  * @returns Montant IR en euros
  * 
- * NOUVEAU BARÈME POST-PIVOT (juridiquement solide) :
+ * BARÈME PROGRESSIF LA JUSTE VOIX :
  * - 0-12k€: 0%
  * - 12-27k€: 5%
  * - 27-78k€: 14%
@@ -113,16 +105,13 @@ export const calculateIncomeTax = (
 };
 
 /**
- * Calcule la contribution fiscale totale (IR uniquement, CNJP supprimée)
- * 
- * CHANGEMENT POST-PIVOT : CNJP abandonnée, seul l'IR subsiste
- * Plus besoin de plafonnement global car IR seul ne peut pas être confiscatoire
+ * Calcule la contribution fiscale totale (IR uniquement)
  * 
  * @param revenuAnnuel Revenu annuel en euros
- * @param patrimoineM Patrimoine en M€ (conservé pour compatibilité mais non utilisé)
+ * @param patrimoineM Patrimoine en M€ (conservé pour compatibilité)
  * @param isHigherEducation Si diplômé Bac+5+
  * @param isDoctorate Si titulaire doctorat Bac+10 médecine/pharmacie
- * @returns { ir: number, cnjp: number (toujours 0), total: number, plafonne: boolean (toujours false) }
+ * @returns { ir: number, cnjp: 0, total: number, plafonne: false, paiementDiffere: false }
  */
 export const calculateTotalContribution = (
   revenuAnnuel: number,
@@ -131,14 +120,13 @@ export const calculateTotalContribution = (
   isDoctorate: boolean = false
 ): { ir: number; cnjp: number; total: number; plafonne: boolean; paiementDiffere: boolean } => {
   const ir = calculateIncomeTax(revenuAnnuel, isHigherEducation, isDoctorate, false);
-  const cnjp = 0; // CNJP supprimée du programme
   
   return {
     ir,
     cnjp: 0,
     total: ir,
-    plafonne: false, // Plus de plafonnement nécessaire (IR seul)
-    paiementDiffere: false // Plus de paiement différé (pas de CNJP)
+    plafonne: false,
+    paiementDiffere: false
   };
 };
 
@@ -269,15 +257,14 @@ export const isDoctorateMedialProfession = (metier: string): boolean => {
 
 /**
  * Calcule le coût annuel total du crédit d'impôt pour diplômés Bac+5+
- * POST-PIVOT : Crédit maintenu car juridiquement solide et encourageant
  * 
  * Estimation basée sur ~1,95 millions de cadres supérieurs Bac+5+ en France
- * Exclusion uniquement ultra-hauts revenus >1,2M€ (plus de CNJP)
+ * Exclusion des ultra-hauts revenus >1,2M€
  * @returns Coût estimé en milliards d'euros
  */
 export const estimateHigherEducationTaxCreditCost = (): number => {
   const numberOfQualifiedWorkers = 2000000; // ~2M cadres Bac+5+
-  const exclusionRate = 0.015; // 1,5% exclus (revenus >1,2M€ uniquement, plus de CNJP)
+  const exclusionRate = 0.015; // 1,5% exclus (revenus >1,2M€)
   const eligibleWorkers = numberOfQualifiedWorkers * (1 - exclusionRate);
   const averageIncomeTax = 5500; // IR moyen annuel
   const creditRate = 0.15;

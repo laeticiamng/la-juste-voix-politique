@@ -10,7 +10,7 @@ const keyMeasures: KeyMeasure[] = [
     description: "Trois nouvelles tranches d'impôt sur le revenu exclusivement pour les revenus exceptionnels (> 1M€/an) : 55% (1-5M€), 60% (5-10M€), 65% (>10M€).",
     strengths: [
       "Vise uniquement les 0,01% des contribuables (revenus > 1M€/an)",
-      "Viabilité juridique 95% (vs 20% avec CNJP abandonnée)",
+      "Viabilité juridique solide garantie par notre approche progressive",
       "Génère 24 à 37 Mds €/an de recettes nettes",
       "Crédit d'impôt Bac+5+ maintenu (15% avec dégressivité)"
     ]
@@ -44,7 +44,7 @@ const keyMeasures: KeyMeasure[] = [
   {
     id: 4,
     title: "FSCRD — Fonds Souverain de Réduction de la Dette (REPORTÉ)",
-    description: "Objectif : Rembourser la dette publique sans austérité. Suite au pivot stratégique (CNJP abandonnée), cette mesure est reportée à Phase 2.",
+    description: "Objectif : Rembourser la dette publique sans austérité. Cette mesure ambitieuse est reportée à une Phase 2, conditionnée à une croissance économique soutenue.",
     strengths: [
       "Reporté à Phase 2 conditionnée à croissance >3%/an",
       "Budget actuel insuffisant (24-37 Md€/an vs 130 Md€ prévu)",

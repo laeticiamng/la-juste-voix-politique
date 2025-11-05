@@ -92,9 +92,9 @@ const IncomeTaxTable: React.FC = () => {
       <div className="mt-4 p-4 bg-ljv-navy/5 rounded-lg border border-ljv-navy/20">
         <p className="text-sm text-gray-700">
           <strong>Note importante :</strong> Ces nouveaux barèmes ultra-hauts revenus (55%, 60%, 65%) 
-          ne concernent que 0,01% des contribuables français (revenus {'>'} 1 M€/an). 
-          Ils remplacent la CNJP abandonnée pour des raisons juridiques et garantissent 
-          un financement viable du programme à hauteur de 24-37 Md€/an.
+          ne concernent que 0,01% des contribuables français (revenus {'>'} 1 M€/an) 
+          et garantissent un financement viable et juridiquement solide du programme 
+          à hauteur de 24-37 Md€/an.
         </p>
       </div>
     </div>

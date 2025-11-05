@@ -109,7 +109,7 @@ const faqItems: FAQItem[] = [
   // Initiatives phares
   {
     question: "Qu'est-ce que l'Impôt sur le Revenu renforcé pour ultra-hauts revenus ?",
-    answer: "Notre système fiscal pivoté introduit trois nouvelles tranches d'IR exclusivement pour les revenus exceptionnels : 55% (1-5M€/an), 60% (5-10M€/an), et 65% (>10M€/an). Ces taux ne concernent que 0,01% des contribuables et génèrent 24 à 37 milliards d'euros par an. Cette approche remplace la CNJP abandonnée pour garantir une viabilité juridique de 95% (vs 20% avec CNJP). Un crédit d'impôt de 15% pour diplômés Bac+5+ est maintenu avec dégressivité.",
+    answer: "Notre système fiscal introduit trois nouvelles tranches d'IR exclusivement pour les revenus exceptionnels : 55% (1-5M€/an), 60% (5-10M€/an), et 65% (>10M€/an). Ces taux ne concernent que 0,01% des contribuables et génèrent 24 à 37 milliards d'euros par an. Cette approche garantit une viabilité juridique solide tout en assurant une véritable progressivité fiscale. Des crédits d'impôt de 15% (Bac+5+) et 20% (Bac+10 doctorats) sont maintenus avec dégressivité.",
     category: 'initiatives',
     badge: 'Phare',
   },

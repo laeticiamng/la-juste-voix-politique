@@ -1,5 +1,4 @@
 // ANALYSE COMPARATIVE : LA JUSTE VOIX vs SYSTÈME ACTUEL
-// VERSION POST-PIVOT OPTION 1 (CNJP Abandonnée → IR Ultra-Hauts Revenus)
 // Comparaison factuelle et objective sur chaque dimension
 
 export interface Solution {
@@ -69,7 +68,7 @@ export const comparativeAnalysis: ComparativePoint[] = [
     },
     verdict: {
       type: 'révolutionnaire',
-      commentaire: "C'est une RUPTURE totale. Le système actuel plafonne à 45% et traite pareil un cadre sup et un milliardaire. Vous créez enfin une VRAIE progressivité pour les ultra-hauts revenus. Juridiquement solide (95% validation CC) contrairement à la CNJP abandonnée."
+      commentaire: "C'est une RUPTURE totale. Le système actuel plafonne à 45% et traite pareil un cadre sup et un milliardaire. Vous créez enfin une VRAIE progressivité pour les ultra-hauts revenus avec des tranches à 55-65%, juridiquement solide et conforme au droit constitutionnel."
     }
   },
   {
