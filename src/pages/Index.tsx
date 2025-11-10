@@ -15,7 +15,7 @@ const Index = () => {
       <SEOHead
         title="Accueil"
         description="La Juste Voix - Un programme politique qui remet la justice, la dignité et la contribution au centre de la République. Découvrez nos propositions pour une société plus juste."
-        keywords="politique france, justice sociale, programme politique, revalorisations, CNJP, fiscalité juste"
+        keywords="politique france, justice sociale, programme politique, revalorisations, IR ultra-hauts revenus, fiscalité juste, crédit d'impôt Bac+5"
         structuredData={organizationSchema}
       />
       <Header />
