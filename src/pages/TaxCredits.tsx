@@ -4,11 +4,12 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { GraduationCap, Calculator, List, Info, TrendingUp } from 'lucide-react';
+import { GraduationCap, Calculator, List, Info, TrendingUp, HelpCircle } from 'lucide-react';
 import TaxCreditSimulator from '@/components/tax/TaxCreditSimulator';
 import TaxCreditProfessions from '@/components/tax/TaxCreditProfessions';
 import TaxCreditInfo from '@/components/tax/TaxCreditInfo';
 import TaxCreditComparison from '@/components/tax/TaxCreditComparison';
+import TaxCreditFAQ from '@/components/tax/TaxCreditFAQ';
 
 const TaxCredits: React.FC = () => {
   return (
@@ -51,7 +52,7 @@ const TaxCredits: React.FC = () => {
         </div>
 
         {/* Navigation Cards */}
-        <div className="grid md:grid-cols-4 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
           <Card className="border-2 border-blue-200 hover:border-blue-400 transition-colors cursor-pointer"
             onClick={() => document.getElementById('simulator')?.scrollIntoView({ behavior: 'smooth' })}>
             <CardHeader>
@@ -111,6 +112,21 @@ const TaxCredits: React.FC = () => {
               </p>
             </CardContent>
           </Card>
+
+          <Card className="border-2 border-indigo-200 hover:border-indigo-400 transition-colors cursor-pointer"
+            onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-indigo-800">
+                <HelpCircle className="h-5 w-5" />
+                FAQ & Cas Pratiques
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-gray-700">
+                Réponses détaillées aux situations concrètes
+              </p>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Simulator Section */}
@@ -129,8 +145,13 @@ const TaxCredits: React.FC = () => {
         </div>
 
         {/* Info Section */}
-        <div id="info" className="scroll-mt-24">
+        <div id="info" className="mb-16 scroll-mt-24">
           <TaxCreditInfo />
+        </div>
+
+        {/* FAQ Section */}
+        <div id="faq" className="scroll-mt-24">
+          <TaxCreditFAQ />
         </div>
       </main>
       
