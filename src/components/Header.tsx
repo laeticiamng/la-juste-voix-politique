@@ -29,6 +29,7 @@ const Header: React.FC = () => {
     { path: "/comparaison-systeme", label: "vs Système actuel" },
     { path: "/revalorisations", label: "Revalorisations" },
     { path: "/fiscalite", label: "Fiscalité" },
+    { path: "/credits-impot", label: "Crédits d'Impôt" },
     { path: "/risques-securisations", label: "Risques" },
     { path: "/faq", label: "FAQ" },
     { path: "/contact", label: "Contact" }

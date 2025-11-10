@@ -15,6 +15,7 @@ import RisksAndSafeguards from "./pages/RisksAndSafeguards";
 import ComparativeAnalysis from "./pages/ComparativeAnalysis";
 import Revalorisations from "./pages/Revalorisations";
 import TaxBrackets from "./pages/TaxBrackets";
+import TaxCredits from "./pages/TaxCredits";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 
@@ -34,6 +35,7 @@ function App() {
                 <Route path="/manifeste" element={<Manifeste />} />
                 <Route path="/revalorisations" element={<Revalorisations />} />
                 <Route path="/fiscalite" element={<TaxBrackets />} />
+                <Route path="/credits-impot" element={<TaxCredits />} />
                 <Route path="/risques-securisations" element={<RisksAndSafeguards />} />
                 <Route path="/comparaison-systeme" element={<ComparativeAnalysis />} />
                 <Route path="/faq" element={<FAQ />} />
