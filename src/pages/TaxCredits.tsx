@@ -4,10 +4,11 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { GraduationCap, Calculator, List, Info } from 'lucide-react';
+import { GraduationCap, Calculator, List, Info, TrendingUp } from 'lucide-react';
 import TaxCreditSimulator from '@/components/tax/TaxCreditSimulator';
 import TaxCreditProfessions from '@/components/tax/TaxCreditProfessions';
 import TaxCreditInfo from '@/components/tax/TaxCreditInfo';
+import TaxCreditComparison from '@/components/tax/TaxCreditComparison';
 
 const TaxCredits: React.FC = () => {
   return (
@@ -50,7 +51,7 @@ const TaxCredits: React.FC = () => {
         </div>
 
         {/* Navigation Cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-4 gap-6 mb-12">
           <Card className="border-2 border-blue-200 hover:border-blue-400 transition-colors cursor-pointer"
             onClick={() => document.getElementById('simulator')?.scrollIntoView({ behavior: 'smooth' })}>
             <CardHeader>
@@ -81,6 +82,21 @@ const TaxCredits: React.FC = () => {
             </CardContent>
           </Card>
 
+          <Card className="border-2 border-green-200 hover:border-green-400 transition-colors cursor-pointer"
+            onClick={() => document.getElementById('comparison')?.scrollIntoView({ behavior: 'smooth' })}>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-green-800">
+                <TrendingUp className="h-5 w-5" />
+                Comparatif Avant/Après
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-gray-700">
+                Impact concret par profil avec visualisations graphiques
+              </p>
+            </CardContent>
+          </Card>
+
           <Card className="border-2 border-teal-200 hover:border-teal-400 transition-colors cursor-pointer"
             onClick={() => document.getElementById('info')?.scrollIntoView({ behavior: 'smooth' })}>
             <CardHeader>
@@ -105,6 +121,11 @@ const TaxCredits: React.FC = () => {
         {/* Professions List */}
         <div id="professions" className="mb-16 scroll-mt-24">
           <TaxCreditProfessions />
+        </div>
+
+        {/* Comparison Table */}
+        <div id="comparison" className="mb-16 scroll-mt-24">
+          <TaxCreditComparison />
         </div>
 
         {/* Info Section */}
