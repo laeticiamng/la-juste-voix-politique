@@ -6,6 +6,8 @@ import BlockCard from "../components/BlockCard";
 import Footer from "../components/Footer";
 import { blocksData } from "../lib/blocks";
 import TestimonialsSection from "../components/home/TestimonialsSection";
+import ProgramHighlights from "../components/home/ProgramHighlights";
+import GuidedExperience from "../components/home/GuidedExperience";
 import NewsletterSignup from "../components/NewsletterSignup";
 import SEOHead, { organizationSchema } from "../components/SEOHead";
 
@@ -24,6 +26,12 @@ const Index = () => {
 
         {/* Testimonials Section */}
         <TestimonialsSection />
+
+        {/* Program highlights section */}
+        <ProgramHighlights />
+
+        {/* Guided experience */}
+        <GuidedExperience />
         
         <div id="blocks" className="container mx-auto px-4 py-16" aria-labelledby="blocks-title">
           <h2 id="blocks-title" className="text-3xl md:text-4xl font-serif font-bold mb-12 text-center">
