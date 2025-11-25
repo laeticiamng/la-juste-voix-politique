@@ -1,33 +1,36 @@
 import React, { useState } from 'react';
-import { Mail, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 import { z } from 'zod';
+import { submitNewsletterSubscription } from '@/lib/api';
 
 const emailSchema = z.object({
-  email: z.string().email('Veuillez entrer une adresse email valide').min(1, 'Email requis')
+  email: z.string().email('Veuillez entrer une adresse email valide').min(1, 'Email requis'),
+  prenom: z.string().min(1, 'Prénom requis').max(100, 'Prénom trop long'),
 });
 
 const NewsletterSignup = ({ className = '' }: { className?: string }) => {
   const [email, setEmail] = useState('');
+  const [prenom, setPrenom] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     try {
-      emailSchema.parse({ email });
+      emailSchema.parse({ email, prenom });
       setIsLoading(true);
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
+      await submitNewsletterSubscription(email, prenom);
+
       setIsSuccess(true);
       setEmail('');
-      
+      setPrenom('');
+
       toast({
         title: "Inscription réussie !",
         description: "Vous recevrez nos dernières actualités par email.",
@@ -46,7 +49,7 @@ const NewsletterSignup = ({ className = '' }: { className?: string }) => {
       } else {
         toast({
           title: "Erreur",
-          description: "Une erreur s'est produite. Veuillez réessayer.",
+          description: error instanceof Error ? error.message : "Une erreur s'est produite. Veuillez réessayer.",
           variant: "destructive",
         });
       }
@@ -74,6 +77,15 @@ const NewsletterSignup = ({ className = '' }: { className?: string }) => {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex flex-col sm:flex-row gap-3">
             <Input
+              type="text"
+              placeholder="Votre prénom"
+              value={prenom}
+              onChange={(e) => setPrenom(e.target.value)}
+              className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-gray-300 focus:border-ljv-gold"
+              disabled={isLoading}
+              required
+            />
+            <Input
               type="email"
               placeholder="Votre email"
               value={email}
@@ -84,7 +96,7 @@ const NewsletterSignup = ({ className = '' }: { className?: string }) => {
             />
             <Button
               type="submit"
-              disabled={isLoading || !email.trim()}
+              disabled={isLoading || !email.trim() || !prenom.trim()}
               className="bg-ljv-gold hover:bg-ljv-gold/90 text-ljv-navy font-medium"
             >
               {isLoading ? (

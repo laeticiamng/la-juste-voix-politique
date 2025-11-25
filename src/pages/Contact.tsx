@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import { Button } from '@/components/ui/button';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
+import { submitContactMessage } from '@/lib/api';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -21,19 +22,27 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
+
+    try {
+      await submitContactMessage(formData);
+
       toast({
         title: "Message envoyé",
         description: "Nous vous répondrons dans les plus brefs délais.",
       });
       setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      toast({
+        title: "Erreur",
+        description: error instanceof Error ? error.message : "Une erreur est survenue. Merci de réessayer.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (
